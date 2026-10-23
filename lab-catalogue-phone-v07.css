@@ -1,0 +1,36 @@
+/* LAB v0.7: fix overlapping rows on narrow phones. Only LAB catalogue controls. */
+#otgLabRemoteCatalogues06 button.rhSettingRow,
+#otgLabPackPanel05 button.rhSettingRow,
+#otgLabOptionalEntry07 a.rhSettingRow {
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  justify-content:center!important;
+  width:100%!important;
+  min-width:0!important;
+  gap:8px!important;
+  box-sizing:border-box!important;
+  white-space:normal!important;
+  text-align:left!important;
+  height:auto!important;
+  min-height:74px!important;
+  padding:16px 18px!important;
+}
+#otgLabRemoteCatalogues06 button.rhSettingRow b,
+#otgLabPackPanel05 button.rhSettingRow b,
+#otgLabOptionalEntry07 a.rhSettingRow b {
+  display:block!important;min-width:0!important;width:100%!important;
+  font-size:1em!important;line-height:1.25!important;
+  overflow-wrap:anywhere!important;white-space:normal!important;
+}
+#otgLabRemoteCatalogues06 button.rhSettingRow span,
+#otgLabPackPanel05 button.rhSettingRow span,
+#otgLabOptionalEntry07 a.rhSettingRow span {
+  display:block!important;width:100%!important;max-width:100%!important;
+  min-width:0!important;position:static!important;margin:0!important;
+  font-size:.81em!important;line-height:1.4!important;
+  overflow-wrap:anywhere!important;white-space:normal!important;
+  opacity:.84!important;
+}
+#otgLabRemoteCatalogues06 .otgLabRemoteSelection06 {min-width:0!important;}
+#otgLabOptionalEntry07 a.rhSettingRow {text-decoration:none;color:inherit;}

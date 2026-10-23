@@ -2,8 +2,8 @@
   "channel": "OTG-LAB",
   "branch": "LAB",
   "version": "8.0.143",
-  "labVersion": "0.6",
+  "labVersion": "0.7",
   "labWorker": "./otg-lab-worker-v1.js",
   "worker": "./otg-lab-worker-v1.js",
-  "message": "LAB v0.6 \u2014 online catalogue library and SHA-256 verified independent FH5 pack download, with all original identity protections."
+  "message": "LAB v0.7 \u2014 phone-native download button layout and isolated optional catalogue clean-start proof; Main and existing FH5 Spaces untouched."
 }

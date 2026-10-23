@@ -1,0 +1,11 @@
+OTG! LAB v0.7 — PHONE BUTTON FIX + OPTIONAL CATALOGUE CLEAN-START DEMO
+INCREMENTAL PATCH ON TOP OF LIVE LAB v0.6 ONLY.
+1. Extract ZIP, copy contents to separate `otg-lab` VS Code repository. Preserve js/, docs/, tests/.
+2. Verify `git remote -v` points ONLY to OTG-Laboratory/otg-lab (not RaceHub).
+3. git add -A
+   git commit -m "OTG! LAB v0.7 - Optional catalogue demo and phone layout"
+   git push
+4. Phone: check LAB v0.7 and three original FH5 owned cars. Settings DOWNLOAD & PREVIEW row must have no overlapping text.
+5. Settings: OPEN CLEAN-START CATALOGUE DEMO. It should say 0 installed cars/routes. Check online and optionally DOWNLOAD/INSTALL into DEMO only. Return to LAB and verify 3 original cars are unchanged.
+
+The clean-start demo does NOT modify application catalogue behaviour or replace the FH5 Space. Public Guide truly optional catalogues are later development. MAIN and RH Guide must NOT be updated with this ZIP.

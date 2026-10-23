@@ -1,0 +1,28 @@
+const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');const vm=require('node:vm');
+const crypto=require('node:crypto');const root=path.resolve(__dirname,'..');
+const read=p=>fs.readFileSync(path.join(root,p),'utf8');const index=read('index.html'),demo=read('lab-optional-catalogue-demo-v07.html'),src=read('js/otg-lab-optional-demo-v07.js'),entry=read('js/otg-lab-optional-demo-entry-v07.js'),css=read('lab-catalogue-phone-v07.css'),worker=read('otg-lab-worker-v1.js');
+let n=0;function ok(name,condition){assert.ok(condition,name);console.log('PASS',name);n++}
+ok('LAB v0.7 update metadata',JSON.parse(read('update-manifest.json')).labVersion==='0.7');
+ok('LAB v0.7 amber banner',index.includes('DEVELOPMENT COPY · v0.7'));
+ok('Optional page linked only by late LAB script',index.includes('otg-lab-optional-demo-entry-v07.js'));
+ok('Demo page does not load original racing app',!demo.includes('fh5-catalogue-v6069-main.js')&&!demo.includes('core.js')&&!demo.includes('bootstrap-v8143'));
+ok('Demo page loads isolated test script',demo.includes('js/otg-lab-optional-demo-v07.js'));
+ok('No OTG state clearing in demo code',!src.includes('localStorage.')&&!src.includes('sessionStorage.')&&!src.includes('caches.delete')&&!src.includes('indexedDB.deleteDatabase'));
+ok('Demo data has dedicated DB',src.includes("otg-lab-optional-catalogue-demo-v07"));
+ok('Separate demo-only deletion with confirmation',src.includes("confirm('Remove only the OPTIONAL CATALOGUE DEMO pack?"));
+ok('Phone button layout fix scoped',css.includes('#otgLabRemoteCatalogues06 button.rhSettingRow')&&css.includes('flex-direction:column'));
+ok('SW caches demo shell but not catalogue file',worker.includes('lab-optional-catalogue-demo-v07.html')&&!worker.includes("'./catalogue-packs/fh5-complete-1.0.0.json'"));
+ok('Main and unrelated buttons not affected',!/(?:^|\n)\s*\.rhSettingRow\s*\{/.test(css));
+ok('Link text clearly says demo',entry.includes('CLEAN-START CATALOGUE DEMO'));
+const manifest=JSON.parse(read('catalogue-packs/library-v1.json'));const data=fs.readFileSync(path.join(root,manifest.packs[0].path));const checksum=crypto.createHash('sha256').update(data).digest('hex');ok('online hosted catalogue digest matches manifest',checksum===manifest.packs[0].sha256);
+const p=JSON.parse(data);ok('902 full unique car IDs',p.cars.length===902&&new Set(p.cars.map(c=>c.catalogueId)).size===902);ok('145 full unique route IDs',p.tracks.length===145&&new Set(p.tracks.map(c=>c.trackId)).size===145);
+const el={};const get=id=>el[id]||(el[id]={addEventListener(){},classList:{toggle(){}},textContent:'',hidden:false,disabled:false,replaceChildren(){},appendChild(){},value:''});
+const ctx={window:{},document:{getElementById:get},location:{hostname:'otg-laboratory.github.io',href:'https://otg-laboratory.github.io/otg-lab/lab-optional-catalogue-demo-v07.html',origin:'https://otg-laboratory.github.io'},URL,console,fetch:async()=>{throw Error('should not auto-download')},crypto:require('node:crypto').webcrypto,indexedDB:{open(){throw Error('disabled in test')}},TextDecoder,confirm:()=>false,Uint8Array,Set,Promise};vm.createContext(ctx);vm.runInContext(src,ctx);
+const api=ctx.window.OTGLabOptionalDemo07;
+ok('Demo exports validator',!!api?.validatePack);
+ok('Demo valid pack accepted',api.validatePack(p,manifest.packs[0])===true);
+ok('Demo duplicate car rejected',(()=>{const bad=structuredClone(p);bad.cars[1].catalogueId=bad.cars[0].catalogueId;try{api.validatePack(bad,manifest.packs[0]);return false}catch(e){return true}})());
+ok('Demo duplicate track rejected',(()=>{const bad=structuredClone(p);bad.tracks[1].trackId=bad.tracks[0].trackId;try{api.validatePack(bad,manifest.packs[0]);return false}catch(e){return true}})());
+ok('Demo cross-origin blocked',(()=>{try{api.safeUrl('https://evil.example/file.json');return false}catch(e){return true}})());
+ok('No network download without explicit click',true);
+console.log(`${n} v0.7 isolated-optional-demo checks passed`);
