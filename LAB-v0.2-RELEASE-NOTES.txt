@@ -1,0 +1,29 @@
+OTG! LAB v0.2 — FH5 permanent identity freeze (QA BUILD)
+Date: 23 October 2026
+BASE: isolated LAB v0.1 / Main code v8.0.143
+
+CHANGES
+- Explicitly freeze all original 902 FH5 catalogue IDs as fh5-v1-0001 through fh5-v1-0902, preserving their exact previous runtime values.
+- Freeze all 902 original legacy slug aliases for compatibility.
+- Add an external machine-readable registry under data/.
+- Ensure missing/duplicate IDs fail before automatic catalogue reconciliation.
+- Refresh the LAB-only service worker cache to prevent stale catalogue code.
+- Display LAB v0.2 on the amber development banner.
+
+UNCHANGED
+- MAIN repository, code, version and personal data.
+- FH5 902 catalogue entries, order, manufacturer, model, year, class type and ownership behaviour.
+- FH5 tracks, tournaments, run history, records and backup logic.
+- GT7 identities, non-catalogue/custom Spaces, official catalogue edit restrictions.
+
+VERIFIED LOCALLY
+- All 902 IDs and aliases unique and equal to prior identifiers.
+- 3 expected owned fixture cars retain their identities through simulated list reorder and insertion.
+- Legacy aliases migrate to frozen IDs.
+- Missing / duplicate IDs rejected before reconciliation.
+- Historical run/backup arrays retained in integration fixture.
+- JavaScript syntax checks passed.
+
+PHONE STATUS: NOT YET TESTED — Andy must deploy to LAB and verify the three real test cars remain owned. His phone backup JSON was not accessed.
+
+CRITICAL: Copy replacement files into the GitHub organisation repo OTG-Laboratory/otg-lab ONLY, never into personal MAIN/RaceHub. No reset, no restore required.

@@ -1,5 +1,5 @@
 {
   "version": "8.0.143",
   "worker": "./otg-lab-worker-v1.js",
-  "message": "OTG! LAB baseline v0.1 (Main v8.0.143 clone). LAB changes are not Main updates."
+  "message": "OTG! LAB v0.2 - FH5 permanent identity lock; Main unchanged."
 }

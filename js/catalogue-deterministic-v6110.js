@@ -3,9 +3,19 @@
 'use strict';
 const FH5_KEY='fh5-catalogue-v1', GT7_KEY='gt7-catalogue-v1', REPAIR_VERSION='6.0.110';
 function pad(n){return String(n+1).padStart(4,'0')}
-function legacyFh5(c){return 'fh5-'+fh5Slug(c.full+'-'+c.year)}
+function legacyFh5(c){return c?.legacyId||'fh5-'+fh5Slug(c.full+'-'+c.year)}
 function legacyGt7(c){return 'gt7-'+gt7Slug(c.make+'-'+c.model+'-'+c.year)}
-function installIds(list,prefix){(list||[]).forEach((c,i)=>{const id=c.catalogueId||`${prefix}-v1-${pad(i)}`;try{Object.defineProperty(c,'catalogueId',{value:id,enumerable:true,writable:false,configurable:false})}catch(_){c.catalogueId=id}})}
+function installIds(list,prefix){
+ if(prefix==='fh5'){
+   const used=new Set();
+   (list||[]).forEach((c,i)=>{
+     const id=String(c?.catalogueId||'');
+     if(!/^fh5-v[1-9]\d*-\d{4,}$/.test(id)||used.has(id))throw new Error('LAB FH5 identity safety: missing/duplicate permanent catalogueId at catalogue row '+(i+1));
+     used.add(id);
+   });
+ }
+ (list||[]).forEach((c,i)=>{const id=c.catalogueId||`${prefix}-v1-${pad(i)}`;try{Object.defineProperty(c,'catalogueId',{value:id,enumerable:true,writable:false,configurable:false})}catch(_){c.catalogueId=id}})
+}
 installIds(typeof FH5_CATALOGUE!=='undefined'?FH5_CATALOGUE:[], 'fh5');
 installIds(typeof GT7_CATALOGUE!=='undefined'?GT7_CATALOGUE:[], 'gt7');
 function exactNorm(v){return String(v||'').normalize('NFKD').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()}
