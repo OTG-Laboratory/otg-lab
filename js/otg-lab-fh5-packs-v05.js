@@ -142,6 +142,6 @@ const originalRender=window.rhRenderSettings;
 if(typeof originalRender==='function')window.rhRenderSettings=function(){const v=originalRender.apply(this,arguments);ensurePanel();return v};
 // Some navigation paths render Settings asynchronously.
 document.addEventListener('click',e=>{if(e.target?.closest?.('[data-tab="more"],#navMore,#more'))setTimeout(ensurePanel,0)},true);
-window.rhLabFH5Pack05=Object.freeze({preflight,readAndPreview,ensurePanel,getStatus:()=>({boot:window.rhLabPackBootV05,installed:installed()})});
+window.rhLabFH5Pack05=Object.freeze({preflight,readAndPreview,ensurePanel,clearPreview:()=>{preview=null;refreshPanel();result('No pack selected. Preview and verify a catalogue before applying.')},getStatus:()=>({boot:window.rhLabPackBootV05,installed:installed()})});
 ensurePanel();
 })();

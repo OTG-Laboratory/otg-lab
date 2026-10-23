@@ -1,0 +1,12 @@
+OTG! LAB v0.6 — 10-file LAB-ONLY incremental patch
+
+1. Make sure the cloned VS Code folder is `otg-lab` from the OTG-Laboratory GitHub organisation.
+2. Copy extracted files INTO this repo, preserving catalogue-packs/, js/, docs/, tests/.
+3. git remote -v must show OTG-Laboratory/otg-lab, NEVER MAIN.
+4. git add -A
+   git commit -m "OTG! LAB v0.6 - Hosted FH5 catalogue library"
+   git push
+5. On phone confirm LAB v0.6, original 3 owned cars. Open Settings in FH5 LAB TEST, CHECK ONLINE FH5 CATALOGUE LIBRARY, DOWNLOAD & PREVIEW. Stop before APPLY.
+
+No existing FH5 car changes. Pack is the verified 902-car/145-track baseline hosted as a separate downloadable file.
+Do not reset LAB or MAIN.

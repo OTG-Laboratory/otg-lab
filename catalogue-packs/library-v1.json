@@ -1,0 +1,20 @@
+{
+  "schema": "otg-lab-catalogue-library-v1",
+  "channel": "OTG-LAB",
+  "libraryVersion": "1.0.0",
+  "description": "LAB test directory only \u2014 independent downloads, no purchase system or live catalogue changes",
+  "packs": [
+    {
+      "id": "fh5-complete",
+      "title": "Forza Horizon 5 \u2014 complete catalogue",
+      "game": "Forza Horizon 5",
+      "catalogueKey": "fh5-catalogue-v1",
+      "packVersion": "1.0.0",
+      "cars": 902,
+      "tracks": 145,
+      "status": "LAB verified baseline, no new cars/routes",
+      "path": "./catalogue-packs/fh5-complete-1.0.0.json",
+      "sha256": "78203708193b4880e0a27b4f9b594fc66fda0be7df091360f47564900d00b90e"
+    }
+  ]
+}

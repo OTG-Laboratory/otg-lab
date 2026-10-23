@@ -2,8 +2,8 @@
   "channel": "OTG-LAB",
   "branch": "LAB",
   "version": "8.0.143",
-  "labVersion": "0.5",
+  "labVersion": "0.6",
   "labWorker": "./otg-lab-worker-v1.js",
   "worker": "./otg-lab-worker-v1.js",
-  "message": "LAB v0.5 \u2014 controlled FH5 catalogue pack preflight/install, preservation gates and immediate LAB Settings version."
+  "message": "LAB v0.6 \u2014 online catalogue library and SHA-256 verified independent FH5 pack download, with all original identity protections."
 }
