@@ -1,0 +1,15 @@
+OTG! LAB v0.4 — Freeze 145 FH5 Track Identities
+
+This is a LAB-only incremental patch, not a replacement for MAIN. Nothing resets saved Spaces or Garage data. Keep your existing LAB Portable Backup.
+
+Before pushing, verify VS Code terminal points to OTG-Laboratory/otg-lab (not MAIN). Extract this ZIP and copy all contents to the root of LAB repo; preserve js/data/docs/tests directories. Do not upload the ZIP itself to the repo.
+
+Git from LAB folder:
+  git remote -v
+  git add -A
+  git commit -m "OTG! LAB v0.4 - Lock FH5 track identities"
+  git push
+
+After GitHub Pages publishes, use LAB v0.3 Settings > Check for Latest Update to test detection of v0.4. Do not choose update if your LAB Backup is missing. A failed upgrade should not erase data; manual refresh remains a fallback. Confirm amber LAB v0.4 ribbon, 3 test cars still in Garage, and the FH5 Track Directory shows 145 routes. Check MAIN only to verify it remains separate.
+
+IMPORTANT: no newly sourced track catalogue has been imported in v0.4; this release only freezes IDs and preserves historic names. Not a complete solution for historical-results migration yet.
