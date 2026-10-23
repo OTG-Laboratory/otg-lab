@@ -2,8 +2,8 @@
   "channel": "OTG-LAB",
   "branch": "LAB",
   "version": "8.0.143",
-  "labVersion": "0.4.1",
+  "labVersion": "0.5",
   "labWorker": "./otg-lab-worker-v1.js",
   "worker": "./otg-lab-worker-v1.js",
-  "message": "LAB v0.4.1 \u2014 isolated LAB checker hotfix and 145 frozen FH5 route identities. MAIN remains protected."
+  "message": "LAB v0.5 \u2014 controlled FH5 catalogue pack preflight/install, preservation gates and immediate LAB Settings version."
 }

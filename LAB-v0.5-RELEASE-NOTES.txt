@@ -1,0 +1,25 @@
+OTG! LAB v0.5 — PROTECTED FH5 CATALOGUE PACK ENGINE
+
+Incremental patch for the SEPARATE OTG Laboratory GitHub repository only.
+DO NOT copy these files into the original MAIN / RaceHub project.
+
+Includes:
+- Strict JSON pack preview and identity check against 902 original FH5 cars
+  and 145 original FH5 routes.
+- Safe additive-new-car pack installer (never touches existing Space data).
+- No-change baseline fixture to verify the update system without adding cars.
+- New route additions explicitly BLOCKED in v0.5 until route scheduler QA.
+- LAB update checker now fixes inherited 8.0.143 status on opening Settings.
+- No new game cars or tracks were researched or added by this release.
+
+Git: git remote -v (must show OTG-Laboratory/otg-lab)
+git add -A
+git commit -m "OTG! LAB v0.5 - Protected FH5 catalogue pack engine"
+git push
+
+PHONE QA required. Confirm LAB v0.5 banner, Settings LAB v0.5 immediately,
+FH5 CATALOGUE PACK LAB panel > PREVIEW INCLUDED FH5 BASELINE verified,
+then optional APPLY VERIFIED LAB PACK; all three owned FH5 test cars remain.
+Do not restore or reset anything.
+
+See docs/LAB-v0.5-FH5-CATALOGUE-ENGINE.md for capabilities/limitations.
