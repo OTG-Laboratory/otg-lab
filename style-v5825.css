@@ -1,0 +1,27 @@
+/* OTG! v5.8.25 — Final Standings clean live UI */
+body.rhFS25Active{overflow:hidden!important;background:#000!important}
+body.rhFS25Active>header,body.rhFS25Active>nav{display:none!important}
+body.rhFS25Active main{padding:0!important;margin:0!important;max-width:none!important}
+body.rhFS25Active main>.screen{display:none!important}
+body.rhFS25Active #final-standings{display:block!important;position:fixed!important;inset:0!important;z-index:99999!important;padding:0!important;margin:0!important;overflow:auto!important;background:#000!important}
+.rhFS25Page{min-height:100svh;background:#000;display:flex;justify-content:center;align-items:flex-start}
+.rhFS25Stage{position:relative;width:min(100vw,calc(100svh * .4642857));aspect-ratio:832/1792;flex:0 0 auto;overflow:hidden;background:#000;color:#f4f7fa;font-family:Arial,Helvetica,sans-serif}
+.rhFS25Art{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:fill;pointer-events:none;user-select:none}
+.rhFS25Hot{position:absolute;border:0;background:transparent;padding:0;z-index:8;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.rhFS25TopBack{left:3.2%;top:1.4%;width:11.5%;height:6.4%;border-radius:50%}
+.rhFS25Subtitle{position:absolute;z-index:4;left:22%;right:22%;top:11.35%;height:3.4%;display:flex;align-items:center;justify-content:center;background:rgba(2,12,18,.95);color:#55d8f0;font-size:2.45cqw;font-weight:700;letter-spacing:.11em;text-align:center;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rhFS25Rows{position:absolute;z-index:4;left:11.8%;top:32.65%;width:75.2%;height:25.8%;overflow-y:auto;overflow-x:hidden;scrollbar-width:none;background:rgba(0,6,10,.34)}
+.rhFS25Rows::-webkit-scrollbar{display:none}
+.rhFS25Row{height:20%;min-height:20%;display:grid;grid-template-columns:15% 48% 23% 14%;align-items:center;border-bottom:1px solid rgba(76,158,180,.28);font-variant-numeric:tabular-nums;color:#f4f6f8}
+.rhFS25Pos{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:4.1cqw;color:#58d7f0;text-align:center;letter-spacing:.04em}
+.rhFS25Car{padding-left:3%;font-size:2.75cqw;line-height:1.08;font-weight:500;overflow-wrap:anywhere}
+.rhFS25Time{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:2.85cqw;color:#55d8f0;text-align:right;white-space:nowrap}
+.rhFS25Gap{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:1.75cqw;color:#d8dde1;text-align:right;white-space:nowrap;padding-right:2%}
+.rhFS25TrophyMask{position:absolute;z-index:4;left:7.4%;top:73.15%;width:27.6%;height:12.7%;display:flex;align-items:center;justify-content:center;background:linear-gradient(90deg,rgba(5,7,8,.99),rgba(6,8,9,.98));overflow:hidden}
+.rhFS25Trophy{max-width:78%;max-height:92%;object-fit:contain;filter:drop-shadow(0 6px 8px rgba(0,0,0,.75))}
+.rhFS25ChampionLabel{position:absolute;z-index:4;left:37%;right:7%;top:74.1%;height:2.6%;display:flex;align-items:center;background:rgba(5,8,9,.97);color:#55d8f0;font-size:2.55cqw;font-weight:700;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rhFS25WinnerName{position:absolute;z-index:4;left:37%;right:6%;top:77.15%;height:3.8%;display:flex;align-items:center;background:rgba(5,8,9,.98);color:#f4f6f8;font-size:3.25cqw;font-weight:700;line-height:1.05;overflow:hidden}
+.rhFS25WinnerTime{position:absolute;z-index:4;left:37%;right:7%;top:82.2%;height:3.4%;display:flex;align-items:center;background:rgba(5,8,9,.98);color:#55d8f0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:4.2cqw;font-variant-numeric:tabular-nums;white-space:nowrap}
+.rhFS25Hall{left:6.1%;top:89.4%;width:42.2%;height:8.8%;border-radius:6%}
+.rhFS25Back{left:51%;top:89.4%;width:42.2%;height:8.8%;border-radius:6%}
+@media(min-width:900px){.rhFS25Subtitle{font-size:20px}.rhFS25Pos{font-size:34px}.rhFS25Car{font-size:23px}.rhFS25Time{font-size:24px}.rhFS25Gap{font-size:15px}.rhFS25ChampionLabel{font-size:21px}.rhFS25WinnerName{font-size:27px}.rhFS25WinnerTime{font-size:35px}}

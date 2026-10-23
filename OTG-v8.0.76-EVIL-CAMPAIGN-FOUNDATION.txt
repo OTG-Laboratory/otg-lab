@@ -1,0 +1,65 @@
+OTG! Main v8.0.76 — EVIL CAMPAIGN foundation
+
+AUTHORITATIVE SOURCE
+- FH5-OTG-EVIL-v8.0.70-697-FULL-TRACK-CLEANUP-SHAKE-UP-R2.xlsx
+- 697-car freeze
+- 708 campaign slots
+
+NEW CAMPAIGN ORDER
+- Controlled shuffle seed: 8224
+- Regular slots 1–639 reshuffled.
+- Multi-visit programmes retain their internal visit order.
+- Finals / Final Boss slots 640–708 remain fixed and unchanged.
+- The four source slots just replayed before this build are deliberately moved deeper:
+  source 1 -> new 91
+  source 2 (Bugatti) -> new 311
+  source 3 -> new 94
+  source 4 -> new 98
+
+NEW OPENING
+001  Mitsubishi — Festival / Manufacturer — 9 cars — STANDARD — OFF-ROAD
+002  Alpine — Race Off / Manufacturer — 2 cars — KNOCKOUT — ROAD / STREET
+003  Classic Championship — Race Off / Vintage & Classic — 183 cars — KNOCKOUT — ROAD / STREET
+004  Modern Rally — RALLY ADVENTURE — Festival — 10 cars — STANDARD — RALLY ADVENTURE
+005  MG — Festival / Manufacturer — 3 cars — STANDARD — ROAD / STREET
+006  Renault — Race Off / Manufacturer — 7 cars — KNOCKOUT — ROAD / STREET
+007  Vintage Racers — Festival / Class-Type — 5 cars — STANDARD — ROAD / STREET
+008  Pontiac — Race Off / Manufacturer — 4 cars — KNOCKOUT — ROAD / STREET
+009  Extreme Track Toys — HOT WHEELS — Festival — 42 cars — GROUPS — HOT WHEELS
+010  1960s — Race Off / Era — 52 cars — KNOCKOUT — ROAD / STREET
+
+DASHBOARD
+- Andy Main / FH5 only: Festival is reduced to half width and EVIL CAMPAIGN sits beside it.
+- Dashboard is now a deliberate two-column x five-row grid:
+  Festival | Evil Campaign
+  Race Off | Custom Racing
+  Garage | Race Setups
+  Pick My Ride | Records
+  Stats | Settings
+- Evil Campaign uses its own dark crimson / oxblood treatment.
+- Tile copy is intentionally compact: progress + next slot only.
+
+CAMPAIGN SCREEN
+- 0 / 708 clean-slate progress.
+- Current slot card + full shuffled list grouped into campaign phases.
+- Blue = TODO, green = DONE.
+- Slot detail carries event family, mode, eligible count, live format, DO THIS NOW / STOP WHEN and track programme.
+- Completion is manual in this foundation build so parked multi-visit Festival / Race Off programmes cannot be advanced accidentally.
+
+EVENT HAND-OFF
+- Supported Festival slots launch the existing Festival setup engine.
+- RANDOMISE ALL slots call the existing v8.0.70 persistent Festival shuffle bags.
+- Fixed Festival programmes keep their fixed track.
+- Supported Race Off slots launch / continue the existing Race Off engine and its live auto-route system.
+- The embedded R2 pool is authoritative where a normal preset differs (for example Mexico Class/Type Rally stays OFF-ROAD rather than switching to Rally Adventure).
+- R2 protected Race Off Finals are enforced, including Copper Canyon Sprint for All Cars and The Gauntlet for Mexico Class/Type Rally fields.
+- Existing Festival / Race Off runs are continued rather than duplicated where a matching active/prepared event exists.
+- Lonely Hearts Garage Mix slots remain instruction-led for now.
+
+RESET
+- Reset Racing Data / Full Reset returns Evil Campaign progress to 0 / 708.
+- Garage/catalogue rules remain unchanged.
+
+MAIN ONLY
+- rh-guide is untouched.
+- Pick My Drive mobile round-row issue remains on the TODO list; not changed here.

@@ -1,0 +1,13 @@
+RaceHub v5.7.32 — Championship Setup Production Conformance
+Date: 27 July 2026
+Baseline: protected, phone-tested v5.7.31
+
+SCOPE ONLY: Championship Setup.
+- Preserved existing Championship eligibility, frozen-run creation, trophy mapping and run data behaviour.
+- Setup now opens with zero configured rounds as locked.
+- Eligible cars remain included by default.
+- Included count now refreshes immediately with selection changes.
+- Rebuilt visible Setup composition around locked Entry List / Championship Rounds / freeze / action / cumulative-time hierarchy.
+- Added locked zero-round empty state and explicit Cancel/Discard action.
+- No other RaceHub screen intentionally changed.
+- No artwork generated, redrawn, zoomed or cropped.

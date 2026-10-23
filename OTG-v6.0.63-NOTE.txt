@@ -1,0 +1,4 @@
+v6.0.63 synchronized final rebrand checkpoint.
+Only product change: new-user/default space wording My RaceHub -> My OTG!.
+Version synchronized to 6.0.63.
+Main existing user data/storage preserved.

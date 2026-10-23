@@ -1,0 +1,9 @@
+/* OTG! v8.0.134 — restore existing paint dice on Evil slot/Open Event and live result entry. */
+#evilcampaign .rhEvilR1Hero8097.slot:has(> .otgDiceLaunch8112),
+#festival .rh5801Hero:has(> .otgDiceLaunch8112),
+#event .rh5801Hero:has(> .otgDiceLaunch8112) {position:relative!important;}
+#evilcampaign .rhEvilR1Hero8097.slot > .otgDiceLaunch8112 {top:10px!important;right:12px!important;}
+#festival .rh5801Hero > .otgDiceLaunch8112,
+#event .rh5801Hero > .otgDiceLaunch8112 {top:10px!important;right:10px!important;}
+#festival .rh5801Hero:has(> .otgDiceLaunch8112) .rh5801Head,
+#event .rh5801Hero:has(> .otgDiceLaunch8112) .rh5801Head {padding-right:52px!important;}

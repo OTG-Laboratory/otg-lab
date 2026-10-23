@@ -1,0 +1,21 @@
+RaceHub v5.7.74 — STOPWATCH + TIMING BOARD
+
+Baseline
+- Promoted from v5.7.73 MAIN TESTED PROMOTION.
+- Existing data model and racing logic retained.
+
+Implemented
+- Digital stopwatch presentation for Championship and Event result entry.
+- Direct numeric keypad fields only; browser number spinners suppressed.
+- Digital timing-board presentation for current standings and final classifications.
+- Latest classified car highlighted contextually on Result Accepted.
+- Final Championship/Event leaderboard rows receive timing-board styling.
+- Race Night Queue constrained to a fixed-height scroll window.
+- Record badges stack with deliberate spacing.
+- Onboarding Step 3 wording polish layer included.
+- Visible build and cache version advanced to 5.7.74.
+
+Locked principle
+- Stopwatch = result input.
+- Timing board = classification output.
+- Records remain clipboard/archive presentation.

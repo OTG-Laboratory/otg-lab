@@ -1,0 +1,6 @@
+RaceHub v5.7.22 — GARAGE LOCKED v1
+Full app built from protected v5.7.21.
+Garage visual rebuilt to approved authority.
+Preserved: existing Garage data, Add/Edit/Delete Car, Search, manufacturer accordion and all other app functionality.
+No sort/filter/view-all. Search + compact Add New Car row. Alphabetical manufacturers. Edit pencil per car. Bottom info tile. No Hubs/?.
+Dashboard, Festival, Events and fullscreen foundation unchanged.

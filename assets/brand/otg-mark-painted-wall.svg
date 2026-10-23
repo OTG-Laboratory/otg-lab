@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-label="Out The Garage!">
+<defs><filter id="rough"><feTurbulence baseFrequency=".035" numOctaves="3" seed="9" result="n"/>
+<feDisplacementMap in="SourceGraphic" in2="n" scale="5"/></filter></defs>
+<rect width="900" height="420" fill="#101315"/>
+<g opacity=".55" stroke="#34393c" stroke-width="2"><path d="M0 105H900M0 210H900M0 315H900"/><path d="M225 0V420M450 0V420M675 0V420"/></g>
+<g filter="url(#rough)" transform="translate(65 30) skewX(-7)">
+ <text x="40" y="205" fill="#f7f7f4" stroke="#030506" stroke-width="18" paint-order="stroke"
+ font-family="Arial Black,Arial,sans-serif" font-size="190" font-weight="900" letter-spacing="-15">OTG</text>
+ <text x="620" y="205" fill="#20dfff" stroke="#030506" stroke-width="18" paint-order="stroke"
+ font-family="Arial Black,Arial,sans-serif" font-size="190" font-weight="900">!</text>
+</g>
+<g fill="#f7f7f4"><circle cx="102" cy="65" r="7"/><circle cx="150" cy="280" r="5"/><circle cx="520" cy="62" r="4"/>
+<path d="M170 235v70h9v-70zM315 230v105h8V230zM555 232v62h8v-62z"/></g>
+<g fill="#20dfff"><circle cx="755" cy="70" r="8"/><circle cx="810" cy="250" r="5"/>
+<path d="M735 225v120h9V225zM790 220v75h7v-75z"/></g>
+<text x="450" y="350" text-anchor="middle" fill="#20dfff" font-family="Arial,Helvetica,sans-serif" font-size="31" font-weight="800" letter-spacing="7">OUT THE GARAGE!</text>
+<text x="450" y="390" text-anchor="middle" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" letter-spacing="6">DRIVE • RECORD • IMPROVE</text>
+</svg>

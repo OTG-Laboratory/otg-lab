@@ -1,0 +1,17 @@
+OTG! MAIN v8.0.113 — MY OTG! JOURNEY / RACING REPORTS + EVIL TILE TEXT
+
+1. MY OTG! JOURNEY now has an independent RACING REPORTS tile at the top. Reports do not clutter major moments.
+2. Sessions are assembled from timestamped saved Festival, Race Off and Custom Racing results in the active Space. 3 hours without a result ends one; midnight never splits them.
+3. A report shows result count, distinct cars, recorded driving time (sum of submitted race times, not real elapsed play time), completed events and cars driven. Record flags and improved repeat car/track times are reported conservatively.
+4. Optional FINISH SESSION ends the current report immediately; next new result begins a fresh session. This writes only a small timestamp boundary in the active Space, backed up with Space data. No result data modified.
+5. EVIL CAMPAIGN dashboard tile: NEXT line moved down/stacked clearly on phones.
+
+Limitations: Only saved entries with valid result timestamps and positive race times can be reconstructed. Drift scores without timed result timestamps are excluded. Reports are calculated when viewed, so no background notifications.
+
+Install: Extract ZIP over existing RaceHub folder. Make portable backup first. DO NOT RESET.
+PowerShell:
+git add .
+git commit -m "OTG! v8.0.113 - Racing Reports and Evil Tile Polish"
+git push origin main
+
+LIVE QA REQUIRED. Accepted baseline remains v8.0.112 until user passes.

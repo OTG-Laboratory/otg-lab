@@ -1,0 +1,7 @@
+OTG! v7.0.1 — Stage 1 Records Foundation
+
+- Track-first Records with layout grouping and inline record history.
+- Car History from Garage book button.
+- Car History includes Races Entered, Honours and Personal Bests.
+- Advanced Timing/lap results remain excluded from Track Records and PBs.
+- Existing racing data and storage schema are unchanged.

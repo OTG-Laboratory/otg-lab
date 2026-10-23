@@ -1,0 +1,13 @@
+RaceHub v5.7.10 — Dashboard LIVE v3
+
+Root cause fixed:
+Previous builds modified views.js renderHome(), but the production app uses
+studio-final.js rhRenderHome(). This build changes the actual live renderer.
+
+Dashboard:
+- no Settings cog
+- six equal compact tiles
+- Settings is tile six
+- approved logo
+- coloured identities
+- active Studio Final data/navigation preserved

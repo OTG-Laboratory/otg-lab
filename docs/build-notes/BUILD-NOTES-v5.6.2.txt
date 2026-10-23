@@ -1,0 +1,17 @@
+RACEHUB v5.6.2 — PHONE TEST BATCH 1 CORRECTIONS
+
+Baseline: v5.6.1 Studio Final Build
+
+Corrected from first live phone-test batch:
+- Splash logo centring.
+- Dashboard logo sizing.
+- Festival Favourite Manufacturer section visibility.
+- Large-Garage Championship Setup selection usability.
+- Garage manufacturer-filter overflow.
+- Duplicate Create Event empty-state action.
+- Records / Hall of Fame hierarchy.
+- Stats navigation violation.
+- About version mismatch.
+
+Known supplied-artwork limitation:
+The supplied Festival background itself contains baked-in RaceHub/RH branding. No unbranded Festival background exists in the supplied locked artwork pack. This build does not invent or substitute artwork; the source asset is therefore retained pending an authorised unbranded replacement.

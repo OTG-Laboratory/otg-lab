@@ -1,0 +1,15 @@
+RaceHub v5.7.55 — SAVED RACE PICKER FIX
+
+Root cause / correction:
+- v5.7.54 used a small inline dropdown treatment that was not reliably visible in the phone layouts.
+- Events also had a later-loaded locked UI renderer that replaced the Event round markup after the main controller loaded.
+- Saved race selection is now exposed as an explicit full-width CHOOSE SAVED RACE NAME button beneath every editable Round.
+- The loaded-last Event renderer is also updated, so both Championships and Events expose the same picker.
+- Existing saved race history is read immediately from completed/active Championship and Event round names in the current Space.
+- Existing v5.7.53 track-average and completion-flow changes are untouched.
+
+PHONE TEST:
+1. Championship Setup -> Add Round: CHOOSE SAVED RACE NAME must be visible directly under the Round.
+2. Tap it: existing names from racing history must be listed.
+3. Select one: it fills that Round.
+4. Repeat in Event setup.

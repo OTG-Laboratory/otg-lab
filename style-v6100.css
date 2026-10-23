@@ -1,0 +1,13 @@
+/* OTG! v6.0.100 catalogue polish on stable v6.0.97 base */
+.rhGT96CatActions,.rhGT97InlineActions{display:none!important}
+.rhCatalogueGarageCar span:last-child b{display:flex;align-items:center;gap:5px;flex-wrap:nowrap}
+.rhGT100InlineActions{display:inline-flex;align-items:center;gap:2px;margin-left:4px;vertical-align:middle;flex:0 0 auto}
+.rhGT100InlineActions button,.rhGT100MakeEdit{appearance:none;border:0!important;background:transparent!important;box-shadow:none!important;color:#58d3f0!important;padding:0 1px!important;margin:0!important;min-width:18px!important;min-height:18px!important;width:auto!important;height:auto!important;font-size:16px!important;line-height:1!important;font-weight:800!important}
+.rhCatalogueGarageV84 .rhGarageMakeHeadV1{display:flex!important;align-items:center!important}
+.rhCatalogueGarageV84 .rhGarageMakeHeadV1>b{margin-right:auto!important;min-width:0}
+.rhGT100MakeEdit{margin-left:8px!important;margin-right:8px!important;flex:0 0 auto!important;position:relative;z-index:3}
+.rhCatalogueGarageV84 .rhCatalogueMakeCount{margin-left:0!important;flex:0 0 auto}
+.rhCatalogueGarageV84 .rhGarageToolsV1 label{padding-right:8px!important;min-width:0!important}
+.rhCatalogueGarageV84 .rhGarageToolsV1 input{font-size:12.5px!important;letter-spacing:-.35px!important;min-width:0!important;width:100%!important;padding-left:16px!important;padding-right:0!important}
+.rhCatalogueGarageV84 .rhGarageToolsV1 input::placeholder{font-size:12.5px!important;letter-spacing:-.35px!important}
+.rhGT100MakeHint{display:block;margin-top:6px;color:#7f8d98;font-size:12px;line-height:1.25}

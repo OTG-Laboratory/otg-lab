@@ -1,0 +1,23 @@
+{
+  "lab_version": "0.1",
+  "base_version": "8.0.143",
+  "base_zip": "OTG-v8.0.143-LIFETIME-CAREER-HEADING-HOTFIX-QA.zip",
+  "base_sha256": "bcad848acfb8bdcaa4b65514c3ec7123431cb468fd53f4bde9ac2b2010c3fb92",
+  "original_files": 1890,
+  "unchanged_source_files": 1885,
+  "modified_source_files": [
+    "index-v8143.html",
+    "index.html",
+    "js/bootstrap-v8143.js",
+    "manifest.webmanifest",
+    "update-manifest.json"
+  ],
+  "new_files": [
+    "lab-shell-v1.css",
+    "otg-lab-worker-v1.js",
+    "LAB-SETUP-READ-FIRST.md"
+  ],
+  "originals_untouched_in_base": true,
+  "data_migrations": false,
+  "requires_distinct_web_origin": true
+}

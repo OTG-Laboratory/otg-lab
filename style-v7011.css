@@ -1,0 +1,18 @@
+/* OTG! v7.0.11 — balanced single-screen dashboard sizing + standard Journey back */
+.v7Dash{min-height:100svh;background:#01070a;color:#fff;overflow:hidden}
+.v7DashHero{height:28svh;min-height:210px;max-height:330px;position:relative;background:linear-gradient(180deg,rgba(0,5,9,.04) 0%,rgba(0,5,9,.08) 58%,rgba(0,6,10,.52) 86%,#01070a 100%),url('assets/final/dashboard-otg-neutral-v6056.png') center 43%/cover no-repeat}
+.v7DashWelcome{display:none!important}
+.v7DashLogo{position:absolute;width:min(47vw,285px);left:22px;top:max(18px,env(safe-area-inset-top));bottom:auto;transform:none;filter:drop-shadow(0 8px 14px rgba(0,0,0,.62))}
+.v7DashBody{padding:0 14px calc(10px + env(safe-area-inset-bottom))}
+.v7DashGrid{gap:10px}
+.v7DashTile{min-height:92px;padding:9px 11px;grid-template-columns:52px minmax(0,1fr) 16px;gap:9px;border-radius:18px}
+.v7DashTile.wide{min-height:110px;grid-template-columns:66px minmax(0,1fr) 20px;padding:10px 13px}
+.v7DashTile>i{width:48px;height:48px;border-radius:12px;font-size:30px}
+.v7DashTile.wide>i{width:62px;height:62px;font-size:38px}
+.v7DashTile>i svg{width:31px;height:31px}.v7DashTile.wide>i svg{width:39px;height:39px}
+.v7DashTile>span{gap:5px}.v7DashTile>span>b{font-size:16px}.v7DashTile.wide>span>b{font-size:24px}
+.v7DashTile>span>small{font-size:10.5px}.v7DashTile.wide>span>small{font-size:13px}.v7DashTile>em{font-size:28px}
+.v7DashFooter{gap:9px;margin:12px auto 0}.v7DashFooter b{font-size:22px}.v7DashFooter small{font-size:9px;margin-top:-5px}
+.v7Journey .v7JourneyHead button{padding:8px 13px!important;font-size:13px!important;border-radius:14px!important;min-height:0!important;line-height:1.1!important}
+@media(max-width:390px){.v7DashHero{height:27svh;min-height:190px}.v7DashLogo{width:min(48vw,230px);left:16px;top:max(14px,env(safe-area-inset-top))}.v7DashBody{padding-left:9px;padding-right:9px}.v7DashGrid{gap:8px}.v7DashTile{min-height:82px;grid-template-columns:45px minmax(0,1fr) 14px;padding:7px 8px}.v7DashTile.wide{min-height:98px;grid-template-columns:56px minmax(0,1fr) 17px;padding:9px 10px}.v7DashTile>i{width:42px;height:42px}.v7DashTile.wide>i{width:52px;height:52px}.v7DashTile>span>b{font-size:14px}.v7DashTile.wide>span>b{font-size:21px}.v7DashTile>span>small{font-size:9px}.v7DashTile.wide>span>small{font-size:11.5px}.v7DashFooter{margin-top:9px}}
+@media(max-height:780px){.v7DashHero{height:25svh;min-height:170px}.v7DashGrid{gap:6px}.v7DashTile{min-height:70px}.v7DashTile.wide{min-height:84px}.v7DashFooter{margin-top:5px}}

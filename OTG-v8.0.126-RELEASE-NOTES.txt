@@ -1,0 +1,29 @@
+OTG! v8.0.126 QA — RACING LEGENDS + HISTORIC MOMENTS
+
+Built directly upon v8.0.125, no tournament gameplay changes.
+
+WHAT IS NEW
+- RACING LEGENDS now opens a full linked Historic Moments archive. NEW CAR CAREERS top-five leaderboards show the most raced cars (official timed results) and most well-travelled (distinct recorded route/layout combinations) via the same read-only Garage Intelligence collector. Existing Arch-Rivals, Dynasty and Comeback calculations remain untouched.
+- Historic Moments also appears in MY OTG! JOURNEY, below Racing Reports. Buttons lead to Racing Legends, Closest Battles, and Racing Reports.
+- Read-only and CURRENT-SPACE-only. Moments are *derived* from existing racing data every time, not invented, awarded, or saved.
+- Search by car/rival/track/event, filter by category (battles, first titles, rivalries, verified comebacks, personal bests, Evil milestones), and tap WHY THIS MADE HISTORY for exact evidence and source. More pages load on demand.
+- Title: earliest existing completed multi-make timed championship won by each manufacturer in this Space, not a claim about games played outside OTG!.
+- Timed Battle: completed Festival championship first vs second within 2 seconds, or validated same-match Race Off/Swiss times within 1.5 seconds.
+- Rivalry: the existing Legends comparison unit is retained (Festival group meeting counted once across multiple routes).
+- Comeback: only existing Legends algorithms that verify full Festival or Swiss qualifying standings.
+- PB improvement: needs a previous older, dated result for the same car and identical named route/layout; no cross-route comparisons. Curation limited to 25 strongest verified changes.
+- Evil Campaign milestones: only actual saved DONE flags, including the famous Slot 13, first Swiss Slot 26 and later landmarks. No phantom celebrations or future awards.
+- Missing dates show DATE NOT RECORDED; no fictional chronology. Results with no timestamps cannot be used to claim historic PB changes.
+
+PRESERVATION: All four Spaces, Garage, 1,219 Evil Tournament visits (Slot 13 and Slot 26 unchanged), Swiss cups, Hubbs Memorial Finals Encore, TET After Dark styling, race results, records, medals, backups and report metadata are UNCHANGED. No calls to rhSave(), writes to localStorage or event creation in the new scripts. No migrations.
+
+PHONE QA
+1. Confirm version 8.0.126 and current Tournament progress is unchanged; no restore/reset.
+2. STATS → RACING LEGENDS → HISTORIC MOMENTS → BACK. Existing Legend foldouts and Back button still work.
+3. RECORDS → MY OTG! JOURNEY → HISTORIC MOMENTS; report tile and prior Journey cards still visible.
+4. Toggle Close Battles, Titles, PB, Evil Milestones filters; search a car and clear; tap WHY THIS MADE HISTORY.
+5. Use navigation to Closest Battles, Racing Reports and Racing Legends; revisit.
+6. Garage Intelligence features, Hubbs trophy, TET After Dark and tournament slot previews unchanged.
+7. Do live Festival Top 3 at Slot 13 and Swiss first/second racer at Slot 26 when reached.
+
+QA build only until mobile smoke tests pass. Previous formally accepted MAIN safety baseline v8.0.119.

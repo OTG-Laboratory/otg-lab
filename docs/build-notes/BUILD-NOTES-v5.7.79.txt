@@ -1,0 +1,7 @@
+RaceHub v5.7.79 — Touch Scroll Containment
+
+- Preserves the v5.7.78 stable in-place car selection behaviour.
+- Internal vertical list gestures are captured from touchstart through touchend.
+- Fast flings and boundary overscroll cannot transfer to the outer document.
+- Lightweight controlled inertia keeps fast list swipes usable.
+- No data, championship, selection, or navigation behaviour changed.

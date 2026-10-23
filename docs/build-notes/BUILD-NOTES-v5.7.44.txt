@@ -1,0 +1,5 @@
+RaceHub v5.7.44 — NEW ARTWORK INTEGRATION
+Built from v5.7.43 Final Visual Corrections.
+Changed only Records, Hall of Fame and Settings-family background artwork plus version/cache references.
+All v5.7.43 application behaviour and data code preserved.
+Records artwork includes the promised TV camera helicopter.

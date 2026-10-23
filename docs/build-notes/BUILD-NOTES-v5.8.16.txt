@@ -1,0 +1,7 @@
+RaceHub v5.8.16 — Emergency recovery
+
+- Restored the exact proven v5.8.10 application and race-end flow.
+- Removed all v5.8.11–v5.8.15 Final Standings experiments from the active build path.
+- Enter Result remains the locked working screen.
+- Version/update metadata and service-worker cache advanced to v5.8.16.
+- No new Final Standings artwork in this recovery build.

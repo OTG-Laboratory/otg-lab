@@ -1,0 +1,13 @@
+/* OTG! 8.0.137: competition awards on existing final results screens */
+.otgFinish8137{box-sizing:border-box;margin:16px 0;padding:14px 15px;border:1px solid rgba(55,210,235,.4);border-radius:16px;background:linear-gradient(145deg,#071a29,#030e17);color:#edfaff;text-align:left;max-width:100%}
+.otgFinish8137 h3{font-size:12px;letter-spacing:1.5px;font-weight:900;color:#56d6ed;margin:0 0 10px}
+.otgFinishRow8137{display:flex;align-items:flex-start;gap:11px;padding:8px 0;border-top:1px solid rgba(74,205,230,.18)}
+.otgFinishRow8137>span{min-width:23px;font-size:22px;line-height:1.3;flex:none}
+.otgFinishRow8137 b{display:block;font-size:12px;font-weight:800;line-height:1.4;letter-spacing:.15px;overflow-wrap:anywhere}
+.otgFinishRow8137 small{display:block;font-size:12px;color:#a8c8d4;line-height:1.45;overflow-wrap:anywhere}
+.otgFinishTrigger8137{position:absolute;z-index:31;top:65%;left:14%;right:14%;width:72%;min-height:2.9%;padding:6px 5px;border-radius:9px;border:1px solid #52d6ec;background:#071927;color:#b7f5ff;font-size:clamp(9px,2.4vw,15px);font-weight:900;letter-spacing:.4px;cursor:pointer;box-shadow:0 0 10px #00a9d133}
+.otgFinishPanel8137{position:absolute;z-index:36;left:6%;right:6%;top:19%;bottom:14%;overflow-y:auto;overscroll-behavior:contain;padding:12px 12px 16px;border:2px solid #48d1e8;border-radius:14px;background:rgba(1,9,16,.98);box-shadow:0 12px 28px #000}
+.otgFinishPanel8137[hidden]{display:none!important}
+.otgFinishPanel8137 .otgFinish8137{margin:40px 0 0}
+.otgFinishClose8137{position:absolute;top:8px;right:9px;border:1px solid #4cdeee;border-radius:7px;background:#112f3e;color:#eff;font-size:20px;width:34px;height:31px;cursor:pointer}
+@media(max-width:390px){.otgFinish8137{padding:11px 12px}.otgFinishRow8137{gap:8px}.otgFinishRow8137 b{font-size:11px}}

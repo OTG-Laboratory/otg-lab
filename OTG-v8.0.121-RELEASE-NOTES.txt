@@ -1,0 +1,20 @@
+OTG! v8.0.121 — SWISS RESTORATION QA (NOT ACCEPTED MAIN)
+
+Verified against the actual v8.0.120 source and 20 October portable backup.
+Source: 1,165 original specialist-first slots + live Favourite BMW Finals visits (5 Festival, 7 Race Off) = 1,177.
+Swiss visits in source: ZERO. Five new distinct Swiss Cups * seven visits = 35 additional visits; BMW live QA total 1,212.
+Only after original source slots >=25; source slots 1–25 unchanged; 10 completed slots remain keyed identically.
+Events: Classic Normal, 1990s Normal, 2000s Normal, 2010s Normal, Hypercar Normal Swiss Cups.
+Each: 16 NORMAL cars chosen randomly on first launch and saved in evilCampaignR18098.swissFields8121.
+4 independent Swiss rounds (16 results each), then KO quarter 8, semi 4, final 2, capped at 16 results per visit.
+Swiss pairings, standings, tie-breaks and results use existing native v8 Festival Swiss engine.
+Knockout track draw uses existing random bag; final is the protected finale.
+Original 230 events/1,177 visits remain present in order; existing Groups and other competitions unchanged.
+No modification to Portable Backup schema, localStorage keys or existing state; no user data is included in this ZIP.
+Every new Swiss advancement must go through the Evil R1 campaign; early advance controls are blocked.
+
+PHONE QA IS REQUIRED before calling this an accepted MAIN. DO NOT RESET OR RESTORE.
+Check: current slot and saved data; Slot 13 Festival Top 3 still works; first Swiss visit after original Slot 25;
+first/second racer result entry; end of a Swiss round STOP HERE; later Swiss visit resumes correct round;
+Top 8 cut, 3 knockout stages, champion, medals, Records, Home counters and app updater.
+Prefer leaving v8.0.120 uninstalled until Slot 13 test is completed; 8.0.119 remains accepted MAIN.

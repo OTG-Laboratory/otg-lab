@@ -1,0 +1,27 @@
+OTG! v8.0.125 QA — THE EVIL TOURNAMENT AFTER DARK + HUBBS MEMORIAL RETURNS
+
+The official name remains THE EVIL TOURNAMENT — Sponsored by Dave and Steves Lubrication Fluids.
+This is an Andy-only FH5 campaign look; it is NOT an app-wide theme or adult-content addition.
+
+WHAT CHANGED
+- AFTER DARK: rich black-cherry / plum velvet, magenta, champagne-gold and warm crimson accents. Racing-night illustration, existing sponsor/title, hero layout, progress, NEXT UP, and Hubbs trophy retained. One-tap AFTER DARK / ORIGINAL switch preserves the v8.0.124 appearance. Preference is device-local and changes no racing data. Reduced-motion accessibility supported.
+- HUBBS MEMORIAL TROPHY IS NOW REAL RACING: the retired Lonely Hearts idea reappears as three completely separate FESTIVAL divisions for the 45 manufacturers that had exactly one car in the frozen 697-car FH5 specialist audit.
+  * Road Outsiders: 28 NORMAL road cars; four groups of 7 over two random tracks (14 result entries each); Top 2 from each group reach an 8-car, two-route final (16 results). Five visits.
+  * Race Rebels: 5 dedicated RACE cars; two Road/Street rounds (10 results). One visit.
+  * Dirt Misfits: 12 OFF-ROAD/BUGGY cars; two Dirt/Cross Country rounds (24 results). One visit.
+  * No category mixing, no race cars on road-car normal courses, no off-road monsters on road finales. Specialist-first eligibility remains authoritative.
+- The Hubbs trophy exhibit shows the three divisional schedules and can jump to the scheduled visits. NO winner, result, medal or trophy is pre-awarded.
+- These are seven ADDITIVE FINAL-ENCORE visits, with three new distinct event IDs. BMW Favourite Manufacturer setup: old 1,212 slots remain numerically unchanged; Hubbs visits are 1,213–1,219. The first 1,212 slots match v8.0.124, byte-for-byte as logical records.
+
+DATA RULES
+Only the frozen in-memory source catalogue is extended, before the unchanged v8.0.121 R1 engine runs. No stored state is edited, imported, reset or overwritten. The original 1,165 base slot records and 228 base event IDs are retained. All four Spaces, Garage, racing results, records, Swiss Cups, historic rivalry reports, medals, and the user backup remain intact.
+
+PHONE QA
+1. Check Update; version 8.0.125 (if necessary check a second time). DO NOT RESET/RESTORE.
+2. Dashboard tile title and sponsor still fit on phone.
+3. Open The Evil Tournament: After Dark styling appears. Switch to ORIGINAL, check v8.0.124 look returns, and toggle BACK to After Dark. Slogan and sponsor visible.
+4. Progress still shows 10 done / 1219 (using 20 Oct backup), next Slot 0011. Legendary Slot 0013 is still 1990s Normal Championship. Swiss first at Slot 0026.
+5. Hubbs trophy -> VIEW RACE PROGRAMME: 3 divisions, 45 unique cars and 7 visits. View a future Hubbs slot without launching it.
+6. Inspect next race and Garage Intelligence: still work, no progress lost. Live Festival Top 3 at Slot 13 and Swiss at Slot 26 remain outstanding.
+
+IMPORTANT: This is QA, not accepted MAIN. Do not award the trophy from artwork alone; a division has to be raced to win. The existing last fully accepted MAIN was v8.0.119.

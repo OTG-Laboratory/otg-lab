@@ -1,0 +1,54 @@
+/* OTG! v6.0.26 — Stage 9D final League result-entry alignment.
+   Locked correction only: Position and Race Time boxes share the same top/bottom line,
+   while the segmented time digits are vertically centred inside the timer box. */
+.rhLeagueResultInputsV6021{
+  grid-template-columns:70px minmax(0,1fr);
+  align-items:start;
+}
+.rhLeagueResultInputsV6021>label:first-child input{
+  height:50px;
+  min-height:50px;
+  padding:8px 10px;
+  font-size:1rem;
+  text-align:center;
+}
+.rhLeagueRaceTimeLabelV6022 .rhLeagueDigitalTimeV6022{
+  position:relative;
+  top:0;
+  height:50px;
+  min-height:50px;
+  box-sizing:border-box;
+  margin:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.rhLeagueDigitalTimeV6022 .rhLeagueTimePartV6022{
+  height:100%;
+  display:block!important;
+}
+.rhLeagueDigitalTimeV6022 .rhLeagueSegDisplayV6022{
+  top:50%!important;
+  bottom:auto!important;
+  height:27px;
+  transform:translateY(-50%)!important;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.rhLeagueDigitalTimeV6022>i{
+  top:0;
+  align-self:center;
+}
+@media(max-width:420px){
+  .rhLeagueResultInputsV6021{grid-template-columns:70px minmax(0,1fr);align-items:start}
+  .rhLeagueRaceTimeLabelV6022 .rhLeagueDigitalTimeV6022{top:0;height:50px;min-height:50px}
+  .rhLeagueDigitalTimeV6022 .rhLeagueSegDisplayV6022{height:27px}
+}
+
+/* OTG! v6.0.27 — LOCKED one-fix correction.
+   No redraw. Lower ONLY the existing Race Time box 4px.
+   Position box stays fixed; segmented digits retain v6.0.26 vertical centring. */
+.rhLeagueRaceTimeLabelV6022 .rhLeagueDigitalTimeV6022 {
+  top:4px!important;
+}

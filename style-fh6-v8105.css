@@ -1,0 +1,39 @@
+/* OTG! 8.0.105 — FH6 specialist-first workshop; isolated to FH6 only. */
+.fh6PrepLaunch{display:flex;justify-content:space-between;gap:12px;align-items:center;border:1px solid #338e9e;border-radius:12px;background:#0a2b37;padding:14px;margin:0 0 15px;color:#d3f6ff}
+.fh6PrepLaunch b{color:#77e8f6;font-size:13px;letter-spacing:1px}
+.fh6PrepLaunch p{font-size:12px;line-height:1.4;color:#b7d5dc;margin:5px 0 0}
+.fh6PrepLaunch button,.fh6PrepLoad,.fh6PrepFooter button{flex:none;border:1px solid #39cddd;background:#09566a;border-radius:9px;color:#fff;font-weight:800;padding:11px;font-size:12px;min-height:44px;cursor:pointer}
+.fh6PrepPage{color:#e5f9ff;background:#07141d;min-height:100dvh;padding-bottom:calc(26px + env(safe-area-inset-bottom))}
+.fh6PrepHeader{display:flex;align-items:center;gap:12px;padding:18px 16px;background:linear-gradient(125deg,#0c2c39,#091821);border-bottom:1px solid #296778}
+.fh6PrepHeader>button{border:1px solid #3b8696;border-radius:9px;background:#0a2f3b;color:#ddfbff;font-size:30px;line-height:1;width:44px;height:46px;flex:none;cursor:pointer}
+.fh6PrepHeader small{color:#65d4e5;letter-spacing:1.5px;font-weight:800;font-size:10px}
+.fh6PrepHeader h1{font-size:20px;letter-spacing:1px;margin:3px 0}
+.fh6PrepHeader p{font-size:10px;letter-spacing:1.4px;color:#8dc6d1;margin:0}
+.fh6PrepBody{padding:14px;max-width:950px;margin:0 auto}
+.fh6PrepIntro{padding:15px;background:#0b2835;border-radius:12px;border:1px solid #3a8b9c}
+.fh6PrepIntro strong{font-size:25px;color:#79e8f2;display:block}
+.fh6PrepIntro p{font-size:12px;line-height:1.55;color:#c7e4ed;margin:6px 0 0}
+.fh6PrepGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}
+.fh6PrepTile{padding:12px 8px;border:1px solid #274d5a;background:#0b1d29;border-radius:10px;display:grid;gap:3px}
+.fh6PrepTile b{font-size:20px;color:#80e5ef}.fh6PrepTile small{font-size:10px;color:#d3f3fb;font-weight:750;overflow-wrap:anywhere}.fh6PrepTile span{font-size:9px;color:#8babb7}
+.fh6PrepTile.alert{border-color:#806441}.fh6PrepTile.alert b{color:#e9c58b}
+.fh6PrepRules{border:1px solid #286173;border-radius:10px;background:#0a2430;padding:12px;margin:12px 0}
+.fh6PrepRules summary{font-size:12px;font-weight:800;color:#88e9f0;cursor:pointer}
+.fh6PrepRules p{font-size:12px;line-height:1.65;color:#c7dfe5}
+.fh6PrepTools{display:grid;gap:8px;margin:17px 0 8px}.fh6PrepTools input,.fh6PrepTools select,.fh6PrepSelects select{box-sizing:border-box;width:100%;color:#ebfaff;background:#071821;border:1px solid #347185;border-radius:9px;min-height:45px;padding:8px 10px;font-size:13px}
+.fh6PrepFilters{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.fh6PrepMatch{font-size:11px;color:#93b8c2;margin:10px 0}
+.fh6PrepRows{display:grid;gap:10px}.fh6PrepRow{border:1px solid #2b5462;border-radius:12px;padding:13px;background:#0b1e29;overflow:hidden}
+.fh6PrepRowHead{display:flex;justify-content:space-between;align-items:start;gap:8px}.fh6PrepRowHead b{font-size:13px;line-height:1.35}
+.fh6PrepBadge{font-size:9px;font-weight:900;letter-spacing:.4px;border-radius:5px;padding:5px;flex:none;white-space:nowrap}.fh6PrepConfirmed{color:#adebd6;background:#17463c}.fh6PrepDraft{color:#ffd9a0;background:#503b23}
+.fh6PrepSub{margin:7px 0 10px;color:#93b7c4;font-size:11px;line-height:1.4}
+.fh6PrepSelects{display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+.fh6PrepSelects label{display:grid;gap:4px;font-size:10px;font-weight:800;letter-spacing:.6px;color:#8eddec}
+.fh6PrepSelects label[hidden]{display:none!important}
+.fh6PrepActions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.fh6PrepActions button{border-radius:8px;padding:11px;min-height:42px;font-size:11px;font-weight:850;cursor:pointer}
+.fh6PrepConfirm{border:1px solid #3cbece;background:#115a6b;color:#edfeff}.fh6PrepUndo{border:1px solid #8b6b5e;background:#37251f;color:#f6d8bd}
+.fh6PrepLoad{width:100%;margin-top:14px}.fh6PrepEmpty{padding:20px;text-align:center;color:#accbd2}
+.fh6PrepFooter{margin-top:17px;background:#221b17;border:1px solid #765a41;padding:15px;border-radius:12px;display:grid;gap:10px}
+.fh6PrepFooter b{color:#f4cf93;font-size:13px}.fh6PrepFooter p{font-size:12px;line-height:1.55;color:#dfd1bf;margin:0}
+@media(max-width:530px){.fh6PrepLaunch{display:grid}.fh6PrepLaunch button{width:100%}.fh6PrepGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.fh6PrepPage{font-size:13px}}

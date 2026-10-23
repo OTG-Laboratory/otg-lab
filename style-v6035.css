@@ -1,0 +1,16 @@
+/* OTG! v6.0.35 — Grand Tour Fix #5: Celebration Settings label/description spacing only. */
+.rhSettingPanel .rhToggle > span{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:5px;
+  min-width:0;
+}
+.rhSettingPanel .rhToggle > span > b,
+.rhSettingPanel .rhToggle > span > small{
+  display:block;
+  margin:0;
+}
+.rhSettingPanel .rhToggle > span > small{
+  line-height:1.35;
+}

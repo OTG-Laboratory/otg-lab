@@ -1,0 +1,20 @@
+OTG! v8.0.87 — MAIN ONLY
+
+BASELINE
+- Built directly from accepted Main v8.0.86.
+- Evil Campaign bridge unchanged.
+- Results / Corrections unchanged.
+- rh-guide untouched.
+
+LOCATION CLUE REWRITE
+- Rally Adventure: all 24 standard events + Horizon Badlands Goliath rewritten.
+- Rally colour cues: CYAN Apex Predators, ORANGE Horizon Raptors, PURPLE Grit Reapers, RED Goliath finale.
+- Rally clues now give broad map position (north/south/east/west/centre) and a nearby named region/landmark.
+- Hot Wheels: all 17 standard events + Hot Wheels Goliath audited/reworked.
+- Hot Wheels colour cues: BLUE Speed Racing, ORANGE Hazard Racing.
+- Hot Wheels clues now identify the relevant island/biome: Giant's Canyon, Forest Falls, Ice Cauldron or Horizon Nexus.
+- LOCATION category pills visually use the matching colour.
+- Track Directory search also matches colour/team/racing-family text.
+
+NO DATA MIGRATION
+- No saved races, championships, records, spaces, Garage data or campaign state are changed.

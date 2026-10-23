@@ -1,0 +1,8 @@
+RaceHub v5.6.10 — Cog & Help Final Alignment
+
+Scope only:
+- Settings cog glyph moved 4px lower inside its existing circular control.
+- Help ? glyphs moved 4px lower inside their existing circular controls.
+- Back arrow alignment from v5.6.9 is LOCKED and unchanged.
+- Dashboard hero/logo composition unchanged.
+- Events unchanged and remain phone-verified PASS.

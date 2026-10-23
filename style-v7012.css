@@ -1,0 +1,12 @@
+/* OTG! v7.0.12 — Race Setup load + dashboard final sizing + compact v7 back controls */
+.v7DashGrid{gap:11px}
+.v7DashTile{min-height:98px;padding:10px 12px;grid-template-columns:55px minmax(0,1fr) 17px;gap:10px}
+.v7DashTile.wide{min-height:116px;grid-template-columns:70px minmax(0,1fr) 21px;padding:11px 14px}
+.v7DashTile>i{width:51px;height:51px}.v7DashTile.wide>i{width:66px;height:66px}
+.v7DashTile>i svg{width:33px;height:33px}.v7DashTile.wide>i svg{width:42px;height:42px}
+.v7DashTile>span>b{font-size:17px}.v7DashTile.wide>span>b{font-size:25px}
+.v7DashTile>span>small{font-size:11px}.v7DashTile.wide>span>small{font-size:13.5px}
+.v7DashFooter{margin-top:13px}.v7DashFooter b{font-size:23px}.v7DashFooter small{font-size:9.5px}
+.v7SetupsHead button{padding:8px 13px!important;font-size:13px!important;border-radius:14px!important;min-height:0!important;line-height:1.1!important}
+@media(max-width:390px){.v7DashGrid{gap:9px}.v7DashTile{min-height:87px;grid-template-columns:48px minmax(0,1fr) 15px;padding:8px 9px}.v7DashTile.wide{min-height:103px;grid-template-columns:59px minmax(0,1fr) 18px;padding:9px 11px}.v7DashTile>i{width:45px;height:45px}.v7DashTile.wide>i{width:55px;height:55px}.v7DashTile>span>b{font-size:15px}.v7DashTile.wide>span>b{font-size:22px}.v7DashTile>span>small{font-size:9.5px}.v7DashTile.wide>span>small{font-size:12px}}
+@media(max-height:780px){.v7DashGrid{gap:7px}.v7DashTile{min-height:74px}.v7DashTile.wide{min-height:89px}.v7DashFooter{margin-top:6px}}

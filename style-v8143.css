@@ -1,0 +1,14 @@
+/* OTG! v8.0.143 — Lifetime Career heading visibility hotfix.
+   Legacy base CSS globally hides every <header> with !important. The v8.0.142
+   Lifetime Career section uses a semantic inner header which must opt back in.
+   Scoped strictly to Lifetime Career; no other page heading changes. */
+#more .otgLifetime8142 > header {
+  display: flex !important;
+  padding: 0 !important;
+  position: static !important;
+  background: none !important;
+  border: 0 !important;
+  text-align: left !important;
+  min-height: 0 !important;
+}
+#more .otgLifetime8142 > header > div { min-width: 0; }

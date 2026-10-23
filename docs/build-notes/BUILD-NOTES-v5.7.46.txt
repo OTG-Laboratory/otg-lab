@@ -1,0 +1,6 @@
+RaceHub v5.7.46 — FESTIVAL CHAMPIONSHIP REPAIR
+- Restored missing rhNextSlot() causing Festival/Era Continue to fail.
+- Replaced REMOVE ALL EXCLUDED with CLEAR ALL / SELECT ALL.
+- Corrected service-worker asset manifest/version.
+- Events untouched.
+- Existing data, Garage, frozen runs and 2-car eligibility preserved.

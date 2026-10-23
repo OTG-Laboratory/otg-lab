@@ -1,0 +1,16 @@
+RaceHub v5.7.27 — RECORDS + HALL OF FAME BACKGROUNDS
+
+Built from working v5.7.26.
+
+ONLY CHANGE:
+- Records approved background asset wired into Records hero.
+- Hall of Fame approved background asset wired into Hall of Fame hero.
+
+STRICT:
+- NO redraw.
+- NO crop.
+- NO zoom.
+- no UI/layout/functionality/data changes.
+- assets retained at complete native dimensions and displayed with contain.
+
+All v5.7.26 Records/Hall functionality and all earlier locked pages remain unchanged.

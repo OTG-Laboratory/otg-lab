@@ -1,0 +1,5 @@
+RaceHub v5.7.92 — Final Standings Complete Rebuild
+- Rebuilt the completed Championship Final Standings page from a clean renderer.
+- Matches the locked Official Results artwork structure: full header, metadata, framed timing board, internal scrolling, winner panel, paired actions and bottom navigation.
+- Removes all legacy podium-card and cropped/offset leaderboard layouts from completed-run routes.
+- Preserves Championship data, Hall of Fame, Continue and result flow.

@@ -1,0 +1,6 @@
+RaceHub v5.8.35 — Final Polish
+
+Locked changes only:
+- Current Standings: removed the top-left back arrow and shifted the heading left. Bottom Back to Championship retained.
+- Backup Management: added Delete to every backup card using the locked destructive confirmation dialog. Only the selected backup is deleted; RaceHub Spaces and racing data are unaffected. Deleting the final backup returns to No Saved Backups.
+- Version incremented to v5.8.35.

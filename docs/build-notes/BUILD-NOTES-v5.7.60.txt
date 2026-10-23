@@ -1,0 +1,8 @@
+RaceHub v5.7.60 — Championship Festival navigation + Result Summary compaction
+
+- Current tested baseline: v5.7.59.
+- Replaces the remaining live Championship overview/back call to undefined rhFestival() with rhRenderFestival().
+- Audited completed Championship final-board Return to Festival: shared path remains rhRenderFestival() for Festival, Manufacturer, Era and Favourite Manufacturer.
+- Compacts record celebration on Championship Result Summary for phone: Hubs + congratulations are grouped rather than leaving excessive vertical blank space.
+- Restyles Championship Progress within Result Summary so label/name/completion data no longer collide on narrow phones.
+- No racing data, result calculation, track-average, Event flow, completion or leaderboard logic changed.

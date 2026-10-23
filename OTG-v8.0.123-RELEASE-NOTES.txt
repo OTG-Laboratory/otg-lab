@@ -1,0 +1,26 @@
+OTG! v8.0.123 — EVIL TOURNAMENT NAMING RIGHTS / HUBBS MEMORIAL TROPHY (PHONE QA)
+
+SOURCE: Built DIRECTLY ON v8.0.122 Garage Intelligence QA.
+CAMPAIGN OFFICIAL PUBLIC-FACING NAME: The Evil Tournament — sponsored by Dave and Steves Lubrication Fluids.
+
+WHAT CHANGED (VISUAL ONLY)
+- FH5 dashboard Evil Campaign tile is now THE EVIL TOURNAMENT with full sponsor line, progress and NEXT slot preserved.
+- Entering the tournament shows a dedicated responsive hero: original branded graphic, full title sponsorship and OTG! slogan.
+- New Hubbs Memorial Trophy: original gold/cyan heart cup vector artwork, memorial card immediately under NEXT UP, full-sized trophy exhibit reachable by VIEW THE TROPHY and a working BACK button.
+- All imagery lives in reusable SVG assets. No external downloads/network/CDNs. Cache-pinned for offline phone app.
+
+IMPORTANT DISCOVERY
+The historic Lonely Hearts Cup was part of an OLD, retired Evil playlist. The live 1,212-slot specialist-first Evil R1 schedule from v8.0.122 contains NO separate Lonely Hearts competition. Hence the new title/trophy appear in the live campaign as a memorial trophy *design and exhibit*, NOT an invented new event or awarded trophy. Adding a competition and assigning its entrants/slots would require a separate, explicit campaign change. Nothing has been falsely reported as earned.
+
+DATA SECURITY
+No existing JS gameplay assets or source JSON changed. Existing R1 identifiers, exact 1,212 slots, medals, Swiss (first at Slot 26), result entry, 4 Spaces, Garage inventory, saved events, Records and backups are unchanged. Version assets were pinned; keep mobile storage, DO NOT RESET or restore.
+
+PHONE QA
+1) Home -> see THE EVIL TOURNAMENT title and sponsorship; completion/NEXT unchanged.
+2) Open tile -> dedicated hero appears with full sponsor; controls and NEXT UP remain.
+3) Find Hubbs Memorial Trophy just under NEXT UP. VIEW THE TROPHY -> large gold/cyan cup; BACK -> campaign.
+4) Check the original campaign still reads 1,212 slots, Slot 13 and first Swiss at Slot 26.
+5) Visit Garage -> Car Comparison, Finder, Forgotten Cars still present.
+6) Complete v8.0.122 live Festival Top 3 and Swiss tests when encountered.
+
+STATUS: QA ONLY. v8.0.119 remains last fully accepted MAIN.

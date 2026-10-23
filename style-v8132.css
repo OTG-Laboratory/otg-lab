@@ -1,0 +1,33 @@
+/* OTG! v8.0.132 — Tournament HISTORY = exact Garage history icon. */
+/* v7HistoryBtn supplies the original 38×38 cyan square, glyph and surface. */
+.otgDrawHistory8131.v7HistoryBtn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: middle !important;
+  width: 38px !important;
+  min-width: 38px !important;
+  max-width: 38px !important;
+  height: 38px !important;
+  min-height: 38px !important;
+  max-height: 38px !important;
+  flex: 0 0 38px !important;
+  margin: 2px 0 2px 6px !important;
+  padding: 0 !important;
+  letter-spacing: normal !important;
+  font-size: 18px !important;
+  line-height: 1 !important;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+/* The legacy lineup rule used display:table; keep these icons inline instead. */
+.rhLineupRowV1 .otgDrawHistory8131.v7HistoryBtn,
+.rhRaceOffDrawMatchV6118 .otgDrawHistory8131.v7HistoryBtn {
+  display: inline-flex !important;
+  margin: 2px 0 2px 6px !important;
+  font-size: 18px !important;
+}
+.otgDrawHistory8131.v7HistoryBtn:focus-visible {
+  outline: 2px solid #ffd67c;
+  outline-offset: 2px;
+}

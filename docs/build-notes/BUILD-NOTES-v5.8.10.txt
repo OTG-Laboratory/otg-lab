@@ -1,0 +1,8 @@
+RaceHub v5.8.10
+- Added one authoritative race-end flow loaded last.
+- Result Saved now always opens the podium Result Summary.
+- Result Summary uses current partial classification with the latest car highlighted.
+- Final Standings resolves names from the current Space car list instead of unavailable window.carById.
+- Championship and Event completion routes use the same final standings renderer.
+- Build notes moved into docs/build-notes.
+- Enter Result artwork/layout remains untouched.

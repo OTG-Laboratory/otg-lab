@@ -1,0 +1,32 @@
+OTG! v8.0.98 — FH5 EVIL SPECIALIST R1 PLAYABLE QA
+2026-10-14
+
+PURPOSE
+Promotes the accepted v8.0.97 Specialist-First R1 preview to a playable QA campaign while preserving the existing Legacy 708 campaign/state.
+
+R1 PLAYABLE ENGINE
+- Separate R1 state key: evilCampaignR18098
+- Campaign ID: evil-specialist-r1-20261014
+- Exact frozen eligible-car IDs from the accepted 697-car R1 master
+- 1,165 campaign slots / 228 event cards
+- Standard Festival: exact field + persistent random-track bag
+- Groups Festival: exact field + 2-track stage programme; Final uses random + protected finale
+- Race Off: exact frozen field; persistent bracket; existing Race Off result flow
+- Drag: Festival-only temporary loadout; one fixed-round run
+- Drift Festival: random Drift Zones, higher score wins, persistent scores
+- Drift Race Off: same random Drift Zone for both cars in each pairing; higher score advances; ties rerun both cars on the same zone
+- Slot DONE is gated by the required cumulative workload actually banked
+- Multi-visit events continue the same saved run/bracket/score event rather than starting again
+
+SAFETY
+- Legacy campaign state (evilCampaign8076) is read only for display and is not migrated/deleted by R1.
+- Installing v8.0.98 does not automatically reset any campaign data.
+- R1 state is cleared only when the user explicitly confirms Reset Racing Data / Full Reset.
+- v8.0.96 portable backup remains installed.
+- rh-guide untouched.
+
+KNOWN QA LIMITATION
+- Drift score results live in the R1 campaign state. The older timed-result Car History framework does not yet present Drift Zone score history.
+
+LIVE QA START
+Open EVIL CAMPAIGN -> Slot 0001. R1 should show PLAYABLE QA • v8.0.98 and the exact field. Do not manually reset Legacy 708.

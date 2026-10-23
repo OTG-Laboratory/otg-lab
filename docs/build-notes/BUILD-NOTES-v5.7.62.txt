@@ -1,0 +1,11 @@
+RaceHub v5.7.62 — CHAMPIONSHIP ACTION COLOUR POLISH
+
+Built from tested v5.7.61 checkpoint.
+
+Surgical visual-only change:
+- SAVE & START: brighter green with stronger border/glow.
+- SAVE & BACK: brighter amber/orange with stronger border/glow.
+- CANCEL & BACK: brighter destructive red with stronger border/glow.
+- Disabled SAVE & START behaviour remains unchanged.
+
+No Championship logic, Event flow, data behaviour, navigation, or other UI changed.

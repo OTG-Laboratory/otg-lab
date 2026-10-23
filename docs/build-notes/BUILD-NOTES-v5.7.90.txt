@@ -1,0 +1,7 @@
+RaceHub v5.7.90 — RESULT SUMMARY / FINAL STANDINGS FLOW REPAIR
+
+- Removed the transient Official Results board from every Result Summary screen.
+- Prevented the board boot animation from flashing in the empty summary area.
+- Final Standings now resets to the top before and after rendering, preventing inherited scroll/cropped presentation.
+- Preserved the locked Official Results board, winner panel, internal scrolling and actions.
+- Settings remains the authoritative installed-version display.

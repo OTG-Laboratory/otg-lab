@@ -1,0 +1,37 @@
+OTG! v8.0.62 — LIVE QA CHECKLIST
+
+THIS BUILD IS PROVISIONAL UNTIL LIVE TESTED.
+
+1. UPDATE GATE
+   - From installed v8.0.61, opening the deployed v8.0.62 must show OTG! UPDATE AVAILABLE.
+   - UPDATE NOW must create/verify a Safety Backup before installing.
+   - After reload, splash/version must show v8.0.62.
+
+2. HENNESSEY
+   - Garage / Manufacturer lists should show one Hennessey entry containing all five currently owned Hennessey cars (assuming ownership has not changed).
+
+3. PICKUPS & 4x4's
+   - The `Pickups & 4x4's Championship` card must open setup normally.
+
+4. SWISS ABANDON
+   - Open an active Festival Swiss and Custom Racing Swiss screen.
+   - Danger Zone / ABANDON must be available, including after entering the Swiss knockout continuation.
+
+5. LONELY HEARTS
+   - Festival should show LONELY HEARTS CUP when at least two one-car manufacturers are eligible.
+   - Race Off should show LONELY HEARTS RACE OFF.
+   - With the frozen 693-car Garage used to create the playlist, expected starting eligibility was 44 makes; this can legitimately differ if ownership has changed.
+   - Festival should choose normal format by entrant count; Race Off should use knockout.
+
+6. HALL OF FAME
+   - Completed Slot 3 GMC Race Off should appear in Hall of Fame with its champion and aggregate winning time.
+
+7. MULTIPLE ACTIVE RACE OFFS
+   - With All Cars Race Off parked, start another Race Off.
+   - Race Off landing must show BOTH active tournaments with separate Continue actions.
+   - Returning to either must preserve its existing draw/bracket/results.
+
+8. REGRESSION WATCH
+   - Result Summary average remains same Championship/Event + same round/course only.
+   - Record celebration top-right artifact stays gone.
+   - Existing Festival / Race Off setup previews and progression remain intact.

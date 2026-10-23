@@ -1,0 +1,11 @@
+RaceHub v5.7.50 — RACE NIGHT FOLLOW-UP
+
+Confirmed phone-test corrections from v5.7.49:
+- Records Championship/Event group headers now show status only: ACTIVE / COMPLETED / NOT STARTED. Result counts removed.
+- Removed the redundant shared Championship Setup freeze/explanation block containing START CHAMPIONSHIP text.
+  The real Start Championship action remains unchanged.
+- Added RENAME MANUFACTURER control inside each expanded Garage manufacturer group.
+- Manufacturer rename updates all Garage cars, Favourite Manufacturer, and Manufacturer/Favourite Championship run names/values in the current Space.
+- Existing pull-to-refresh suppression from v5.7.49 preserved.
+- Average-time repair remains in place and still requires a genuine race result to verify.
+- PWA icon code is unchanged from v5.7.49; installed icon requires reinstall/shortcut refresh to verify.

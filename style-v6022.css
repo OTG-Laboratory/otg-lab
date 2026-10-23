@@ -1,0 +1,11 @@
+/* OTG! v6.0.22 — Stage 9C mini digital League race-time correction. */
+.rhLeagueResultInputsV6021{grid-template-columns:92px minmax(0,1fr);align-items:end}
+.rhLeagueRaceTimeLabelV6022{min-width:0}
+.rhLeagueDigitalTimeV6022{display:flex;align-items:center;justify-content:center;gap:3px;min-width:0;height:48px;padding:0 8px;border:1px solid rgba(43,224,250,.34);border-radius:11px;background:linear-gradient(180deg,rgba(3,16,21,.95),rgba(1,8,12,.98));box-shadow:inset 0 0 0 3px rgba(255,255,255,.025),inset 0 0 16px rgba(43,224,250,.035)}
+.rhLeagueDigitalTimeV6022>i{position:relative;top:2px;color:#57cbd8;font-size:15px;font-style:normal;font-weight:900;line-height:1}
+.rhLeagueTimePartV6022{position:relative!important;display:block!important;width:38px;height:30px;min-width:0}
+.rhLeagueTimePartV6022.ms{width:55px}
+.rhLeagueSegDisplayV6022{pointer-events:none;position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:1px;height:30px;font-size:23px;transform:translateY(-2px)}
+.rhLeagueTimePartV6022 input{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;box-sizing:border-box!important;padding:0!important;border:0!important;background:transparent!important;color:transparent!important;caret-color:#7cf3ff!important;outline:0!important;opacity:.02!important;font-size:16px!important}
+.rhLeagueTimePartV6022:focus-within .rhSegDigit span.on{background:#7cf3ff;box-shadow:0 0 .16em #22eaff,0 0 .4em rgba(34,234,255,.72)}
+@media(max-width:420px){.rhLeagueResultInputsV6021{grid-template-columns:82px minmax(0,1fr);gap:8px}.rhLeagueDigitalTimeV6022{height:46px;padding:0 5px;gap:2px}.rhLeagueTimePartV6022{width:32px;height:27px}.rhLeagueTimePartV6022.ms{width:47px}.rhLeagueSegDisplayV6022{height:27px;font-size:20px}.rhLeagueDigitalTimeV6022>i{font-size:13px}}

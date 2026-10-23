@@ -1,0 +1,21 @@
+OUT THE GARAGE! — 8.0.124 SPONSOR TILE / TOURNAMENT HERO QA
+
+BRIEF: Dave and Steves Lubrication Fluids have rejected the cramped title-sponsorship tile, and correctly demanded a PROPER HERO on the Tournament entrance. The beloved Hubbs Memorial Trophy must not change.
+
+CHANGED
+1. Dashboard Evil Tournament tile: hard line wrapping and smaller adaptive sizing ensure "THE EVIL TOURNAMENT" is fully legible in the two-column phone grid. The full "DAVE AND STEVES LUBRICATION FLUIDS" name is on TWO lines, with sponsorship attribution. Progress and NEXT slot remain intact. No overlap/ellipsis expected on supported phone widths.
+2. Tournament landing page: a REAL self-contained, custom SVG racing-arena illustration (floodlit chequered flags and a neon-lit racing car), followed by an oversized THE EVIL TOURNAMENT masthead, distinct title-sponsor plaque and "YOUR HARDEST OPPONENT IS YOU." Easy to see immediately after opening the tile, BEFORE progress cards. Not simply a tinted text header.
+3. The new hero renderer has a scoped fallback for older campaign render flows and avoids slot-detail/record headings. The original 8.0.123 sponsor/trophy files remain installed and functional.
+
+PRESERVATION
+No racing engine files or stored app data were edited. No resets or restore. 1,212 Evil R1 slots and their IDs (first Swiss at Slot 26), Garage Intelligence, Race Off, records, medals, racing reports, Garage, 4 Spaces, owned cars, results and Hubbs Trophy retained. v8.0.119 remains last fully accepted MAIN. 8.0.124 is QA until phone passes.
+
+PHONE QA
+1. Reload/update and confirm v8.0.124 (second update check if needed).
+2. On Dashboard, both "THE EVIL TOURNAMENT" and all of "DAVE AND STEVES LUBRICATION FLUIDS" are visible, with progress and NEXT slot still present. No clipped text.
+3. Tap tile: the very TOP of the opened Tournament shows a large racing-night illustration, bold event name, sponsor plaque and YOUR HARDEST OPPONENT IS YOU, BEFORE R1 PROGRESS.
+4. Scroll: Hubbs Memorial Trophy remains intact; VIEW THE TROPHY and BACK work.
+5. Slots unchanged: existing progress, NEXT UP, 1,212 total, Swiss Slot 26, Car Comparison/Finder/Forgotten Cars.
+6. Later: Festival Top 3 at Slot 13 and actual Swiss race flow at Slot 26 remain pending.
+
+INSTALL: Extract files into existing OTG! repo; use the 3 in-chat git commands. Do not reset anything.

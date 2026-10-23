@@ -1,0 +1,2 @@
+RaceHub v5.7.5 — Home visual-only checkpoint
+Built directly from v5.7.3. Home structure, controls, order, navigation and data behaviour unchanged. Surface treatment only.

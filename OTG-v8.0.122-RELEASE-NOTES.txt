@@ -1,0 +1,17 @@
+OTG! v8.0.122 — GARAGE INTELLIGENCE (PHONE QA)
+
+BUILT FROM v8.0.121 SWISS RESTORATION QA ZIP; INCLUDES ALL v8.0.121 FEATURES.
+DO NOT RESET, RESTORE, OR ERASE APP STORAGE TO INSTALL. Main accepted safety baseline remains v8.0.119.
+
+Three NEW tiles at top of GARAGE:
+- FORGOTTEN CARS: lists owned cars with no saved timed results, then those with old timestamped results; configurable 30/60/90/180 days. "Never recorded" does not mean never driven in the actual game.
+- SMART CAR FINDER: search, make, class/type, decade, racing activity filters, and random draw from matching owned cars. Never draws unowned catalogue entries; never sets up or runs a race.
+- CAR COMPARISON: pick two owned cars; show saved timed result count, distinct recorded routes, latest race and per-car PBs on ONLY identical named tracks/layouts. No comparing unrelated routes, PI/performance estimates or made-up car ratings.
+
+Both the read-only analyser and UI query currently active Space only (FH5, GT7, FH6 or manual Spaces). Spaces with zero recorded results get truthful empty states. Drift Zone score data excluded because this is a timed-result feature.
+
+Versions: new pinned index-v8122, bootstrap, updater and worker. Fixed root index version metadata, preserved earlier version-pinned archives, and added cache-busted Garage Intelligence script + CSS. No localStorage schema, campaign definition or backups altered. The 1,212-slot Swiss schedule and first Swiss at Slot 26 are unchanged.
+
+QA CHECK ON PHONE: Open Garage and verify three new tiles and back controls. Test a filtered random pick, compare different track data, try empty FH6 Space, return to Evil Campaign and check Slot 13/26 and 1,212 slot count. More in-browser tests are performed by build script but these are not a substitute for real-phone acceptance.
+
+STATUS: NOT ACCEPTED MAIN. Preserve export from 20 October and make a fresh Portable Backup before testing.

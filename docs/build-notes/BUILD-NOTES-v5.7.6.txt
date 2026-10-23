@@ -1,0 +1,23 @@
+RaceHub v5.7.6 — RH-UI-017 DASHBOARD LOCKED PRODUCTION
+
+BASELINE
+- Directly based on RaceHub v5.7.5 HOME VISUAL-ONLY CHECKPOINT.
+- All non-Dashboard systems retained unchanged.
+
+DASHBOARD — LOCKED
+- Portrait phone-first, no horizontal scrolling.
+- Approved dark wet racetrack background.
+- WELCOME TO + current RaceHub Space name.
+- Settings only at top-right; Dashboard Hubs button removed by Studio approval.
+- Exact approved racehub-logo.png centred; no generated/substitute logo.
+- 2x2 Festival / Events / Garage / Records tiles.
+- Full-width Stats tile.
+- Dashboard Championship-in-Progress panel removed by Studio approval. Active racing remains available through Festival/Events.
+- No footer/stat clutter.
+
+FUNCTIONALITY
+- Existing destination functions retained.
+- No Garage, Festival, Events, Records, Stats, Settings, Spaces, backup/restore, reset or data-model behaviour rewritten.
+
+VERSION
+- Visible app version and service-worker cache incremented to 5.7.6.

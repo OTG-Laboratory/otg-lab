@@ -1,0 +1,11 @@
+RaceHub v5.8.05 — Version Authority Sync
+
+Baseline: v5.8.04 Result Summary Podium Checkpoint.
+
+Changes only:
+- Synced HTML release metadata to 5.8.05.
+- Synced Settings installed/latest version authority to 5.8.05.
+- Synced active RaceHub build constant to 5.8.05.
+- Added fresh v5.8.05 service worker and cache key.
+- Updated active asset query versions so the phone can verify the deployed build.
+- No screen layout, artwork, racing logic, data behaviour or navigation changes.

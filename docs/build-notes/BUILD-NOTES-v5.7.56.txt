@@ -1,0 +1,30 @@
+RaceHub v5.7.56 — RESULT SUMMARY + EVENT NAV REPAIR
+
+Targeted fixes only:
+
+RESULT SUMMARY
+- TRACK AVERAGE is now the running average of all EARLIER results for the same Round/track inside the current Championship/Event.
+- Current result is excluded from the benchmark.
+- Second car on the same track therefore compares against the first; third compares against first two, etc.
+- Championship Result Summary no longer shows whole-run result slots such as 13 / 4050.
+- It now shows current-car progress: X OF Y ROUNDS COMPLETE + percentage/progress bar.
+- Event Result Summary uses the same current-car round-progress principle.
+
+EVENTS
+- Fixed active Event renderer typo that caused Event detail rendering to fail.
+- START EVENT now returns into the dedicated Event screen after the start milestone.
+- Events-screen CONTINUE/open now uses the dedicated Event screen instead of overwriting the Events listing.
+- Existing Event data and frozen racers/rounds are preserved.
+- Existing RETURN TO EVENT car-complete flow remains intact.
+
+PRESERVED
+- Saved Race Name picker from v5.7.55.
+- Passed Championship car-complete / RETURN TO CHAMPIONSHIP behaviour.
+- Championship discovery, manufacturer rename, pull-to-refresh prevention and existing user data format.
+
+PHONE TEST
+1. Event: create -> choose racers/rounds -> START EVENT. It must open the active Event.
+2. Return to Events -> CONTINUE. It must reopen the active Event.
+3. Record the same track for two different cars. Result 2 must show TRACK AVERAGE based on result 1.
+4. Championship Result Summary must show current car X OF Y ROUNDS COMPLETE, never X / total results.
+5. Complete an Event car to confirm RETURN TO EVENT.

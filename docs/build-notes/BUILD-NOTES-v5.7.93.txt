@@ -1,0 +1,6 @@
+RaceHub v5.7.93
+- Final Standings moved into a fully isolated full-screen root.
+- Enter Result and Result Summary can no longer remain visible beneath it.
+- Timing board height now matches the number of classified cars up to eight rows.
+- Internal scrolling is enabled only when more than eight results exist.
+- Winner panel, actions and navigation use normal page flow.

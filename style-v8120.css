@@ -1,0 +1,20 @@
+/* v8.0.120 — Entry-only course record beside LOCATION, current-round pace below. */
+.rh5801Entry .rh120Actions{display:flex;align-items:stretch;gap:12px;margin-top:10px;min-width:0}
+.rh5801Entry .rh120Actions>.rhTrackLocationBtn8073{flex:0 0 auto;max-width:53%;min-width:0;margin:0!important;min-height:49px;padding:10px 12px;font-size:clamp(.86rem,3.6vw,1.05rem)}
+.rh5801Entry .rh120Record{flex:1;min-width:0;border:1px solid rgba(102,199,231,.32);border-radius:12px;background:rgba(5,25,35,.8);padding:9px 12px;display:flex;flex-direction:column;justify-content:center;text-align:right}
+.rh5801Entry .rh120Record small{font-size:clamp(.65rem,2.65vw,.8rem);letter-spacing:.04em;color:#72c8dd;font-weight:800;white-space:nowrap}
+.rh5801Entry .rh120Record strong{font-weight:850;color:#fff;font-size:clamp(.91rem,3.6vw,1.26rem);font-variant-numeric:tabular-nums;white-space:nowrap}
+.rh5801Entry .rh120Pace{margin:9px 4.5% 2px;padding:13px 15px 12px;border-radius:17px;border:1px solid rgba(85,191,226,.34);background:linear-gradient(125deg,rgba(3,15,26,.97),rgba(4,23,37,.96));box-shadow:0 2px 22px rgba(3,24,33,.16);min-width:0}
+.rh120PaceHead{display:flex;flex-wrap:wrap;justify-content:space-between;gap:5px 11px;align-items:baseline;margin-bottom:7px}
+.rh5801Entry .rh120Pace small{color:#6ac5dd;font-size:.81rem;font-weight:850;letter-spacing:.045em}
+.rh120PaceHead em{color:#819caa;font-size:.67rem;font-style:normal;font-weight:750;letter-spacing:.035em}
+.rh120PaceRow{display:flex;align-items:center;gap:10px;min-width:0;padding:6px 0;border-top:1px solid rgba(105,173,197,.15)}
+.rh120PaceRow .rh120Rank{width:25px;flex:0 0 25px;text-align:center;font-size:1.1rem}
+.rh120PaceRow .rh120Car{flex:1;min-width:0;color:#dcecf1;font-size:.89rem;line-height:1.24;overflow-wrap:anywhere}
+.rh120PaceRow strong,.rh120PairRow strong{color:white;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:850;font-size:clamp(.84rem,3.1vw,.99rem)}
+.rh5801Entry .rh120Pace p{margin:8px 0 0;color:#c3d8e0;text-align:center;font-weight:750;font-size:.86rem}
+.rh120PairRow{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:10px}
+.rh120PairRow span{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.rh120PairRow b{color:#dfedf4;overflow-wrap:anywhere;font-weight:780;font-size:.91rem}
+.rh120PairRow em{font-style:normal;color:#83bfd0;font-size:.68rem;font-weight:800;letter-spacing:.07em}
+@media(max-width:360px){.rh5801Entry .rh120Actions{gap:7px}.rh5801Entry .rh120Record{padding:7px}.rh5801Entry .rh120Pace{padding:11px}.rh120PaceRow{gap:5px}}

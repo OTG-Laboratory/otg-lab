@@ -1,0 +1,9 @@
+RaceHub v5.7.58 — Championship Final Leaderboard Routing Repair
+
+Baseline: v5.7.57 tested checkpoint.
+
+Repair only:
+- Fixed the shared completed-Championship final leaderboard renderer throwing a ReferenceError from Event-only variables (completedCars/eventCars).
+- Championship Complete → VIEW FINAL LEADERBOARD now renders the actual final classification and RETURN TO FESTIVAL for Festival, Manufacturer, Era and Favourite Manufacturer runs.
+- Preserved all v5.7.57 Event flow, result flow, track-average, Records history and completed-item behaviour unchanged.
+- No visual redesign or unrelated polish changes.

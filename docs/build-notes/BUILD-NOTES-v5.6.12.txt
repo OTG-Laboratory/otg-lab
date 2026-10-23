@@ -1,0 +1,8 @@
+RaceHub v5.6.12 — Stats Cockpit Checkpoint
+
+- Restores the approved clean wet-night cockpit/pit-lane Stats artwork.
+- Keeps the locked four Stats metrics only: Total Races, Championships Created, Championships Completed, Time Driven.
+- Stats now count recorded races/time from both Championships and user-created Events in the current RaceHub Space.
+- No RPM, fuel, temperature, redline, manufacturer ranking or gamification stats.
+- No Settings content button on Stats.
+- No changes to phone-verified Events, Garage, Records/Hall of Fame or Dashboard behaviour.

@@ -1,0 +1,5 @@
+{
+  "version": "8.0.143",
+  "worker": "./otg-service-worker-v8143.js",
+  "message": "OTG! v8.0.143 — Lifetime Career heading visibility hotfix; all racing data and calculations unchanged."
+}

@@ -1,0 +1,16 @@
+/* OTG! v8.0.6 — Groups identity, compact Back and danger-zone spacing. */
+.v8GroupTopRow{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px;
+}
+.v8GroupVisibleBack{
+  display:inline-flex!important;align-items:center;justify-content:center;
+  min-height:40px!important;height:40px!important;padding:0 14px!important;margin:0!important;
+  border:1px solid rgba(55,196,235,.52)!important;border-radius:999px!important;
+  background:rgba(2,13,19,.9)!important;color:#fff!important;font-weight:900!important;
+  letter-spacing:.06em!important;font-size:13px!important;line-height:1!important;width:auto!important;max-width:max-content!important;
+}
+.v8GroupIdentity{
+  color:#59cbe8;font-weight:900;letter-spacing:.12em;font-size:13px;text-transform:uppercase;
+}
+.v8Reveal>.v8GroupIdentity{margin:0 0 10px}
+.v8GroupAbandon{margin-top:22px}

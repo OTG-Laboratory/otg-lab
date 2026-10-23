@@ -1,0 +1,5 @@
+/* OTG! v6.0.31 — Favourite Manufacturer setup page-height correction only.
+   Favourite setup must end with its real content, matching the other Championship setup variants. */
+#festival:has(.rhFavouriteSetupV6031){min-height:100dvh!important;height:auto!important;}
+.rhFavouriteSetupV6031{min-height:100dvh!important;height:auto!important;}
+.rhFavouriteSetupV6031 .rhSetupBodyV1{min-height:0!important;height:auto!important;}

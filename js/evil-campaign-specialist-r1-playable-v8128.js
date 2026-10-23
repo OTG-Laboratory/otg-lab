@@ -1,0 +1,727 @@
+/* OTG! v8.0.111 — R1 slot finish line, descriptive NEXT UP, two Olympic medal tables.
+   - R1 is the live Evil Campaign; the Legacy 708 UI is retired in this build.
+   - Exact frozen entrant IDs from the accepted R1 manifest.
+   - Standard/Groups Festival, Race Off, Drag, Drift Festival and Drift Race Off are playable.
+   - Slot completion is explicit and is gated by the workload actually completed.
+*/
+(()=>{
+'use strict';
+const VERSION='8.0.128';
+const FH5_KEY='fh5-catalogue-v1';
+const STATE_KEY='evilCampaignR18098';
+const CAMPAIGN_ID='evil-specialist-r1-20261014';
+const TYPE='evil-r1';
+const DATA=()=>window.rhEvilSpecialistR18097||{meta:{slots:0,ecosystemCounts:{}},events:{},slots:[],cars:[],setupGuide:[],rules:[],audit:{}};
+const LEGACY_OPEN=window.rhOpenEvilCampaign8076;
+const E=v=>typeof window.esc==='function'?window.esc(String(v??'')):String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const same=(a,b)=>String(a??'')===String(b??'');
+const now=()=>new Date().toISOString();
+const clone=x=>JSON.parse(JSON.stringify(x));
+function space(){try{return typeof window.rhSpace==='function'?window.rhSpace():null}catch(_){return null}}
+function fh5(){return space()?.catalogueKey===FH5_KEY}
+function save(){try{window.rhSave?.()}catch(_){try{rhSave()}catch(__){}}}
+function toast(msg){try{window.toast?.(msg)}catch(_){} }
+function host(){return document.getElementById('evilcampaign')}
+function showEvil(){try{window.show?.('evilcampaign')}catch(_){document.querySelectorAll('.screen').forEach(x=>x.classList.add('hidden'));host()?.classList.remove('hidden')}}
+function eventFor(s){return eventById(s?.eventId)}
+function eventById(id){const ev=favEvents()[id]||DATA().events?.[id]||null;return ev?currentEligibleEvent8128(ev):null}
+function slots(){return favSlots()}
+function slotByNo(n){return slots().find(x=>Number(x.slot)===Number(n))||null}
+function slotsForEvent(eventId){return slots().filter(x=>same(x.eventId,eventId)).sort((a,b)=>Number(a.slot)-Number(b.slot))}
+function slotNo(n){return String(Number(n)||0).padStart(4,'0')}
+function ecoClass(v){return String(v||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
+function modeLabel(s){return String(s?.mode||'').toUpperCase()}
+function oldDone(){const p=space()?.evilCampaign8076;return p?.done&&typeof p.done==='object'?Object.keys(p.done).length:0}
+function liveCarMap(){const m=new Map();for(const c of space()?.cars||[])m.set(String(c.id),c);return m}
+function carFallback(id){return DATA().cars.find(c=>same(c.id,id))||{id,name:id,ecosystem:'',role:''}}
+function liveCarName(c,fallback){try{return typeof window.carName==='function'&&c?window.carName(c):fallback?.name||fallback?.id||'Unknown car'}catch(_){return fallback?.name||fallback?.id||'Unknown car'}}
+function matchedCars(ev){const live=liveCarMap();return (ev?.eligibleIds||[]).map(id=>{const f=carFallback(id),c=live.get(String(id));return {id,name:liveCarName(c,f),live:!!c,meta:f,car:c}})}
+function currentRuns(){try{return typeof rhCurrentRuns==='function'?rhCurrentRuns():(space()?.runs||[])}catch(_){return space()?.runs||[]}}
+function raceOffs(){const s=space();if(s&&!Array.isArray(s.raceOffs))s.raceOffs=[];return s?.raceOffs||[]}
+
+/* ---------- v8.0.128: late ownership — draw-time eligibility, never rewriting the manifest ----------
+ * The historical R1 source was a fixed 697-owned-car snapshot. Newly acquired
+ * FH5 catalogue cars are only considered when they really exist in the active
+ * Space's Garage. A completed first-round Race Off draw, fully drawn Stage 1
+ * Festival groups, or a completed Swiss field select freezes that event's field.
+ * Unrecognised/ambiguous specialist classes fail CLOSED to prevent races across
+ * the wrong ecosystem; they are surfaced to the driver for later review.
+ */
+const slug8128=v=>String(v||'').normalize('NFKD').toUpperCase().replace(/[^A-Z0-9]+/g,'-').replace(/^-|-$/g,'');
+function baseCarIds8128(){return new Set((DATA().cars||[]).map(c=>String(c.id)))}
+function knownClass8128(){const by=new Map();for(const c of DATA().cars||[]){const k=slug8128(c.classType);if(!k)continue;const item=by.get(k)||new Set();item.add(c.ecosystem);by.set(k,item)}return by}
+function reviewedProfile8128(c){
+ const catalog=typeof FH5_CATALOGUE!=='undefined'&&Array.isArray(FH5_CATALOGUE)?FH5_CATALOGUE:[];
+ const found=c.catalogueId?catalog[Number(String(c.catalogueId).match(/(\d+)$/)?.[1]||0)-1]:null;
+ if(!found||String(found.make).toLowerCase()!==String(c.make||'').toLowerCase()||
+    slug8128(found.model)!==slug8128(c.model)||String(found.year)!==String(c.year))return null;
+ const cls=slug8128(c.classType||found.classType),year=Number(c.year),make=String(c.make||'').trim();
+ if(!cls||!Number.isInteger(year)||year<1900||year>2100)return null;
+ const name=`${make} ${c.model||''} ${year}`;
+ let ecosystem;
+ if(/FORZA EDITION/i.test(name))ecosystem='FORZA EDITION';
+ else if(/FORMULA DRIFT/i.test(make)||/DRIFT CAR/i.test(name))ecosystem='DRIFT';
+ else {const classes=knownClass8128().get(cls);if(!classes||classes.size!==1)return null;ecosystem=[...classes][0]}
+ return {id:String(c.id),catalogueId:String(c.catalogueId),name:liveCarName(c,c),make,model:c.model,year:String(year),classType:String(c.classType||found.classType),ecosystem,role:ecosystem==='NORMAL'?'ROAD':'REVIEWED CATALOGUE CLASS',late8128:true};
+}
+function lateProfiles8128(){if(!fh5())return [];const known=baseCarIds8128(),out=[];
+ for(const c of space()?.cars||[])if(!known.has(String(c.id))&&c.catalogueKey===FH5_KEY){const p=reviewedProfile8128(c);if(p)out.push(p)}
+ return out;
+}
+function unresolvedLate8128(){if(!fh5())return [];const known=baseCarIds8128();return (space()?.cars||[]).filter(c=>c.catalogueKey===FH5_KEY&&!known.has(String(c.id))&&!reviewedProfile8128(c));}
+function lateMatch8128(ev,c){
+ const id=String(ev.id||''),yr=Number(c.year),make=slug8128(c.make),cls=slug8128(c.classType),eco=c.ecosystem;
+ if(id.startsWith('HUBBS-')||id.startsWith('SW-')||[FAV_F,FAV_R].includes(id))return false;
+ if(id==='N-ALL-RO')return eco==='NORMAL';
+ if(id==='RC-ALL-F'||id==='RC-ALL-R'||id==='RC-HW-ALL')return eco==='RACE';
+ if(id==='OR-ALL-F'||id==='OR-ALL-R')return eco==='OFF-ROAD / BUGGY';
+ if(id==='DR-ALL-F'||id==='DR-ALL-R')return eco==='DRIFT';
+ if(id==='DR-FD-F'||id==='DR-FD-R')return eco==='DRIFT'&&make==='FORMULA-DRIFT';
+ if(id==='DR-2010-F'||id==='DR-2010-R')return eco==='DRIFT'&&yr>=2010&&yr<=2019;
+ if(id.startsWith('FE-'))return eco==='FORZA EDITION'&& (id.startsWith('FE-OFF-')?/(RALLY|OFFROAD|OFF-ROAD|BUGG|4X4)/i.test(c.classType):!/(RALLY|OFFROAD|OFF-ROAD|BUGG|4X4)/i.test(c.classType));
+ const prefix=eco==='NORMAL'?'N-':eco==='RACE'?'RC-':eco==='OFF-ROAD / BUGGY'?'OR-':null;
+ if(!prefix||!id.startsWith(prefix))return false;
+ const tail=id.slice(prefix.length);
+ if(tail.startsWith('ERA-')){const match=tail.match(/^ERA-(\d{4})-/);return !!match&&yr>=Number(match[1])&&yr<Number(match[1])+10}
+ if(tail.startsWith('CLS-'))return tail.startsWith('CLS-'+cls+'-');
+ if(tail.startsWith('MK-'))return tail.startsWith('MK-'+make+'-');
+ if(eco==='NORMAL'&&tail.startsWith('HER-'))return tail.startsWith('HER-VIN-')?yr<=1949:tail.startsWith('HER-CLA-')?yr>=1950&&yr<=1990:false;
+ if(tail.startsWith('HW-'))return eco==='RACE'&&tail==='HW-ALL'||eco==='NORMAL'&&tail.slice(3)===cls;
+ if(tail.startsWith('DRAG-'))return eco==='NORMAL'&&tail.slice(5)===cls;
+ if(tail.startsWith('RA-'))return eco==='OFF-ROAD / BUGGY'&&tail.slice(3)===cls;
+ return false;
+}
+function fieldFrozen8128(ev){
+ const id=String(ev.id),r=[...currentRuns()].reverse().find(x=>x.type===TYPE&&same(x.value,id)&&!x.abandonedAt);
+ if(r){if(r.format==='groups-total-time')return r.v8Groups?.stage1Closed?{ids:[...(r.entries||[])],frozen:true}:{ids:null,frozen:false};
+  return {ids:[...(r.entries||[])],frozen:true};}
+ const ro=[...raceOffs()].reverse().find(x=>x.type===TYPE&&same(x.value,id)&&x.status!=='abandoned');
+ if(ro){const drawn=(ro.rounds||[]).some(rd=>rd.matches?.length||['drawn','racing','raced','complete'].includes(rd.status));
+  if(drawn||['complete','awaiting-champion'].includes(ro.status))return {ids:[...(ro.entryIds||[])],frozen:true};}
+ if(ev.id.startsWith('DR-')){const d=state().driftEvents?.[id];if(d?.drawnIds8128)return {ids:[...d.drawnIds8128],frozen:true};
+  if(d?.rounds?.length)return {ids:[...(ev.eligibleIds||[])],frozen:true};}
+ return {ids:null,frozen:false};
+}
+function currentEligibleEvent8128(ev){
+ const state8128=fieldFrozen8128(ev);
+ const original=[...(ev.eligibleIds||[])];
+ let ids=state8128.ids||original;
+ if(!state8128.frozen){
+  const more=[...lateProfiles8128()].filter(c=>[FAV_F,FAV_R].includes(ev.id)?c.ecosystem==='NORMAL'&&slug8128(c.make)===slug8128(favSnapshot().make):lateMatch8128(ev,c)).map(c=>c.id);
+  ids=[...new Set([...ids,...more])];
+ }
+ return {...ev,eligibleIds:ids,eligible:ids.length,planEligible:Number(ev.planEligible)||Number(ev.eligible)||original.length,fieldFrozen8128:state8128.frozen,lateCount8128:Math.max(0,ids.length-original.length)};
+}
+function syncRaceOffBeforeDraw8128(ro,ev){
+ if(!ro||ro.status==='complete'||ro.status==='awaiting-champion'||(ro.rounds||[]).some(x=>x.matches?.length||['drawn','racing','raced','complete'].includes(x.status)))return false;
+ const ids=[...(ev.eligibleIds||[])],live=liveCarMap(),have=new Set((ro.entryIds||[]).map(String));let added=false;
+ for(const id of ids)if(!have.has(String(id))&&live.has(String(id))){ro.entryIds.push(id);ro.entrants.push(snapshotCar(live.get(String(id))));have.add(String(id));added=true;}
+ if(added){ro.fieldLockedAt=null;ro.updatedAt=now();save()}return added;
+}
+window.rhEvilLateAudit8128=()=>({eligible:lateProfiles8128(),needsReview:unresolvedLate8128().map(c=>({id:c.id,make:c.make,model:c.model,year:c.year,classType:c.classType}))});
+
+function rhid(prefix){try{return rhId(prefix)}catch(_){return `${prefix}-${Date.now()}-${Math.random().toString(36).slice(2,8)}`}}
+function trophy(){try{return rhTrophyTypeKey('festival')}catch(_){return 'festival'}}
+
+function state(){
+ const s=space();if(!s)return {campaignId:CAMPAIGN_ID,done:{},driftEvents:{},trackBags:{},driftBag:{remaining:[],cycle:0}};
+ let p=s[STATE_KEY];
+ if(!p||p.campaignId!==CAMPAIGN_ID){p={campaignId:CAMPAIGN_ID,createdAt:now(),updatedAt:now(),done:{},driftEvents:{},trackBags:{},driftBag:{remaining:[],cycle:0}};s[STATE_KEY]=p;save()}
+ p.done=p.done&&typeof p.done==='object'?p.done:{};
+ p.driftEvents=p.driftEvents&&typeof p.driftEvents==='object'?p.driftEvents:{};
+ p.trackBags=p.trackBags&&typeof p.trackBags==='object'?p.trackBags:{};
+ p.driftBag=p.driftBag&&typeof p.driftBag==='object'?p.driftBag:{remaining:[],cycle:0};
+ return p;
+}
+/* ---------- 8.0.103: paired, separated Favourite Manufacturer Finals Nights ----------
+   Build the visit schedule from the Specialist-First NORMAL audit, not broad make eligibility.
+   The two events share an immutable manufacturer/entrant snapshot from their first launch.
+   Every visit obeys the 24-result Festival / five-pairing Race Off caps.
+   Existing 1–25 slot numbers stay fixed; the remaining source visits keep their original event IDs and visit order. R1 data and Garage are never reset.
+*/
+const FAV_F='N-FAV-FINALS-F',FAV_R='N-FAV-FINALS-R';
+let favCache={key:null,slots:null,events:{}};
+function favSnapshot(freeze=false){
+ const p=state(),sf=space(),saved=p.favouriteFinals8103;
+ if(saved?.make&&Array.isArray(saved.ids))return {...saved,ids:[...new Set([...saved.ids,...lateProfiles8128().filter(c=>c.ecosystem==='NORMAL'&&slug8128(c.make)===slug8128(saved.make)).map(c=>c.id)])]};
+ const make=String(sf?.favouriteManufacturer||'').trim();
+ const live=new Set((sf?.cars||[]).map(c=>String(c.id)));
+ const baseIds=make?(DATA().cars||[]).filter(c=>c.ecosystem==='NORMAL'&&String(c.make).toLocaleLowerCase()===make.toLocaleLowerCase()&&live.has(String(c.id))).map(c=>String(c.id)):[];
+ const ids=[...baseIds,...lateProfiles8128().filter(c=>c.ecosystem==='NORMAL'&&slug8128(c.make)===slug8128(make)).map(c=>c.id)];
+ if(freeze&&ids.length>=2){p.favouriteFinals8103={make,ids:[...baseIds],selectedAt:now(),source:'FH5 NORMAL — make locked on first launch, field locked after draw'};save();favCache.key=null;return p.favouriteFinals8103}
+ return {make,ids};
+}
+function powerOf2(n){let v=1;while(v*2<=n)v*=2;return v}
+function favVisits(kind,n){
+ if(n<2)return [{workload:0,liveFormat:kind==='F'?'STANDARD':'KNOCKOUT',doNow:'SELECT A FAVOURITE MANUFACTURER IN SETTINGS',stopWhen:'Select a manufacturer with at least two eligible NORMAL cars, then return here.'}];
+ if(kind==='F'){
+  if(n<=24){const rounds=n<=12?2:1;return [{workload:n*rounds,liveFormat:'STANDARD',doNow:`RUN ${rounds} ROAD / STREET ROUND${rounds===1?'':'S'} • ${n} NORMAL CARS`,stopWhen:`Bank ${n*rounds} results, then crown the Festival champion.`}]}
+  const result=[];let field=n,stage=1;
+  while(field>10){const g=Math.ceil(field/8),q=Math.floor(field/g),rem=field%g;
+   for(let i=0;i<g;i++){const k=q+(i<rem?1:0);result.push({workload:2*k,liveFormat:'GROUPS',doNow:`DRAW & RUN STAGE ${stage} GROUP ${i+1}/${g} • 2 TRACKS`,stopWhen:'Run this one complete group over two random routes, bank the Top 2, then PARK IT.'})}
+   field=g*2;stage++;
+  }
+  result.push({workload:field*2,liveFormat:'GROUPS',doNow:'RUN THE FINAL • 2 TRACKS',stopWhen:'Run the final over two Road / Street tracks and crown the Favourite Manufacturer Festival champion.'});return result;
+ }
+ const result=[];let remaining=n,stage=0;
+ while(remaining>1){const target=powerOf2(remaining),matches=remaining===target?remaining/2:remaining-target;
+  const label=remaining===2?'FINAL':remaining===4?'SEMI-FINAL':remaining===8?'QUARTER-FINAL':stage===0&&remaining!==target?'PRELIMINARY':`ROUND OF ${remaining}`;
+  for(let i=0;i<matches;i+=5){const batch=Math.min(5,matches-i);result.push({workload:batch*2,liveFormat:'KNOCKOUT',doNow:`${label} • PAIRINGS ${i+1}–${i+batch} OF ${matches}`,stopWhen:`Run ${batch} pairings on the app-assigned route, then PARK IT.`})}
+  remaining=remaining===target?remaining/2:target;stage++;
+ }
+ return result;
+}
+
+/* ---------- 8.0.121: additive Swiss Cups; original 1,177 slots stay in their existing order. ----------
+   INVARIANTS: never edit the original 1,165-slot DATA; never rewrite completed DONE keys.
+   Additional entries are inserted AFTER source slots >=25; the first 25 slots and
+   every saved marker in the supplied 20 October backup are unchanged.
+*/
+const SWISS_CUPS8121=[{id:"SW-N-90S",name:"1990s Normal Swiss Cup",source:"N-ERA-1990-F",after:[25, 95, 175, 255, 340, 460, 570]},{id:"SW-N-CLASSIC",name:"Classic Normal Swiss Cup",source:"N-HER-CLA-F",after:[65, 190, 325, 475, 615, 730, 840]},{id:"SW-N-00S",name:"2000s Normal Swiss Cup",source:"N-ERA-2000-F",after:[150, 295, 430, 580, 710, 840, 965]},{id:"SW-N-10S",name:"2010s Normal Swiss Cup",source:"N-ERA-2010-F",after:[215, 365, 515, 660, 800, 925, 1040]},{id:"SW-N-HYPER",name:"Hypercar Normal Swiss Cup",source:"N-CLS-HYPERCAR-F",after:[285, 435, 600, 740, 880, 990, 1090]}];
+const SWISS_WORK8121=[16,16,16,16,8,4,2];
+const isSwissCup8121=id=>SWISS_CUPS8121.some(c=>c.id===id);
+function swissField8121(cup,freeze=false){
+ const p=state(),saved=p.swissFields8121?.[cup.id];if(saved?.length===16)return [...saved];
+ if(!freeze)return [];
+ const source=DATA().events?.[cup.source]||{eligibleIds:[]};const live=liveCarMap();
+ const sourceIds=[...(source.eligibleIds||[]),...lateProfiles8128().filter(c=>c.ecosystem==='NORMAL'&&lateMatch8128(source,c)).map(c=>c.id)];
+ const elig=[...new Set(sourceIds)].filter(id=>live.has(String(id))&&
+  (DATA().cars.some(c=>same(c.id,id)&&c.ecosystem==='NORMAL')||lateProfiles8128().some(c=>same(c.id,id)&&c.ecosystem==='NORMAL')));
+ if(elig.length<16)return [];
+ const selected=shuffle(elig).slice(0,16);
+ p.swissFields8121=p.swissFields8121||{};p.swissFields8121[cup.id]=[...selected];p.updatedAt=now();favCache.key=null;save();
+ return selected;
+}
+function swissEvents8121(){return Object.fromEntries(SWISS_CUPS8121.map(c=>{
+ const src=DATA().events[c.source]||{},ids=swissField8121(c,false);
+ return [c.id,{id:c.id,ecosystem:'NORMAL',mode:'Festival',family:'Swiss Cup',
+  event:c.name,pool:'ROAD / STREET',formatRule:'SWISS',protectedFinale:src.protectedFinale||'The Marathon',
+  eligibilityRule:'Exactly 16 randomly selected NORMAL cars. Eligible gift/wheelspin arrivals join the pool until all 16 are drawn; then the field is locked.',
+  eligible:16,eligibleIds:ids,swissSourceEvent:c.source}];
+ }));}
+function swissSlotVisits8121(){const map=new Map();for(const c of SWISS_CUPS8121){
+  c.after.forEach((after,i)=>{const stage=i+1,label=i<4?`SWISS ROUND ${stage} OF 4`:stage===5?'QUARTER-FINAL • TOP 8':stage===6?'SEMI-FINAL • TOP 4':'FINAL • CHAMPION';
+   const entry={slot:0,phase:'01–04 • SWISS RESTORATION',ecosystem:'NORMAL',eventId:c.id,mode:'Festival',family:'Swiss Cup',event:c.name,
+    eligible:16,liveFormat:'SWISS',swissStage8121:stage,visit:`${stage}/7`,
+    doNow:stage<=4?`SWISS ROUND ${stage}/4 • 8 PAIRINGS • 1 RANDOM TRACK`:stage===5?'QUARTER-FINAL • 4 PAIRINGS':stage===6?'SEMI-FINAL • 2 PAIRINGS':'FINAL • 1 PAIRING',
+    stopWhen:'Finish only this round, then MARK AS DONE. Next Swiss visit is elsewhere in the campaign.',
+    programme:stage===7?'PROTECTED FINALE':'RANDOMISE ALL',pool:'ROAD / STREET',workload:SWISS_WORK8121[i],
+    notes:'ADDED v8.0.121 • Existing competitions and 1–25 source slot numbers remain intact. 16 entrants randomly frozen on first start; 4 Swiss rounds → Top 8 knockout.'};
+    if(!map.has(after))map.set(after,[]);map.get(after).push(entry);
+  });
+ }
+ return map;}
+
+function favSlots(){
+ const raw=DATA().slots||[],snap=favSnapshot(),k=`${space()?.id||''}|${snap.make}|${snap.ids.join('|')}`;
+ if(favCache.key===k&&favCache.slots)return favCache.slots;
+ const baseFavCount=snap.ids.filter(id=>baseCarIds8128().has(String(id))).length;
+ const fvs=favVisits('F',baseFavCount),rvs=favVisits('R',baseFavCount);
+ const mk=(kind,visits)=>visits.map((v,i)=>({
+  slot:0,phase:kind==='F'?'06A • FAVOURITE MANUFACTURER FESTIVAL NIGHT':'06C • FAVOURITE MANUFACTURER RACE OFF NIGHT',
+  ecosystem:'NORMAL',eventId:kind==='F'?FAV_F:FAV_R,mode:kind==='F'?'Festival':'Race Off',family:'Favourite Manufacturer',
+  event:`${snap.make||'Favourite Manufacturer'} • ${kind==='F'?'Festival Night':'Race Off Night'}`,eligible:snap.ids.length,
+  liveFormat:v.liveFormat,visit:`${i+1}/${visits.length}`,doNow:v.doNow,stopWhen:v.stopWhen,
+  programme:kind==='F'?'RANDOMISE ALL':'AUTO ROUTE',pool:'ROAD / STREET',workload:v.workload,
+  notes:'Finals Night • NORMAL cars only • manufacturer fixed on first launch; new eligible arrivals until draw closes.'}));
+ const a=raw.findIndex(x=>Number(x.slot)===1149),b=raw.findIndex(x=>Number(x.slot)===1157);
+ const base=[...raw.slice(0,a),...mk('F',fvs),...raw.slice(a,b),...mk('R',rvs),...raw.slice(b)];
+ const swissVisits=swissSlotVisits8121(),merged=[];
+ for(const r of base){merged.push(r);for(const sv of swissVisits.get(Number(r.slot))||[])merged.push({...sv,phase:r.phase})}
+ merged.forEach((s,i)=>{if(Number(s.slot)!==i+1)s={...s};merged[i]={...s,slot:i+1}});
+ const make=snap.make||'Choose a manufacturer';const details='All eligible NORMAL cars only; specialist ecosystems excluded. New arrivals join until the final Stage 1 group / first Race Off field draw.';
+ favCache={key:k,slots:merged,events:{
+  [FAV_F]:{id:FAV_F,planEligible:baseFavCount,ecosystem:'NORMAL',mode:'Festival',family:'Favourite Manufacturer',event:`${make} • Festival Night`,pool:'ROAD / STREET',formatRule:'AUTO',protectedFinale:'The Goliath',eligibilityRule:details,eligible:snap.ids.length,eligibleIds:[...snap.ids]},
+  [FAV_R]:{id:FAV_R,planEligible:baseFavCount,ecosystem:'NORMAL',mode:'Race Off',family:'Favourite Manufacturer',event:`${make} • Race Off Night`,pool:'ROAD / STREET',formatRule:'KNOCKOUT',protectedFinale:'The Goliath',eligibilityRule:details,eligible:snap.ids.length,eligibleIds:[...snap.ids]},
+  ...swissEvents8121()
+ }};
+ return merged;
+}
+function favEvents(){favSlots();return favCache.events}
+function freezeFavouriteIfLaunch(s){
+ if(![FAV_F,FAV_R].includes(s.eventId))return s;
+ const x=favSnapshot();if(x.ids.length<2){toast('Choose a Favourite Manufacturer with at least two NORMAL cars in Settings.');return null}
+ const old=favSnapshot(true);if(!old.make||old.ids.length<2)return null;
+ return slotByNo(s.slot);
+}
+function done(s){return !!state().done?.[String(s.slot)]}
+function counts(){const all=slots(),p=state();let n=0;for(const s of all)if(p.done?.[String(s.slot)])n++;return {done:n,total:all.length}}
+function current(){return slots().find(s=>!done(s))||null}
+function phaseGroups(rows=slots()){const out=[];for(const s of rows){let g=out.find(x=>x.name===s.phase);if(!g){g={name:s.phase,rows:[]};out.push(g)}g.rows.push(s)}return out}
+function phaseStats(rows){let n=0;for(const s of rows)if(done(s))n++;return {done:n,total:rows.length}}
+function cumulativeWorkload(s){return slotsForEvent(s.eventId).filter(x=>Number(x.slot)<=Number(s.slot)).reduce((a,x)=>a+(Number(x.workload)||0),0)}
+function previousWorkload(s){return cumulativeWorkload(s)-(Number(s.workload)||0)}
+function eventTotalWorkload(eventId){return slotsForEvent(eventId).reduce((a,x)=>a+(Number(x.workload)||0),0)}
+function visitIndex(s){return Math.max(1,slotsForEvent(s.eventId).findIndex(x=>Number(x.slot)===Number(s.slot))+1)}
+function lastVisit(s){const a=slotsForEvent(s.eventId);return a.length&&Number(a[a.length-1].slot)===Number(s.slot)}
+
+/* ---------- exact eligibility + FH5 route hooks ---------- */
+const baseEligible8098=window.rhEligible;
+if(typeof baseEligible8098==='function')window.rhEligible=function(type,value){
+ if(String(type)===TYPE){const ev=eventById(value),ids=new Set((ev?.eligibleIds||[]).map(String));return (space()?.cars||[]).filter(c=>ids.has(String(c.id)))}
+ return baseEligible8098.apply(this,arguments);
+};
+try{rhEligible=window.rhEligible}catch(_){}
+function categoryForEvent(ev){const pool=String(ev?.pool||'');if(pool==='OFF-ROAD')return'OFFROAD';if(pool==='RALLY ADVENTURE')return'RALLY';if(pool==='HOT WHEELS')return'HOT_WHEELS';if(pool==='DRAG')return'DRAG';return'ROAD'}
+function trackPool(cat){try{return [...(window.rhFH5TrackTaxonomy8067?.standardPool?.(cat)||[])]}catch(_){return[]}}
+const basePreset8098=window.rhFH5Preset8056;
+if(typeof basePreset8098==='function')window.rhFH5Preset8056=function(type,value,context='festival'){
+ if(String(type)===TYPE){const ev=eventById(value),cat=categoryForEvent(ev),pool=trackPool(cat);return {type,value,context,discipline:ev?.pool||'Road / Street',tracks:[...pool],pool:[...pool],raceCategory:cat,fixed:cat==='DRAG',source:`EVIL R1 • ${ev?.event||value}`}}
+ return basePreset8098.apply(this,arguments);
+};
+const baseFinale8098=window.rhFH5Finale8058;
+if(typeof baseFinale8098==='function')window.rhFH5Finale8058=function(type,value,context='festival'){
+ if(String(type)===TYPE)return String(eventById(value)?.protectedFinale||'').trim()||null;
+ return baseFinale8098.apply(this,arguments);
+};
+
+/* ---------- R1 Festival track shuffle bag ---------- */
+function shuffle(a){a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function drawTrack(cat,exclude=[]){const pool=trackPool(cat).filter(Boolean),p=state(),key=String(cat||'ROAD'),ex=new Set(exclude.map(String));if(!pool.length)return'Round';let b=p.trackBags[key];if(!b||!Array.isArray(b.remaining))b=p.trackBags[key]={remaining:[],cycle:0};let valid=b.remaining.filter(x=>pool.includes(x));if(!valid.length){valid=shuffle(pool);b.cycle=(Number(b.cycle)||0)+1}let idx=valid.findIndex(x=>!ex.has(String(x)));if(idx<0){valid=shuffle(pool);b.cycle=(Number(b.cycle)||0)+1;idx=valid.findIndex(x=>!ex.has(String(x)));if(idx<0)idx=0}const pick=valid.splice(idx,1)[0];b.remaining=valid;p.updatedAt=now();save();return pick}
+function drawPairSecondTrack(cat,first,used=[]){
+ const pool=trackPool(cat),prior=new Set((used||[]).map(String));
+ const unusedOther=pool.some(x=>String(x)!==String(first)&&!prior.has(String(x)));
+ return drawTrack(cat,unusedOther?[...used,first]:[first]);
+}
+function makeRound(name){return {id:rhid('round'),name:String(name||'Round'),layout:''}}
+function totalStandardRounds(ev){return Math.max(1,Math.round(eventTotalWorkload(ev.id)/Math.max(1,Number(ev.planEligible)||Number(ev.eligible)||ev.eligibleIds?.length||1)))}
+function targetStandardRounds(s,ev){return Math.max(1,Math.round(cumulativeWorkload(s)/Math.max(1,Number(ev.planEligible)||Number(ev.eligible)||ev.eligibleIds?.length||1)))}
+function appendR1Rounds(run,s,ev){
+ const need=targetStandardRounds(s,ev),total=totalStandardRounds(ev),cat=categoryForEvent(ev);run.rounds=Array.isArray(run.rounds)?run.rounds:[];
+ const used=run.rounds.map(x=>x.name);while(run.rounds.length<need){const n=run.rounds.length+1,final=(n===total&&String(ev.protectedFinale||'').trim());const name=final?String(ev.protectedFinale):drawTrack(cat,used);used.push(name);run.rounds.push(makeRound(name))}
+ if(run.status==='complete'&&run.results?.length<run.entries.length*run.rounds.length){run.status='active';delete run.completedAt}run.updatedAt=now();save();
+}
+function runFor(eventId){return [...currentRuns()].reverse().find(r=>String(r.type)===TYPE&&same(r.value,eventId)&&!r.abandonedAt)||null}
+function groupCountFromEvent(eventId){const first=slotsForEvent(eventId).find(x=>x.liveFormat==='GROUPS');const m=String(first?.doNow||'').match(/GROUP\s+\d+\/(\d+)/i);return Math.max(1,Number(m?.[1])||Math.ceil((Number(eventById(eventId)?.eligible)||8)/8))}
+function initialGroupRun(s,ev){
+ const entries=(ev.eligibleIds||[]).filter(id=>liveCarMap().has(String(id))),cat=categoryForEvent(ev),firstTrack=drawTrack(cat),tracks=[firstTrack,drawPairSecondTrack(cat,firstTrack)],gc=groupCountFromEvent(ev.id),sizes=(()=>{const n=entries.length,q=Math.floor(n/gc),r=n%gc;return Array.from({length:gc},(_,i)=>q+(i<r?1:0))})();
+ return {id:rhid('run'),name:ev.event,type:TYPE,value:ev.id,trophy:trophy(),createdAt:now(),startedAt:now(),updatedAt:now(),status:'active',format:'groups-total-time',rounds:tracks.map(makeRound),results:[],entries:[...entries],evilCampaignR1:markerFor(s),v8Groups:{stage:1,stage1Closed:false,groupPlan:{groupCount:gc,sizes,qualifiers:gc*2},excludedStage1:[],knownStage1Eligible:[...entries],pool:[...entries],qualifiers:[],completedGroups:[],activeGroup:null,final:false,championId:null}}
+}
+function standardRun(s,ev){
+ const entries=(ev.eligibleIds||[]).filter(id=>liveCarMap().has(String(id))),run={id:rhid('run'),name:ev.event,type:TYPE,value:ev.id,trophy:trophy(),createdAt:now(),startedAt:now(),updatedAt:now(),status:'active',rounds:[],results:[],entries:[...entries],evilCampaignR1:markerFor(s)};appendR1Rounds(run,s,ev);return run
+}
+function dragRun(s,ev){const entries=(ev.eligibleIds||[]).filter(id=>liveCarMap().has(String(id)));return {id:rhid('run'),name:ev.event,type:TYPE,value:ev.id,trophy:trophy(),createdAt:now(),startedAt:now(),updatedAt:now(),status:'active',rounds:[makeRound(s.programme||'Festival Drag Strip')],results:[],entries:[...entries],evilCampaignR1:markerFor(s),evilR1Drag:true}}
+
+function swissCreateRun8121(s,ev){
+ const cup=SWISS_CUPS8121.find(x=>x.id===s.eventId);if(!cup)return null;
+ const chosen=swissField8121(cup,true);if(chosen.length!==16)return toast('Swiss Cup needs 16 eligible NORMAL cars.');
+ const fresh=eventFor(s),cat=categoryForEvent(fresh),used=[],rounds=[];
+ for(let i=0;i<4;i++){const name=drawTrack(cat,used);used.push(name);rounds.push(makeRound(name))}
+ const t=now(),r={id:rhid('run'),name:fresh.event,type:TYPE,value:fresh.id,trophy:trophy(),createdAt:t,startedAt:t,updatedAt:t,status:'active',format:'swiss',
+  rounds,results:[],entries:[...chosen],v8SwissPlan:{knockoutSize:8},evilCampaignR1:markerFor(s)};
+ r.v8Swiss={phase:'swiss',knockoutSize:8,currentRound:0,swissRounds:rounds.map((rd,i)=>({id:rd.id,index:i+1,label:`SWISS ROUND ${i+1}`,trackName:rd.name,layout:'',status:i===0?'setup':'pending',matches:null,byeId:null})),ko:null,championId:null,championTotal:null};
+ space().runs.push(r);save();return r;
+}
+function swissAdvance8121(r,s){
+ const stage=Number(s.swissStage8121)||1,x=r.v8Swiss;if(!x)return false;
+ if(stage===1)return true;
+ if(stage<=4){const prev=x.swissRounds[stage-2],next=x.swissRounds[stage-1];if(prev?.status!=='complete'||!next)return false;
+  if(x.phase!=='swiss')return false;x.currentRound=stage-1;if(next.status==='pending')next.status='setup';save();return true;}
+ if(x.swissRounds?.[3]?.status!=='complete')return false;
+ if(stage===5){if(x.phase==='swiss'){const previousFn=swissBeginKO8121; if(typeof previousFn!=='function')return false;
+   // The original Swiss engine computes its own tie-breaks and Top 8 cut.
+   previousFn(r.id);
+  }
+  const rd=x.ko?.rounds?.[0];if(x.phase!=='ko'||!rd)return false;
+  if(!rd.trackName){rd.trackName=drawTrack(categoryForEvent(eventFor(s)),r.rounds.map(y=>y.name));save()}return true;
+ }
+ const ko=x.ko,idx=stage-5,prev=ko?.rounds?.[idx-1];if(!ko||prev?.status!=='complete')return false;
+ if(!ko.rounds[idx]){if(typeof swissNextKO8121!=='function')return false;swissNextKO8121(r.id)}
+ const rd=ko.rounds[idx];if(!rd)return false;ko.currentRound=idx;
+ if(!rd.trackName){const used=[...r.rounds.map(y=>y.name),...ko.rounds.slice(0,idx).map(y=>y.trackName).filter(Boolean)];
+  rd.trackName=stage===7?(eventFor(s)?.protectedFinale||drawTrack(categoryForEvent(eventFor(s)),used)):drawTrack(categoryForEvent(eventFor(s)),used)}
+ save();return true;
+}
+// Preserve native Swiss state transitions; the Evil schedule controls when a new round may start.
+const swissNextRound8121=window.rhV8051NextSwissRound;
+const swissBeginKO8121=window.rhV8051BeginSwissKO;
+const swissNextKO8121=window.rhV8051NextKORound;
+function swissStopGuard8121(name){const base=window[name];if(typeof base!=='function')return;
+ window[name]=function(id,...args){const r=currentRuns().find(x=>same(x.id,id));if(r?.type===TYPE&&isSwissCup8121(r.value)){
+  const s=slotByNo(r.evilCampaignR1?.slot),cur=current();
+  if(!s||!cur||!same(cur.slot,s.slot)||done(s)||slotReadyForSignoff(s)){
+   if(s&&slotReadyForSignoff(s))renderSlotComplete(s);else toast('Return to the current Evil R1 slot before advancing Swiss.');return;
+  }
+ }
+ return base.call(this,id,...args);
+ };
+}
+for(const name of ['rhV8051NextSwissRound','rhV8051BeginSwissKO','rhV8051NextKORound','rhV8051StartSwissRound','rhV8051StartKORound','rhV8051SaveSwissResult','rhV8051SaveKOResult'])swissStopGuard8121(name);
+
+function ensureFestival(s){const ev=eventFor(s);if(!ev)return null;let r=runFor(ev.id);if(!r){r=s.liveFormat==='SWISS'?swissCreateRun8121(s,ev):s.liveFormat==='GROUPS'?initialGroupRun(s,ev):s.liveFormat==='DRAG SHOOTOUT'?dragRun(s,ev):standardRun(s,ev);space().runs=Array.isArray(space().runs)?space().runs:[];space().runs.push(r);save()}else{r.evilCampaignR1=markerFor(s);if(s.liveFormat==='STANDARD')appendR1Rounds(r,s,ev);save()}
+ if(r&&s.liveFormat==='SWISS'&&!swissAdvance8121(r,s)){toast('Finish and bank the previous Swiss visit first.');return null}
+ return r}
+
+/* Make R1 group stage setups two tracks; the Final is one random track + protected finale. */
+const baseStageRender8098=window.rhV8RenderStageSetup;
+if(typeof baseStageRender8098==='function')window.rhV8RenderStageSetup=function(id){
+ const r=currentRuns().find(x=>same(x.id,id)),p=r?.v8Groups?.pendingStageSetup;if(r?.evilCampaignR1&&p&&!p.evilR1Program8098){const ev=eventById(r.value),cat=categoryForEvent(ev),used=[...(r.rounds||[]),...(r.v8Groups?.completedGroups||[]).flatMap(g=>g.rounds||[])].map(x=>x.name);const firstTrack=drawTrack(cat,used);const names=p.final?[firstTrack,String(ev?.protectedFinale||drawPairSecondTrack(cat,firstTrack,used))]:[firstTrack,drawPairSecondTrack(cat,firstTrack,used)];p.rounds=names.map(makeRound);p.evilR1Program8098={version:VERSION,tracks:[...names]};p.fh5AutoProgram8070={version:'8.0.99-r1',category:cat,suggested:[...names]};p.fh5AutoProgram8058={phase:p.final?'final':'stage',source:'EVIL R1',suggested:[...names]};save()}
+ return baseStageRender8098.apply(this,arguments)
+};
+
+/* Stamp R1 marker into direct and resumed Festival runs. */
+function markerFor(s){return {campaignId:CAMPAIGN_ID,stateKey:STATE_KEY,slotId:`r1-${s.slot}`,slot:Number(s.slot),eventId:s.eventId,ecosystem:s.ecosystem,format:s.liveFormat,pool:s.pool,updatedAt:now()}}
+function openFestivalSlot(s){try{const r=ensureFestival(s);if(!r)return toast('Unable to create R1 Festival event');r.evilCampaignR1=markerFor(s);save();try{window.show?.('festival')}catch(_){try{show('festival')}catch(__){}};if(typeof window.rhOpenRun==='function')return window.rhOpenRun(r.id);if(typeof rhOpenRun==='function')return rhOpenRun(r.id);toast('Festival screen is unavailable');}catch(err){console.error('OTG! R1 Festival launch failed',err);toast(`Festival launch failed${err?.message?`: ${err.message}`:''}`)}}
+
+/* ---------- R1 Race Off ---------- */
+function snapshotCar(c){return {sourceCarId:c.id,make:String(c.make||''),model:String(c.model||''),year:String(c.year||''),classType:String(c.classType||''),name:liveCarName(c,c)}}
+function raceOffFor(eventId){return [...raceOffs()].reverse().find(r=>String(r.type)===TYPE&&same(r.value,eventId)&&r.status!=='abandoned')||null}
+function createRaceOff(s,ev){const live=liveCarMap(),cars=(ev.eligibleIds||[]).map(id=>live.get(String(id))).filter(Boolean),t=now(),ro={id:rhid('raceoff'),name:ev.event,type:TYPE,value:ev.id,status:'prepared',createdAt:t,updatedAt:t,fieldLockedAt:null,entryIds:cars.map(c=>c.id),entrants:cars.map(snapshotCar),rounds:[],currentRoundIndex:0,championCarId:null,evilCampaignR1:markerFor(s)};raceOffs().push(ro);save();return ro}
+function openRaceOffSlot(s){const ev=eventFor(s);let ro=raceOffFor(s.eventId);if(!ro)ro=createRaceOff(s,ev);else syncRaceOffBeforeDraw8128(ro,ev);ro.evilCampaignR1=markerFor(s);save();try{window.show?.('raceoff')}catch(_){};if(ro.status==='complete'||ro.status==='awaiting-champion'){window.rhRenderRaceOffLocked?.(ro.id);return}const idx=Number(ro.currentRoundIndex||0),rd=ro.rounds?.[idx];if(rd?.status==='drawn'||rd?.status==='racing'||rd?.status==='raced')window.rhRenderRaceOffLocked?.(ro.id);else window.rhRaceOffOpenRoundSetup?.(ro.id)}
+const startRaceOffDraw8128=window.rhRaceOffStartDraw;
+if(typeof startRaceOffDraw8128==='function')window.rhRaceOffStartDraw=function(id,...args){
+ const ro=raceOffs().find(x=>same(x.id,id));if(ro?.type===TYPE)syncRaceOffBeforeDraw8128(ro,eventById(ro.value));
+ return startRaceOffDraw8128.call(this,id,...args);
+};
+function completedRaceOffMatches(ro){let n=0;for(const r of ro?.rounds||[])for(const m of r.matches||[])if(m.status==='complete'||m.winnerCarId)n++;return n}
+
+/* ---------- Drift score engine ---------- */
+const DRIFT_ZONES=['Punto Norte','Panorámica','Precipice','Farmland Trail','East Coast','Las Dunas','Cara Este','Esquisto','Costera','Los Campos','Las Curvas','Giro Encorvado','Ranchería','Polytunnels','Trailbreaker','Hillside','Otro Mundo','Reservoir','Arbolada','Camino De Montaña'];
+function drawDriftZone(){const p=state(),b=p.driftBag;let a=(b.remaining||[]).filter(x=>DRIFT_ZONES.includes(x));if(!a.length){a=shuffle(DRIFT_ZONES);b.cycle=(Number(b.cycle)||0)+1}const z=a.shift();b.remaining=a;p.updatedAt=now();save();return z}
+function driftEvent(ev,kind){const p=state();let d=p.driftEvents[ev.id];if(!d||d.kind!==kind){d=kind==='festival'?{kind,eventId:ev.id,createdAt:now(),rounds:[]}:{kind,eventId:ev.id,createdAt:now(),rounds:[],complete:false,championId:null};p.driftEvents[ev.id]=d;save()}return d}
+function driftFestivalTargets(s,ev){const e=Math.max(1,Number(ev.planEligible)||ev.eligibleIds.length),from=Math.floor(previousWorkload(s)/e)+1,to=Math.round(cumulativeWorkload(s)/e);return {from,to}}
+function ensureDriftFestivalRounds(s,ev){const d=driftEvent(ev,'festival'),t=driftFestivalTargets(s,ev);if(!d.drawnIds8128){d.drawnIds8128=[...(ev.eligibleIds||[])];save()}while(d.rounds.length<t.to)d.rounds.push({index:d.rounds.length+1,zone:drawDriftZone(),scores:{}});save();return d}
+function driftFestivalDoneCount(d,s,ev){const t=driftFestivalTargets(s,ev);let n=0;for(const r of d.rounds||[])if(r.index<=t.to)for(const id of ev.eligibleIds)if(Number.isFinite(Number(r.scores?.[id])))n++;return n}
+function nextDriftFestivalEntry(d,s,ev){const t=driftFestivalTargets(s,ev);for(let ri=t.from;ri<=t.to;ri++){const r=d.rounds[ri-1];for(const id of ev.eligibleIds)if(!Number.isFinite(Number(r?.scores?.[id])))return {round:r,carId:id}}return null}
+function saveDriftFestivalScore(slotN){const s=slotByNo(slotN),ev=eventFor(s),d=ensureDriftFestivalRounds(s,ev),next=nextDriftFestivalEntry(d,s,ev),v=Math.floor(Number(document.getElementById('rhR1DriftScore8098')?.value));if(!next||!Number.isFinite(v)||v<0)return toast('Enter a valid drift score');next.round.scores[next.carId]=v;state().updatedAt=now();save();renderDriftFestival(s.slot)}
+function driftStandings(d,ev){return ev.eligibleIds.map(id=>({id,total:(d.rounds||[]).reduce((a,r)=>a+(Number(r.scores?.[id])||0),0),rounds:(d.rounds||[]).filter(r=>Number.isFinite(Number(r.scores?.[id]))).length})).sort((a,b)=>b.total-a.total)}
+function renderDriftFestival(slotN){const ss=slotByNo(slotN);if(slotReadyForSignoff(ss))return renderSlotComplete(ss);const s=slotByNo(slotN),ev=eventFor(s),h=host();if(!s||!ev||!h)return;const d=ensureDriftFestivalRounds(s,ev),t=driftFestivalTargets(s,ev),next=nextDriftFestivalEntry(d,s,ev),target=progressFor(s).target,doneN=driftFestivalDoneCount(d,s,ev),standing=driftStandings(d,ev).filter(x=>x.rounds);h.innerHTML=`<div class="rhEvilR18097"><button class="rhEvilR1Back8097" onclick="rhEvilOpenR1Slot8098(${s.slot})"><span>‹</span><b>BACK</b></button><header class="rhEvilR1Hero8097 slot"><small>EVIL R1 • DRIFT FESTIVAL</small><h1>SLOT ${slotNo(s.slot)}</h1><p>HIGHER SCORE WINS</p><strong>ROUND${t.from===t.to?'':'S'} ${t.from}${t.from===t.to?'':`–${t.to}`}</strong></header><main class="rhEvilR1Body8097"><section class="rhEvilR1ProgressCard8098"><b>${Math.min(doneN,target)} / ${target}</b><span>SCORES BANKED THROUGH THIS VISIT</span><i style="width:${Math.min(100,target?doneN/target*100:0)}%"></i></section>${next?`<section class="rhEvilR1DriftEntry8098"><small>ROUND ${next.round.index} • ${E(next.round.zone)}</small><h2>${E(liveCarName(liveCarMap().get(String(next.carId)),carFallback(next.carId)))}</h2><label>DRIFT SCORE</label><input id="rhR1DriftScore8098" inputmode="numeric" type="number" min="0" step="1" placeholder="0"><button class="btn" onclick="rhEvilSaveDriftFestival8098(${s.slot})">SAVE SCORE</button></section>`:`<section class="rhEvilR1Ready8098"><b>✓ VISIT WORKLOAD COMPLETE</b><p>All required Drift Zone scores for this slot are banked. Return to the slot and mark it DONE.</p></section>`}<section class="rhEvilR1DriftRounds8098">${d.rounds.slice(t.from-1,t.to).map(r=>`<div><b>ROUND ${r.index}</b><span>${E(r.zone)}</span><strong>${Object.keys(r.scores||{}).length}/${ev.eligibleIds.length}</strong></div>`).join('')}</section>${standing.length?`<section class="rhEvilR1DriftBoard8098"><h3>LIVE TOTALS</h3>${standing.slice(0,10).map((x,i)=>`<div><b>${i+1}</b><span>${E(liveCarName(liveCarMap().get(String(x.id)),carFallback(x.id)))}</span><strong>${x.total.toLocaleString()}</strong></div>`).join('')}</section>`:''}</main></div>`;window.scrollTo(0,0)}
+window.rhEvilSaveDriftFestival8098=saveDriftFestivalScore;
+
+function pow2Floor(n){let p=1;while(p*2<=n)p*=2;return p}
+function newDriftRound(field,label){const n=field.length,target=pow2Floor(n),pre=n>target,matches=[],byes=[];if(pre){const pairCount=n-target,sh=shuffle(field);for(let i=0;i<pairCount;i++)matches.push({id:rhid('drift-match'),a:sh[i*2],b:sh[i*2+1],zone:null,scoreA:null,scoreB:null,winnerId:null});byes.push(...sh.slice(pairCount*2));return {index:1,label:'PRELIMINARY',matches,byes,complete:false}}for(let i=0;i<n;i+=2)matches.push({id:rhid('drift-match'),a:field[i],b:field[i+1],zone:null,scoreA:null,scoreB:null,winnerId:null});return {index:1,label:label||`ROUND OF ${n}`,matches,byes,complete:false}}
+function driftRoundLabel(n){if(n===2)return'FINAL';if(n===4)return'SEMI-FINALS';if(n===8)return'QUARTER-FINALS';return`ROUND OF ${n}`}
+function ensureDriftRaceOff(ev){const d=driftEvent(ev,'raceoff');if(!d.drawnIds8128){d.drawnIds8128=[...(ev.eligibleIds||[])];save()}if(!d.rounds.length)d.rounds.push(newDriftRound(shuffle([...d.drawnIds8128])));save();return d}
+function allDriftMatches(d){return (d.rounds||[]).flatMap(r=>r.matches||[])}
+function completedDriftMatches(d){return allDriftMatches(d).filter(m=>m.winnerId).length}
+function activeDriftMatch(d){for(const r of d.rounds||[]){for(const m of r.matches||[])if(!m.winnerId)return {round:r,match:m}}return null}
+function maybeAdvanceDrift(d){const s=current();if(s?.eventId===d.eventId&&!lastVisit(s)&&slotReadyForSignoff(s))return;let r=d.rounds[d.rounds.length-1];if(!r||r.matches.some(m=>!m.winnerId))return;const field=[...(r.byes||[]),...r.matches.map(m=>m.winnerId)];r.complete=true;if(field.length===1){d.complete=true;d.championId=field[0];save();return}const matches=[];for(let i=0;i<field.length;i+=2)matches.push({id:rhid('drift-match'),a:field[i],b:field[i+1],zone:null,scoreA:null,scoreB:null,winnerId:null});d.rounds.push({index:d.rounds.length+1,label:driftRoundLabel(field.length),matches,byes:[],complete:false});save()}
+function saveDriftRaceOffScore(slotN,side){const s=slotByNo(slotN),ev=eventFor(s),d=ensureDriftRaceOff(ev);maybeAdvanceDrift(d);const cur=activeDriftMatch(d);if(!cur)return renderDriftRaceOff(slotN);if(!cur.match.zone){cur.match.zone=drawDriftZone();save()}const v=Math.floor(Number(document.getElementById('rhR1DriftScore8098')?.value));if(!Number.isFinite(v)||v<0)return toast('Enter a valid drift score');if(side==='A')cur.match.scoreA=v;else cur.match.scoreB=v;if(Number.isFinite(cur.match.scoreA)&&Number.isFinite(cur.match.scoreB)){if(Number(cur.match.scoreA)===Number(cur.match.scoreB)){cur.match.scoreA=null;cur.match.scoreB=null;save();toast('Tie — rerun BOTH cars on the same Drift Zone and enter fresh scores.');return renderDriftRaceOff(slotN)}cur.match.winnerId=Number(cur.match.scoreA)>Number(cur.match.scoreB)?cur.match.a:cur.match.b;maybeAdvanceDrift(d)}save();renderDriftRaceOff(slotN)}
+function renderDriftRaceOff(slotN){const ss=slotByNo(slotN);if(slotReadyForSignoff(ss))return renderSlotComplete(ss);const s=slotByNo(slotN),ev=eventFor(s),h=host();if(!s||!ev||!h)return;const d=ensureDriftRaceOff(ev);maybeAdvanceDrift(d);const cur=activeDriftMatch(d),target=Math.round(cumulativeWorkload(s)/2),doneN=completedDriftMatches(d);if(cur&&!cur.match.zone){cur.match.zone=drawDriftZone();save()}let entry='';if(cur){const side=Number.isFinite(cur.match.scoreA)?'B':'A',cid=side==='A'?cur.match.a:cur.match.b;entry=`<section class="rhEvilR1DriftEntry8098"><small>${E(cur.round.label)} • ${E(cur.match.zone)}</small><h2>${E(liveCarName(liveCarMap().get(String(cid)),carFallback(cid)))}</h2><p>${side==='A'?'FIRST':'SECOND'} CAR • both cars use the same zone</p><label>DRIFT SCORE</label><input id="rhR1DriftScore8098" inputmode="numeric" type="number" min="0" step="1" placeholder="0"><button class="btn" onclick="rhEvilSaveDriftRaceOff8098(${s.slot},'${side}')">SAVE ${side==='A'?'FIRST':'SECOND'} SCORE</button>${Number.isFinite(cur.match.scoreA)?`<div class="rhEvilR1FirstScore8098">FIRST SCORE: <b>${Number(cur.match.scoreA).toLocaleString()}</b></div>`:''}</section>`}else if(d.complete){entry=`<section class="rhEvilR1Ready8098"><b>🏆 DRIFT RACE OFF COMPLETE</b><p>Champion: ${E(liveCarName(liveCarMap().get(String(d.championId)),carFallback(d.championId)))}</p></section>`}h.innerHTML=`<div class="rhEvilR18097"><button class="rhEvilR1Back8097" onclick="rhEvilOpenR1Slot8098(${s.slot})"><span>‹</span><b>BACK</b></button><header class="rhEvilR1Hero8097 slot"><small>EVIL R1 • DRIFT RACE OFF</small><h1>SLOT ${slotNo(s.slot)}</h1><p>HIGHER SCORE ADVANCES</p><strong>${Math.min(doneN,target)} / ${target} PAIRINGS</strong></header><main class="rhEvilR1Body8097"><section class="rhEvilR1ProgressCard8098"><b>${Math.min(doneN,target)} / ${target}</b><span>PAIRINGS COMPLETE THROUGH THIS VISIT</span><i style="width:${Math.min(100,target?doneN/target*100:0)}%"></i></section>${doneN>=target&&!d.complete?`<section class="rhEvilR1Ready8098"><b>✓ VISIT WORKLOAD COMPLETE</b><p>Stop here for this slot. The bracket is saved exactly where it is.</p></section>`:entry}<section class="rhEvilR1DriftRounds8098">${d.rounds.map(r=>`<div><b>${E(r.label)}</b><span>${(r.matches||[]).filter(m=>m.winnerId).length}/${(r.matches||[]).length} pairings</span><strong>${r.complete?'DONE':'LIVE'}</strong></div>`).join('')}</section></main></div>`;window.scrollTo(0,0)}
+window.rhEvilSaveDriftRaceOff8098=saveDriftRaceOffScore;
+
+/* ---------- R1 Groups car-order control ---------- */
+function activeGroupResultCount(r,grp){
+ if(!r||!grp)return 0;
+ const roundIds=new Set((r.rounds||[]).map(x=>String(x.id)));
+ const carIds=new Set((grp.carIds||[]).map(String));
+ return (r.results||[]).filter(x=>same(x.v8GroupId,grp.id)||(carIds.has(String(x.carId))&&roundIds.has(String(x.roundId)))).length;
+}
+function injectRandomiseCarOrder(runId){
+ const root=document.getElementById('festival'),r=currentRuns().find(x=>same(x.id,runId)),grp=r?.v8Groups?.activeGroup;
+ if(!root||!r?.evilCampaignR1||r.format!=='groups-total-time'||!grp||activeGroupResultCount(r,grp)>0)return;
+ const lineup=root.querySelector('.rhLineupV1');if(!lineup||lineup.querySelector('.rhEvilR1RandomOrder8100'))return;
+ const btn=document.createElement('button');btn.type='button';btn.className='btn secondary rhEvilR1RandomOrder8100';btn.innerHTML='<span>↻</span><b>RANDOMISE CAR ORDER</b><small>Same group • same tracks</small>';
+ btn.onclick=()=>window.rhEvilRandomiseGroupOrder8100?.(r.id);
+ const head=lineup.querySelector('.rhOverviewSectionHeadV1');if(head)head.insertAdjacentElement('afterend',btn);else lineup.prepend(btn);
+}
+window.rhEvilRandomiseGroupOrder8100=function(runId){
+ const r=currentRuns().find(x=>same(x.id,runId)),grp=r?.v8Groups?.activeGroup;if(!r?.evilCampaignR1||r.format!=='groups-total-time'||!grp)return toast('No active R1 group to randomise');
+ if(activeGroupResultCount(r,grp)>0)return toast('Car order is locked after the first result is banked.');
+ grp.carIds=shuffle(grp.carIds||[]);grp.randomisedAt=now();r.updatedAt=now();save();
+ try{window.rhOpenRun?.(r.id)}catch(_){try{rhOpenRun(r.id)}catch(__){}}
+};
+
+/* ---------- workload readiness ---------- */
+/* The 8-car workload in the R1 spreadsheet is an upper-bound planning estimate,
+   not the actual live GROUPS workload. Example: 35 Hypercars / 5 groups = 7
+   cars × 2 tracks = 14 results, never 16. Count saved results for the
+   corresponding GROUP only: Group 2's entries must not close Group 1's slot.
+   Stage sizes use the frozen run field and the same balanced allocations as
+   the live Groups engine; completed/active groups override plan estimates. */
+function groupVisitKey(s){
+ const m=String(s.doNow||'').match(/STAGE\s+(\d+)\s+GROUP\s+(\d+)\s*\/\s*(\d+)/i);
+ if(m)return {stage:Number(m[1]),index:Number(m[2]),groups:Number(m[3]),final:false};
+ if(/RUN THE FINAL/i.test(String(s.doNow||'')))return {stage:0,index:1,groups:1,final:true};
+ return null;
+}
+function balancedGroupSizes(n,count){
+ n=Math.max(0,Math.floor(Number(n)||0));count=Math.max(1,Math.floor(Number(count)||1));
+ const q=Math.floor(n/count),extra=n%count;
+ return Array.from({length:count},(_,i)=>q+(i<extra?1:0));
+}
+function groupVisitProgress(s,ev){
+ const visits=slotsForEvent(ev.id).filter(x=>x.liveFormat==='GROUPS'),run=runFor(ev.id),groups=run?.v8Groups;
+ const byStage=new Map();
+ for(const v of visits){const k=groupVisitKey(v);if(k&&!k.final)byStage.set(k.stage,Math.max(byStage.get(k.stage)||0,k.groups))}
+ const stageSizes=new Map();
+ let entrants=Number(run?.entries?.length)||Number(ev.eligibleIds?.length)||Number(ev.eligible)||0;
+ for(const [stage,count] of [...byStage.entries()].sort((a,b)=>a[0]-b[0])){
+  if(stage===1){entrants=Number(run?.entries?.length)||entrants}
+  else{const previous=stageSizes.get(stage-1);entrants=previous?previous.length*2:entrants}
+  stageSizes.set(stage,balancedGroupSizes(entrants,count));
+ }
+ let target=0,banked=0,ready=true,visitWorkload=0;
+ for(const v of visits){
+  const key=groupVisitKey(v);if(!key||Number(v.slot)>Number(s.slot))continue;
+  const group=groups?.completedGroups?.find(g=>key.final?!!g.final:(Number(g.stage)===key.stage&&Number(g.index)===key.index))
+     ||(groups?.activeGroup&&(key.final?!!groups.activeGroup.final:Number(groups.activeGroup.stage)===key.stage&&Number(groups.activeGroup.index)===key.index)?groups.activeGroup:null);
+  const sizes=stageSizes.get(key.stage)||[];
+  const predicted=key.final?((stageSizes.get(Math.max(...byStage.keys(),1))||[]).length*2):Number(sizes[key.index-1]||0);
+  const carIds=group?.carIds||[];
+  const actualCars=group?carIds.length:predicted;
+  const rounds=group?.rounds?.length||((groups?.activeGroup===group&&run?.rounds?.length)||2);
+  const required=actualCars*rounds;
+  const carSet=new Set(carIds.map(String));
+  const roundSet=new Set((group?.rounds||((groups?.activeGroup===group)?run?.rounds:[])||[]).map(x=>String(x.id)));
+  const valid=new Set();
+  if(group)for(const result of run?.results||[]){
+   if(String(result.v8GroupId||'')!==String(group.id))continue;
+   if(!carSet.has(String(result.carId))||!roundSet.has(String(result.roundId)))continue;
+   valid.add(`${String(result.carId)}|${String(result.roundId)}`);
+  }
+  const count=valid.size;
+  target+=required;banked+=count;
+  if(count<required||!group)ready=false;
+  if(Number(v.slot)===Number(s.slot))visitWorkload=required;
+ }
+ return {done:banked,target,ready:ready&&target>0,label:'RESULT ENTRIES',visitWorkload};
+}
+function progressFor(s){
+ if(!s)return {done:0,target:0,ready:false,label:'ENTRIES'};
+ const ev=eventFor(s);let target=cumulativeWorkload(s);
+ if(ev&&s.liveFormat==='STANDARD'){const r=runFor(ev.id);if(r)target=(r.entries||[]).length*targetStandardRounds(s,ev)}
+ if(ev&&s.liveFormat==='DRAG SHOOTOUT'){const r=runFor(ev.id);if(r)target=(r.entries||[]).length;}
+ if(ev&&[FAV_F,FAV_R].includes(s.eventId)&&ev.eligibleIds.length<2)return {done:0,target:0,ready:false,label:'ENTRIES'};
+ if(!ev)return {done:0,target,ready:false,label:'ENTRIES'};
+ if(s.liveFormat==='GROUPS')return groupVisitProgress(s,ev);
+ if(s.liveFormat==='SWISS'){
+  const r=runFor(ev.id),n=(r?.results||[]).length,stage=Number(s.swissStage8121)||1;
+  const round=stage<=4?r?.v8Swiss?.swissRounds?.[stage-1]:r?.v8Swiss?.ko?.rounds?.[stage-5];
+  const ready=n>=target&&round?.status==='complete';
+  return {done:n,target,ready:!!ready,label:'RESULT ENTRIES',visitWorkload:Number(s.workload)||0};
+ }
+ if(s.liveFormat==='DRIFT SCORE'){const d=state().driftEvents[ev.id],t=driftFestivalTargets(s,ev);const n=d?driftFestivalDoneCount(d,s,ev):0;target=t.to*ev.eligibleIds.length;return {done:n,target,ready:n>=target,label:'SCORES',visitWorkload:(t.to-t.from+1)*ev.eligibleIds.length}}
+ if(s.liveFormat==='DRIFT KNOCKOUT'){const d=state().driftEvents[ev.id],n=d?completedDriftMatches(d)*2:0;if(lastVisit(s)&&d?.drawnIds8128?.length>Number(ev.planEligible))target+=2*(d.drawnIds8128.length-Number(ev.planEligible));return {done:n,target,ready:n>=target,label:'SCORE ENTRIES'}}
+ if(s.mode==='Race Off'){const ro=raceOffFor(ev.id),n=completedRaceOffMatches(ro)*2;
+  const totalEntry=(ro?.entryIds||[]).length,planned=Math.max(2,Number(ev.planEligible)||0);
+  if(lastVisit(s)&&totalEntry>planned)target+=2*(totalEntry-planned);
+  return {done:n,target,ready:n>=target,label:'RESULT ENTRIES',visitWorkload:lastVisit(s)?Math.max(0,target-previousWorkload(s)):Number(s.workload)||0}}
+ const r=runFor(ev.id),n=Array.isArray(r?.results)?r.results.length:0;
+ const prev=s.liveFormat==='STANDARD'&&r?(r.entries||[]).length*Math.max(0,targetStandardRounds(s,ev)-1):0;
+ return {done:n,target,ready:n>=target,label:'RESULT ENTRIES',visitWorkload:s.liveFormat==='STANDARD'&&r?Math.max(0,target-prev):s.liveFormat==='DRAG SHOOTOUT'&&r?target:undefined};
+}
+function actionLabel(s){if(s.liveFormat==='DRIFT SCORE')return state().driftEvents[s.eventId]?'CONTINUE DRIFT FESTIVAL':'START DRIFT FESTIVAL';if(s.liveFormat==='DRIFT KNOCKOUT')return state().driftEvents[s.eventId]?'CONTINUE DRIFT RACE OFF':'START DRIFT RACE OFF';if(s.mode==='Race Off')return raceOffFor(s.eventId)?'CONTINUE RACE OFF':'START RACE OFF';return runFor(s.eventId)?'CONTINUE FESTIVAL':'START FESTIVAL'}
+function launchSlot(n){const s=slotByNo(n);if(!s)return;if(slotReadyForSignoff(s))return renderSlotComplete(s);const cur=current();if(!done(s)&&cur&&Number(cur.slot)!==Number(s.slot))return toast(`Finish Slot ${slotNo(cur.slot)} first — R1 unlocks in order.`);const frozen=freezeFavouriteIfLaunch(s);if(!frozen)return;const ev=eventFor(frozen);if(!ev)return toast('R1 event definition not found');if(frozen.liveFormat==='DRIFT SCORE')return renderDriftFestival(n);if(frozen.liveFormat==='DRIFT KNOCKOUT')return renderDriftRaceOff(n);if(frozen.mode==='Race Off')return openRaceOffSlot(frozen);return openFestivalSlot(frozen)}
+window.rhEvilLaunchR1Slot8098=launchSlot;
+function setStatus(n,want){const s=slotByNo(n);if(!s)return;const p=state();if(want==='done'){const cur=current();if(cur&&Number(cur.slot)!==Number(s.slot))return toast(`Slot ${slotNo(cur.slot)} is the current R1 slot.`);const pr=progressFor(s);if(!slotReadyForSignoff(s))return toast(`Finish this slot first — ${Math.min(pr.done,pr.target)} / ${pr.target} ${pr.label.toLowerCase()} are banked.`);p.done[String(s.slot)]={doneAt:now(),eventId:s.eventId,workload:pr.visitWorkload??(Number(s.workload)||0)};p.updatedAt=now();save();repaintHome();return renderNextUp(n)}delete p.done[String(s.slot)];p.updatedAt=now();save();renderSlot(n);repaintHome()}
+window.rhEvilSetR1Status8098=setStatus;
+
+/* ---------- v8.0.111 — deliberate slot finish line ---------- */
+function slotReadyForSignoff(s){
+ if(!s||done(s)||!progressFor(s).ready)return false;
+ // Championship and tournament champions must be confirmed before the final slot closes.
+ if(lastVisit(s)&&s.mode==='Race Off'&&s.liveFormat!=='DRIFT KNOCKOUT'&&raceOffFor(s.eventId)?.status!=='complete')return false;
+ if(lastVisit(s)&&s.liveFormat==='GROUPS'&&runFor(s.eventId)?.status!=='complete')return false;
+ if(lastVisit(s)&&s.liveFormat==='SWISS'&&runFor(s.eventId)?.status!=='complete')return false;
+ if(lastVisit(s)&&s.liveFormat==='DRIFT KNOCKOUT'&&!state().driftEvents[s.eventId]?.complete)return false;
+ return true;
+}
+function renderSlotComplete(s){
+ const h=host();if(!h||!s)return;const pr=progressFor(s),w=visitBanked(s,pr);
+ if(!slotReadyForSignoff(s))return renderSlot(s,true);
+ showEvil();h.innerHTML=`<div class="rhEvilR18097 rhEvilFinish8111">
+ <button class="rhEvilR1Back8097" onclick="rhRenderEvilCampaignR18098()"><span>‹</span><b>BACK</b></button>
+ <header class="rhEvilR1Hero8097 slot"><small>EVIL R1 • RESULTS SAVED</small><h1>SLOT ${slotNo(s.slot)}</h1><p>COMPLETE!</p><strong>${E(s.event)}</strong></header>
+ <main class="rhEvilR1Body8097"><section class="rhEvilR1Stop8111"><span>🏁</span><h2>STOP HERE, YOU FUCKWIT!</h2><p>That's all you're supposed to race for Slot ${slotNo(s.slot)}. Don't draw the next round yet!</p><div><strong>${w.completed} / ${w.actual}</strong><small>${E(pr.label.toLowerCase())} safely banked</small></div></section>
+ <div class="rhEvilR1FinishActions8111"><button class="btn" onclick="rhEvilSetR1Status8098(${s.slot},'done')">✓ MARK AS DONE</button><button class="btn secondary" onclick="rhEvilR1ReviewSlot8111(${s.slot})">REVIEW SLOT DETAILS</button><button class="btn secondary" onclick="rhRenderEvilCampaignR18098()">BACK TO CAMPAIGN</button></div></main></div>`;
+ window.scrollTo(0,0);
+}
+function readyRunSlot(r){const s=slotByNo(r?.evilCampaignR1?.slot);return s&&current()&&Number(current().slot)===Number(s.slot)&&slotReadyForSignoff(s)?s:null}
+function readyRaceOffSlot(ro){const s=slotByNo(ro?.evilCampaignR1?.slot);return s&&current()&&Number(current().slot)===Number(s.slot)&&slotReadyForSignoff(s)?s:null}
+// End-of-result and next-draw hooks. Do not alter saved results, draws or underlying tournament state.
+function interceptR1Action(name,entity,precheck=false){
+ const base=window[name];if(typeof base!=='function')return;
+ window[name]=function(){const obj=entity==='festival'?currentRuns().find(x=>same(x.id,arguments[0])):raceOffs().find(x=>same(x.id,arguments[0]));
+  let slot=entity==='festival'?readyRunSlot(obj):readyRaceOffSlot(obj);
+  if(precheck&&slot){renderSlotComplete(slot);return;}
+  const out=base.apply(this,arguments);
+  slot=entity==='festival'?readyRunSlot(obj):readyRaceOffSlot(obj);
+  if(slot)renderSlotComplete(slot);
+  return out;
+ };
+}
+for(const name of ['rhV8DrawNextGroup','rhV8PrepareNextStage','rhV8AdvanceStage','rhV8StartNextStage'])interceptR1Action(name,'festival',true);
+interceptR1Action('rhV8FinishGroup','festival');
+for(const name of ['rhRaceOffOpenRoundSetup','rhRaceOffEnterNext','rhRaceOffRenderDrawComplete','rhRaceOffRenderDrawReview'])interceptR1Action(name,'raceoff',true);
+for(const name of ['rhRaceOffRenderRoundProgress','rhRaceOffConfirmChampion','rhRaceOffRenderChampion'])interceptR1Action(name,'raceoff');
+for(const name of ['rhSaveResult','rhSaveResultFinal']){
+ const base=window[name];if(typeof base!=='function')continue;
+ window[name]=function(){const out=base.apply(this,arguments);const r=currentRuns().find(x=>same(x.id,arguments[0]));
+  const slot=readyRunSlot(r);if(slot)setTimeout(()=>{const fresh=readyRunSlot(r);if(fresh)renderSlotComplete(fresh)},0);return out;
+ };
+}
+/* ---------- R1 UI ---------- */
+function tileHtml(){const m=DATA().meta,c=counts(),cur=current();return `<button class="v7DashTile evil8097" onclick="rhOpenEvilCampaignR18098()"><i aria-hidden="true" class="otgEvilDashIcon8117">😈</i><span><b>EVIL CAMPAIGN</b><small><span>${c.done} / ${c.total} COMPLETE</span><span>${cur?`NEXT • SLOT ${slotNo(cur.slot)}`:'R1 COMPLETE'}</span></small></span><em aria-hidden="true">›</em></button>`}
+function injectTile(){if(!fh5())return;const grid=document.querySelector('#home .v7DashGrid');if(!grid)return;grid.querySelectorAll('.v7DashTile.evil8076,.v7DashTile.evil8097').forEach(x=>x.remove());const festival=grid.querySelector('.v7DashTile.festival');if(festival)festival.classList.remove('wide');if(festival)festival.insertAdjacentHTML('afterend',tileHtml());else grid.insertAdjacentHTML('afterbegin',tileHtml())}
+const baseHome8098=window.rhRenderHome;if(typeof baseHome8098==='function')window.rhRenderHome=function(){const out=baseHome8098.apply(this,arguments);injectTile();return out};
+function repaintHome(){const h=document.getElementById('home');if(h&&!h.classList.contains('hidden')&&typeof window.rhRenderHome==='function')window.rhRenderHome()}
+function summaryCards(){const c=DATA().meta.ecosystemCounts||{};return `<section class="rhEvilR1Split8097"><div class="normal"><b>${c.NORMAL||0}</b><span>NORMAL</span></div><div class="fe"><b>${c['FORZA EDITION']||0}</b><span>FORZA EDITION</span></div><div class="drift"><b>${c.DRIFT||0}</b><span>DRIFT</span></div><div class="race"><b>${c.RACE||0}</b><span>RACE</span></div><div class="offroad"><b>${c['OFF-ROAD / BUGGY']||0}</b><span>OFF-ROAD / BUGGY</span></div></section>`}
+function actionStrip(){return `<section class="rhEvilR1Actions8097"><button onclick="rhEvilR1SetupGuide8098()"><span>🔧</span><b>SETUP GUIDE</b><small>Permanent shopping/loadout reference</small></button><button onclick="rhEvilR1Cars8098()"><span>🚗</span><b>CAR CLASSIFICATION</b><small>Inspect all 697 specialist assignments</small></button><button onclick="rhEvilMedals8111()"><span>🏆</span><b>MEDAL TABLES</b><small>Manufacturers & individual cars</small></button><button onclick="rhEvilR1Audit8098()"><span>✓</span><b>R1 AUDIT</b><small>Counts, caps and live QA state</small></button></section>`}
+function slotWorkSummary(s,pr){
+ const ev=eventFor(s),actual=Math.max(0,Number(pr.visitWorkload??s.workload)||0);
+ if(s.liveFormat==='GROUPS')return `${Math.floor(actual/2)} cars × 2 tracks • ${actual} result entries`;
+ if(s.liveFormat==='DRIFT KNOCKOUT')return `${Math.floor(actual/2)} Drift Zone pairings • ${actual} score entries`;
+ if(s.liveFormat==='DRIFT SCORE')return `${Number(ev?.eligibleIds?.length)||0} drift cars • ${actual} scores`;
+ if(s.mode==='Race Off')return `${Math.floor(actual/2)} pairings • ${actual} result entries`;
+ if(s.liveFormat==='DRAG SHOOTOUT')return `${Number(ev?.eligibleIds?.length)||0} cars • ${actual} drag entries`;
+ const entrants=Math.max(1,Number(ev?.eligibleIds?.length)||Number(s.eligible)||1);
+ const rounds=actual/entrants;
+ return `${entrants} cars × ${Number.isInteger(rounds)?rounds:'multiple'} race${rounds===1?'':'s'} • ${actual} result entries`;
+}
+function visitBanked(s,pr){
+ const actual=Math.max(0,Number(pr.visitWorkload??s.workload)||0);
+ return {actual,completed:Math.min(actual,Math.max(0,(Number(pr.done)||0)-((Number(pr.target)||0)-actual)))};
+}
+function mainNextUp8101(s){
+ if(!s)return `<section class="rhEvilR1MainNext8101 complete"><div><small>CAMPAIGN STATUS</small><h2>R1 COMPLETE</h2><p>All ${counts().total} Specialist-First slots are marked done.</p></div></section>`;
+ const pr=progressFor(s),w=visitBanked(s,pr),ready=slotReadyForSignoff(s),started=w.completed>0;
+ const label=ready?'MARK AS DONE':started?'CONTINUE CURRENT EVENT':'GO TO NEXT EVENT';
+ return `<section class="rhEvilR1MainNext8101 eco-${ecoClass(s.ecosystem)}">
+ <div class="rhEvilR1MainNextHead8101"><span><small>NEXT UP • SLOT ${slotNo(s.slot)}</small><h2>${E(s.event)}</h2><p>${E(modeLabel(s))} • ${E(s.liveFormat)} • VISIT ${E(s.visit)}</p></span><strong>${E(s.ecosystem)}</strong></div>
+ <div class="rhEvilR1Brief8111"><span>THIS SLOT</span><b>${E(slotWorkSummary(s,pr))}</b><div class="rhEvilR1BriefProgress8111"><strong>${w.completed} / ${w.actual}</strong><small>${E(pr.label.toLowerCase())} banked in this visit</small></div><i style="width:${w.actual?Math.round(100*w.completed/w.actual):0}%"></i></div>
+ <div class="rhEvilR1MainNextDo8101"><small>${ready?'STOP — SLOT COMPLETE':`DO THIS ${started?'NOW':'NEXT'}`}</small><b>${ready?'All required results are saved. Mark this slot DONE before moving on.':E(s.doNow)}</b><span>${ready?'✓ READY TO MARK AS DONE':`STOP HERE: ${E(s.stopWhen)}`}</span></div>
+ <div class="rhEvilR1MainNextActions8101"><button class="btn" onclick="${ready?`rhEvilOpenR1Slot8098(${Number(s.slot)})`:`rhEvilLaunchR1Slot8098(${Number(s.slot)})`}">${label}</button><button class="btn secondary" onclick="rhEvil${ready?'R1ReviewSlot8111':'OpenR1Slot8098'}(${Number(s.slot)})">VIEW SLOT</button></div></section>`;
+}
+function slotState(s){if(done(s))return'done';const cur=current();return cur&&Number(cur.slot)===Number(s.slot)?'current':'todo'}
+function slotRow(s){const st=slotState(s),pr=progressFor(s);return `<button class="rhEvilR1Row8097 rhEvilR1RowState8098 ${st} eco-${ecoClass(s.ecosystem)}" onclick="rhEvilOpenR1Slot8098(${Number(s.slot)})"><i>${slotNo(s.slot)}</i><span><b>${E(s.event)}</b><small>${E(modeLabel(s))} • ${E(s.liveFormat)} • VISIT ${E(s.visit)}${pr.done?` • ${Math.min(pr.done,pr.target)}/${pr.target} BANKED`:''}</small></span><strong>${st==='done'?'DONE':st==='current'?'NOW':pr.visitWorkload??(Number(s.workload)||0)}<small>${st==='done'?'':st==='current'?'CURRENT':'ENTRIES'}</small></strong><em>›</em></button>`}
+function renderList(q=''){const target=document.getElementById('rhEvilR1List8098');if(!target)return;const text=String(q||'').trim().toLowerCase(),all=slots();if(text){const rows=all.filter(s=>`${s.slot} ${s.phase} ${s.ecosystem} ${s.eventId} ${s.mode} ${s.family} ${s.event} ${s.liveFormat} ${s.pool} ${s.doNow}`.toLowerCase().includes(text));target.innerHTML=`<div class="rhEvilR1SearchCount8097"><b>${rows.length}</b> MATCHING SLOTS</div>${rows.slice(0,250).map(slotRow).join('')}`;return}const cur=current();target.innerHTML=phaseGroups(all).map(g=>{const pc=phaseStats(g.rows),open=cur&&g.rows.some(x=>Number(x.slot)===Number(cur.slot))?'open':'';return `<details class="rhEvilR1Phase8097" ${open}><summary><span><b>${E(g.name)}</b><small>${pc.done}/${pc.total} DONE</small></span><em>⌄</em></summary><div>${g.rows.map(slotRow).join('')}</div></details>`}).join('')}
+window.rhEvilR1Search8098=v=>renderList(v);
+function renderMain(){const h=host();if(!h)return;const m=DATA().meta,c=counts(),cur=current();h.innerHTML=`<div class="rhEvilR18097"><button class="rhEvilR1Back8097" onclick="show('home')"><span>‹</span><b>BACK</b></button><header class="rhEvilR1Hero8097"><small>ANDY • FH5 • R1</small><h1>EVIL CAMPAIGN</h1><p>SPECIALIST-FIRST REBUILD</p><strong>LIVE R1 • v8.0.121 QA</strong></header><main class="rhEvilR1Body8097"><section class="rhEvilR1Safety8097 setup"><b>R1 IS THE LIVE EVIL CAMPAIGN</b><p>Reset Racing Data now clears R1 progress along with Championships, results, Records, Track counters, Stats and Car History-derived racing data. Garage ownership remains untouched.</p></section><section class="rhEvilR1Stats8097"><div><small>R1 PROGRESS</small><b>${c.done}</b><span>/ ${c.total} DONE</span></div><div><small>NEXT SLOT</small><b>${cur?slotNo(cur.slot):'✓'}</b><span>${cur?'CURRENT':'COMPLETE'}</span></div><div><small>EVENT CARDS</small><b>${m.eventCards+2+SWISS_CUPS8121.length}</b><span>EXACT FIELDS</span></div><div><small>MAX WORKLOAD</small><b>${m.maxWorkload}</b><span>RESULT ENTRIES</span></div></section>${mainNextUp8101(cur)}${summaryCards()}${actionStrip()}<section class="rhEvilR1Intro8097"><div><small>THE LIST</small><h2>${slots().length} SLOTS</h2></div><p>More slots, smaller bites. Two separated Favourite Manufacturer Finals Nights are added with capped visits; Reset Racing Data returns R1 to Slot 0001 without touching Garage ownership.</p></section><section class="rhEvilR1Search8097"><input type="search" placeholder="Search slot, event, format…" oninput="rhEvilR1Search8098(this.value)"></section><div id="rhEvilR1List8098"></div></main></div>`;renderList('');window.scrollTo(0,0)}
+window.rhOpenEvilCampaignR18098=function(){if(!fh5())return toast('Evil Campaign is available in the Forza Horizon 5 Space');showEvil();renderMain()};window.rhRenderEvilCampaignR18098=renderMain;
+function setupForSlot(s){let key='NORMAL / ROAD';if(s.ecosystem==='RACE')key='RACE';else if(s.ecosystem==='OFF-ROAD / BUGGY')key='OFF-ROAD / BUGGY';else if(s.ecosystem==='DRIFT')key='DRIFT';else if(s.ecosystem==='FORZA EDITION')key='FORZA EDITION';return (DATA().setupGuide||[]).find(r=>String(r?.[0])===key)||null}
+function setupMini(s){const x=setupForSlot(s);if(!x)return'';return `<section class="rhEvilR1SetupMini8097"><small>RECOMMENDED MAIN SETUP</small><h3>${E(x[0])}</h3><div><b>TYRES</b><span>${E(x[1])}</span></div><div><b>CHASSIS</b><span>${E(x[2])}</span></div><div><b>DRIVETRAIN</b><span>${E(x[3])}</span></div>${s.pool==='DRAG'?'<p><strong>DRAG EXCEPTION:</strong> temporary drag loadout for this slot, then return to the main ecosystem setup.</p>':''}</section>`}
+function eligibleHtml(ev){const cars=matchedCars(ev);return `<details class="rhEvilR1Eligible8097"><summary><span><b>EXACT ELIGIBLE FIELD</b><small>${cars.length} cars • frozen from your live Garage snapshot</small></span><em>⌄</em></summary><div class="rhEvilR1EligibleList8097">${cars.map((x,i)=>`<div class="${x.live?'':'missing'}"><i>${String(i+1).padStart(3,'0')}</i><span><b>${E(x.name)}</b><small>${E(x.meta.ecosystem)} • ${E(x.meta.role)}${x.live?'':' • NOT IN CURRENT GARAGE'}</small></span></div>`).join('')}</div></details>`}
+function renderSlot(n,review=false){const s=slotByNo(n),h=host();if(!s||!h)return renderMain();if(!review&&slotReadyForSignoff(s))return renderSlotComplete(s);const ev=eventFor(s),st=slotState(s),pr=progressFor(s),pct=Math.min(100,pr.target?pr.done/pr.target*100:0),isDone=done(s),canFinish=slotReadyForSignoff(s);h.innerHTML=`<div class="rhEvilR18097"><button class="rhEvilR1Back8097" onclick="rhRenderEvilCampaignR18098()"><span>‹</span><b>BACK</b></button><header class="rhEvilR1Hero8097 slot"><small>${st==='done'?'DONE':st==='current'?'CURRENT SLOT':'R1 SLOT'} • ${E(s.ecosystem)}</small><h1>SLOT ${slotNo(s.slot)}</h1><p>${E(modeLabel(s))}</p><strong>${E(s.liveFormat)}</strong></header><main class="rhEvilR1Body8097"><section class="rhEvilR1SlotCard8097 eco-${ecoClass(s.ecosystem)}"><small>${E(s.family)} • ${E(s.eventId)}</small><h2>${E(s.event)}</h2><div><span>${ev?.eligibleIds?.length??s.eligible} CARS</span><span>${E(s.pool)}</span><span>VISIT ${E(s.visit)}</span><span>${pr.visitWorkload??s.workload} RESULT ENTRIES</span></div></section><section class="rhEvilR1Instruction8097"><small>DO THIS NOW</small><h3>${E(s.doNow)}</h3><p>${E(s.stopWhen)}</p></section><section class="rhEvilR1ProgressCard8098"><b>${Math.min(pr.done,pr.target)} / ${pr.target}</b><span>${E(pr.label)} BANKED THROUGH THIS VISIT</span><i style="width:${pct}%"></i></section><section class="rhEvilR1Programme8097"><small>PROGRAMME</small><h3>${E(s.programme)}</h3><p>${ev?.protectedFinale?`Protected finale: <strong>${E(ev.protectedFinale)}</strong>. `:''}${E(ev?.eligibilityRule||'')}</p></section>${[FAV_F,FAV_R].includes(s.eventId)?`<section class="rhEvilR1Note8097"><small>FINALS NIGHT SELECTION</small><p>${E(favSnapshot().make||'Choose Favourite Manufacturer in Settings first')} • ${ev?.eligibleIds?.length||0} eligible NORMAL cars. Festival and Race Off are separate, non-consecutive Finals Nights. Manufacturer freezes on first launch; late eligible cars join until the complete draw is closed.</p></section>`:''}${s.notes?`<section class="rhEvilR1Note8097"><small>CAMPAIGN NOTE</small><p>${E(s.notes)}</p></section>`:''}${setupMini(s)}${ev?.lateCount8128&&!ev?.fieldFrozen8128?`<section class="rhEvilR1Note8097"><small>🎁 GARAGE ARRIVALS • DRAW STILL OPEN</small><p>${ev.lateCount8128} newly owned eligible car${ev.lateCount8128===1?'':'s'} will join this event until its full field draw is closed. Drawn groups and saved results remain untouched.</p></section>`:''}${ev&&isSwissCup8121(s.eventId)&&!(ev.eligibleIds||[]).length?'<section class="rhEvilR1Note8097"><small>RANDOM FIELD</small><p>Sixteen eligible NORMAL cars will be shuffled and frozen only when the full 16-car field is drawn. No other championship is affected.</p></section>':ev?eligibleHtml(ev):''}<section class="rhEvilR1LiveActions8098">${!canFinish?`<button class="btn" onclick="rhEvilLaunchR1Slot8098(${s.slot})">${E(actionLabel(s))}</button>`:``}${isDone?`<button class="btn" onclick="rhEvilR1NextUp8100(${s.slot})">NEXT UP</button><button class="btn secondary" onclick="rhEvilSetR1Status8098(${s.slot},'todo')">MARK AS TODO</button>`:`<button class="btn ${canFinish?'':'secondary'}" ${canFinish?'': 'disabled'} onclick="rhEvilSetR1Status8098(${s.slot},'done')">${canFinish?'MARK SLOT DONE':pr.ready?'CONFIRM EVENT CHAMPION FIRST':`LOCKED • ${Math.max(0,pr.target-pr.done)} TO GO`}</button>`}</section>${canFinish&&!isDone?'<section class="rhEvilR1Ready8098"><b>✓ SLOT WORKLOAD COMPLETE</b><p>The required work is banked. Mark the slot DONE when you are happy.</p></section>':''}</main></div>`;window.scrollTo(0,0)}
+window.rhEvilOpenR1Slot8098=renderSlot;
+window.rhEvilR1ReviewSlot8111=n=>renderSlot(n,true);
+
+/* ---------- NEXT UP handoff ---------- */
+function renderNextUp(completedSlotNo){
+ const completed=slotByNo(completedSlotNo),h=host();if(!h)return;
+ const next=current();showEvil();
+ if(!next){h.innerHTML=`<div class="rhEvilR18097"><button class="rhEvilR1Back8097" onclick="rhRenderEvilCampaignR18098()"><span>‹</span><b>BACK</b></button><header class="rhEvilR1Hero8097"><small>R1 SLOT ${slotNo(completedSlotNo)} DONE</small><h1>CAMPAIGN COMPLETE</h1><p>NO NEXT SLOT</p><strong>${counts().done} / ${counts().total} DONE</strong></header><main class="rhEvilR1Body8097"><section class="rhEvilR1Ready8098"><b>✓ EVIL R1 COMPLETE</b><p>There are no unresolved Specialist-First slots left.</p></section><section class="rhEvilR1LiveActions8098"><button class="btn" onclick="rhRenderEvilCampaignR18098()">RETURN TO EVIL CAMPAIGN</button></section></main></div>`;window.scrollTo(0,0);return;}
+ const ev=eventFor(next),pr=progressFor(next);
+ h.innerHTML=`<div class="rhEvilR18097"><button class="rhEvilR1Back8097" onclick="rhRenderEvilCampaignR18098()"><span>‹</span><b>BACK</b></button><header class="rhEvilR1Hero8097"><small>SLOT ${slotNo(completedSlotNo)} DONE</small><h1>NEXT UP</h1><p>SLOT ${slotNo(next.slot)}</p><strong>${E(modeLabel(next))} • ${E(next.liveFormat)}</strong></header><main class="rhEvilR1Body8097">${completed?`<section class="rhEvilR1Ready8098"><b>✓ SLOT ${slotNo(completed.slot)} BANKED</b><p>${E(completed.event)} is marked DONE. R1 has unlocked the next slot.</p></section>`:''}<section class="rhEvilR1SlotCard8097 eco-${ecoClass(next.ecosystem)}"><small>${E(next.family)} • ${E(next.eventId)}</small><h2>${E(next.event)}</h2><div><span>${ev?.eligibleIds?.length??next.eligible} CARS</span><span>${E(next.pool)}</span><span>VISIT ${E(next.visit)}</span><span>${pr.visitWorkload??next.workload} RESULT ENTRIES</span></div></section><section class="rhEvilR1Instruction8097"><small>DO THIS NEXT</small><h3>${E(next.doNow)}</h3><p>${E(next.stopWhen)}</p></section><section class="rhEvilR1Programme8097"><small>PROGRAMME</small><h3>${E(next.programme)}</h3><p>${ev?.protectedFinale?`Protected finale: <strong>${E(ev.protectedFinale)}</strong>. `:''}${E(ev?.eligibilityRule||'')}</p></section><section class="rhEvilR1LiveActions8098 rhEvilR1NextActions8100"><button class="btn" onclick="rhEvilLaunchR1Slot8098(${next.slot})">GO TO NEXT EVENT</button><button class="btn secondary" onclick="rhEvilOpenR1Slot8098(${next.slot})">VIEW NEXT SLOT</button><button class="btn secondary" onclick="rhRenderEvilCampaignR18098()">BACK TO CAMPAIGN LIST</button></section>${pr.done?`<section class="rhEvilR1Note8097"><small>RESUMABLE</small><p>${Math.min(pr.done,pr.target)} / ${pr.target} ${E(pr.label.toLowerCase())} are already banked for this visit.</p></section>`:''}</main></div>`;window.scrollTo(0,0);
+}
+window.rhEvilR1NextUp8100=renderNextUp;
+
+/* ---------- v8.0.111 — Olympic medals; derived, never saved as duplicate state ---------- */
+const medalIcons=['🥇','🥈','🥉'];
+function medalRecords(){
+ const records=[],carMap=new Map((DATA().cars||[]).map(c=>[String(c.id),c]));
+ function add(ev,finish,ids){for(const id of [...new Set((ids||[]).map(String))]){
+  const car=carMap.get(id);if(!car)continue;
+  records.push({eventId:ev.id,event:ev.event,ecosystem:ev.ecosystem,mode:ev.mode,family:ev.family,carId:id,car:car.name,make:car.make||'Unknown',finish,manufacturerEligible:manufacturerEventEligible(ev,carMap)});
+ }}
+ function finalMedals(ev,ids){if(ids[0])add(ev,0,[ids[0]]);if(ids[1])add(ev,1,[ids[1]]);if(ids.length>2)add(ev,2,ids.slice(2,4));}
+ const grouped=new Set();
+ for(const s of slots()){
+  const ev=eventFor(s);if(!ev||grouped.has(ev.id))continue;grouped.add(ev.id);
+  if(ev.mode==='Race Off'){
+   if(s.liveFormat==='DRIFT KNOCKOUT'){
+    const d=state().driftEvents[ev.id];if(!d?.complete||!d.championId)continue;
+    const rounds=d.rounds||[],final=rounds[rounds.length-1],last=final?.matches?.[0];
+    if(!last?.winnerId)continue;
+    const loser=String(last.winnerId)===String(last.a)?last.b:last.a;
+    const semi=rounds.length>1?rounds[rounds.length-2]:null;
+    finalMedals(ev,[d.championId,loser,...(semi?.matches?.length===2?semi.matches.map(m=>String(m.winnerId)===String(m.a)?m.b:m.a):[])]);
+   }else{
+    const ro=raceOffFor(ev.id);if(ro?.status!=='complete'||!ro.championCarId)continue;
+    const rounds=ro.rounds||[],final=rounds[rounds.length-1],last=final?.matches?.[0];
+    const loser=last?.loserCarId||((last?.winnerCarId===last?.carA?.sourceCarId)?last?.carB?.sourceCarId:last?.carA?.sourceCarId);
+    const semi=rounds.length>1?rounds[rounds.length-2]:null;
+    finalMedals(ev,[ro.championCarId,loser,...(semi?.matches?.length===2?semi.matches.map(m=>m.loserCarId):[])]);
+   }
+  }else if(s.liveFormat==='DRIFT SCORE'){
+   const d=state().driftEvents[ev.id],rounds=d?.rounds||[],n=Number(ev.eligibleIds?.length)||0,required=Math.round(eventTotalWorkload(ev.id)/Math.max(1,n));
+   if(!n||rounds.length<required||rounds.slice(0,required).some(r=>(ev.eligibleIds||[]).some(id=>!Object.prototype.hasOwnProperty.call(r.scores||{},id))))continue;
+   finalMedals(ev,driftStandings({...d,rounds:rounds.slice(0,required)},ev).map(x=>x.id).slice(0,3));
+  }else{
+   const r=runFor(ev.id);if(!r||r.status!=='complete')continue;
+   if(r.format==='swiss'){
+    const k=r.v8Swiss?.ko,rr=k?.rounds||[],final=rr[rr.length-1]?.matches?.[0],semi=rr.length>1?rr[rr.length-2]:null;
+    if(r.v8Swiss?.championId&&final){
+     const loser=String(final.winnerId)===String(final.carA)?final.carB:final.carA;
+     finalMedals(ev,[r.v8Swiss.championId,loser,...(semi?.matches?.length===2?semi.matches.map(m=>String(m.winnerId)===String(m.carA)?m.carB:m.carA):[])]);
+    }
+   }else if(r.format==='groups-total-time'){
+    const final=(r.v8Groups?.completedGroups||[]).find(g=>g.final);
+    if(final?.standings?.length)finalMedals(ev,final.standings.slice(0,3).map(x=>x.id));
+   }else{
+    const expected=new Set((r.rounds||[]).map(rd=>String(rd.id))),all=new Map();
+    for(const id of r.entries||[])all.set(String(id),{id:String(id),time:0,rounds:new Set()});
+    for(const x of r.results||[]){const row=all.get(String(x.carId));if(!row||!expected.has(String(x.roundId))||row.rounds.has(String(x.roundId))||!Number.isFinite(Number(x.time)))continue;row.rounds.add(String(x.roundId));row.time+=Number(x.time)}
+    const sorted=[...all.values()].filter(x=>expected.size&&x.rounds.size===expected.size).sort((a,b)=>a.time-b.time);
+    if(sorted.length===all.size&&sorted.length>=2)finalMedals(ev,sorted.slice(0,3).map(x=>x.id));
+   }
+  }
+ }
+ return records;
+}
+function manufacturerEventEligible(ev,map){
+ if(String(ev.ecosystem)==='DRIFT'||/manufacturer/i.test(String(ev.family))||[FAV_F,FAV_R].includes(ev.id))return false;
+ const makes=new Set((ev.eligibleIds||[]).map(id=>map.get(String(id))?.make).filter(Boolean));return makes.size>1;
+}
+function medalStandings(kind){
+ const list=medalRecords().filter(m=>kind==='cars'||m.manufacturerEligible),by=new Map();
+ for(const m of list){const key=kind==='cars'?m.carId:m.make;let rec=by.get(key);
+  if(!rec){rec={key,name:kind==='cars'?m.car:m.make,gold:0,silver:0,bronze:0,total:0,history:[]};by.set(key,rec)}
+  if(m.finish===0)rec.gold++;else if(m.finish===1)rec.silver++;else rec.bronze++;
+  rec.total++;rec.history.push(m);
+ }
+ return [...by.values()].sort((a,b)=>b.gold-a.gold||b.silver-a.silver||b.bronze-a.bronze||a.name.localeCompare(b.name));
+}
+function renderMedalTables(kind='manufacturers'){
+ if(!fh5())return toast('EVIL R1 medals belong to the Forza Horizon 5 Space');
+ const h=host();if(!h)return;const rows=medalStandings(kind==='cars'?'cars':'manufacturers');showEvil();
+ h.innerHTML=`<div class="rhEvilR18097"><button class="rhEvilR1Back8097" onclick="rhRenderEvilCampaignR18098()"><span>‹</span><b>BACK</b></button>
+ <header class="rhEvilR1Hero8097"><small>EVIL R1 • OLYMPIC RANKING</small><h1>MEDAL TABLES</h1><p>YOUR HARDEST OPPONENT IS YOU.</p><strong>🥇 GOLD • 🥈 SILVER • 🥉 BRONZE</strong></header>
+ <main class="rhEvilR1Body8097"><div class="rhEvilMedalTabs8111"><button class="${kind!=='cars'?'selected':''}" onclick="rhEvilMedals8111('manufacturers')">MANUFACTURERS</button><button class="${kind==='cars'?'selected':''}" onclick="rhEvilMedals8111('cars')">INDIVIDUAL CARS</button></div>
+ <p class="rhEvilMedalPolicy8111">${kind==='cars'?'Every finished competition counts, including manufacturer-only and Drift.':'Drift and single-manufacturer events are excluded. Medals awarded only after a competition finishes.'} Ranked by gold, then silver, then bronze. Both losing semifinalists take bronze in Race Off.</p>
+ ${rows.length?`<div class="rhEvilMedalTable8111"><div class="rhEvilMedalRow8111 heading"><span>RANK • ${kind==='cars'?'CAR':'MAKE'}</span><b>🥇</b><b>🥈</b><b>🥉</b><b>ALL</b></div>${rows.map((r,i)=>`<button class="rhEvilMedalRow8111" onclick="rhEvilMedalHistory8111('${kind}','${encodeURIComponent(r.key).replace(/'/g,'%27')}')"><span><small>${i+1}.</small> ${E(r.name)}</span><b>${r.gold}</b><b>${r.silver}</b><b>${r.bronze}</b><b>${r.total}</b></button>`).join('')}</div>`:'<section class="rhEvilR1Ready8098"><b>NO MEDALS AWARDED YET</b><p>Complete an Evil R1 competition to open the podium.</p></section>'}
+ </main></div>`;window.scrollTo(0,0);
+}
+window.rhEvilMedals8111=renderMedalTables;
+window.rhEvilMedalHistory8111=function(kind,encoded){
+ const key=decodeURIComponent(encoded),row=medalStandings(kind).find(x=>x.key===key),h=host();if(!row||!h)return renderMedalTables(kind);
+ showEvil();h.innerHTML=`<div class="rhEvilR18097"><button class="rhEvilR1Back8097" onclick="rhEvilMedals8111('${kind}')"><span>‹</span><b>BACK</b></button><header class="rhEvilR1Hero8097"><small>EVIL R1 • MEDAL HISTORY</small><h1>${E(row.name)}</h1><p>🥇 ${row.gold} • 🥈 ${row.silver} • 🥉 ${row.bronze}</p><strong>${row.total} CAREER MEDALS</strong></header><main class="rhEvilR1Body8097"><div class="rhEvilMedalHistory8111">${row.history.map(m=>`<section><strong>${medalIcons[m.finish]} ${m.finish===0?'GOLD':m.finish===1?'SILVER':'BRONZE'}</strong><b>${E(m.event)}</b><p>${E(m.car)} • ${E(m.mode)}${m.manufacturerEligible?'':' • Car medal only'}</p></section>`).join('')}</div></main></div>`;window.scrollTo(0,0);
+};
+// Exposed only for deterministic, read-only regression tests — no state mutation.
+window.rhEvilR1MedalQA8111={records:medalRecords,standings:medalStandings,signoff:n=>slotReadyForSignoff(slotByNo(n))};
+const baseCarHistory8111=window.rhOpenCarHistoryV7001;
+if(typeof baseCarHistory8111==='function')window.rhOpenCarHistoryV7001=function(id){const out=baseCarHistory8111.apply(this,arguments);
+ if(!fh5())return out;
+ const medals=medalRecords().filter(m=>same(m.carId,id)),root=document.querySelector('#rhCarHistoryV7001 .v7CarHistoryPage');
+ if(root&&medals.length){const area=document.createElement('section');area.className='v7HistoryCard rhEvilCarMedals8111';area.innerHTML=`<h2>🏅 EVIL R1 MEDALS</h2><div>${medalIcons.map((icon,i)=>`<span>${icon} ${medals.filter(m=>m.finish===i).length}</span>`).join('')}</div><p>${medals.map(m=>`${medalIcons[m.finish]} ${E(m.event)}`).join('<br>')}</p>`;root.appendChild(area)}
+ return out;
+};
+
+/* ---------- reference screens ---------- */
+window.rhEvilR1SetupGuide8098=function(){const h=host(),rows=DATA().setupGuide||[];if(!h)return;h.innerHTML=`<div class="rhEvilR18097"><button class="rhEvilR1Back8097" onclick="rhRenderEvilCampaignR18098()"><span>‹</span><b>BACK</b></button><header class="rhEvilR1Hero8097"><small>R1 REFERENCE</small><h1>SETUP GUIDE</h1><p>BUY ONCE • STOP FAFFING</p></header><main class="rhEvilR1Body8097"><section class="rhEvilR1Safety8097 setup"><b>BASELINE, NOT A COMPULSORY MAX BUILD</b><p>Chassis/control first. Preserve original drivetrain by default. Drag is the temporary exception.</p></section><div class="rhEvilR1GuideGrid8097">${rows.map(r=>`<section><small>${E(r[0])}</small><h2>${E(r[5]||r[0])}</h2><div><b>TYRES</b><span>${E(r[1])}</span></div><div><b>SUSPENSION / CHASSIS</b><span>${E(r[2])}</span></div><div><b>DRIVETRAIN</b><span>${E(r[3])}</span></div><div><b>POWER / WEIGHT</b><span>${E(r[4])}</span></div></section>`).join('')}</div></main></div>`;window.scrollTo(0,0)};
+let carFilterEco='ALL';function renderCars(q=''){const box=document.getElementById('rhEvilR1CarsList8098');if(!box)return;const text=String(q||'').trim().toLowerCase(),rows=(DATA().cars||[]).filter(c=>(carFilterEco==='ALL'||c.ecosystem===carFilterEco)&&(!text||`${c.name} ${c.make} ${c.model} ${c.year} ${c.classType} ${c.ecosystem} ${c.role}`.toLowerCase().includes(text)));box.innerHTML=`<div class="rhEvilR1SearchCount8097"><b>${rows.length}</b> MATCHING CARS</div>${rows.map(c=>`<div class="rhEvilR1CarRow8097 eco-${ecoClass(c.ecosystem)}"><span><b>${E(c.name)}</b><small>${E(c.classType)} • ${E(c.role)} • ${E(c.confidence)} CONFIDENCE</small></span><strong>${E(c.ecosystem)}</strong><details><summary>WHY?</summary><p>${E(c.basis)}</p></details></div>`).join('')}`}
+window.rhEvilR1CarsFilter8098=v=>renderCars(v);window.rhEvilR1CarsEco8098=function(v){carFilterEco=v;document.querySelectorAll('.rhEvilR1EcoTabs8097 button').forEach(b=>b.classList.toggle('active',b.dataset.eco===v));renderCars(document.getElementById('rhEvilR1CarSearch8098')?.value||'')};window.rhEvilR1Cars8098=function(){const h=host();if(!h)return;carFilterEco='ALL';const ecos=['ALL','NORMAL','FORZA EDITION','DRIFT','RACE','OFF-ROAD / BUGGY'];h.innerHTML=`<div class="rhEvilR18097"><button class="rhEvilR1Back8097" onclick="rhRenderEvilCampaignR18098()"><span>‹</span><b>BACK</b></button><header class="rhEvilR1Hero8097"><small>697-CAR AUDIT</small><h1>CAR CLASSIFICATION</h1><p>ONE SPECIALIST HOME PER CAR</p></header><main class="rhEvilR1Body8097"><section class="rhEvilR1Search8097"><input id="rhEvilR1CarSearch8098" type="search" placeholder="Search car, make, class or role…" oninput="rhEvilR1CarsFilter8098(this.value)"></section><div class="rhEvilR1EcoTabs8097">${ecos.map(x=>`<button data-eco="${E(x)}" class="${x==='ALL'?'active':''}" onclick="rhEvilR1CarsEco8098('${E(x)}')">${E(x)}</button>`).join('')}</div><div id="rhEvilR1CarsList8098"></div></main></div>`;renderCars('');window.scrollTo(0,0)};
+window.rhEvilR1Audit8098=function(){const h=host(),a=DATA().audit||{},rules=DATA().rules||[];if(!h)return;const checks=[['GARAGE CARS',a['Garage cars'],697],['OWNED MATCHED',a['Owned cars matched'],697],['EVENT CARDS',a['Event cards']+2+SWISS_CUPS8121.length,235],['CAMPAIGN SLOTS',slots().length,slots().length],['MAX WORKLOAD',a['Max workload entries per slot'],'≤ 24'],['MAX RACE OFF PAIRINGS',a['Max Race Off pairings per slot'],'≤ 5'],['UNCOVERED CARS',a['Uncovered cars'],0],['BAD EVENTS',a['Bad events under 2 entrants'],0],['DUPLICATE EVENT IDS',a['Duplicate event IDs'],0],['SLOT NUMBERING',a['Slot numbering contiguous'],'YES']];h.innerHTML=`<div class="rhEvilR18097"><button class="rhEvilR1Back8097" onclick="rhRenderEvilCampaignR18098()"><span>‹</span><b>BACK</b></button><header class="rhEvilR1Hero8097"><small>PLAYABLE QA</small><h1>R1 AUDIT</h1><p>MECHANICAL CHECKS + LOCKED RULES</p></header><main class="rhEvilR1Body8097"><div class="rhEvilR1AuditChecks8097">${checks.map(x=>`<div><span>${E(x[0])}</span><b>${E(x[1])}</b><small>EXPECTED ${E(x[2])}</small></div>`).join('')}</div><section class="rhEvilR1Rules8097"><h2>LOCKED BUILD RULES</h2>${rules.map(r=>`<div><b>${E(r[0])}</b><strong>${E(r[1])}</strong><p>${E(r[2])}</p></div>`).join('')}</section></main></div>`;window.scrollTo(0,0)};
+window.rhEvilOpenLegacy8098=function(){if(typeof LEGACY_OPEN!=='function')return toast('Legacy campaign viewer is unavailable');LEGACY_OPEN()};
+
+/* ---------- Return-to-R1 bridge ---------- */
+function injectReturn(screenId,marker){const root=document.getElementById(screenId);if(!root||!marker||root.querySelector('.rhEvilR1Return8098'))return;const b=document.createElement('button');b.className='rhEvilR1Return8098';b.innerHTML=`↩ EVIL R1 • SLOT ${slotNo(marker.slot)}`;b.onclick=()=>{showEvil();renderSlot(marker.slot)};root.appendChild(b)}
+const baseOpenRun8098=window.rhOpenRun;if(typeof baseOpenRun8098==='function')window.rhOpenRun=function(id){const r=currentRuns().find(x=>same(x.id,id)),ready=readyRunSlot(r);if(ready)return renderSlotComplete(ready);const out=baseOpenRun8098.apply(this,arguments);if(r?.evilCampaignR1)setTimeout(()=>{injectReturn('festival',r.evilCampaignR1);injectRandomiseCarOrder(id)},0);return out};
+for(const name of ['rhRaceOffOpenRoundSetup','rhRaceOffRenderDrawReview','rhRaceOffRenderDrawComplete','rhRaceOffRenderRoundProgress','rhRaceOffEnterNext','rhRenderRaceOffLocked','rhRaceOffRenderChampion']){const base=window[name];if(typeof base==='function')window[name]=function(){const out=base.apply(this,arguments),id=arguments[0],ro=raceOffs().find(x=>same(x.id,id));if(ro?.evilCampaignR1)setTimeout(()=>injectReturn('raceoff',ro.evilCampaignR1),0);return out}}
+
+/* Reset Racing Data / Full Reset: R1 and the retired Legacy campaign are racing data.
+   v8.0.102 attaches AFTER v8.0.66 replaces the approved confirmation button; cloneNode does
+   not preserve event listeners, which is why the earlier immediate R1 hook was lost. */
+function clearEvilCampaignStates8102(){const s=space();if(!s)return;delete s[STATE_KEY];delete s.evilCampaign8076;save()}
+function addEvilResetListener8102(){const b=document.getElementById('rhResetConfirm6090');if(!b||b.dataset.rhEvilReset8102)return;b.dataset.rhEvilReset8102='1';b.addEventListener('click',clearEvilCampaignStates8102,{once:true})}
+const baseResetConfirm8102=window.rhResetConfirm;if(typeof baseResetConfirm8102==='function')window.rhResetConfirm=function(){const out=baseResetConfirm8102.apply(this,arguments);setTimeout(addEvilResetListener8102,0);return out};
+const baseFullResetConfirm8102=window.rhFullResetConfirm;if(typeof baseFullResetConfirm8102==='function')window.rhFullResetConfirm=function(){const out=baseFullResetConfirm8102.apply(this,arguments);setTimeout(addEvilResetListener8102,0);return out};
+/* Also cover any direct reset-final invocation that bypasses the approved confirmation screen. */
+const baseResetRacingFinal8102=window.rhResetRacingFinal;if(typeof baseResetRacingFinal8102==='function')window.rhResetRacingFinal=function(){const out=baseResetRacingFinal8102.apply(this,arguments);clearEvilCampaignStates8102();return out};
+const baseFullResetFinal8102=window.rhFullResetFinal;if(typeof baseFullResetFinal8102==='function')window.rhFullResetFinal=function(){const out=baseFullResetFinal8102.apply(this,arguments);clearEvilCampaignStates8102();return out};
+window.rhClearEvilCampaignStates8102=clearEvilCampaignStates8102;
+
+window.rhEvilR1Report8098=()=>({version:VERSION,campaignId:CAMPAIGN_ID,stateKey:STATE_KEY,counts:counts(),legacyDone:oldDone(),events:Object.keys(DATA().events||{}).length+2+SWISS_CUPS8121.length,slots:slots().length,cars:(DATA().cars||[]).length,driftZones:DRIFT_ZONES.length});
+repaintHome();
+window.rhEvilR1QA8103={slots:()=>slots().map(x=>({...x})),events:()=>({...favEvents()}),favourite:()=>({...favSnapshot(),ids:[...favSnapshot().ids]}),readiness:(n)=>progressFor(slotByNo(n))};
+})();

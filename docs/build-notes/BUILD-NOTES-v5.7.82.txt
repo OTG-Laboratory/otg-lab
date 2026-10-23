@@ -1,0 +1,8 @@
+RaceHub v5.7.82 — Restore Championship Exit / Resume
+
+- Preserves the locked Enter Result artwork and all v5.7.81 functionality.
+- Top-left back control now returns to the active Championship Overview instead of leaving the Festival container blank.
+- Unsaved time or finishing-position input triggers a Leave without saving confirmation.
+- Championship remains active and can be continued later from Festival or Dashboard.
+- Matching safe exit behaviour added to Event result entry.
+- Visible version and PWA cache advanced to v5.7.82.

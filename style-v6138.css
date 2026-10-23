@@ -1,0 +1,4 @@
+/* OTG! v6.0.138 — prevent whole-page rubber-band/overscroll without changing normal page scrolling. */
+html,body{overscroll-behavior-y:none;overscroll-behavior-x:none}
+html{background:#02070a}
+body{min-height:100dvh;background:#02070a}

@@ -1,0 +1,13 @@
+RaceHub v5.7.80 — POST-RACE EXPERIENCE
+
+- Rebuilt Enter Result presentation around the locked finish-line professional timing concept.
+- Preserved segmented stopwatch inputs, position selection, submission rules and result ownership.
+- Added a one-time stopwatch segment power-on animation.
+- Rebuilt Result Summary as an official classification panel showing two cars above, the current car, and two below.
+- Rebuilt completed Championship Final Standings as a fixed official circuit display board with internally scrolling classification.
+- Digital segmented type is used for positions and timing data; car names retain the RaceHub UI type for readability.
+- Added a one-time display-board power-on animation.
+- Final board highlights the latest classified car and scrolls it into view.
+- Preserved record celebration, Hall of Fame and continuation behaviour.
+- Applied the post-race environment to Festival Championships and user Events.
+- Version/cache advanced to 5.7.80 / 5780.

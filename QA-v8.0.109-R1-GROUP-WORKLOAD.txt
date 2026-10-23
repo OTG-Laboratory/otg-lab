@@ -1,0 +1,9 @@
+OTG! v8.0.109 — GROUP COMPLETION QA
+Baseline: accepted v8.0.108
+Slot 0002 (Hypercar, 35 eligible) / Stage 1 Group 1 of 5:
+  Seven cars × two tracks = 14 results. After all 14, MARK SLOT DONE must unlock.
+  If Group 2 already has one car × two tracks entered, those two remain saved, but must NOT be needed for Slot 0002.
+  Later, Group 2 is judged on its own actual group results and the rest of its visit's frozen field.
+Regression: Slot 0001 / 2000s Stage 1 Group 1 (eight cars, two tracks) still requires 16 results.
+Other stages/finals adapt to drawn group size; no completed race results are rewritten.
+No racing reset. Check after portable backup.

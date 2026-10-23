@@ -1,0 +1,9 @@
+RaceHub v5.8.36 — Final QA Polish
+Baseline: v5.8.35 FINAL POLISH
+
+Locked changes only:
+1. Restored vertical touch scrolling to the shared Championship entry-car list.
+2. Corrected Settings update/version authority to report installed and latest versions from current metadata.
+3. Added the locked running-average comparison tile to Result Summary only.
+
+No Enter Result changes. No redesigns. No unrelated behaviour changes.

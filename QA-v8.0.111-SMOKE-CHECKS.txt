@@ -1,0 +1,25 @@
+OTG! v8.0.111 — STATIC & MODEL QA (2026-10-18)
+BASE: v8.0.110 accepted ZIP verified against its published SHA256.
+
+PASS: Node parser checks for the changed Evil R1 script, brand-tagline script and SW.
+PASS: All 209 local script/style/asset references in the live HTML exist.
+PASS: index.html and index-v8111.html are identical; updated worker is version-pinned.
+PASS: Dashboard branding uses approved exact string: YOUR HARDEST OPPONENT IS YOU.
+PASS: Medal-table header uses the same approved exact string.
+PASS: Isolated Node VM loaded 697-car/228-event campaign manifest and 1,167 slot placeholders (expands with live favourite manufacturer).
+PASS: Simulated completed mixed-manufacturer championship produces one gold, silver, bronze entry for manufacturer/car tables.
+PASS: Simulated manufacturer-only championship produces medals for cars but NO manufacturer medals.
+PASS: Drift event does not mistake standard timed results for dedicated Drift Zone score results.
+
+NOT RUN: Full mobile visual QA and real game data/live browser integration test — browser automation was blocked by sandbox policy.
+NOT RUN: Real account stored Spaces / archived live backup rehydration; tests used only synthetic isolated in-memory data.
+
+REQUIRED LIVE QA:
+- Check dashboard line, legibility on phone and return navigation.
+- In FH5 Evil R1, check Slot 0006 manufacturer and car medals from actual completed results.
+- Confirm descriptive Next Up on the next current slot.
+- At the next completed slot boundary, confirm STOP HERE appears, next draw is blocked, and MARK AS DONE advances once.
+- Check the Race Off semifinal double-bronze result when an entire qualifying tournament finishes.
+- Ensure FH6/GT7 and existing garage/results/records remain intact.
+
+DATA POLICY: No reset, initial migration, deletion, or re-seeding of any user's saved Space in this update.

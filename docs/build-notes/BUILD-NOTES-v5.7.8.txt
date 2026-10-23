@@ -1,0 +1,25 @@
+RaceHub v5.7.8 — DASHBOARD CLEAN REBUILD
+
+Starting point: RaceHub v5.7.7 working checkpoint.
+
+Dashboard was rebuilt as a clean page implementation after real-phone testing showed
+the accumulated Home styles were no longer conforming.
+
+Dashboard-only changes:
+- real phone geometry used as authority
+- compact hero
+- current RaceHub Space name
+- one Settings control only, label restored
+- gear centred using dedicated flex container
+- approved RaceHub logo
+- compact 2x2 navigation tiles
+- Festival cyan, Events purple, Garage green, Records gold
+- cyan/light accent subtitle copy
+- compact full-width Stats strip
+- no Hubs button
+- no current-Championship panel
+- no dashboard footer/statistic duplicate
+- zero horizontal scrolling
+
+Navigation actions remain unchanged.
+All non-Dashboard screens and data behaviour preserved.

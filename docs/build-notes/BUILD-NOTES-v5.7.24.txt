@@ -1,0 +1,13 @@
+RaceHub v5.7.24 — GARAGE CLEAN BACKGROUND
+
+NO REDRAW.
+A clean scenery-only crop was taken from the already-generated Garage image.
+Phone status/navigation chrome and all baked Garage UI are excluded from the production background.
+
+UNCHANGED:
+- live Garage header/back control
+- hero dimensions from corrected phone layout
+- Search + Add New Car
+- alphabetical manufacturer accordions
+- all Garage functionality/data
+- Dashboard, Festival, Events and other pages

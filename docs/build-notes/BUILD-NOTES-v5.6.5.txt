@@ -1,0 +1,9 @@
+RaceHub v5.6.5 — EVENTS RACERS + REMOVE CHECKPOINT
+
+- Event creation now asks for Number of Racers.
+- After creation, RaceHub opens a native searchable car picker and requires exactly that many Garage cars.
+- Event screen shows selected racers and allows changing them before result entry.
+- Event results now store and display the racer/car as well as Round and time.
+- Added REMOVE EVENT with RaceHub-native destructive confirmation.
+- Bumped index asset query strings and service-worker cache to v5.6.5 to prevent stale v5.6.3/v5.6.4 UI from being served.
+- Existing custom Events without racer metadata are migrated in-place to a 1-racer setup when opened.

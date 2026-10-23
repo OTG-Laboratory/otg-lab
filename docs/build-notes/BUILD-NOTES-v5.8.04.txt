@@ -1,0 +1,8 @@
+RaceHub v5.8.04 — Result Summary Podium Checkpoint
+
+- Enter Result v5.8.03 remains unchanged and locked.
+- Rebuilt Championship and Event Result Summary presentation around the locked podium artwork.
+- Removed Hubs and all record labels/rosettes from Result Summary.
+- Preserved the current classification context: two above, current highlighted, two below where available.
+- Preserved existing completion and navigation decisions.
+- No other screens changed.

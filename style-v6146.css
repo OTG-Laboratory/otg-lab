@@ -1,0 +1,5 @@
+/* OTG! v6.0.146 — Default Space UI */
+.rhSpaceBadgesFinal{display:flex;gap:6px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.rhSpaceBadgesFinal em{white-space:nowrap}
+.rhDefaultBadge{border-color:#00d8ff!important;color:#00e6ff!important}
+.rhDefaultSpaceBtn{width:100%;margin-top:8px}

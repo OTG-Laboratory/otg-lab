@@ -1,0 +1,31 @@
+/* v8.0.123 — The Evil Tournament | Dave and Steves Lubrication Fluids | Hubbs Memorial Trophy */
+.v7DashTile.evil8097{border-color:rgba(230,69,107,.55);background:linear-gradient(110deg,rgba(28,13,27,.96),rgba(9,26,38,.98));box-shadow:0 8px 25px rgba(0,0,0,.20),inset 0 0 0 1px rgba(231,58,91,.08)}
+.v7DashTile.evil8097>span>b{font-size:clamp(12px,3.3vw,17px);letter-spacing:.02em;line-height:1.12}
+.otgTileSponsor8123{display:block;color:#f39aab!important;font-weight:750;font-size:8px;letter-spacing:.085em;line-height:1.3;margin-top:4px;text-transform:uppercase}
+.rhEvilR1Hero8097.otgTournamentHero8123{padding:78px 17px 24px;position:relative;overflow:hidden;background:#070f18 url('assets/tournaments/evil-tournament-hero-v8123.svg?v=8123') center/cover no-repeat;border-bottom:1px solid rgba(246,97,125,.62);box-shadow:inset 0 -15px 28px rgba(6,13,23,.65)}
+.otgTournamentHero8123::before{content:'';pointer-events:none;position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,8,18,.93),rgba(3,8,18,.73) 55%,rgba(3,8,18,.22)),linear-gradient(0deg,rgba(3,8,18,.66),transparent 70%)}
+.otgTournamentHero8123>*{position:relative;z-index:1}
+.otgTournamentKicker8123{display:block!important;color:#77dff1!important;font-size:10px!important;letter-spacing:.23em!important;font-weight:900!important}
+.otgTournamentHero8123 h1{font-size:clamp(39px,10.5vw,67px)!important;max-width:790px;margin:13px auto 7px!important;line-height:.88!important;letter-spacing:-.055em!important;text-shadow:0 5px 14px rgba(0,0,0,.6)}
+.otgTournamentHero8123 h1 em{display:block;font-style:normal;color:#fff;margin:3px 0 8px}
+.otgTournamentHero8123 h1 span{display:block;color:#f35a80}
+.otgTournamentHero8123 p{color:#d9f6ff!important;margin:12px 0 6px!important;font-size:10px!important;letter-spacing:.08em!important}
+.otgTournamentSponsor8123{max-width:530px;margin:12px auto 0;padding:12px 10px 10px;display:flex;align-items:center;justify-content:center;gap:10px;border:1px solid rgba(250,143,166,.5);border-radius:13px;background:linear-gradient(120deg,rgba(10,24,34,.92),rgba(69,23,45,.80));box-shadow:0 8px 22px rgba(0,0,0,.20)}
+.otgTournamentSponsor8123 svg{flex:0 0 31px;width:31px;height:38px}
+.otgTournamentSponsor8123 span{display:block;text-align:left;line-height:1.15;color:#fff;font-size:clamp(11px,3.1vw,15px);font-weight:900;letter-spacing:.045em;text-transform:uppercase}
+.otgTournamentSponsor8123 span small{display:block!important;color:#ffb2c2!important;font-size:8px!important;letter-spacing:.21em!important;margin-bottom:3px}
+.otgTournamentTagline8123{display:block;margin-top:13px;color:#8bddea;font-weight:900;font-size:10px;letter-spacing:.10em}
+.otgHubbsTeaser8123{display:grid;grid-template-columns:clamp(80px,23vw,116px) 1fr;gap:12px;align-items:center;background:linear-gradient(125deg,#1e2027,#101e29 60%,#162c34);border:1px solid rgba(224,179,97,.55);border-radius:16px;padding:12px 12px 13px;margin:14px 0;box-shadow:0 7px 20px rgba(0,0,0,.2),inset 0 1px 0 rgba(255,237,180,.12)}
+.otgHubbsTeaser8123 img{width:100%;height:142px;object-fit:contain;filter:drop-shadow(0 7px 8px rgba(0,0,0,.50))}
+.otgHubbsTeaser8123 .eyebrow{font-size:9px;font-weight:900;letter-spacing:.16em;color:#e9cd88}
+.otgHubbsTeaser8123 h2{margin:4px 0 5px;font-size:clamp(17px,5.2vw,25px);line-height:1.04;color:#fff5db}
+.otgHubbsTeaser8123 p{margin:0 0 10px;color:#a9c8d5;font-size:11px;line-height:1.35}
+.otgHubbsTeaser8123 button,.otgHubbsBack8123{padding:9px 13px;background:rgba(58,216,235,.11);border:1px solid rgba(58,216,235,.65);border-radius:8px;font-size:10px;font-weight:900;letter-spacing:.085em;color:#c6faff;cursor:pointer}
+.otgHubbsDetail8123{text-align:center;background:radial-gradient(ellipse at 50% 30%,rgba(47,110,117,.24),transparent 62%),#0c1520;padding:72px 15px 28px;border:1px solid rgba(211,164,91,.38);border-radius:15px;margin:5px 0 14px}
+.otgHubbsDetail8123>small{font-size:10px;color:#efd391;letter-spacing:.18em;font-weight:900}
+.otgHubbsDetail8123>h2{font-size:clamp(29px,8vw,44px);color:#fff1c4;margin:9px auto 8px;line-height:1.03}
+.otgHubbsDetail8123>p{font-size:12px;color:#b9d8e1;line-height:1.5;max-width:540px;margin:0 auto 10px}
+.otgHubbsDetail8123>img{display:block;width:min(100%,310px);height:auto;margin:4px auto 12px;filter:drop-shadow(0 16px 15px rgba(0,0,0,.52))}
+.otgHubbsDetail8123 .otgHubbsCaution8123{color:#acd0d9;text-align:left;padding:12px;font-size:11px;background:#122532;border:1px solid rgba(58,216,235,.24);border-radius:10px;max-width:600px;margin:0 auto 14px}
+@media(min-width:760px){.otgTournamentHero8123 h1{font-size:68px!important}.otgHubbsTeaser8123{max-width:950px;margin-left:auto;margin-right:auto;grid-template-columns:122px 1fr}.otgHubbsTeaser8123 img{height:160px}}
+@media(max-width:340px){.otgTournamentHero8123 h1{font-size:37px!important}.otgHubbsTeaser8123{grid-template-columns:80px 1fr;gap:8px;padding:10px}.otgHubbsTeaser8123 img{height:125px}.otgTournamentSponsor8123{padding:8px}}

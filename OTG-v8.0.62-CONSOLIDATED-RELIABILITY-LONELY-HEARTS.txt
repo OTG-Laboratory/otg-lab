@@ -1,0 +1,22 @@
+OTG! MAIN v8.0.62
+CONSOLIDATED RELIABILITY + LONELY HEARTS
+
+TARGETED FIXES / FEATURES
+1. Update + Safety Backup gate hardened and version chain aligned.
+2. Safety Backup expanded to protect complete current Space data, including active Race Offs.
+3. Swiss Abandon restored in Festival and Custom Racing, including knockout continuation.
+4. Apostrophe/special-character Championship card handler fixed universally.
+5. Duplicate live Hennessey variants repaired to one canonical manufacturer.
+6. Lonely Hearts added to Festival and Race Off.
+7. Completed Race Off champions added to Hall of Fame.
+8. Race Off landing now shows all active tournaments, allowing parked brackets to be resumed.
+
+MAIN ONLY
+rh-guide remains v8.0.17 and is untouched.
+
+No reset required.
+
+DEPLOYMENT
+  git add .
+  git commit -m "OTG! v8.0.62 consolidated reliability and Lonely Hearts"
+  git push origin main

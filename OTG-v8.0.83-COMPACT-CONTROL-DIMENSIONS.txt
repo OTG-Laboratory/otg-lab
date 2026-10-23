@@ -1,0 +1,12 @@
+OTG! v8.0.83 — COMPACT CONTROL DIMENSIONS
+
+Main-only UI polish on top of v8.0.82.
+
+- Results / Corrections Back is now a small circular arrow control.
+- Evil Campaign Back is now the same small circular navigation control.
+- Final Standings Correct Results is now a slim utility pill.
+- Fix targets actual width/height/min/max/padding, not just typography.
+- Results/Corrections data logic is unchanged.
+- Evil 708-slot manifest and progress are unchanged.
+- Race Off logic unchanged.
+- rh-guide untouched.

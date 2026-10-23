@@ -1,0 +1,15 @@
+RaceHub v5.7.73 — MAIN PROMOTION
+
+Promoted from phone-tested Beta fixes while preserving Main RaceHub identity.
+
+Included:
+- Full Reset routes into the 3-step onboarding flow.
+- Onboarding Favourite Manufacturer selection and confirmation repaired.
+- Settings Set/Change Favourite action repaired.
+- Result submission clarity preserved: context-aware save/continue/complete wording and accepted-state feedback.
+
+Main protection:
+- RH_FINAL_STORE remains RaceHub_Studio_Final_v5_6.
+- Legacy STORE remains RaceHub_v4_1_director_edition.
+- Main RaceHub manifest identity retained; no RH-GUIDE/SonHub identity.
+- Main-only service-worker cache namespace.

@@ -1,0 +1,11 @@
+OTG! v6.0.57 — Festival branding cleanup
+
+Source: protected v6.0.56.
+NO IMAGE GENERATION. NO REDRAW.
+- Dashboard untouched.
+- Splash untouched.
+- Festival UI/layout/functionality untouched.
+- Removed only the legacy RACEHUB/RH building fascia branding from the Festival background using pixels from the same existing building artwork.
+- Trophy artwork untouched.
+- Other existing Festival artwork untouched.
+- Internal RaceHub/RH storage identifiers preserved.

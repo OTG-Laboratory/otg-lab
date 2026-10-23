@@ -1,0 +1,10 @@
+/* OTG! v8.0.127 — Clear return controls on lengthy racing-history screens. */
+.otgNavFooter8127{display:flex;gap:10px;align-items:stretch;justify-content:space-between;padding:12px 0 26px;margin:12px 12px 0;border-top:1px solid rgba(128,194,201,.28);box-sizing:border-box}
+.otgNavFooter8127 button{min-height:48px;border-radius:10px;border:1px solid #72afbb;background:#102a36;color:#e1faff;font:inherit;font-size:11px;line-height:1.4;font-weight:900;letter-spacing:.02em;padding:11px 14px;cursor:pointer;overflow-wrap:anywhere}
+.otgNavFooter8127 button[data-otg-back]{flex:1;text-align:left}
+.otgNavFooter8127 .otgNavToTop8127{flex:0 0 auto;min-width:65px;border-color:#ae7eab;background:#2a2039;color:#ffdaed}
+.otgNavFooter8127 button:focus-visible{outline:3px solid #9be8f9;outline-offset:3px}
+#hall .otgChronMain8126>.otgNavFooter8127{margin-left:0;margin-right:0}
+#more .otgLegendsBottom8119 button{min-height:48px}
+@media(max-width:360px){.otgNavFooter8127{gap:7px;margin-left:8px;margin-right:8px}.otgNavFooter8127 button{font-size:10px;padding:10px}}
+@media(prefers-reduced-motion:reduce){.otgNavFooter8127 *{scroll-behavior:auto}}

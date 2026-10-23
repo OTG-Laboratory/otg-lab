@@ -1,0 +1,5 @@
+{
+  "version": "8.0.143",
+  "worker": "./otg-lab-worker-v1.js",
+  "message": "OTG! LAB baseline v0.1 (Main v8.0.143 clone). LAB changes are not Main updates."
+}

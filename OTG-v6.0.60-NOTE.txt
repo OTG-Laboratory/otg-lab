@@ -1,0 +1,12 @@
+OTG! v6.0.60 — two-fix cleanup
+Source: v6.0.59.
+
+NO IMAGE GENERATION / NO SCREEN REDESIGN.
+
+1. Delete League destructive confirmation now has NO decorative symbol above the heading.
+2. Hubs branding retouched properly:
+   - old sticker-like black panels removed using cloned texture from the existing artwork
+   - small clean OTG! marks applied directly to cap, chest, tablet, radio and related live Hubs assets
+   - Hubs character, pose, lighting and celebration layout unchanged.
+
+Hall of Fame, Settings and About fixes from v6.0.59 preserved.

@@ -1,0 +1,9 @@
+RaceHub v5.8.29 — Hubs Celebration
+
+- Added standalone Hubs Pit Chief celebration page.
+- Appears only after Result Summary when a Championship/Event or All-Time RaceHub Record is achieved.
+- Result Summary remains record-free so the reveal is a surprise.
+- Uses the approved Pit Chief Hubs artwork cropped from the locked Studio mock-up; no new artwork generated.
+- View Current Standings returns to the active run/event.
+- Continue follows the existing next-car, event, or Final Standings route.
+- Enter Result, Result Summary, Final Standings and all other screens unchanged.

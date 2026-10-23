@@ -1,0 +1,6 @@
+RaceHub v5.7.91
+- Removed the artificial blank area from Result Summary.
+- Compacted finishing-position buttons for phone-height fit.
+- Forced completed Championships through the locked Official Results Final Standings screen.
+- Hardened Final Standings top-of-page reset after Result Summary.
+- Settings version authority updated to 5.7.91.

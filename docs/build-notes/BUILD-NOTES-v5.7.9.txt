@@ -1,0 +1,2 @@
+RaceHub v5.7.9 — Dashboard Locked v3 phone-test build.
+Built from v5.7.8 working checkpoint. Dashboard only: no Settings cog; six equal compact 2x3 tiles; Settings tile six; approved logo; existing navigation/data behaviour preserved. Phone acceptance required.

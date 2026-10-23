@@ -1,0 +1,7 @@
+/* OTG! v6.0.112 — Race Off Stage 1 dashboard/navigation checkpoint */
+.rhDashV4Row.raceoff{--a:#ff3fb4}
+.rhDashV4Row.raceoff>span>small{color:#ff75c9!important}
+/* Seven dashboard rows: preserve approved artwork and move the existing OTG! mark up slightly. */
+.rhHomeLogoV4{bottom:34px!important}
+@media(max-width:390px){.rhHomeLogoV4{bottom:26px!important}.rhDashV4Row{height:56px!important}.rhDashV4List{gap:5px!important}}
+@media(max-height:780px){.rhHomeLogoV4{bottom:22px!important}.rhDashV4Row{height:53px!important}.rhDashV4List{gap:4px!important}}

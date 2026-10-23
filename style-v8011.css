@@ -1,0 +1,30 @@
+/* OTG! v8.0.11 — Festival Groups compact navigation/status pills. */
+.v8GroupPage .v8GroupVisibleBack{
+  min-height:34px!important;
+  height:34px!important;
+  min-width:72px!important;
+  padding:0 12px!important;
+  font-size:12px!important;
+  white-space:nowrap!important;
+}
+.v8GroupPage .rhCurrentCarHeadV1>strong{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:34px!important;
+  height:34px!important;
+  min-width:72px!important;
+  padding:0 12px!important;
+  margin:0!important;
+  border:1px solid rgba(55,196,235,.52)!important;
+  border-radius:999px!important;
+  background:rgba(2,13,19,.9)!important;
+  color:#59cbe8!important;
+  font-size:12px!important;
+  font-weight:900!important;
+  letter-spacing:.06em!important;
+  line-height:1!important;
+  white-space:nowrap!important;
+  box-sizing:border-box!important;
+  flex:0 0 auto!important;
+}

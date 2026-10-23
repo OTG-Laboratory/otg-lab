@@ -1,0 +1,10 @@
+RaceHub v5.8.02 — Enter Result checkpoint refinement
+
+Baseline: v5.8.01 Enter Result checkpoint.
+Scope: Enter Result only.
+
+Changes:
+- Corrected hero artwork framing so the baked mock-up arrow is outside the visible crop.
+- Retained one live, centred back control.
+- Increased optical spacing around the stopwatch colon and decimal separators.
+- No changes to result-entry logic, position input, save flow, artwork choice, or any other screen.

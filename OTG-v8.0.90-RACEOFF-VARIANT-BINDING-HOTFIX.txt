@@ -1,0 +1,6 @@
+OTG! v8.0.90
+Main-only live QA hotfix.
+- Fixes v8.0.89 FH5 catalogue fallback binding for old Race Off snapshots.
+- Applies to completed and pending match snapshots.
+- Car History BACK remains from v8.0.89.
+- No rh-guide changes.

@@ -1,0 +1,43 @@
+
+/* OTG! 8.0.116 — compact expandable record leaderboards */
+.otgBattles8116{color:#e8f6fa;padding-bottom:28px}
+.otgBattles8116 *{box-sizing:border-box}
+.otgBattleIntro8116{display:flex;gap:15px;align-items:start;margin:16px 14px 25px;padding:18px;border:1px solid #30546a;border-radius:17px;background:#061723}
+.otgBattleIntro8116>span{font-size:1.4rem}
+.otgBattleIntro8116 b{color:#cce9f1;font-size:.89rem;letter-spacing:.05em}
+.otgBattleIntro8116 p{font-size:.91rem;color:#a3bac4;line-height:1.55;margin:7px 0 0}
+.otgBattleGroup8116{margin:24px 14px}
+.otgBattleGroup8116>h2{color:#66bdd4;font-size:.85rem;font-weight:850;letter-spacing:.11em;margin:0 0 12px;padding-left:3px}
+.otgBattleFold8116{border:1px solid #304d5b;border-radius:17px;background:#040f17;margin:0 0 12px;overflow:hidden}
+.otgBattleFold8116[open]{border-color:#5e9fb7}
+.otgBattleFold8116>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:15px 14px;min-height:76px}
+.otgBattleFold8116>summary::-webkit-details-marker{display:none}
+.otgBattleFold8116>summary:focus-visible{outline:3px solid #80d6ed;outline-offset:-3px}
+.otgBattleFoldIcon8116{font-size:1.22rem;flex:0 0 27px;text-align:center;align-self:flex-start;margin-top:2px}
+.otgBattleFoldText8116{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1}
+.otgBattleFoldText8116>strong{color:#f0fcff;font-size:.96rem;line-height:1.25;overflow-wrap:anywhere}
+.otgBattleFoldText8116>small{color:#7896a4;font-size:.76rem;line-height:1.35}
+.otgBattleLead8116{display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 10px;margin-top:5px;min-width:0}
+.otgBattleLead8116>b{font-size:1.19rem;color:#6fd1ec;letter-spacing:.01em;white-space:nowrap}
+.otgBattleLead8116>span{font-size:.80rem;line-height:1.35;color:#c3dbe3;overflow-wrap:anywhere;min-width:0}
+.otgBattleLead8116 i{font-style:normal;color:#7093a1}
+.otgBattleEmptyLabel8116{font-size:.79rem;font-weight:700;color:#92a8b4;margin-top:6px}
+.otgBattleFoldAction8116{white-space:nowrap;align-self:center;color:#6bc9e5;font-size:.72rem;font-weight:900;letter-spacing:.03em;display:flex;align-items:center;gap:5px}
+.otgBattleChevron8116{display:inline-block;font-size:1.25rem;transition:transform .15s ease}
+.otgBattleFold8116[open] .otgBattleChevron8116{transform:rotate(180deg)}
+.otgBattleFoldBody8116{border-top:1px solid #304d5b;padding:2px 11px 12px;background:#05131c}
+.otgBattleRank8116{padding:12px 10px;margin-top:10px;border-radius:12px;border:1px solid #263e4b;background:#031019}
+.otgBattleRankHead8116{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.otgBattleRankHead8116>b{color:#93c7d5;font-size:.87rem}
+.otgBattleRankHead8116>strong{font-size:1.18rem;color:#75d5ee;margin-right:auto}
+.otgBattleRankHead8116 time{font-size:.72rem;color:#91a7b2}
+.otgBattleRankEvent8116{margin:7px 0;color:#e7f2f4;font-size:.86rem;font-weight:750;line-height:1.4;overflow-wrap:anywhere}
+.otgBattleRankEvent8116 span{font-size:.75rem;font-weight:450;color:#819eaa}
+.otgBattleTrack8116{display:block;font-size:.74rem;color:#91afba;margin-bottom:8px}
+.otgBattleRankCar8116{display:flex;justify-content:space-between;gap:12px;padding:6px 0;font-size:.80rem;line-height:1.35;color:#c7dce4}
+.otgBattleRankCar8116>span{min-width:0;overflow-wrap:anywhere}
+.otgBattleRankCar8116 b{white-space:nowrap;font-weight:650;color:#96ccdc}
+.otgBattleEmpty8116{margin:0;padding:18px 9px;color:#9bb4c0;font-size:.89rem;line-height:1.6}
+.otgBattleFoot8116{color:#819aa5;font-size:.79rem;line-height:1.65;margin:25px 18px}
+@media(max-width:380px){.otgBattleGroup8116{margin-left:7px;margin-right:7px}.otgBattleFold8116>summary{padding:12px 9px;gap:7px}.otgBattleFoldAction8116{font-size:.65rem}.otgBattleFoldIcon8116{font-size:1rem;flex-basis:20px}.otgBattleLead8116>b{font-size:1.08rem}}
+@media(prefers-reduced-motion:reduce){.otgBattleChevron8116{transition:none}}

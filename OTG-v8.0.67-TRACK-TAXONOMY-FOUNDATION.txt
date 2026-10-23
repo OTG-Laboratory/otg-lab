@@ -1,0 +1,12 @@
+OTG! v8.0.67 — FH5 Track Taxonomy Foundation
+
+Scope only:
+- Adds explicit Festival race categories: ROAD, OFFROAD, RALLY, HOT_WHEELS, DRAG, MIXED, SPECIAL.
+- Adds canonical track catalogue/pools for Mexico Road+Street, Mexico Dirt+Cross Country, Rally Adventure, Hot Wheels, Drag and finale tracks.
+- Normal setup screen shows the derived race category and validates current suggested track names against the catalogue.
+- Road finale pool is Goliath / Colossus / Marathon. The Gauntlet is tagged as an optional future Road finale wildcard, but is NOT used automatically in this build.
+- Off-road finale pool: Titan / Gauntlet. Rally finale: Horizon Badlands Goliath. Hot Wheels finale: Hot Wheels Goliath.
+- Drag remains separate.
+- Existing suggested tracks and running data are not changed.
+- NO random track picker in this build. That is Stage 2 after category QA.
+- rh-guide untouched.

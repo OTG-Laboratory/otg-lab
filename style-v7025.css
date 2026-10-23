@@ -1,0 +1,9 @@
+/* OTG! v7.0.25 — Stats layout source fix.
+   Locked order: heading -> three headline gauges -> approved cockpit artwork -> PB tiles -> Time Driven. */
+.v7StatsScene{min-height:760px;background-position:50% top}
+.v7StatsScene .rhStatsCockpit{min-height:620px;padding:24px 18px 26px;align-items:start;grid-template-rows:auto 1fr}
+.v7StatsScene .rhStatsGauge{align-self:start}
+@media(max-width:520px){
+  .v7StatsScene{min-height:700px;background-position:50% top}
+  .v7StatsScene .rhStatsCockpit{min-height:565px;padding:18px 10px 22px;gap:8px;align-items:start}
+}

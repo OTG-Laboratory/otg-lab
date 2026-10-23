@@ -1,0 +1,6 @@
+RaceHub v5.6.13 — Stats Cockpit + Version Sync
+
+- Stats cockpit remains unchanged from phone-verified v5.6.12.
+- Corrected splash screen version text.
+- Synced CSS/JS cache-busting query strings to v5.6.13.
+- Synced service-worker cache name and runtime build version.

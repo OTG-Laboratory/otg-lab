@@ -1,0 +1,10 @@
+RaceHub v5.8.28 — Final Standings Face-On Full Rebuild
+
+- Deleted obsolete Final Standings v5.8.26 and v5.8.27 renderers.
+- Removed obsolete angled/legacy Final Standings assets from the active project.
+- Added one face-on UI-ready artwork asset derived from the approved face-on composition.
+- Added one authoritative renderer: js/studio-final-standings-v5828.js.
+- No current-result highlight on final classification.
+- Live title, full final classification, gaps, dynamic trophy, champion and navigation.
+- Internal scoreboard scrolling.
+- Global RaceHub screens and race flow otherwise unchanged.

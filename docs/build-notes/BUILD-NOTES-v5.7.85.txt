@@ -1,0 +1,3 @@
+RaceHub v5.7.85
+- Restored application startup bootstrap omitted in v5.7.84.
+- Preserves locked leaderboard, animations, result-screen wheel removal, back/resume and update checker.

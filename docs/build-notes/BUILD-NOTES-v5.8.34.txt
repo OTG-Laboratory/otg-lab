@@ -1,0 +1,9 @@
+RaceHub v5.8.34 — Championship in Progress Locked Master
+
+- Uses approved aerial night-race artwork without redraw.
+- Fixed hero being hidden by legacy global header rule by using a dedicated non-header container.
+- Progress card now shows only Championship Progress, percentage and progress bar.
+- Next Up shows two cars and completion count in the header.
+- No duplicated frozen-car, round, complete or remaining statistics.
+- Applies to Festival, Era, Manufacturer and Favourite active Championship runs through the single rhOpenRun authority.
+- Existing Current Car, Continue, Random Pick, Shuffle Queue, Current Standings and Back to Festival behaviour retained.

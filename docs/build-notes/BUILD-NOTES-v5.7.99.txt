@@ -1,0 +1,7 @@
+RaceHub v5.7.99
+- Final Standings rebuilt from approved grandstand display-board artwork.
+- Restored completed Championship and Event routes.
+- Result Summary Final Standings action repaired.
+- Continue returns to Festival or Events without restarting.
+- Enter Result vertically compacted for phone screens.
+- Settings update checker restored.

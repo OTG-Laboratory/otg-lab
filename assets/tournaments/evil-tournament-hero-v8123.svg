@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="540" viewBox="0 0 1100 540" role="img" aria-label="Abstract chequered racing circuit with cyan and crimson lighting">
+ <defs>
+  <linearGradient id="base" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071018"/><stop offset="0.53" stop-color="#13222d"/><stop offset="1" stop-color="#051018"/></linearGradient>
+  <radialGradient id="glow" cx=".78" cy=".32" r=".62"><stop stop-color="#c52254" stop-opacity=".4"/><stop offset=".48" stop-color="#5c1430" stop-opacity=".12"/><stop offset="1" stop-color="#051018" stop-opacity="0"/></radialGradient>
+  <linearGradient id="teal" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#32eaff" stop-opacity="0"/><stop offset=".55" stop-color="#39e6ff"/><stop offset="1" stop-color="#39e6ff" stop-opacity="0"/></linearGradient>
+  <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#79a3af" stroke-opacity=".065" stroke-width="1"/></pattern>
+  <pattern id="check" width="60" height="60" patternUnits="userSpaceOnUse"><rect width="60" height="60" fill="#13232c"/><rect width="30" height="30" fill="#2e3d46"/><rect x="30" y="30" width="30" height="30" fill="#2e3d46"/></pattern>
+  <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+ </defs>
+ <rect width="1100" height="540" fill="url(#base)"/>
+ <rect width="1100" height="540" fill="url(#glow)"/>
+ <path d="M560 0L1100 0V540H855Z" fill="url(#check)" opacity=".22"/>
+ <path d="M0 0H1100V540H0Z" fill="url(#grid)"/>
+ <g fill="none" stroke-linecap="round">
+  <path d="M640 -85Q1002 59 897 193Q841 261 1024 308Q1170 354 1052 538" stroke="#ee3a64" stroke-opacity=".45" stroke-width="74" filter="url(#blur)"/>
+  <path d="M640 -85Q1002 59 897 193Q841 261 1024 308Q1170 354 1052 538" stroke="#ee3a64" stroke-opacity=".23" stroke-width="34"/>
+  <path d="M640 -85Q1002 59 897 193Q841 261 1024 308Q1170 354 1052 538" stroke="#f75d7d" stroke-opacity=".78" stroke-width="3" stroke-dasharray="14 20"/>
+  <path d="M460 -55Q746 107 698 241Q645 392 919 524" stroke="#39e6ff" stroke-opacity=".30" stroke-width="34" filter="url(#blur)"/>
+  <path d="M460 -55Q746 107 698 241Q645 392 919 524" stroke="#39e6ff" stroke-opacity=".55" stroke-width="2.4"/>
+ </g>
+ <g transform="translate(808 83)" opacity=".48">
+  <circle cx="82" cy="82" r="105" fill="#071018" stroke="#3ae4f4" stroke-width="2" stroke-opacity=".75"/>
+  <circle cx="82" cy="82" r="84" fill="none" stroke="#e7f0f5" stroke-opacity=".14" stroke-width="11" stroke-dasharray="38 16"/>
+  <circle cx="82" cy="82" r="60" fill="#111b26" stroke="#3ce9ff" stroke-width="5"/>
+  <circle cx="82" cy="82" r="36" fill="#05101b" stroke="#e63b65" stroke-width="2"/>
+  <g stroke="#e4f9ff" stroke-width="7" stroke-linecap="round"><path d="M82 47V117M47 82H117M57 57L107 107M107 57L57 107"/></g>
+  <circle cx="82" cy="82" r="13" fill="#e7f9fb"/>
+ </g>
+ <path d="M0 440H1100" stroke="url(#teal)" stroke-width="2"/>
+ <path d="M0 453H1100" stroke="#c74160" stroke-opacity=".24"/>
+</svg>

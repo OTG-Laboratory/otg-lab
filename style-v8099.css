@@ -1,0 +1,9 @@
+/* OTG! v8.0.99 — R1 launch + compact Back hotfix. */
+.rhEvilR1Back8097{
+  width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;
+  padding:0!important;margin:8px 10px -40px!important;border-radius:50%!important;
+  display:inline-grid!important;place-items:center!important;gap:0!important;
+  font-size:0!important;line-height:1!important;
+}
+.rhEvilR1Back8097 span{font-size:22px!important;line-height:1!important;margin:0 0 2px 0!important;display:block!important}
+.rhEvilR1Back8097 b{display:none!important}

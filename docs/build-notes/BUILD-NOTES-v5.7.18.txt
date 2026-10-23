@@ -1,0 +1,22 @@
+RaceHub v5.7.18 — Festival CLEAN HERO
+
+Built directly from the phone-tested v5.7.17 full app.
+
+ONLY correction:
+- Festival hero changed from the oversized/duplicated mock-up crop to a shallow scenery-only crop.
+- All visible Festival UI remains live HTML/CSS, not baked into the background.
+- Hero height reduced so the page is not artificially lengthened.
+
+Preserved exactly:
+- Dashboard
+- Festival navigation and Championship behaviour
+- Continue Racing
+- Favourite Manufacturer
+- Era and Manufacturer collapsibles
+- Manufacturer search
+- locked trophies
+- no '?' help icon
+- bottom Festival information/help tile
+- all data behaviour
+
+No image generation was used for this build.

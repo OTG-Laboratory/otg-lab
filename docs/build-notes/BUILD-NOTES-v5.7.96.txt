@@ -1,0 +1,7 @@
+RaceHub v5.7.96 — Final Standings Removed
+
+- Deleted the experimental Final Standings page, renderers, overlays, routing hooks and locked-page artwork asset.
+- Completed Championship Result Summary now returns safely to Festival.
+- Retained compact result-entry position controls.
+- Settings is the version authority at v5.7.96.
+- This is the clean checkpoint for rebuilding Final Standings from scratch.

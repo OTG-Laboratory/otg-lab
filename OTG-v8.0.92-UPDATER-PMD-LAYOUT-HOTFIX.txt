@@ -1,0 +1,14 @@
+OTG! Main v8.0.92
+
+Live-QA fixes over v8.0.91:
+- Fixes v8.0.91 shell pinning bug: index.html was still loading bootstrap-v8090.js, which re-registered the v8.0.90 service worker and caused restart/update loops.
+- v8.0.92 loads bootstrap-v8092.js, update-wire-v8092.js and otg-service-worker-v8092.js consistently.
+- Pick My Drive phone round rows now render as:
+    [round #] [track name] [delete]
+    [Layout (optional) — full width]
+- v8.0.92 PMD CSS is loaded after legacy PMD styles so older <=390px overrides cannot collapse Layout into the lower-left cell.
+- Car History championship career + BACK retained.
+- Rally Adventure / Hot Wheels LOCATION clues retained.
+- Evil Campaign bridge and Results/Corrections retained.
+- Morris / Forza Edition Race Off labelling remains deferred.
+- rh-guide untouched.

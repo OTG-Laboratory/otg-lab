@@ -1,0 +1,12 @@
+RaceHub v5.6.11 — Records + Hall of Fame Navigation/Presentation
+
+Phone-audit correction checkpoint built from the phone-verified v5.6.10 baseline.
+
+Changes:
+- Hall of Fame in-app back button now explicitly returns to Records.
+- Championship record rows now show Round, record-holding car, and best time together.
+- Records run cards have clearer mobile hierarchy.
+- Hall of Fame banner is reflowed for phone widths so the title/supporting copy no longer fights for space.
+- Android/system Back behaviour intentionally unchanged by Studio decision.
+- Existing Records/Hall of Fame data and trophy/type logic are untouched.
+- Visible/cache version bumped to 5.6.11.

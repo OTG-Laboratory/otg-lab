@@ -1,0 +1,57 @@
+const CACHE_NAME='racehub-v5.7.76-phone-timing-cache-recovery';
+const ASSETS=[
+  './',
+  './index.html',
+  './style-v5776.css?v=5776',
+  './manifest.webmanifest?v=5776',
+  './favicon.png',
+  './js/seed-data.js?v=5776',
+  './js/core.js?v=5776',
+  './js/race-director.js?v=5776',
+  './js/views.js?v=5776',
+  './js/celebrations.js?v=5776',
+  './js/garage.js?v=5776',
+  './js/control-centre.js?v=5776',
+  './js/studio-final-v5766.js?v=5776',
+  './js/studio-locked-ui-v5766.js?v=5776',
+  './js/studio-polish-v5776.js?v=5776',
+  './js/bootstrap-v5776.js?v=5776',
+  './assets/brand/otg-mark-painted-wall.svg',
+  './assets/final/dashboard-background.png',
+  './assets/final/festival-background.png',
+  './assets/final/events-background.png',
+  './assets/final/settings-background.png',
+  './assets/final/records-background-v5744.png',
+  './assets/final/hall-of-fame-background-v5744.png',
+  './assets/final/settings-background-v5744.png',
+  './assets/final/stats-background.png',
+  './assets/final/championship-background.png',
+  './assets/final/hubs.png',
+  './assets/final/trophy-festival.png',
+  './assets/final/trophy-manufacturer.png',
+  './assets/final/trophy-era.png',
+  './assets/final/trophy-favourite.png',
+  './icons/icon-v5765-192.png',
+  './icons/icon-v5765-512.png',
+  './icons/icon-maskable-v5765-192.png',
+  './icons/icon-maskable-v5765-512.png'
+];
+self.addEventListener('install',event=>{
+  event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(ASSETS)));
+  self.skipWaiting();
+});
+self.addEventListener('activate',event=>{
+  event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('racehub-')&&key!==CACHE_NAME).map(key=>caches.delete(key)))));
+  self.clients.claim();
+});
+self.addEventListener('fetch',event=>{
+  if(event.request.mode==='navigate'){
+    event.respondWith(fetch(event.request,{cache:'no-store'}).catch(()=>caches.match('./index.html')));
+    return;
+  }
+  event.respondWith(fetch(event.request,{cache:'no-store'}).then(response=>{
+    const copy=response.clone();
+    caches.open(CACHE_NAME).then(cache=>cache.put(event.request,copy)).catch(()=>{});
+    return response;
+  }).catch(()=>caches.match(event.request)));
+});

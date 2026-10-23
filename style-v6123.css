@@ -1,0 +1,44 @@
+/* OTG! v6.0.123 — Race Off Stage 8: final/champion + draw usability polish */
+@import url('style-v6118.css?v=6118');
+/* Pull the draw working area upward so the page itself does not need a pointless scroll. */
+.rhRaceOffDrawSceneV6118 .rhRaceOffHeroV1{min-height:260px!important;background-position:center 19%!important}
+.rhRaceOffDrawSceneV6118 .rhFestivalBodyV1{margin-top:-14px}
+@media(max-width:520px){.rhRaceOffDrawSceneV6118 .rhRaceOffHeroV1{min-height:235px!important}.rhRaceOffDrawSceneV6118 .rhFestivalBodyV1{margin-top:-18px}.rhRaceOffDrawScrollV6118{height:285px;min-height:230px}}
+
+.rhRaceOffChampionV6123{min-height:100vh;background:#02070a;color:#fff}
+.rhRaceOffChampionHeroV6123{min-height:690px;background-image:linear-gradient(180deg,rgba(0,5,8,.03),rgba(0,5,8,.28) 64%,rgba(0,5,8,.92)),url('assets/final/raceoff-champion-v6123.png');background-size:cover;background-position:center top;position:relative}
+.rhRaceOffChampionHeroV6123 .rhFestivalHeadV1{position:relative;z-index:2}
+.rhRaceOffChampionBodyV6123{margin-top:-120px;position:relative;z-index:3;padding:0 14px 34px}
+.rhRaceOffChampionTitleV6123{text-align:center;padding:20px 18px;margin-bottom:12px;background:rgba(0,8,13,.84);border:1px solid rgba(84,203,233,.35);border-radius:22px;backdrop-filter:blur(8px)}
+.rhRaceOffChampionTitleV6123 small{display:block;color:#58cbea;font-weight:900;letter-spacing:.12em}.rhRaceOffChampionTitleV6123 h1{margin:7px 0 3px;font-size:1.8rem}.rhRaceOffChampionTitleV6123 b{font-size:.95rem;color:#98a6af}
+.rhRaceOffChampionStatsV6123{display:grid;gap:12px}.rhRaceOffChampionCardV6123{padding:18px;background:rgba(0,8,13,.9);border:1px solid rgba(84,203,233,.28);border-radius:20px}.rhRaceOffChampionCardV6123 h2{margin:0 0 12px;color:#57cae9;font-size:1rem;letter-spacing:.08em}.rhRaceOffChampionRowV6123{display:flex;justify-content:space-between;gap:14px;padding:8px 0;border-top:1px solid rgba(255,255,255,.07)}.rhRaceOffChampionRowV6123:first-of-type{border-top:0}.rhRaceOffChampionRowV6123 span{color:#8e9aa3}.rhRaceOffChampionRowV6123 b{text-align:right}.rhRaceOffChampionActionsV6123{display:grid;gap:10px;margin-top:14px}
+.rhRaceOffHistoryV6123 .rhChampCard small{display:block;margin-top:5px}
+@media(max-width:520px){.rhRaceOffChampionHeroV6123{min-height:580px}.rhRaceOffChampionBodyV6123{margin-top:-100px}.rhRaceOffChampionTitleV6123 h1{font-size:1.55rem}}
+/* OTG! v6.0.127 — locked no-Hubs record celebration. Exact approved hero, live data below. */
+.rhRecord127Page{min-height:100dvh;background:#01050a;color:#fff;padding:0 0 24px;overflow-x:hidden}.rhRecord127Hero{position:relative;width:100%;max-width:852px;margin:0 auto}.rhRecord127Hero>img{display:block;width:100%;height:auto}.rhRecord127Back{position:absolute;left:2.5%;top:1.6%;width:20%;height:7%;border:0;background:transparent;z-index:4}.rhRecord127HideGold{position:absolute;right:0;top:14%;width:31%;height:45%;background:linear-gradient(90deg,rgba(1,5,10,0),#01050a 24%);z-index:3}.rhRecord127Main{display:grid;gap:14px;padding:0 3.2%;max-width:852px;margin:0 auto}.rhRecord127Best{margin-top:0;border:1px solid #b47a13;border-radius:28px;background:radial-gradient(circle at 50% 45%,rgba(117,72,8,.28),rgba(8,7,4,.96) 66%);box-shadow:inset 0 0 25px rgba(195,124,15,.13);padding:13px 18px 20px;text-align:center}.rhRecord127Best>b{display:block;color:#e3a52c;font-size:clamp(18px,4.5vw,27px);font-weight:900;margin-bottom:10px}.rhRecord127Best .rhSegTime{justify-content:center;font-size:clamp(2.9rem,12vw,5.4rem);gap:.02em}.rhRecord127Best .rhSegDigit{width:.48em;flex-basis:.48em}.rhRecord127Best .rhSegDigit span{background:rgba(92,58,7,.22)!important}.rhRecord127Best .rhSegDigit span.on{background:#e5a62d!important;box-shadow:0 0 10px rgba(229,166,45,.8)!important}.rhRecord127Best .rhSegTime>em{color:#e5a62d!important;text-shadow:0 0 9px rgba(229,166,45,.75)!important;font-size:.88em}.rhRecord127Stat{min-height:116px;border-radius:26px;display:grid;grid-template-columns:130px 1fr;align-items:center;border:1px solid #2c7894;background:linear-gradient(100deg,#03111b,#020810);padding:14px 24px}.rhRecord127Stat .rhRecord127Icon{width:78px;height:78px;border-radius:50%;display:grid;place-items:center;background:#001a3d;color:#fff;font-size:34px}.rhRecord127Stat small{display:block;font-size:clamp(17px,4vw,27px);color:#64d9f4;margin-bottom:6px}.rhRecord127Stat b{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:clamp(29px,7vw,48px);font-weight:400;letter-spacing:.04em}.rhRecord127Stat.improvement{border-color:#246b2e;background:linear-gradient(100deg,#03150a,#010804)}.rhRecord127Stat.improvement .rhRecord127Icon{background:#001608;color:#51d85d}.rhRecord127Stat.improvement small,.rhRecord127Stat.improvement b{color:#55d560}.rhRecord127Actions{max-width:852px;margin:16px auto 0;padding:0 3.2%;display:grid;grid-template-columns:1fr 1fr;gap:20px}.rhRecord127Actions button{min-height:140px;border-radius:26px;color:#fff;display:flex;align-items:center;justify-content:center;gap:14px;font-size:clamp(17px,4.2vw,28px);font-weight:900;text-align:left}.rhRecord127Actions button:first-child{border:1px solid #7132c6;background:linear-gradient(120deg,#221047,#080015)}.rhRecord127Actions button:last-child{border:1px solid #2d7ea0;background:linear-gradient(120deg,#0a3050,#020b14)}.rhRecord127Actions span{font-size:42px}.rhRecord127Actions b{line-height:1.12}@media(max-width:600px){.rhRecord127Stat{grid-template-columns:100px 1fr;min-height:100px;padding:12px 18px}.rhRecord127Stat .rhRecord127Icon{width:62px;height:62px;font-size:28px}.rhRecord127Actions{gap:12px}.rhRecord127Actions button{min-height:112px;padding:10px;font-size:17px}.rhRecord127Actions span{font-size:34px}}
+/* OTG! v6.0.128 — record celebration lower-panel fit only. Hero is locked and untouched. */
+@media(max-width:600px){
+  .rhRecord127Main{gap:8px;padding:0 3.2%}
+  .rhRecord127Best{border-radius:22px;padding:8px 14px 12px}
+  .rhRecord127Best>b{font-size:16px;margin-bottom:5px}
+  .rhRecord127Best .rhSegTime{font-size:clamp(2.35rem,10vw,4.5rem)}
+  .rhRecord127Stat{grid-template-columns:78px 1fr;min-height:82px;padding:8px 14px;border-radius:22px}
+  .rhRecord127Stat .rhRecord127Icon{width:52px;height:52px;font-size:24px}
+  .rhRecord127Stat small{font-size:clamp(15px,3.6vw,22px);margin-bottom:3px}
+  .rhRecord127Stat b{font-size:clamp(25px,6.2vw,40px)}
+  .rhRecord127Actions{margin-top:8px;gap:10px;padding:0 3.2%}
+  .rhRecord127Actions button{min-height:88px;border-radius:22px;padding:8px;font-size:15px;gap:9px}
+  .rhRecord127Actions span{font-size:30px}
+}
+
+/* v7.0.29 source QA: Race Off history readability + completed delete action */
+.rhRaceOffHistoryV6123 .rhRaceOffHistoryCardV7029{display:grid!important;grid-template-columns:minmax(0,1fr) 28px!important;align-items:center!important;gap:14px!important;text-align:left!important;padding:18px 20px!important;min-height:0!important}
+.rhRaceOffHistoryV6123 .rhRaceOffHistoryCopyV7029{display:grid!important;gap:8px!important;min-width:0!important;width:100%!important}
+.rhRaceOffHistoryV6123 .rhRaceOffHistoryCopyV7029>b{font-size:20px!important;line-height:1.15!important;color:#fff!important;white-space:normal!important}
+.rhRaceOffHistoryV6123 .rhRaceOffHistoryCopyV7029>small{display:grid!important;grid-template-columns:78px minmax(0,1fr)!important;gap:8px!important;margin:0!important;line-height:1.25!important}
+.rhRaceOffHistoryV6123 .rhRaceOffHistoryCopyV7029>small strong{color:#58cbe7!important;font-size:12px!important;text-transform:uppercase!important;letter-spacing:.04em!important}
+.rhRaceOffHistoryV6123 .rhRaceOffHistoryCopyV7029>small em{color:#aeb9be!important;font-size:14px!important;font-style:normal!important;white-space:normal!important;overflow-wrap:anywhere!important}
+.rhRaceOffHistoryV6123 .rhRaceOffHistoryCardV7029>i{justify-self:end!important;color:#fff!important;font-size:34px!important;font-style:normal!important}
+.rhRaceOffDeleteZoneV7029{margin-top:20px;padding:16px;border:1px solid rgba(255,75,75,.38);border-radius:18px;background:rgba(90,0,0,.13)}
+.rhRaceOffDeleteZoneV7029>small{display:block;margin:0 0 10px;color:#ff6464;font-weight:900;letter-spacing:.11em}
+.rhRaceOffDeleteZoneV7029 .dangerBtn{width:100%;background:#8d1919!important;border-color:#d74b4b!important;color:#fff!important}

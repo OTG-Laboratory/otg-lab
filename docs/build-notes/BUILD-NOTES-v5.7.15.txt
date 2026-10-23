@@ -1,0 +1,5 @@
+RaceHub v5.7.15 — Dashboard LOCKED v6
+Full app built from working v5.7.13.
+Critical correction: Dashboard hero now uses dashboard-approved-scene-v6.png derived DIRECTLY from Andy's approved Dashboard authority image. The old dashboard-background.png is not used by this Dashboard override.
+Six already-proven navigation actions and all other app behaviour preserved.
+Fresh CSS/JS/service-worker filenames force cache break.

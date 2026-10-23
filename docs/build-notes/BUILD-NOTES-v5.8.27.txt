@@ -1,0 +1,9 @@
+RaceHub v5.8.27
+
+FIXED
+- Result Summary FINAL STANDINGS tile now calls the active authoritative completion transition instead of obsolete v5.8.23 functions.
+- Championship and Event completion both open the live standalone Final Standings screen.
+- Version, stylesheet references, script cache-busters and service worker synced to v5.8.27.
+
+UNCHANGED
+- Enter Result, Result Summary artwork/layout, Final Standings artwork/layout and all race data logic.

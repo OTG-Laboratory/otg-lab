@@ -1,0 +1,9 @@
+RaceHub v5.7.45 — FESTIVAL MINIMUM ELIGIBILITY
+Protected baseline: phone-tested v5.7.44.
+
+- Manufacturer Championships require 2+ eligible cars.
+- Era Championships require 2+ eligible cars.
+- Favourite Manufacturer Championship requires 2+ eligible cars from the selected favourite.
+- Garage-derived availability recalculates automatically.
+- Existing frozen runs/history are untouched.
+- Events, Festival Championship, artwork and all other v5.7.44 behaviour are unchanged.

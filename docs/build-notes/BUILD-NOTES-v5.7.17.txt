@@ -1,0 +1,17 @@
+RaceHub v5.7.17 — Festival LOCKED v1 phone-test build
+
+Built from protected v5.7.16 Dashboard-final checkpoint.
+
+Festival-only visual rebuild:
+- approved bright festival/paddock scene
+- no Festival '?' help button; guidance moved into bottom information tile
+- active Continue Racing state preserved
+- Festival Championship preserved
+- Favourite Manufacturer purple identity preserved
+- Era and Manufacturer native details/collapse behaviour preserved
+- Manufacturer search preserved
+- real type-driven locked trophies preserved
+- no horizontal scrolling; vertical scrolling allowed
+- Dashboard and all other screens intentionally untouched
+
+Fresh v5717 CSS/JS/service-worker filenames used for cache break.

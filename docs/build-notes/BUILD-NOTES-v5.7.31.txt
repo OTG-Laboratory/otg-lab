@@ -1,0 +1,5 @@
+RaceHub v5.7.31 — SETTINGS HELP ACTUAL FIX
+v5.7.30 Settings renderer was verified to already contain header markup with no ?.
+The remaining visible ? therefore comes from a persistent/global help control.
+v5.7.31 suppresses that control only while .rhSettingsScene is active.
+No Settings UI, background, layout, data or functionality changed.

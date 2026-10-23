@@ -1,0 +1,8 @@
+RaceHub v5.8.23 — FINAL STANDINGS DEMOLITION CHECKPOINT
+
+- Deleted the v5817/v5821 Final Standings renderer files.
+- Deleted old Final Standings background assets except the approved locked artwork.
+- Removed the private legacy Final Standings renderer from studio-race-end-v5810.js.
+- Added one standalone Final Standings page showing only the approved locked artwork.
+- No dynamic leaderboard or winner logic is included at this checkpoint by design.
+- Version and cache authority advanced to 5.8.23.

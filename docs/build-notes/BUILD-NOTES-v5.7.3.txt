@@ -1,0 +1,53 @@
+RaceHub v5.7.3 — LOCKED VISUAL SYSTEM REBUILD
+
+Reason for rebuild
+------------------
+Phone test of v5.7.2 proved the functional controller changes loaded (Space switching worked),
+but the locked visual language did not reach the live screen primitives.
+
+Root cause
+----------
+v5.7.2 styled many newly introduced rh* classes while existing screens still used the older
+shared .btn / .rhSection / .rhChampCard / .rhSettingRow / .rhSpaceRow etc. rules.
+
+v5.7.3 correction
+-----------------
+The actual shared Studio visual system inside style.css has been rebuilt in-place.
+The separate studio-locked-ui.css visual skin has been removed.
+
+Rebuilt live primitives:
+- primary and secondary buttons
+- page header controls
+- Dashboard tiles / Continue panel
+- generic glass sections
+- Championship / Event / Space cards
+- Garage manufacturer groups
+- inputs / selectors / round controls
+- Championship overview / Race Night cards
+- Records / Hall of Fame cards
+- Settings panels / rows
+- modal / confirmation surfaces
+- empty states
+
+Visual target:
+- transparent dark glass rather than flat black slabs
+- controlled cyan outlines and under-glow
+- brighter readable hierarchy on phone
+- native UI surfaces, not pre-rendered card images
+- locked page artwork remains visible through the glass
+
+Protected from v5.7.2:
+- Space switching fix
+- result / car-complete / event-complete transitions
+- Hubs start milestone
+- Event round controls
+- Event Records integration
+- transparent logo / Hubs / trophy production derivatives
+- Garage/data/migration/results/Stats/Backup functional logic
+
+Artwork verification:
+The active Dashboard, Festival, Events, Championship and Settings background files are byte-for-byte
+the recovered locked production background files. The problem was the live UI treatment, not those file paths.
+
+Private Easter egg:
+The tiny TV-camera helicopter remains Festival-only.

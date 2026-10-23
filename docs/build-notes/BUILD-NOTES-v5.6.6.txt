@@ -1,0 +1,13 @@
+RaceHub v5.6.6 — EVENTS GUIDED RUN CHECKPOINT
+
+PHONE AUDIT CORRECTIONS
+- Remove Event moved to each Event row on Events Home; removed from Event detail/setup screen.
+- Event racer picker now groups the Garage by manufacturer in strict alphabetical accordions, with search.
+- Added explicit START EVENT. Starting freezes selected racers and Rounds.
+- Active Event now runs a guided sequence: Car 1 completes all Rounds, then a Next Racer transition, then Car 2, etc.
+- After saving a result, the next Round for the same car opens automatically.
+- Segmented time entry auto-advances MIN -> SEC -> MS -> Save after the expected digit count.
+- Final result automatically marks the Event complete and displays an Event Complete / Final Leaderboard screen.
+- Existing Events with saved results are treated as already started; new Events begin in Setup.
+
+NO GARAGE DATA CHANGES.

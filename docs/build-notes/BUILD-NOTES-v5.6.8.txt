@@ -1,0 +1,8 @@
+RaceHub v5.6.8 — Dashboard Hero & Global Header Controls Checkpoint
+
+Scope only:
+- Dashboard RaceHub logo enlarged/repositioned to preserve visibility of the approved hero car.
+- Global back arrow optically centred in circular control.
+- Dashboard Settings cog optically centred.
+- Help ? controls optically centred.
+- No Events functional changes; v5.6.7 Events remains phone-verified.

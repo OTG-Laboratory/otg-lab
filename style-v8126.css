@@ -1,0 +1,58 @@
+/* OTG! v8.0.126 — Historic Moments & Legends bridge; current Space only. */
+.otgChronicle8126{background:radial-gradient(ellipse at 78% -3%,rgba(130,42,82,.23),transparent 48%),linear-gradient(178deg,#080b17,#050a12 60%,#091019);min-height:100vh;color:#f7f9fa;padding-bottom:36px;font-family:inherit}
+.otgChronicle8126 *{box-sizing:border-box}
+.otgChronHero8126{position:relative;text-align:center;padding:28px clamp(14px,4vw,28px) 34px;border-bottom:2px solid #986342;background:radial-gradient(circle at 26% 33%,rgba(52,172,197,.20),transparent 38%),radial-gradient(circle at 78% 41%,rgba(221,57,113,.22),transparent 43%),linear-gradient(132deg,#0b1626,#1d1025 58%,#090e19)}
+.otgChronHero8126>button{display:block;min-height:44px;padding:8px 12px;border:1px solid #376a7a;border-radius:9px;color:#b7edf3;background:#0b202c;font-size:12px;font-weight:850;cursor:pointer;margin:0 0 20px;text-align:left}
+.otgChronKicker8126{display:block;letter-spacing:.15em;color:#f1bb82;font-size:10px;font-weight:850;line-height:1.6}
+.otgChronHero8126 h1{font-size:clamp(35px,8vw,62px);letter-spacing:-.045em;line-height:.99;margin:12px 0 16px;font-weight:1000;text-shadow:0 5px 18px rgba(0,0,0,.5)}
+.otgChronHero8126 h1 em{font-style:normal;color:#ffa6c4;text-shadow:0 0 24px rgba(233,97,160,.28)}
+.otgChronHero8126 p{font-size:clamp(13px,3.4vw,18px);max-width:550px;margin:0 auto 16px;color:#e2d6e2;line-height:1.5}
+.otgChronHero8126>strong{color:#ffdb99;font-size:11px;letter-spacing:.09em;line-height:1.5}
+.otgChronMain8126{max-width:830px;margin:0 auto;padding:0 12px}
+.otgChronSummary8126{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin:16px auto}
+.otgChronSummary8126>div{min-width:0;text-align:center;border-radius:12px;padding:15px 5px;background:linear-gradient(140deg,#132431,#1b1229);border:1px solid #385263;display:flex;flex-direction:column;justify-content:center;gap:7px}
+.otgChronSummary8126 b{font-size:clamp(19px,5vw,32px);color:#fff7ee}.otgChronSummary8126 small{color:#95d8e3;font-size:8px;font-weight:900;line-height:1.3;letter-spacing:.04em}
+.otgChronNav8126{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:20px 0}
+.otgChronNav8126 button{border:1px solid #568a8c;border-radius:9px;min-height:58px;padding:12px 5px;background:#102633;color:#ceeff5;font-weight:850;font-size:10px;cursor:pointer;line-height:1.4}
+.otgChronFilters8126{border:1px solid #433c56;border-radius:15px;background:rgba(19,17,33,.85);padding:15px 12px;margin:15px 0 24px}
+.otgChronFilters8126 label{display:block;color:#eec48e;font-weight:900;letter-spacing:.14em;font-size:10px;margin:0 0 8px}
+.otgChronFilters8126 input{width:100%;min-height:45px;background:#071722;border:1px solid #637c90;border-radius:8px;color:#fdfbfa;font-size:14px;padding:10px 13px;outline-offset:3px}
+.otgChronChips8126{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}
+.otgChronChips8126 button{border:1px solid #435466;border-radius:30px;min-height:35px;padding:8px 9px;background:#101c2b;color:#b8d4df;font-size:9px;font-weight:900;letter-spacing:.025em;cursor:pointer;line-height:1.2}
+.otgChronChips8126 button.on{background:linear-gradient(120deg,#a53375,#672e70);border-color:#f1a8c8;color:white}
+.otgChronChips8126 span{color:#e6c8ac;margin-left:4px}
+.otgChronListHead8126{display:flex;gap:10px;justify-content:space-between;align-items:end;margin:0 0 13px}
+.otgChronListHead8126 h2{font-size:18px;color:#fff1d8;letter-spacing:.03em;margin:0}
+.otgChronListHead8126 span{font-size:10px;color:#9ccbd4;text-align:right}
+.otgChronItems8126{display:flex;flex-direction:column;gap:13px}
+.otgChronMoment8126{border-radius:14px;border:1px solid #3b5362;background:linear-gradient(128deg,#101e2d,#181525);padding:17px 15px;box-shadow:0 10px 20px rgba(0,0,0,.12);overflow-wrap:anywhere}
+.otgChronMoment8126[data-kind="battle"]{border-left:4px solid #f0ae78}.otgChronMoment8126[data-kind="champion"]{border-left:4px solid #efca74}.otgChronMoment8126[data-kind="rivalry"]{border-left:4px solid #ff72ad}.otgChronMoment8126[data-kind="comeback"]{border-left:4px solid #aa85f5}.otgChronMoment8126[data-kind="pb"]{border-left:4px solid #57c8d8}.otgChronMoment8126[data-kind="campaign"]{border-left:4px solid #f55f7f}
+.otgChronMomentTop8126{display:flex;align-items:center;gap:8px;line-height:1.2;margin-bottom:10px}
+.otgChronMomentTop8126>span{font-size:23px}.otgChronMomentTop8126>small{color:#f0bd8a;font-size:9px;letter-spacing:.09em;font-weight:950;flex:1}
+.otgChronMomentTop8126>time{font-size:9px;color:#9fc2d1;white-space:nowrap}
+.otgChronMoment8126 h3{margin:0 0 7px;font-size:clamp(15px,4vw,20px);color:#fff4ea;line-height:1.3}
+.otgChronMoment8126>p{color:#d3e2e6;font-size:13px;line-height:1.55;margin:0 0 14px}
+.otgChronMoment8126 details{border-top:1px solid #3b4556;padding-top:8px}
+.otgChronMoment8126 summary{font-size:10px;font-weight:900;letter-spacing:.06em;color:#86d5dc;list-style:none;cursor:pointer;padding:6px 0}
+.otgChronMoment8126 summary::-webkit-details-marker{display:none}
+.otgChronMoment8126 summary>span{float:right}
+.otgChronMoment8126 details>div{background:rgba(4,14,23,.65);border-radius:8px;padding:13px;margin:5px 0 0}
+.otgChronMoment8126 details b{color:#f3bb83;font-size:10px;letter-spacing:.08em}
+.otgChronMoment8126 details p{font-size:12px;line-height:1.55;color:#ecf2f1;margin:8px 0}
+.otgChronMoment8126 details small{display:block;font-size:10px;color:#aec4d1;margin-top:7px;line-height:1.35}
+.otgChronEmpty8126{text-align:center;border:1px dashed #456777;border-radius:13px;padding:28px 16px;color:#cfeaf0}
+.otgChronEmpty8126 b{color:#fff0d5;font-size:14px}.otgChronEmpty8126 p{font-size:12px;line-height:1.5}
+.otgChronMore8126{display:block;width:100%;min-height:48px;border:1px solid #d0a07f;border-radius:12px;background:#4c2144;color:#fff4e3;margin:20px auto;font-weight:950;cursor:pointer}
+.otgChronMain8126 footer{font-size:10px;line-height:1.6;color:#a0b6c1;padding:18px 4px 12px}
+.otgChronLegendsLink8126{display:grid;grid-template-columns:1fr;gap:13px;margin:14px 12px 20px;padding:17px;border-radius:13px;border:1px solid #e0b078;background:linear-gradient(115deg,#292036,#122633)}
+.otgChronLegendsLink8126 small{font-size:9px;font-weight:900;letter-spacing:.12em;color:#f2c187}
+.otgChronLegendsLink8126 h2{color:#fff0dc;margin:5px 0;font-size:20px}
+.otgChronLegendsLink8126 p{color:#cee3e8;margin:0;font-size:12px;line-height:1.45}
+.otgChronLegendsLink8126 button{min-height:45px;border-radius:9px;border:1px solid #f5b7cb;background:linear-gradient(110deg,#8a326d,#52276d);color:#fff7f2;font-size:11px;font-weight:900;padding:12px;cursor:pointer}
+.otgChronTile8126{display:flex;text-align:left;align-items:center;gap:12px;width:calc(100% - 24px);margin:12px auto;padding:17px 12px;border:1px solid #d29e76;border-radius:13px;background:linear-gradient(105deg,#281c33,#142c3a);color:#fff8ee;cursor:pointer}
+.otgChronTile8126>span{font-size:30px}.otgChronTile8126>div{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}
+.otgChronTile8126 b{font-size:15px;color:#ffe2bd}.otgChronTile8126 small{color:#d2e8e8;font-size:10px;line-height:1.35}.otgChronTile8126 em{font-style:normal;color:#ffabc5;font-weight:950;font-size:9px;margin-top:5px}.otgChronTile8126>i{font-size:23px;color:#d6c7a4}
+.otgChronicle8126 button:focus-visible,.otgChronLegendsLink8126 button:focus-visible,.otgChronTile8126:focus-visible{outline:3px solid #9be8f9;outline-offset:3px}
+@media(min-width:700px){.otgChronLegendsLink8126{grid-template-columns:1fr auto;align-items:center}.otgChronItems8126{display:grid;grid-template-columns:1fr 1fr;gap:15px}}
+@media(max-width:345px){.otgChronSummary8126{gap:4px}.otgChronSummary8126>div{padding:12px 3px}.otgChronNav8126{gap:5px}.otgChronNav8126 button{font-size:9px}.otgChronMomentTop8126>time{font-size:8px}}
+@media(prefers-reduced-motion:reduce){.otgChronicle8126 *{animation:none!important;transition:none!important}}

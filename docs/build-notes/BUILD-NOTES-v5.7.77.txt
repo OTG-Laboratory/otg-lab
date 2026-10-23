@@ -1,0 +1,14 @@
+RaceHub v5.7.77 — Production Conformance
+
+Baseline: v5.7.76 PHONE TIMING CACHE RECOVERY.
+
+Implemented only the three approved production-polish corrections:
+- Updated the Festival Continue Racing card hierarchy while preserving its active-run action.
+- Removed the contextual help control from Championship and Event Enter Result headers only.
+- Constrained the Race Night queue to a compact fixed-height internal scrolling viewport with a visible scrollbar.
+
+Version/cache:
+- Visible splash and About version advanced to 5.7.77.
+- Active stylesheet and Studio layers advanced to v5777.
+- Service worker cache advanced to racehub-v5.7.77-production-conformance.
+- Active cache-busting references aligned to 5777.

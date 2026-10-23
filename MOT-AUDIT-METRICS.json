@@ -1,0 +1,1090 @@
+{
+  "errors": [],
+  "infos": [
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-2000-F",
+      569,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-2000-F",
+      689,
+      12,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-2000-F",
+      805,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-2000-F",
+      916,
+      12,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-CLS-HYPERCAR-F",
+      2,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-CLS-HYPERCAR-F",
+      186,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-CLS-HYPERCAR-F",
+      390,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-CLS-HYPERCAR-F",
+      571,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-CLS-HYPERCAR-F",
+      772,
+      6,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-1990-F",
+      636,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-1990-F",
+      748,
+      12,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "OR-ERA-2010-F",
+      400,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "OR-ERA-2010-F",
+      520,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "OR-ERA-2010-F",
+      654,
+      10,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "OR-ERA-2010-F",
+      780,
+      16,
+      12
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "OR-ERA-2010-F",
+      909,
+      8,
+      12
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-MK-FORD-F",
+      16,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-MK-FORD-F",
+      203,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-MK-FORD-F",
+      403,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-MK-FORD-F",
+      587,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-MK-FORD-F",
+      782,
+      4,
+      12
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-2010-F",
+      719,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-2010-F",
+      758,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-2010-F",
+      785,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-2010-F",
+      821,
+      8,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-2010-F",
+      1068,
+      16,
+      12
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-2010-F",
+      1097,
+      8,
+      12
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "OR-CLS-PICKUPS-4X4-F",
+      21,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "OR-CLS-PICKUPS-4X4-F",
+      206,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "OR-CLS-PICKUPS-4X4-F",
+      407,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "OR-CLS-PICKUPS-4X4-F",
+      593,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "OR-CLS-PICKUPS-4X4-F",
+      787,
+      4,
+      12
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-MK-CHEVROLET-F",
+      29,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-MK-CHEVROLET-F",
+      257,
+      16,
+      12
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-MK-CHEVROLET-F",
+      488,
+      16,
+      12
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-MK-CHEVROLET-F",
+      720,
+      4,
+      12
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-HER-CLA-F",
+      588,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-HER-CLA-F",
+      645,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-HER-CLA-F",
+      702,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-HER-CLA-F",
+      763,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-HER-CLA-F",
+      811,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-HER-CLA-F",
+      864,
+      4,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "OR-ALL-F",
+      710,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "OR-ALL-F",
+      771,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "OR-ALL-F",
+      818,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "OR-ALL-F",
+      873,
+      8,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-1960-F",
+      247,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-1960-F",
+      451,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-1960-F",
+      631,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-1960-F",
+      827,
+      8,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-MK-PORSCHE-F",
+      519,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-MK-PORSCHE-F",
+      762,
+      12,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "RC-HW-ALL",
+      388,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "RC-HW-ALL",
+      489,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "RC-HW-ALL",
+      590,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "RC-HW-ALL",
+      695,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "RC-HW-ALL",
+      801,
+      6,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "RC-ALL-F",
+      389,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "RC-ALL-F",
+      492,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "RC-ALL-F",
+      592,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "RC-ALL-F",
+      696,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "RC-ALL-F",
+      802,
+      6,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "RC-CLS-EXTREME-TRACK-TOYS-F",
+      75,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "RC-CLS-EXTREME-TRACK-TOYS-F",
+      316,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "RC-CLS-EXTREME-TRACK-TOYS-F",
+      535,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "RC-CLS-EXTREME-TRACK-TOYS-F",
+      776,
+      8,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-1970-F",
+      76,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-1970-F",
+      274,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-1970-F",
+      466,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-1970-F",
+      659,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-1970-F",
+      848,
+      4,
+      12
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-2020-F",
+      854,
+      16,
+      12
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-2020-F",
+      982,
+      8,
+      12
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-CLS-TRACK-TOYS-F",
+      297,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-CLS-TRACK-TOYS-F",
+      484,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-CLS-TRACK-TOYS-F",
+      678,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-CLS-TRACK-TOYS-F",
+      865,
+      8,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-CLS-RETRO-SPORTS-CARS-F",
+      517,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-CLS-RETRO-SPORTS-CARS-F",
+      716,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-CLS-RETRO-SPORTS-CARS-F",
+      904,
+      10,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-HW-TRACK-TOYS",
+      347,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-HW-TRACK-TOYS",
+      529,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-HW-TRACK-TOYS",
+      727,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-HW-TRACK-TOYS",
+      914,
+      8,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-CLS-MODERN-SUPERCAR-F",
+      613,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-CLS-MODERN-SUPERCAR-F",
+      838,
+      12,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-CLS-RETRO-SUPERCARS-F",
+      620,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-CLS-RETRO-SUPERCARS-F",
+      845,
+      12,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-HW-HYPERCAR",
+      155,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-HW-HYPERCAR",
+      356,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-HW-HYPERCAR",
+      537,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-HW-HYPERCAR",
+      739,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-HW-HYPERCAR",
+      922,
+      6,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-1980-F",
+      163,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-1980-F",
+      366,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-1980-F",
+      548,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-1980-F",
+      747,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-ERA-1980-F",
+      935,
+      4,
+      12
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-MK-NISSAN-F",
+      183,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-MK-NISSAN-F",
+      425,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-MK-NISSAN-F",
+      649,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-MK-NISSAN-F",
+      880,
+      8,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-MK-BMW-F",
+      192,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-MK-BMW-F",
+      431,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-MK-BMW-F",
+      656,
+      16,
+      12
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-MK-BMW-F",
+      884,
+      4,
+      12
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-CLS-CLASSIC-MUSCLE-F",
+      193,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-CLS-CLASSIC-MUSCLE-F",
+      432,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-CLS-CLASSIC-MUSCLE-F",
+      657,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-CLS-CLASSIC-MUSCLE-F",
+      885,
+      6,
+      12
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-HW-MODERN-SUPERCAR",
+      662,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-HW-MODERN-SUPERCAR",
+      890,
+      12,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-HW-RETRO-SUPERCARS",
+      672,
+      16,
+      14
+    ],
+    [
+      "PLANNED_MISMATCH",
+      "N-HW-RETRO-SUPERCARS",
+      898,
+      12,
+      14
+    ]
+  ],
+  "groupEvents": [
+    {
+      "event": "N-ERA-2000-F",
+      "eligible": 54,
+      "slots": 10,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 144,
+      "plannedEntries": 144,
+      "roundDraws": 20
+    },
+    {
+      "event": "N-CLS-HYPERCAR-F",
+      "eligible": 35,
+      "slots": 6,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 90,
+      "plannedEntries": 90,
+      "roundDraws": 12
+    },
+    {
+      "event": "N-ERA-1990-F",
+      "eligible": 62,
+      "slots": 11,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 164,
+      "plannedEntries": 164,
+      "roundDraws": 22
+    },
+    {
+      "event": "OR-ERA-2010-F",
+      "eligible": 45,
+      "slots": 9,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 122,
+      "plannedEntries": 122,
+      "roundDraws": 18
+    },
+    {
+      "event": "N-MK-FORD-F",
+      "eligible": 34,
+      "slots": 6,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 88,
+      "plannedEntries": 88,
+      "roundDraws": 12
+    },
+    {
+      "event": "N-ERA-2010-F",
+      "eligible": 188,
+      "slots": 33,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 504,
+      "plannedEntries": 504,
+      "roundDraws": 66
+    },
+    {
+      "event": "OR-CLS-PICKUPS-4X4-F",
+      "eligible": 34,
+      "slots": 6,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 88,
+      "plannedEntries": 88,
+      "roundDraws": 12
+    },
+    {
+      "event": "N-MK-CHEVROLET-F",
+      "eligible": 25,
+      "slots": 5,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 66,
+      "plannedEntries": 68,
+      "roundDraws": 10
+    },
+    {
+      "event": "N-HER-CLA-F",
+      "eligible": 122,
+      "slots": 21,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 324,
+      "plannedEntries": 324,
+      "roundDraws": 42
+    },
+    {
+      "event": "OR-ALL-F",
+      "eligible": 124,
+      "slots": 21,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 328,
+      "plannedEntries": 328,
+      "roundDraws": 42
+    },
+    {
+      "event": "N-ERA-1960-F",
+      "eligible": 36,
+      "slots": 6,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 92,
+      "plannedEntries": 92,
+      "roundDraws": 12
+    },
+    {
+      "event": "N-MK-PORSCHE-F",
+      "eligible": 30,
+      "slots": 5,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 76,
+      "plannedEntries": 76,
+      "roundDraws": 10
+    },
+    {
+      "event": "RC-HW-ALL",
+      "eligible": 59,
+      "slots": 11,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 158,
+      "plannedEntries": 158,
+      "roundDraws": 22
+    },
+    {
+      "event": "RC-ALL-F",
+      "eligible": 59,
+      "slots": 11,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 158,
+      "plannedEntries": 158,
+      "roundDraws": 22
+    },
+    {
+      "event": "N-CLS-SUPER-SALOONS-F",
+      "eligible": 32,
+      "slots": 5,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 80,
+      "plannedEntries": 80,
+      "roundDraws": 10
+    },
+    {
+      "event": "RC-CLS-EXTREME-TRACK-TOYS-F",
+      "eligible": 28,
+      "slots": 5,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 72,
+      "plannedEntries": 72,
+      "roundDraws": 10
+    },
+    {
+      "event": "N-ERA-1970-F",
+      "eligible": 34,
+      "slots": 6,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 88,
+      "plannedEntries": 88,
+      "roundDraws": 12
+    },
+    {
+      "event": "N-ERA-2020-F",
+      "eligible": 48,
+      "slots": 9,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 128,
+      "plannedEntries": 128,
+      "roundDraws": 18
+    },
+    {
+      "event": "N-CLS-TRACK-TOYS-F",
+      "eligible": 36,
+      "slots": 6,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 92,
+      "plannedEntries": 92,
+      "roundDraws": 12
+    },
+    {
+      "event": "N-CLS-RETRO-SPORTS-CARS-F",
+      "eligible": 37,
+      "slots": 6,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 94,
+      "plannedEntries": 94,
+      "roundDraws": 12
+    },
+    {
+      "event": "N-HW-TRACK-TOYS",
+      "eligible": 36,
+      "slots": 6,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 92,
+      "plannedEntries": 92,
+      "roundDraws": 12
+    },
+    {
+      "event": "N-CLS-MODERN-SUPERCAR-F",
+      "eligible": 30,
+      "slots": 5,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 76,
+      "plannedEntries": 76,
+      "roundDraws": 10
+    },
+    {
+      "event": "N-CLS-RETRO-SUPERCARS-F",
+      "eligible": 30,
+      "slots": 5,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 76,
+      "plannedEntries": 76,
+      "roundDraws": 10
+    },
+    {
+      "event": "N-HW-HYPERCAR",
+      "eligible": 35,
+      "slots": 6,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 90,
+      "plannedEntries": 90,
+      "roundDraws": 12
+    },
+    {
+      "event": "N-ERA-1980-F",
+      "eligible": 34,
+      "slots": 6,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 88,
+      "plannedEntries": 88,
+      "roundDraws": 12
+    },
+    {
+      "event": "N-MK-NISSAN-F",
+      "eligible": 28,
+      "slots": 5,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 72,
+      "plannedEntries": 72,
+      "roundDraws": 10
+    },
+    {
+      "event": "N-MK-BMW-F",
+      "eligible": 26,
+      "slots": 5,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 68,
+      "plannedEntries": 68,
+      "roundDraws": 10
+    },
+    {
+      "event": "N-CLS-CLASSIC-MUSCLE-F",
+      "eligible": 27,
+      "slots": 5,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 70,
+      "plannedEntries": 70,
+      "roundDraws": 10
+    },
+    {
+      "event": "N-HW-MODERN-SUPERCAR",
+      "eligible": 30,
+      "slots": 5,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 76,
+      "plannedEntries": 76,
+      "roundDraws": 10
+    },
+    {
+      "event": "N-HW-RETRO-SUPERCARS",
+      "eligible": 30,
+      "slots": 5,
+      "liveFormat": "GROUPS",
+      "actualResultEntries": 76,
+      "plannedEntries": 76,
+      "roundDraws": 10
+    }
+  ],
+  "formats": {
+    "GROUPS": 251,
+    "KNOCKOUT": 705,
+    "STANDARD": 172,
+    "DRIFT KNOCKOUT": 16,
+    "DRAG SHOOTOUT": 11,
+    "DRIFT SCORE": 10
+  },
+  "ecosystems": {
+    "NORMAL": 476,
+    "FORZA EDITION": 16,
+    "DRIFT": 22,
+    "RACE": 59,
+    "OFF-ROAD / BUGGY": 124
+  }
+}

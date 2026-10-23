@@ -1,0 +1,52 @@
+/* OTG! v8.0.93 — Pick My Drive structural phone-row fix.
+   The Layout input now lives inside a dedicated wrapper, so legacy .layout grid rules cannot collapse it. */
+@media (max-width:900px){
+  .v7PmdSetup .v8093PmdRound{
+    display:grid!important;
+    grid-template-columns:28px minmax(0,1fr) 38px!important;
+    grid-template-rows:auto auto!important;
+    column-gap:7px!important;
+    row-gap:8px!important;
+    align-items:center!important;
+    height:auto!important;
+    min-height:0!important;
+    padding:8px 0 10px!important;
+  }
+  .v7PmdSetup .v8093PmdRound>b{
+    grid-column:1!important;
+    grid-row:1!important;
+    justify-self:center!important;
+    align-self:center!important;
+  }
+  .v7PmdSetup .v8093PmdRound>.v8093PmdName{
+    grid-column:2!important;
+    grid-row:1!important;
+    width:100%!important;
+    min-width:0!important;
+    box-sizing:border-box!important;
+  }
+  .v7PmdSetup .v8093PmdRound>button{
+    grid-column:3!important;
+    grid-row:1!important;
+    justify-self:end!important;
+    align-self:center!important;
+    margin:0!important;
+  }
+  .v7PmdSetup .v8093PmdLayoutRow{
+    grid-column:1 / -1!important;
+    grid-row:2!important;
+    display:block!important;
+    width:100%!important;
+    min-width:0!important;
+    margin:0!important;
+    padding:0!important;
+  }
+  .v7PmdSetup .v8093PmdLayoutRow>input{
+    display:block!important;
+    width:100%!important;
+    min-width:0!important;
+    max-width:none!important;
+    box-sizing:border-box!important;
+    margin:0!important;
+  }
+}

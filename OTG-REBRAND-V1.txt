@@ -1,0 +1,7 @@
+OTG! REBRAND V1 — v6.0.47
+Based on protected RaceHub v6.0.46.
+Visible brand: OTG!; full Out The Garage! on loading/splash/dashboard/About.
+Master mark: OTG white, ! cyan.
+Environmental mark: same identity rendered as spray paint on a dark garage wall.
+Legacy RaceHub/RH technical identifiers, storage, repositories and deployment workflow intentionally preserved.
+rh-guide not modified.

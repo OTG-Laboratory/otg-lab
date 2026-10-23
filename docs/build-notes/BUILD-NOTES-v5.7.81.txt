@@ -1,0 +1,8 @@
+RaceHub v5.7.81 — ENTER RESULT LOCKED ARTWORK
+
+- Working baseline: supplied v5.7.81 archive containing the v5.7.80 production app.
+- Rebuilt the Championship Enter Result screen as genuine functional HTML/CSS using the supplied locked finish-line artwork as visual authority.
+- Added a dedicated clean race-scene hero asset derived from the supplied artwork; UI controls remain live, accessible and data-driven.
+- Preserved segmented minutes/seconds/milliseconds entry, position selection, submission-state wording and existing result-save logic.
+- Preserved Result Summary, Final Standings and all other existing functionality.
+- Updated visible splash version, cache-busting references and service worker cache to v5.7.81.

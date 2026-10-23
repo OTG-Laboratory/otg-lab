@@ -1,0 +1,14 @@
+RaceHub v5.7.66 — ANDROID BACK + MANUFACTURER PENCIL REPAIR
+
+Baseline: v5.7.65 phone-tested build.
+
+Phone feedback preserved:
+- PWA installation works.
+- v5.7.65 optically-centred installed icon is a BIG PASS and is unchanged.
+
+Repairs only:
+1. The v5.7.65 navigation code is now actually wired into index.html and the service worker, so Android/browser Back closes an open RaceHub overlay first, otherwise follows the visible RaceHub Back control one level at a time; Home remains the app root.
+2. Manufacturer Rename is moved from the separate row underneath an expanded Manufacturer group to the Manufacturer header pencil icon. The existing RaceHub rename modal and propagation logic are unchanged.
+3. Version/cache assets bumped to v5.7.66. Approved v5.7.65 PWA icon files and manifest icon geometry are untouched.
+
+No Championship, Event, result, records, data or other visual changes.

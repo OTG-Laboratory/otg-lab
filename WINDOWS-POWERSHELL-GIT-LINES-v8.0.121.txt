@@ -1,0 +1,11 @@
+# From PowerShell, after downloading the ZIP to Downloads:
+# Run these commands WHILE YOU ARE IN YOUR EXISTING OTG! Git repository folder.
+# Double-check current folder before expanding; this overlays app code, never browser local storage.
+Get-Location
+$Zip = Join-Path $env:USERPROFILE 'Downloads\OTG-v8.0.121-SWISS-RESTORATION-QA.zip'
+Expand-Archive -LiteralPath $Zip -DestinationPath (Get-Location).Path -Force
+# Validate the change, then commit the QA release.
+git status --short
+git add -A
+git commit -m "OTG! v8.0.121 - Swiss R1 restoration QA"
+git push

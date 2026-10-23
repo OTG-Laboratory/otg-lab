@@ -1,0 +1,8 @@
+RaceHub v5.7.78 — Scroll Stability
+
+- Prevented outer-page overscroll from exposing the black root background.
+- Added contained momentum scrolling to internal long-list panels.
+- Championship Setup car toggles now update in place and preserve exact list scroll position.
+- Clear All and Select All update the existing list without rebuilding the screen.
+- Tightened Enter Result stopwatch digit-group spacing only.
+- Preserved all championship eligibility, selection, rounds, data and start behaviour.

@@ -1,0 +1,49 @@
+/* OTG! v8.0.92 — Pick My Drive phone row + updater pin repair.
+   Phone target:
+     [round #] [race / track name] [delete]
+     [          Layout (optional) full width          ]
+   This stylesheet is loaded after the legacy PMD styles so old <=390px rules cannot
+   collapse the Layout input back into the small lower-left cell. */
+@media (max-width:520px){
+  .v7PmdRound{
+    display:grid!important;
+    grid-template-columns:28px minmax(0,1fr) 38px!important;
+    grid-template-rows:auto auto!important;
+    column-gap:7px!important;
+    row-gap:8px!important;
+    align-items:center!important;
+    padding:8px 0 10px!important;
+  }
+  .v7PmdRound>b{
+    grid-column:1!important;
+    grid-row:1!important;
+    align-self:center!important;
+    justify-self:center!important;
+    text-align:center!important;
+  }
+  .v7PmdRound>input:not(.layout){
+    grid-column:2!important;
+    grid-row:1!important;
+    width:100%!important;
+    min-width:0!important;
+    box-sizing:border-box!important;
+  }
+  .v7PmdRound>button{
+    grid-column:3!important;
+    grid-row:1!important;
+    align-self:center!important;
+    justify-self:end!important;
+    margin:0!important;
+  }
+  .v7PmdRound>input.layout{
+    grid-column:1 / -1!important;
+    grid-row:2!important;
+    display:block!important;
+    justify-self:stretch!important;
+    width:100%!important;
+    min-width:0!important;
+    max-width:none!important;
+    box-sizing:border-box!important;
+    margin:0!important;
+  }
+}

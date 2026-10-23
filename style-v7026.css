@@ -1,0 +1,10 @@
+/* OTG! v7.0.26 — Stats compact layout fix.
+   No artwork changes. Keep headline gauges above cockpit art; pull PB/Time tiles directly up beneath the artwork. */
+.v7StatsScene{min-height:520px;background-position:50% top}
+.v7StatsScene .rhStatsCockpit{min-height:380px;padding:18px 18px 10px;align-items:start;grid-template-rows:auto 1fr}
+.v7StatsCardsStage5{padding-top:10px}
+@media(max-width:520px){
+  .v7StatsScene{min-height:500px;background-position:50% top}
+  .v7StatsScene .rhStatsCockpit{min-height:365px;padding:14px 10px 8px;gap:8px;align-items:start}
+  .v7StatsCardsStage5{padding-top:8px}
+}

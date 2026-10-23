@@ -1,0 +1,9 @@
+OTG! v6.0.56 — Dashboard clean rebuild
+Restart source: retained OTG! v6.0.47.
+NO IMAGE GENERATION / NO DASHBOARD REDESIGN.
+Dashboard uses proven rhHomeHeroV4/rhHomeLogoV4 structure.
+Legacy RaceHub building branding removed; no replacement building branding.
+Approved OTG PNG placed in existing logo slot; size/position/brightness controlled only by final CSS.
+Passed v6.0.52 splash treatment retained.
+Visible version: 6.0.56.
+Legacy RaceHub/RH technical internals preserved.

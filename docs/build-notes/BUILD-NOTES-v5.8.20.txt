@@ -1,0 +1,7 @@
+RaceHub v5.8.20 — Final Standings single-authority rebuild
+
+- Removed the active legacy Final Standings renderer from studio-release-v5809.js.
+- studio-final-standings-v5817.js is now the sole Final Standings authority.
+- Replaced the baked full-screen mock-up used as a background with a clean artwork asset.
+- Preserved working car-name, timing, winner, trophy, Hall of Fame and return logic.
+- Synced visible version and service-worker cache to v5.8.20.

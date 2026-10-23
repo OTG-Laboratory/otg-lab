@@ -1,0 +1,31 @@
+/* OTG! v8.0.77 — Evil Campaign back-control hotfix.
+   Make the campaign exit impossible to miss and keep it above every hero layer. */
+.rhEvilBack8076.rhEvilBackHotfix8077{
+  display:flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+  position:absolute!important;
+  z-index:9999!important;
+  left:14px!important;
+  top:calc(16px + env(safe-area-inset-top))!important;
+  width:64px!important;
+  height:48px!important;
+  padding:0!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:3px!important;
+  border:1px solid rgba(110,233,251,.9)!important;
+  border-radius:15px!important;
+  background:rgba(2,13,19,.97)!important;
+  color:#6ee9fb!important;
+  box-shadow:0 8px 24px rgba(0,0,0,.55)!important;
+  font-size:0!important;
+  line-height:1!important;
+  pointer-events:auto!important;
+}
+.rhEvilBack8076.rhEvilBackHotfix8077::before{content:'‹';font-size:31px;font-weight:800;line-height:1;transform:translateY(-1px)}
+.rhEvilBack8076.rhEvilBackHotfix8077::after{content:'BACK';font-size:9px;font-weight:1000;letter-spacing:.08em;line-height:1}
+@media(max-width:520px){
+  .rhEvilHero8076{padding-left:92px!important}
+  .rhEvilBack8076.rhEvilBackHotfix8077{left:12px!important;top:calc(14px + env(safe-area-inset-top))!important;width:66px!important;height:46px!important}
+}

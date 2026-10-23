@@ -1,0 +1,29 @@
+OTG! v8.0.106 — FH6 EVIL CAMPAIGN PRE-LAUNCH BLUEPRINT (QA)
+BASELINE: accepted v8.0.105 (and all accepted FH5 / GT7 systems).
+
+NEW
+- FH6 Garage > OPEN EVIL BLUEPRINT. FH6-only read-only programme rehearsal.
+- Manufacturer, Era, Class, Specialist and Finals event previews generated from the existing 658-car FH6 snapshot and Workshop decisions.
+- Switch between DRAFT (explicitly unverified; excludes unresolved) and CONFIRMED-ONLY entrant previews.
+- Separate Forza Edition ROAD/OFF-ROAD pools; unassigned FE roles remain out of route-specific events.
+- Specialist Drift uses score-based Drift Zones, not racing times, and specialist races never leak into NORMAL events.
+- Festival stage-sizing respects <=24 results per visit: small fields bundle up to 4 rounds; fields >24 use balanced groups <=8 with two route placeholders, knockout stage deliberately not invented.
+- Race Off workload respects <=5 pairings/10 entries per visit and preserves knockout round boundaries (26 cars => 7 visits, 476 => 99).
+- Finals Night roadmap explicitly separates Favourite Manufacturer Festival Night from Favourite Manufacturer Race Off Night by FE and Drift nights. Favourite is NOT frozen during preview.
+- Randomised run-order *preview* with no saved races. Pure no-repeat draw-bag helper included but disabled for use until real FH6 route data is verified.
+- All new programme previews derive in memory; no playlist, racing slots, results, FH6 track names, location clues or persistent campaign state generated.
+
+SAFETY
+- FH5 Evil R1, GT7 and current FH6 Garage/ownership and classification decisions left untouched.
+- Does not start or unlock FH6 Evil racing. No reset; take portable backup before installing.
+- Existing v8.0.103 AVERAGE TIME and mobile RUN ORDER remain awaiting user's separate live testing.
+
+QA TEST
+- JavaScript unit harness and ZIP/offline path checks passed. Headless browser navigation was blocked by the sandbox, so mobile/browser interaction is NOT verified. Live phone QA required.
+- Test: FH6 > Garage > OPEN EVIL BLUEPRINT > Specialist / Finals > event preview > Randomise > Back.
+- Verify FH5 and GT7 data intact; all FH6 racing still locked.
+
+VS CODE / POWERSHELL (extract ZIP into existing C:\RaceHub)
+ git add .
+ git commit -m "OTG! v8.0.106 - FH6 Evil Campaign Blueprint"
+ git push origin main

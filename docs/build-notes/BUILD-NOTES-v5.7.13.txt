@@ -1,0 +1,12 @@
+RaceHub v5.7.13 — RH-UI-017 Dashboard LOCKED v5
+
+FULL PHONE-TEST BUILD, not a mock-up.
+Starting point: working v5.7.12 full RaceHub build.
+Preserved: proven 1x6 Dashboard navigation and all existing RaceHub functionality/data behaviour.
+Dashboard-only visual correction:
+- brighter and more legible wet racetrack/pit-building hero
+- more hero/background breathing room
+- approved logo retained
+- compact translucent 1x6 rows retained
+- no Settings cog / Hubs / Championship panel
+Hard-cache break repeated with v5713 physical filenames.

@@ -1,0 +1,11 @@
+RaceHub v5.7.63 — Championship action colour visibility
+
+Baseline: v5.7.61 known-good functional checkpoint.
+
+Changes:
+- Correctly version-wired CSS/JS/service worker assets for phone/PWA cache refresh.
+- SAVE & START enabled state: vivid high-visibility green.
+- SAVE & BACK: vivid amber/orange, clearly distinct from destructive red.
+- CANCEL & BACK: vivid clean red.
+- Disabled SAVE & START remains visibly disabled.
+- No Championship behaviour/data changes.

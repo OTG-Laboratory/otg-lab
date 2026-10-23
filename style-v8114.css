@@ -1,0 +1,18 @@
+
+/* OTG! 8.0.114 — read-only Close Battles & Journey Moments */
+.otgBattles8114,.otgBattles8114 *{box-sizing:border-box}
+.otgBattlesIntro8114{margin:20px 18px;padding:19px 18px;color:#a2b1bb;line-height:1.6;background:#020d15;border:1px solid #284758;border-radius:18px}
+.otgBattlesSection8114{margin:18px 18px 32px;background:#020a11;border:1px solid #284958;border-radius:22px;overflow:hidden}
+.otgBattlesSection8114>header{padding:20px;border-bottom:1px solid #284958}
+.otgBattlesSection8114>header h2{color:#66b0c9;font-size:clamp(1.14rem,4vw,1.45rem);margin:0 0 7px;line-height:1.2}
+.otgBattlesSection8114>header small{color:#81939d;font-size:.9rem}
+.otgBattleRow8114{margin:14px;padding:16px;border:1px solid #294351;border-radius:16px;background:#031018;min-width:0}
+.otgBattleTop8114{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.otgBattleTop8114 b{font-size:.85rem;color:#8a9da7}.otgBattleTop8114 strong{font-size:1.45rem;color:#6dc4df}.otgBattleTop8114 small{font-size:.82rem;color:#849ba8}
+.otgBattleRow8114 h3{font-size:1.02rem;color:#f6fbff;margin:11px 0;overflow-wrap:anywhere}
+.otgBattleRow8114 p{display:flex;align-items:flex-start;gap:10px;justify-content:space-between;color:#dce8ed;line-height:1.4;margin:10px 0;font-size:.92rem}
+.otgBattleRow8114 p span{flex:1;min-width:0;overflow-wrap:anywhere}.otgBattleRow8114 p em{font-style:normal;white-space:nowrap;color:#8dbece}
+.otgBattleRow8114>small{color:#849ba8}.otgBattlesEmpty8114{padding:20px;color:#9cafb9;line-height:1.5}
+.otgClosestBattlesTile8114{width:100%;text-align:left;cursor:pointer}
+.otgJourneyMoment8114{border-color:rgba(87,182,205,.45)!important}
+@media(max-width:360px){.otgBattlesSection8114{margin-left:8px;margin-right:8px}.otgBattleRow8114{padding:11px;margin:9px}.otgBattleTop8114 strong{font-size:1.2rem}}

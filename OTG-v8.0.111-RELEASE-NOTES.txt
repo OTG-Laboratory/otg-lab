@@ -1,0 +1,27 @@
+OTG! v8.0.111 — MAIN • EVIL R1 FINISH LINE & MEDALS
+Source: verified v8.0.110 zip (checksum matched). NO DATA RESET/MIGRATION.
+
+1. SLOT COMPLETE / MARK AS DONE
+   - Completion screen with exact saved current-slot results, a clear STOP HERE instruction and MARK AS DONE.
+   - Results remain saved even if you leave without marking done.
+   - Next-round/next-group actions are intercepted at a ready unconfirmed slot boundary.
+   - Festival Groups use actual group-size × actual tracks from v8.0.109, not source planning estimates.
+   - Final Race Off slot waits until champion is confirmed; no accidental medals or early signoff.
+2. NEXT UP MISSION BRIEF
+   - Shows current visit, cars, tracks/rounds/pairings, result-entry workload and result counts banked IN THIS SLOT.
+   - Mark-as-done prompt replaces CONTINUE once workload is ready.
+3. EVIL R1 MEDAL TABLES
+   - Olympic gold / silver / bronze for completed events. Both losing Race Off semifinalists get bronze.
+   - Individual cars earn medals in ALL completed events, including Drift and one-manufacturer events.
+   - Manufacturers earn medals only from events with multiple manufacturers and NEVER Drift or single-make events.
+   - Medal tables and histories are derived from saved Festival/Groups/Knockout/Drift results (no duplicate medal data).
+   - Medal section appears in FH5 Evil R1 and medal totals also appear in the relevant Car History.
+
+4. OTG! TAGLINE
+   - Approved wording: YOUR HARDEST OPPONENT IS YOU.
+   - Added under the Home dashboard mark and on the medal-table header.
+   - No changes to racing data or general navigation.
+
+SAFETY: Keep FH5 / FH6 / GT7 saved Spaces intact. NEVER use Reset Racing Data or Full Reset for this update.
+PHONE QA: Confirm completed Slot 0006 podium, visit workloads in NEXT UP, and automatic STOP at next true slot boundary.
+LIMITATION: Automated fixtures do not replace real phone/PS5 racing. v8.0.111 requires your live PASS.

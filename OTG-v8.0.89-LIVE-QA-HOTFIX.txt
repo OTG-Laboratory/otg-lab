@@ -1,0 +1,12 @@
+OTG! v8.0.89 — LIVE QA HOTFIX
+
+Fixes only the two issues found in v8.0.88 live testing:
+1. Race Off variant labels: old saved brackets with stale sourceCarId values now use the frozen make/year/classType/model snapshot as an exact catalogue fallback. This fixes Morris Minor 1000 1953 vs Morris Minor 1000 1953 • FORZA EDITION in the existing Evil Slot 003 bracket.
+2. Car History: restores the fixed, always-visible BACK control that v8.0.66 introduced and v8.0.88 accidentally bypassed when replacing the history opener.
+
+Preserved unchanged:
+- v8.0.88 Championship Career calculations/content
+- v8.0.87 Rally Adventure + Hot Wheels LOCATION clues
+- v8.0.86 Evil Campaign bridge
+- v8.0.82 Results/Corrections
+- rh-guide

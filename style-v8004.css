@@ -1,0 +1,27 @@
+/* OTG! v8.0.4 — Festival entry selection: no hidden focusable checkbox. */
+.rhSetupCarV1>.rhSetupIncludeV804{
+  width:52px!important;height:52px!important;padding:0!important;margin:0 auto!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  border:2px solid rgba(55,196,235,.72)!important;border-radius:11px!important;
+  background:rgba(3,16,22,.92)!important;color:transparent!important;
+  box-shadow:none!important;font-size:0!important;touch-action:manipulation;
+}
+.rhSetupCarV1>.rhSetupIncludeV804 i{
+  font-style:normal;font-size:32px;line-height:1;color:transparent;
+}
+.rhSetupCarV1>.rhSetupIncludeV804.is-on{
+  background:linear-gradient(180deg,rgba(42,157,199,.75),rgba(19,84,115,.9))!important;
+  border-color:#47c8ef!important;box-shadow:0 0 18px rgba(35,184,228,.28)!important;
+}
+.rhSetupCarV1>.rhSetupIncludeV804.is-on i{color:#eafaff}
+
+/* OTG! v8.0.5 — Groups navigation/result flow */
+.v8GroupVisibleBack{
+  display:inline-flex!important;align-items:center;justify-content:center;
+  min-height:52px;padding:0 20px;margin:0 0 14px;border:1px solid rgba(55,196,235,.55);
+  border-radius:999px;background:rgba(2,13,19,.9);color:#fff;font-weight:900;
+  letter-spacing:.08em;font-size:16px;
+}
+.v8TrackResult{background:rgba(8,18,25,.94);border:1px solid #243b46;border-radius:18px;padding:20px}
+.v8TrackResult>small{display:block;color:#31d8e8;font-weight:900;letter-spacing:.1em}
+.v8TrackResult>h2{margin:8px 0 4px}.v8TrackResult>strong{display:block;font-size:2rem;margin-bottom:12px}

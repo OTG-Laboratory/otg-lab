@@ -1,0 +1,17 @@
+RaceHub v5.7.25 — GARAGE REBUILD
+
+Built from v5.7.24.
+
+ONLY CORRECTIONS:
+1. Existing Garage background asset was directly cleaned with inpainting.
+   Baked header/back-arrow pixels are removed from the asset itself.
+   No redraw, no generator, no zoom/crop fake fix.
+2. Garage search now filters existing manufacturer/car DOM in-place.
+   It does not rerender the Garage on each keypress, so the mobile keyboard remains open.
+
+UNCHANGED:
+- 675-car data
+- Add/Edit/Delete Car
+- alphabetical manufacturer accordion
+- Search + compact Add New Car layout
+- Dashboard, Festival, Events and all other screens/functionality

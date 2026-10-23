@@ -1,0 +1,15 @@
+RaceHub v5.7.12 — HARD CACHE BREAK
+
+Purpose:
+Force phones/PWA installs off the previous Dashboard v3 shell.
+
+Hard cache break:
+- style.css -> style-v5712.css
+- js/studio-final.js -> js/studio-final-v5712.js
+- service-worker.js -> service-worker-v5712.js
+- service worker registration uses updateViaCache:'none'
+- navigation requests use network/no-store first
+- index includes explicit no-cache meta directives
+
+Dashboard content is the already-approved RH-UI-017 v4 1x6 list.
+No functional/data redesign.

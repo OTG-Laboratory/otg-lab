@@ -1,0 +1,16 @@
+RaceHub v5.7.23 — GARAGE HEADER FIX
+
+Built from phone-tested v5.7.22.
+
+ONLY CORRECTIONS:
+- eliminate visible baked duplicate Garage header/back-arrow pixels from hero presentation
+- reduce Garage hero height to reclaim vertical space
+
+UNCHANGED:
+- exact Garage background asset
+- live Garage heading/back control
+- Search + Add New Car
+- alphabetical manufacturer accordion
+- car counts and edit controls
+- all 675-car data/functionality
+- Dashboard, Festival, Events and every other page

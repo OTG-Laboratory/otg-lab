@@ -1,0 +1,25 @@
+OTG! v8.0.110 — EVIL R1 MOT / QA PRE-RACE UPDATE
+Baseline: v8.0.109 accepted. FH5 Evil Campaign, GT7, FH6 data preserved.
+
+AUDIT SUMMARY
+- 697 FH5 cars; each assigned to exactly one specialist ecosystem.
+- 228 source competition cards; all have >=2 entrants and consistent specialist eligibility.
+- 1,165 original source slots. 2 Favourite Manufacturer Finals added dynamically.
+- 251 Groups visits; 114 source planning workloads are estimates different from the actual balanced groups; v8.0.109 uses the real size for completion.
+- 705 Race Off knockout visits, 16 Drift Race Off visits; planned pairings match field sizes and max five pairings per visit.
+- All 30 Groups tournaments produce group sizes of 2–8 and max 24 results per visit.
+- Standard and drift Festival round counts are integral and consistent.
+- Off-road competitions have no ordinary road finales.
+
+NEW VERIFIED DEFECT (fixed here):
+At the shared track shuffle-bag rollover, the two drawn tracks for an R1 Group could be identical.
+v8.0.110 prevents that by excluding first track from second draw.
+New-version index, JS app overlay, bootstrap and updater must all cache before the new worker installs.
+
+RESIDUAL LIMITATIONS
+- Physical phone interaction, group resume, Race Off UI, group track draw and stage/finale transitions still require live testing.
+- Legacy Source manifest keeps 114 *planning estimates* for group workloads; runtime counters are corrected by v8.0.109.
+- AVERAGE TIME and mobile RUN ORDER pending user testing.
+- If the track pool had only one eligible route, two different routes cannot be guaranteed; FH5 currently has 43 Road/Street, 38 Off-road, 24 Rally Adventure and 17 Hot Wheels standard routes.
+
+PHONE QA: update via accepted installer after a portable backup, confirm Slot 0002 remains DONE, and next group track pair is distinct. DO NOT RESET.

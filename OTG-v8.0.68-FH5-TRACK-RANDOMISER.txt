@@ -1,0 +1,9 @@
+OTG! v8.0.68 — FH5 Festival Track Randomiser
+
+Stage 2 of the track-variety feature.
+- Randomise one editable race slot at a time.
+- Category-safe pools only.
+- Current-set duplicate avoidance + recent-track preference.
+- Protected finale pools for Groups finals.
+- Drag and fixed specials untouched.
+- Existing suggested tracks remain the default until the user presses RANDOM TRACK.

@@ -1,0 +1,8 @@
+RaceHub v5.7.53 — RACE NIGHT FLOW REPAIR
+
+- Track averages are now per round/track across ALL cars from prior COMPLETED Championship/Event runs, not car-specific.
+- Result Summary shows TRACK AVERAGE and faster/slower delta when historical data exists.
+- Championship and Event setup round-name fields now offer previously used round names via autocomplete while still accepting new names.
+- Car Complete no longer starts the next car. It returns to the Championship/Event overview so the user chooses what happens next.
+- Final-car completion behaviour remains the normal Championship/Event completion flow.
+- Existing data is preserved.

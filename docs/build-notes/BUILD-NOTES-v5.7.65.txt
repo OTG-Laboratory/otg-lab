@@ -1,0 +1,14 @@
+RaceHub v5.7.65 — PRE-BETA NAVIGATION & POLISH
+
+Baseline: v5.7.64 known-good phone checkpoint.
+
+Changes only:
+1. Android/browser Back now follows the visible RaceHub back control on non-Home screens and closes open RaceHub overlays first. Home remains the root so Android Back can leave the PWA normally.
+2. Manufacturer Rename no longer uses browser prompt/confirm. Garage and legacy Settings rename paths now use a RaceHub-styled modal plus RaceHub confirmation while preserving the existing rename propagation logic.
+3. PWA icons optically re-centred from the existing locked RH badge, removing the stray right-edge source fragment and adding safe breathing room for Android adaptive/maskable icon cropping. Versioned icon filenames force fresh install metadata.
+
+Preserved:
+- v5.7.64 Championship/Event/result/completion/data behaviour.
+- Three-button Championship setup and prepared/active lifecycle.
+- Save & Back yellow treatment.
+- Existing RaceHub logo artwork; only PWA icon canvas/cropping changed.

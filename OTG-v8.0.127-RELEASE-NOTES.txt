@@ -1,0 +1,18 @@
+OTG! 8.0.127 — THE BLOODY BACK BUTTONS — QA
+
+## v8.0.127 — The Bloody BACK Buttons (2026-10-20)
+
+- Historic Moments: visible Back to Journey / Back to Racing Legends at the hero top AND at the bottom; Top shortcut for long archives.
+- Racing Reports and Closest Battles: keep their existing header return and add a clearly labelled return at the foot. A link opened from Historic Moments now returns to Historic Moments; a normal entry returns to Journey or Records.
+- Racing Legends: keep the existing top and bottom Back to Stats buttons; when visited directly from Historic Moments, both return to the archive instead.
+- Garage Intelligence: each of Forgotten Cars, Smart Car Finder and Car Comparison gets a bottom Back to Garage button without changing its existing top button.
+- No changes to results, Garage, Spaces, saves, the 1,219-slot Tournament, Hubbs Memorial, Swiss, timing, medals, or other racing algorithms. No reset or import required.
+- QA: JavaScript parsing, data-file hashes, archive integrity and simulated navigation checked. Live-phone check still required.
+
+INSTALL:
+1. Extract the ZIP into the existing OTG! repo, retaining existing content.
+2. git add -A
+3. git commit -m "OTG! v8.0.127 - Navigation Back Buttons QA"
+4. git push
+
+Existing device data is not part of the ZIP and is not replaced by this release. Do not reset or restore.

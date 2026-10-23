@@ -1,0 +1,13 @@
+/* OTG! v8.0.141 — Smart Finder ↔ Pick My Drive, phone first. */
+.otgFinderPmd8141{display:flex;flex-direction:column;gap:12px;margin:14px 0;padding:16px;border:1px solid #50cad6;background:linear-gradient(145deg,#0d3440,#0d2531);border-radius:14px;color:#e8faff}
+.otgFinderPmd8141>div{display:flex;flex-direction:column;gap:5px}
+.otgFinderPmd8141 b{font-size:15px;letter-spacing:.025em}
+.otgFinderPmd8141 small{font-size:12px;line-height:1.5;color:#bed8e2}
+.otgFinderPmd8141 button{font-family:inherit;min-height:48px;padding:12px 14px;font-weight:800;letter-spacing:.02em;border:1px solid #68dfe6;border-radius:10px;background:#49dae4;color:#071e29;cursor:pointer}
+.otgFinderPmd8141 button:disabled{opacity:.48;cursor:not-allowed}
+.otgFinderPmd8141 p{margin:0;color:#ffc78c;font-size:12px}
+.otgPmdRefine8141{box-sizing:border-box;display:flex;flex-direction:column;gap:4px;width:100%;min-height:54px;text-align:center;padding:14px 12px;margin:12px 0;border-radius:12px;border:1px solid #4abdc7;background:#12313c;color:#87eff6;font-family:inherit;cursor:pointer}
+.otgPmdRefine8141 b{font-size:13px;letter-spacing:.025em}
+.otgPmdRefine8141 small{font-size:11px;line-height:1.4;color:#d0e2e6}
+.otgPmdRefine8141:focus-visible,.otgFinderPmd8141 button:focus-visible{outline:3px solid #b6fbff;outline-offset:3px}
+@media(max-width:390px){.otgFinderPmd8141{padding:12px}.otgPmdRefine8141{margin:10px 0}}

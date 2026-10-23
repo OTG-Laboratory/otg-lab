@@ -1,0 +1,37 @@
+OTG! v8.0.97 — EVIL SPECIALIST-FIRST R1 PREVIEW — STATIC QA
+
+BUILD MODE
+READ-ONLY PREVIEW. R1 launchers are locked. No R1 progress state is initialised or written.
+Legacy 708-slot Evil state is preserved and remains viewable.
+
+MASTER AUDIT
+- FH5 cars classified: 697
+- Ecosystems: 476 NORMAL / 16 FORZA EDITION / 22 DRIFT / 59 RACE / 124 OFF-ROAD-BUGGY
+- Event cards: 228
+- Campaign slots: 1,165
+- Event-car eligibility links: 5,069
+- Slot numbering: contiguous 1..1165
+- Duplicate event IDs: 0
+- Uncovered classified cars: 0
+- Events under 2 entrants: 0
+- Maximum normal slot workload: 24 result entries
+- Maximum Race Off workload: 5 pairings (10 individual car results)
+- Modern Rally core Festival: 4 rounds split across two 20-result visits
+
+APP REGRESSION / SAFETY CHECKS
+- index.html and index-v8097.html are byte-identical.
+- v8097 updater/bootstrap/service-worker are version-pinned.
+- Every local HTML reference exists.
+- Every service-worker asset reference exists.
+- New data/preview/bootstrap/update/service-worker JavaScript passes node --check.
+- Preview script contains no rhSave(), localStorage.setItem(), sessionStorage.setItem(), delete operation, new-state assignment or legacy-state assignment.
+- Accepted PMD v8093 remains loaded.
+- Results/Corrections v8082 remains loaded.
+- FH5 Track Directory / LOCATION v8087 remains loaded.
+- Evil two-way bridge v8086 remains loaded for legacy campaign.
+- Car History v8088 remains loaded.
+- Portable Backup v8096 remains loaded.
+- rh-guide is not part of this Main build tree and was untouched.
+
+BROWSER NOTE
+A headless local browser smoke test could not be run because this execution environment blocks local/file navigation by policy. Static syntax, reference, data-integrity and destructive-write audits all passed.

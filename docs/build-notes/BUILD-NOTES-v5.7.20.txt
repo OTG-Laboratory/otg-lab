@@ -1,0 +1,21 @@
+RaceHub v5.7.20 — FULLSCREEN FOUNDATION
+
+Built from protected phone-tested v5.7.19.
+
+GLOBAL FOUNDATION ONLY:
+- manifest display changed from standalone to fullscreen
+- portrait orientation retained
+- viewport-fit=cover enabled
+- dynamic/small viewport height foundation added
+- safe-area left/right handling added
+- first user interaction requests browser fullscreen with navigationUI hidden where supported
+- no Exit/Quit button
+
+UNCHANGED:
+- Dashboard visuals and six working actions
+- Festival phone-tested visuals, clean hero, trophies, collapsibles and bottom help tile
+- all RaceHub data/functionality
+- all other page visuals
+
+Android may temporarily reveal system controls on edge gestures; RaceHub does not interfere with OS navigation.
+Fresh v5720 CSS/JS/service-worker filenames force cache refresh.

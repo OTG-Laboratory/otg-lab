@@ -1,0 +1,7 @@
+/* OTG! v6.0.33 — Grand Tour Fix #3: Review Classification EDIT RESULTS active visual state only */
+.rhLeagueReviewActionsV6021 button:first-child{
+  border-color:rgba(69,205,235,.78);
+  background:linear-gradient(135deg,rgba(10,46,61,.96),rgba(7,31,43,.98));
+  color:#e9fbff;
+  box-shadow:inset 0 0 0 1px rgba(105,224,246,.08),0 0 14px rgba(46,202,234,.08);
+}

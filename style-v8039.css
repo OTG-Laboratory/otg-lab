@@ -1,0 +1,6 @@
+/* OTG! v8.0.39 — one-result Smart Bar, directly above active text entry. */
+.rhGlobalSmartWrap{position:relative;width:100%;min-width:0}
+.rhGlobalSmartWrap>input{width:100%;box-sizing:border-box}
+.rhGlobalSmartBar{top:auto!important;bottom:calc(100% + 5px)!important;left:0!important;right:0!important;max-height:none!important;overflow:visible!important;padding:4px!important;z-index:90!important}
+.rhGlobalSmartBar .rhSmartSuggestionSingle{width:100%!important}
+.rhGlobalSmartBar .rhSmartSuggestionSingle span{max-width:100%!important}

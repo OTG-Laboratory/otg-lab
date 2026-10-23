@@ -1,0 +1,14 @@
+OTG! v8.0.100 — Evil R1 NEXT UP + Randomise Car Order
+
+Changes
+- Restores the post-slot NEXT UP handoff for Specialist-First Evil R1.
+- GO TO NEXT EVENT launches the newly unlocked slot directly.
+- Completed R1 slot details also expose NEXT UP so an already-completed QA slot can verify the handoff after updating.
+- Adds RANDOMISE CAR ORDER to an active R1 Groups field before any result is banked.
+- Randomising changes only the order of the cars already in that group; tracks and group membership stay fixed.
+- Car order locks as soon as the first result for that group is banked.
+- Legacy 708 campaign, Garage/catalogue, Records, Car History, LOCATION, Results/Corrections, PMD and Portable Backup are unchanged.
+
+QA intent
+- Existing v8.0.99 R1 progress is preserved because the R1 campaign state key is unchanged.
+- No automatic reset or migration is performed.

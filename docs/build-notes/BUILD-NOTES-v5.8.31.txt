@@ -1,0 +1,8 @@
+RaceHub v5.8.31 — Result Summary Simplification
+
+Changed only the Result Summary presentation:
+- Removed the redundant green RESULT ACCEPTED / CURRENT CLASSIFICATION tile.
+- Current Classification now begins immediately after the championship/event summary card.
+- Existing Result Saved confirmation remains unchanged.
+- Championship and Event result summaries both updated.
+- No changes to artwork, timing data, Hubs, Records, Final Standings, or navigation logic.

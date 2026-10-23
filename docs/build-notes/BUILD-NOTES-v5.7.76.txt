@@ -1,0 +1,14 @@
+RaceHub v5.7.76 — Phone Timing Cache Recovery
+
+Built from the v5.7.75 correction candidate after identifying inconsistent active version and service-worker references.
+
+Corrections:
+- Visible splash and About version advanced to 5.7.76.
+- Active stylesheet renamed to style-v5776.css.
+- Active polish layer renamed to studio-polish-v5776.js.
+- Bootstrap renamed and registered against service-worker-v5776.js.
+- Manifest, CSS and JavaScript cache-busting references aligned to 5776.
+- New cache identity deletes all previous RaceHub caches during activation.
+- Preserves the v5.7.75 phone stopwatch, digital timing-board, full-name wrapping and next-only queue corrections.
+
+No data model or racing logic changes.

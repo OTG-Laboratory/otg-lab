@@ -1,0 +1,18 @@
+/* OTG! v7.0.10 — approved compact one-screen dashboard + standard Journey back */
+.v7Dash{min-height:100svh;background:#01070a;color:#fff;overflow:hidden}
+.v7DashHero{height:28svh;min-height:210px;max-height:330px;position:relative;background:linear-gradient(180deg,rgba(0,5,9,.04) 0%,rgba(0,5,9,.08) 58%,rgba(0,6,10,.52) 86%,#01070a 100%),url('assets/final/dashboard-otg-neutral-v6056.png') center 43%/cover no-repeat}
+.v7DashWelcome{display:none!important}
+.v7DashLogo{position:absolute;width:min(47vw,285px);left:22px;top:max(18px,env(safe-area-inset-top));bottom:auto;transform:none;filter:drop-shadow(0 8px 14px rgba(0,0,0,.62))}
+.v7DashBody{padding:0 12px calc(8px + env(safe-area-inset-bottom))}
+.v7DashGrid{gap:7px}
+.v7DashTile{min-height:74px;padding:6px 8px;grid-template-columns:44px minmax(0,1fr) 14px;gap:7px;border-radius:16px}
+.v7DashTile.wide{min-height:88px;grid-template-columns:56px minmax(0,1fr) 18px;padding:8px 10px}
+.v7DashTile>i{width:40px;height:40px;border-radius:11px;font-size:27px}
+.v7DashTile.wide>i{width:52px;height:52px;font-size:34px}
+.v7DashTile>i svg{width:27px;height:27px}.v7DashTile.wide>i svg{width:34px;height:34px}
+.v7DashTile>span{gap:4px}.v7DashTile>span>b{font-size:14px}.v7DashTile.wide>span>b{font-size:22px}
+.v7DashTile>span>small{font-size:9px}.v7DashTile.wide>span>small{font-size:12px}.v7DashTile>em{font-size:25px}
+.v7DashFooter{gap:8px;margin:10px auto 0}.v7DashFooter b{font-size:20px}.v7DashFooter small{font-size:8px;margin-top:-5px}
+.v7Journey .v7JourneyHead button{padding:8px 13px!important;font-size:13px!important;border-radius:14px!important;min-height:0!important;line-height:1.1!important}
+@media(max-width:390px){.v7DashHero{height:27svh;min-height:190px}.v7DashLogo{width:min(48vw,230px);left:16px;top:max(14px,env(safe-area-inset-top))}.v7DashBody{padding-left:8px;padding-right:8px}.v7DashGrid{gap:6px}.v7DashTile{min-height:68px;grid-template-columns:40px minmax(0,1fr) 13px;padding:5px 6px}.v7DashTile.wide{min-height:80px;grid-template-columns:50px minmax(0,1fr) 16px}.v7DashTile>i{width:37px;height:37px}.v7DashTile.wide>i{width:46px;height:46px}.v7DashTile>span>b{font-size:13px}.v7DashTile.wide>span>b{font-size:20px}.v7DashTile>span>small{font-size:8.5px}.v7DashTile.wide>span>small{font-size:11px}.v7DashFooter{margin-top:8px}}
+@media(max-height:780px){.v7DashHero{height:25svh;min-height:170px}.v7DashTile{min-height:62px}.v7DashTile.wide{min-height:72px}.v7DashFooter{margin-top:5px}}

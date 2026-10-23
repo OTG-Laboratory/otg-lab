@@ -1,0 +1,37 @@
+OTG! v8.0.108 — FH6 GARAGE-ADAPTIVE RACING (QA BUILD)
+BASELINE: v8.0.107 ACCEPTED. This is the FH6 prelaunch final prep pass.
+
+WHAT IS NEW
+- FH6 Festival and Race Off pages present a current-Garage-only competition picker.
+- COMPETITION OPPORTUNITIES AUTO-UPDATE when FH6 catalogue cars are ticked/unticked.
+- Manufacturer, Era, Class, Favourite, all-NORMAL, and specialist competitions (FE Road, FE Off-Road, Drift Zones, dedicated Race, Off-Road / Buggy).
+- Eligibility uses Specialist-First classification: every known normal group excludes specialist cars. Unresolved cars cannot be included and FE needs a confirmed ROAD/OFF-ROAD role.
+- Classifications that remain draft are clearly labelled, not silently treated as verified.
+- A competition needs at least two eligible owned cars; no arbitrary Garage ownership milestones.
+- A random starting-order REHEARSAL; redraws do not change Garage or past competitions.
+- Workload previews respect 24 results per Festival visit / 5 pairings per Race Off visit. For 25+ entrants, group-stage preview is not presented as a completed championship.
+- FH6 Garage gets OPEN GARAGE RACING shortcut, and its Festival/Race Off navigation leads to this adaptive picker.
+- Evil List 2 — Return of the Twat! is PARKED, not generated or started. The 715-visit earlier Evil blueprint remains a separate planning view and does not control everyday racing.
+
+CRITICAL PRELAUNCH RESTRICTIONS
+- START COMPETITION is intentionally DISABLED pending real FH6 routes, Drift Zones, LOCATION verification and the playable result engine. This update prepares eligibility and UI; it does NOT claim playable races already work.
+- Once actual START is enabled in a future FH6 build, it must freeze entrant IDs, car order and verified tracks. The freeze helper is implemented & tested but is not connected to a playable Start button yet.
+- Route pools remain empty by default; FH5 tracks are NEVER reused for FH6.
+- No automatic creation of runs, tournament results, Evil List 2 slots, or Records entries.
+- No resets; no change to existing FH5 and GT7 data or current Space.
+
+PHONE QA
+1. Take a portable backup. Install in C:\RaceHub and update; do NOT Reset Racing Data.
+2. FH6 > Garage > OPEN GARAGE RACING; Festival and Race Off should be empty with zero cars owned.
+3. Tick two NORMAL FH6 cars of the same manufacturer (check their specialist category first). Manufacturer/Favourite/Era or Class events appear where eligible.
+4. Add another eligible NORMAL car; existing draft count grows. Untick it; field shrinks. Specialist cars never appear in NORMAL competitions.
+5. On Festival and Race Off verify RANDOMISE field rehearsal and visit limits. START must remain disabled.
+6. Switch back to FH5/GT7 and confirm their races, progress, records and cars remain unchanged.
+7. Do NOT use test races to assess record saving; FH6 result entry is still waiting for real game routes.
+
+STILL OPEN SEPARATELY: FH5 v8.0.103 AVERAGE TIME and mobile RUN ORDER phone checks.
+
+VS CODE TERMINAL (POWERSHELL) AFTER EXTRACTING ZIP OVER C:\RaceHub
+ git add .
+ git commit -m "OTG! v8.0.108 - FH6 Garage Adaptive Festival and Race Off"
+ git push origin main

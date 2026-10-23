@@ -1,0 +1,14 @@
+OTG! MAIN v8.0.103 — QA release candidate — 15 October 2026
+
+Built directly from accepted v8.0.102 source.
+
+1. Active-race LOCATION: button now tracks current live Festival route on each CONTINUE, and appears on Race Off ENTER RESULT. Rally Adventure/Hot Wheels clues retained.
+2. AVERAGE TIME: per-track, same-championship average and faster/slower difference restored on active R1 and Groups result screens, with records view support.
+3. Run Order: mobile Groups screen removes the clipped inner list and allows whole page scrolling, including 8th car.
+4. Favourite Manufacturer: two separate, non-consecutive NORMAL-only Finals Nights (Festival first, Race Off later, FE and Drift between), built adaptively from the selected Settings manufacturer. Immutable entrant/manufacturer snapshot freezes on first Favourite event launch.
+5. Campaign slots now vary with selected favourite: 1165 + Festival visits + Race Off visits. A 26-car NORMAL BMW field yields 1177 slots (5+7). The original first 1148 slots are unchanged. No racing data is reset by installing.
+6. 24 result-entry Festival cap, five Race Off pairings per visit; existing legacy retirement and Reset Racing Data hook retained.
+
+QA: JavaScript syntax, service-worker asset paths, manifest-contiguous slots and 2–476 car workload caps pass. Live phone installation/scroll/swipe and cloud updater have NOT been exercised here: user acceptance needed.
+
+Deployment: use the normal accepted update workflow; always make a portable backup before changing live source. Do NOT use Reset Racing Data merely to install.

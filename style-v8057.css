@@ -1,0 +1,17 @@
+/* OTG! v8.0.57 — FH5 full Groups programme + specialist intro layout polish. */
+.rhFH5FullGroups8057 .rhSetupPanelHeadV1 strong{color:#31ddf7}
+.rhFH5ProgrammeRow8057{display:grid;grid-template-columns:128px minmax(0,1fr);gap:10px;padding:10px 0;border-top:1px solid rgba(49,221,247,.16);align-items:start}
+.rhFH5ProgrammeRow8057:first-of-type{border-top:0}
+.rhFH5ProgrammeRow8057>b{font-size:11px;line-height:1.25;color:#31ddf7;letter-spacing:.04em}
+.rhFH5ProgrammeRow8057>span{font-size:12px;line-height:1.45;color:#eef6f8;min-width:0}
+.rhFH5ProgrammeRow8057 em{font-style:normal;color:#6f8490;padding:0 3px}
+.rhFH5StageSuggestion8057{margin-top:12px;padding:12px 13px;border:1px solid rgba(49,221,247,.35);border-radius:14px;background:rgba(5,24,32,.62);display:grid;gap:5px}
+.rhFH5StageSuggestion8057>b{font-size:12px;color:#31ddf7}
+.rhFH5StageSuggestion8057>span{font-size:13px;line-height:1.4;color:#fff}
+.rhFH5StageSuggestion8057>small{font-size:10px;line-height:1.35;color:#a9bcc4}
+/* v8.0.56 specialist helper line could squeeze the description into a tiny middle column on phones. */
+.rhFH5Special8056 .rhFestivalDetailIntroV1,.rhFH5RaceOffSpecial8056 .rhFestivalDetailIntroV1{grid-template-columns:34px minmax(0,1fr);grid-template-areas:"icon copy" ". badge";align-items:center;row-gap:4px}
+.rhFH5Special8056 .rhFestivalDetailIntroV1>i,.rhFH5RaceOffSpecial8056 .rhFestivalDetailIntroV1>i{grid-area:icon}
+.rhFH5Special8056 .rhFestivalDetailIntroV1>span,.rhFH5RaceOffSpecial8056 .rhFestivalDetailIntroV1>span{grid-area:copy;min-width:0}
+.rhFH5Special8056 .rhFestivalDetailIntroV1>b,.rhFH5RaceOffSpecial8056 .rhFestivalDetailIntroV1>b{grid-area:badge;white-space:normal;line-height:1.25;text-align:left}
+@media(max-width:390px){.rhFH5ProgrammeRow8057{grid-template-columns:1fr;gap:3px}.rhFH5ProgrammeRow8057>b{font-size:10px}.rhFH5ProgrammeRow8057>span{font-size:11px}}

@@ -1,0 +1,7 @@
+RaceHub v5.8.01 — Enter Result checkpoint
+- Clean Enter Result rebuild for Championships and Events
+- Approved side-on finish-line artwork crop
+- Existing digital stopwatch preserved
+- Finishing position changed from tile grid to typed numeric field
+- Full phone-screen layout with save action at bottom
+- No other screens intentionally changed

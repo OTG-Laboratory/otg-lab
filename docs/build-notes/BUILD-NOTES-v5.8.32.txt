@@ -1,0 +1,10 @@
+RaceHub v5.8.32 — Car Complete / Final Classification rebuild
+
+- Removed active legacy Championship and Event Car Complete renderers.
+- Rebuilt one authoritative page for both flows.
+- Uses approved podium artwork.
+- Removed help button and redundant All Rounds Complete tile.
+- Final Classification has no latest-result highlight or obsolete hint.
+- Classification board scrolls internally.
+- Return controls remain fixed.
+- Other locked screens and data logic untouched.

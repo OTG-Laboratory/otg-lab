@@ -1,0 +1,5 @@
+RaceHub v5.6.7 — Events Timing & Finish Polish
+- Correct Event segmented time storage to seconds, matching RaceHub formatter.
+- Correct cumulative Event leaderboard totals.
+- Align racer-picker checkbox/car rows.
+- Add RETURN TO EVENTS to Event Complete.

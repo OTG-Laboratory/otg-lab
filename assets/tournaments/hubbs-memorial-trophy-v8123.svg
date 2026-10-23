@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="660" viewBox="0 0 520 660" role="img" aria-label="Hubbs Memorial Trophy, gold racing cup with a cyan heart, laurel wreath and engraved memorial base">
+ <defs>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff6c1"/><stop offset=".22" stop-color="#ca9e40"/><stop offset=".40" stop-color="#fff2ab"/><stop offset=".59" stop-color="#aa701b"/><stop offset=".81" stop-color="#f3d376"/><stop offset="1" stop-color="#986817"/></linearGradient>
+  <linearGradient id="gold2" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f9da8e"/><stop offset=".6" stop-color="#a36f29"/><stop offset="1" stop-color="#f6dc8b"/></linearGradient>
+  <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3e5661"/><stop offset=".55" stop-color="#111c27"/><stop offset="1" stop-color="#344550"/></linearGradient>
+  <radialGradient id="heart" cx=".3" cy=".25" r=".9"><stop stop-color="#dcfeff"/><stop offset=".25" stop-color="#58ecff"/><stop offset=".74" stop-color="#14788f"/><stop offset="1" stop-color="#072e49"/></radialGradient>
+  <filter id="shadow" x="-40%" y="-40%" width="180%" height="190%"><feGaussianBlur stdDeviation="12"/></filter>
+ </defs>
+ <ellipse cx="260" cy="618" rx="165" ry="21" fill="#000" opacity=".30" filter="url(#shadow)"/>
+ <g transform="translate(0 4)">
+  <path d="M170 148c-52-17-81 9-71 61 8 38 37 68 83 73" fill="none" stroke="#a4702b" stroke-width="25" stroke-linecap="round"/>
+  <path d="M350 148c52-17 81 9 71 61-8 38-37 68-83 73" fill="none" stroke="#a4702b" stroke-width="25" stroke-linecap="round"/>
+  <path d="M170 148c-52-17-81 9-71 61 8 38 37 68 83 73" fill="none" stroke="url(#gold)" stroke-width="15" stroke-linecap="round"/>
+  <path d="M350 148c52-17 81 9 71 61-8 38-37 68-83 73" fill="none" stroke="url(#gold)" stroke-width="15" stroke-linecap="round"/>
+  <path d="M141 116H379C374 227 345 319 284 346H236C175 319 146 227 141 116Z" fill="url(#gold)" stroke="#fff0b0" stroke-width="3"/>
+  <ellipse cx="260" cy="116" rx="119" ry="22" fill="#f7df94" stroke="#966013" stroke-width="6"/>
+  <ellipse cx="260" cy="115" rx="105" ry="12" fill="#5d4521" opacity=".56"/>
+  <path d="M171 147Q176 261 233 321" stroke="#fff8bf" stroke-opacity=".66" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <path d="M347 145Q350 257 291 320" stroke="#a3691a" stroke-opacity=".52" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M260 171c-21-23-63-8-63 25 0 31 39 58 63 83 24-25 63-52 63-83 0-33-42-48-63-25Z" fill="url(#heart)" stroke="#fff8c6" stroke-width="8"/>
+  <path d="M224 184q19-15 34 4" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="7" stroke-linecap="round"/>
+  <g fill="none" stroke="#fce2a1" stroke-width="5" opacity=".82">
+   <path d="M197 289Q183 259 190 225"/><path d="M323 289Q337 259 330 225"/>
+  </g>
+  <g fill="#e4b553" opacity=".9">
+   <ellipse cx="185" cy="281" rx="7" ry="15" transform="rotate(-44 185 281)"/>
+   <ellipse cx="178" cy="261" rx="7" ry="15" transform="rotate(-30 178 261)"/>
+   <ellipse cx="179" cy="240" rx="6" ry="13" transform="rotate(-14 179 240)"/>
+   <ellipse cx="335" cy="281" rx="7" ry="15" transform="rotate(44 335 281)"/>
+   <ellipse cx="342" cy="261" rx="7" ry="15" transform="rotate(30 342 261)"/>
+   <ellipse cx="341" cy="240" rx="6" ry="13" transform="rotate(14 341 240)"/>
+  </g>
+  <path d="M236 344H284L299 416H221Z" fill="url(#gold2)" stroke="#fff2aa" stroke-opacity=".6" stroke-width="3"/>
+  <path d="M211 405H309Q324 412 318 430H202Q196 412 211 405Z" fill="url(#gold)"/>
+  <rect x="169" y="427" width="182" height="23" rx="6" fill="url(#steel)" stroke="#cfa554" stroke-width="5"/>
+  <path d="M156 454H364L377 578H143Z" fill="url(#steel)" stroke="#d3aa63" stroke-width="5"/>
+  <rect x="153" y="578" width="214" height="21" rx="6" fill="url(#gold2)"/>
+  <rect x="169" y="479" width="182" height="81" rx="6" fill="#14202b" stroke="#ebc56f" stroke-width="2"/>
+  <text x="260" y="498" font-family="Arial, sans-serif" font-weight="700" font-size="9" text-anchor="middle" letter-spacing=".55" fill="#83e9ff">OTG! · FOREVER LEGENDARY</text>
+  <text x="260" y="526" font-family="Arial, sans-serif" font-weight="900" font-size="25" text-anchor="middle" letter-spacing="1" fill="#fff4cb">HUBBS</text>
+  <text x="260" y="545" font-family="Arial, sans-serif" font-weight="700" font-size="13" text-anchor="middle" letter-spacing="1.4" fill="#e9cc7a">MEMORIAL TROPHY</text>
+ </g>
+</svg>

@@ -1,0 +1,4 @@
+RaceHub v5.7.94
+- Loaded the isolated Final Standings renderer that v5.7.93 accidentally failed to include in index.html.
+- Hard-hides the legacy Enter Result DOM while Final Standings is open.
+- Advances stylesheet, scripts, version metadata and service-worker cache.

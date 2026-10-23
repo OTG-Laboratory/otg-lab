@@ -1,0 +1,26 @@
+OTG! v8.0.105 — FH6 SPECIALIST-FIRST PRE-LAUNCH PREP (QA)
+BASELINE: accepted v8.0.104, itself carrying v8.0.103 active-race fixes.
+
+NEW
+- FH6 Garage > OPEN CLASSIFICATION launches a phone-native 658-car Specialist-First planning workshop.
+- Initial draft suggestions come from the frozen October 2026 FH6 roster hints, not invented final game taxonomy.
+- Tentative: NORMAL 481, FORZA EDITION 19, DRIFT 16, RACE? 19, OFF-ROAD / BUGGY 34; unresolved REVIEW 89.
+- Every assignment is DRAFT until explicitly confirmed, with FE ROAD/OFF-ROAD sub-role required.
+- Each confirmed car's exact ID, ecosystem, role and confirmation date are stored only in the FH6 Space and can be reverted.
+- Filter for needs-review / draft / confirmed, ecosystem; search and load more 50 at a time for mobile performance.
+- Displays approved specialist-first / per-visit workload / random-no-repeat policies for future FH6 implementation.
+- No FH6 racing campaign, track list, Drift Zone list, location clue or playlist is fabricated or activated.
+
+SAFETY
+- v8.0.104 FH6 master, FH5 Evil R1, GT7, existing ownership, records and stats untouched.
+- No reset is required. Take a portable backup before installing.
+- FH6 candidate API defaults to CONFIRMED ONLY; no automatic event launch is connected.
+
+TESTS
+- Automated JS syntax + offline asset paths + test harness for classification, persistence, FE split and Space isolation.
+- Phone live test pending: FH6 Garage > OPEN CLASSIFICATION, search, confirm, return to Garage; FH5 still intact.
+
+VS CODE / POWERSHELL (run after extracting ZIP into the existing project folder)
+ git add .
+ git commit -m "OTG! v8.0.105 - FH6 Specialist First Preparation"
+ git push origin main

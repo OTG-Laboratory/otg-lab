@@ -1,0 +1,9 @@
+OTG! v8.0.81 — Main
+
+Fixes:
+- Results / Corrections resolves car names from the active Space catalogue.
+- Results / Corrections Back button compacted.
+- Evil Campaign Back button compacted.
+- Final Standings Correct Results action compacted and subtitle removed.
+
+No racing-data migration. Evil Campaign order/progress unchanged. rh-guide untouched.

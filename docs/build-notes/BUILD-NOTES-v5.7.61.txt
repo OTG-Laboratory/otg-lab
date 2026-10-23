@@ -1,0 +1,12 @@
+RaceHub v5.7.61 — CHAMPIONSHIP SAVE / LEAVE / RESUME
+
+- All Festival Championship setup types now use three locked actions:
+  GREEN — SAVE & START; ORANGE — SAVE & BACK; RED — CANCEL & BACK.
+- SAVE & BACK stores a Prepared Championship without freezing entries/rounds. Reopening its generated Championship card resumes editing.
+- SAVE & START promotes a Prepared Championship (or a new setup) to Active and freezes its current entries/rounds.
+- Active/Prepared generated Championship cards reopen the existing run instead of silently starting a duplicate setup.
+- Back from Championship result entry / result summary returns to the active Championship overview; overview Back returns to Festival; Festival Back returns Home. Accepted results remain saved.
+- Removed redundant Active Championship “FROZEN RUN — ENTRY LIST & ROUNDS” panel. Frozen state remains enforced and explained in the Queue note.
+- Prepared Championships are excluded from Records until they are actually started.
+- Removed the rogue contextual ? control from About RaceHub.
+- Existing Event flow, result calculations, completion/final-leaderboard flow and v5.7.60 passed behaviour otherwise preserved.

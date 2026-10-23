@@ -1,0 +1,7 @@
+/* OTG! v8.0.68 — FH5 Festival one-at-a-time track randomiser. */
+.rhFH5RandomHint8068{margin:10px 0 16px;padding:11px 13px;border:1px solid rgba(255,214,75,.28);border-radius:13px;background:rgba(255,214,75,.055);display:flex;flex-direction:column;gap:4px}
+.rhFH5RandomHint8068 b{color:#ffe06b;font-size:11px;letter-spacing:.08em}.rhFH5RandomHint8068 span{color:#aebbc3;font-size:11px;line-height:1.45}
+.rhFH5RandomTrack8068{width:100%;min-height:46px;margin:8px 0 0;border:1px solid rgba(255,214,75,.34);border-radius:12px;background:linear-gradient(180deg,rgba(255,214,75,.12),rgba(255,214,75,.055));color:#ffe06b;font:inherit;font-size:12px;font-weight:900;letter-spacing:.055em;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.rhFH5RandomTrack8068:active{transform:translateY(1px);background:rgba(255,214,75,.18)}.rhFH5RandomTrack8068 span{font-size:17px}.rhFH5RandomTrack8068.finale{border-color:rgba(255,112,70,.42);background:linear-gradient(180deg,rgba(255,112,70,.13),rgba(255,112,70,.055));color:#ffad88}
+.rhFH5RandomLocked8068{width:100%;min-height:42px;margin:8px 0 0;border:1px solid rgba(142,155,166,.22);border-radius:12px;background:rgba(142,155,166,.06);color:#8f9ba4;display:flex;align-items:center;justify-content:center;gap:7px;font-size:11px;letter-spacing:.06em}.rhFH5RandomLocked8068 span{font-size:14px}
+@media(max-width:520px){.rhFH5RandomTrack8068{min-height:48px}.rhFH5RandomHint8068{margin-top:8px}}

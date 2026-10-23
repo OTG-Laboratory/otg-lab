@@ -1,0 +1,14 @@
+/* v8.0.135 — highlights belong inside existing results; no new screens. */
+.otgAfterRace8135{box-sizing:border-box;margin:14px 0 16px;padding:12px 14px;border:1px solid rgba(33,220,240,.37);border-radius:14px;background:linear-gradient(145deg,rgba(12,45,57,.94),rgba(4,20,30,.96));color:#f1fbff;text-align:left;max-width:100%;}
+.otgAfterRace8135 h3{font-size:11px;letter-spacing:1.9px;color:#60eafa;margin:0 0 9px;font-weight:900;text-transform:uppercase;}
+.otgAfterRaceItem8135{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-top:1px solid rgba(128,221,238,.13);}
+.otgAfterRaceItem8135:first-of-type{border-top:0;padding-top:2px;}
+.otgAfterRaceItem8135>span{flex:none;display:block;min-width:24px;font-size:20px;line-height:1.2;color:#88f3ff;}
+.otgAfterRaceItem8135>div{min-width:0;flex:1;}
+.otgAfterRaceItem8135 b{display:block;font-size:12px;line-height:1.35;letter-spacing:.45px;color:#f2fdff;overflow-wrap:anywhere;}
+.otgAfterRaceItem8135 small{display:block;margin-top:3px;font-size:11px;line-height:1.35;color:#b7d4df;overflow-wrap:anywhere;}
+/* Full-screen record pages have their own visual hierarchy. */
+.rhRecord127Main>.otgAfterRace8135{margin:9px 14px 16px;}
+/* Race Off transition: keep the next-car action accessible on a phone. */
+#rhRaceOffTransitionV6119 .otgAfterRace8135{margin:10px 0;}
+@media(max-width:390px){.otgAfterRace8135{padding:10px 11px;margin:10px 0 13px;}.otgAfterRaceItem8135{gap:8px;}.otgAfterRaceItem8135 b{font-size:11px;}}

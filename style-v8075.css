@@ -1,0 +1,55 @@
+/* OTG! v8.0.75 — compact History nav + Pick My Drive phone fit. */
+.rhFestivalHeadV1.rhHistoryHeadV8075{
+ display:grid!important;
+ grid-template-columns:auto minmax(0,1fr) auto!important;
+ align-items:start!important;
+ gap:11px!important;
+}
+.rhFestivalHeadV1.rhHistoryHeadV8075>div{min-width:0!important}
+.rhFestivalHeadV1 .rhHistoryNavV8075{
+ position:static!important;
+ z-index:auto!important;
+ align-self:start!important;
+ width:118px!important;
+ min-width:118px!important;
+ min-height:50px!important;
+ margin:0!important;
+ padding:7px 9px!important;
+ display:grid!important;
+ grid-template-columns:minmax(0,1fr) auto!important;
+ align-items:center!important;
+ gap:6px!important;
+ border:1px solid rgba(64,220,247,.68)!important;
+ border-radius:15px!important;
+ background:linear-gradient(110deg,rgba(5,25,34,.88),rgba(3,12,18,.82))!important;
+ box-shadow:0 7px 20px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.06)!important;
+ backdrop-filter:blur(8px)!important;
+ text-align:left!important;
+ color:#fff!important;
+ text-shadow:none!important;
+}
+.rhHistoryNavV8075 span{display:grid!important;gap:1px!important;min-width:0!important}
+.rhHistoryNavV8075 b{font-size:12px!important;line-height:1.05!important;letter-spacing:.09em!important;color:#59dff7!important;font-weight:1000!important}
+.rhHistoryNavV8075 em{font-style:normal!important;font-size:8px!important;line-height:1.1!important;letter-spacing:.025em!important;color:#d6e2e7!important;font-weight:800!important;white-space:nowrap!important}
+.rhHistoryNavV8075>strong{font-size:22px!important;line-height:1!important;color:#59dff7!important;font-weight:300!important}
+
+/* PMD: the old compact breakpoint stopped at 390px; current phones can be ~400–430 CSS px.
+   Stack Layout beneath the round name before the row can clip sideways. */
+@media(max-width:520px){
+ .rhFestivalHeadV1 .rhHistoryNavV8075{width:112px!important;min-width:112px!important;min-height:46px!important;padding:6px 8px!important;border-radius:14px!important}
+ .rhHistoryNavV8075 b{font-size:11px!important}.rhHistoryNavV8075 em{font-size:7.5px!important}.rhHistoryNavV8075>strong{font-size:20px!important}
+ .v7PmdRound{
+   grid-template-columns:22px minmax(0,1fr) 38px!important;
+   column-gap:7px!important;
+   row-gap:7px!important;
+   align-items:center!important;
+ }
+ .v7PmdRound>b{grid-column:1!important;grid-row:1!important}
+ .v7PmdRound>input:not(.layout){grid-column:2!important;grid-row:1!important;width:100%!important;box-sizing:border-box!important}
+ .v7PmdRound>.layout{grid-column:2!important;grid-row:2!important;width:100%!important;box-sizing:border-box!important}
+ .v7PmdRound>button{grid-column:3!important;grid-row:1 / span 2!important;align-self:center!important}
+}
+@media(max-width:390px){
+ .rhFestivalHeadV1.rhHistoryHeadV8075{gap:8px!important}
+ .rhFestivalHeadV1 .rhHistoryNavV8075{width:103px!important;min-width:103px!important;padding-left:7px!important;padding-right:7px!important}
+}

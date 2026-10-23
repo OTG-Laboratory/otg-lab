@@ -1,0 +1,2 @@
+RaceHub v5.7.11 — RH-UI-017 Dashboard Locked v4 phone-test build.
+Built from v5.7.10 working checkpoint. Active production rhRenderHome() rebuilt to the locked 1x6 compact horizontal list. Existing destinations/data behaviour preserved. No other page intentionally changed.

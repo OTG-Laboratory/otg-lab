@@ -1,0 +1,24 @@
+/* OTG! v6.0.142 — viewport shell only.
+   No touch interception and no change to OTG!'s page/content scroll architecture.
+   html owns the fixed viewport; body remains the normal vertical scroller. */
+html{
+  width:100%;
+  height:100%;
+  min-height:100%;
+  overflow:hidden!important;
+  overscroll-behavior:none!important;
+  background:#02070a;
+}
+body{
+  width:100%;
+  height:100dvh;
+  min-height:100dvh;
+  max-height:100dvh;
+  overflow-x:hidden!important;
+  overflow-y:auto!important;
+  overscroll-behavior-y:none!important;
+  -webkit-overflow-scrolling:touch;
+  background:#02070a;
+}
+/* Hidden app screens must never contribute to scroll geometry. */
+.screen.hidden{display:none!important;}

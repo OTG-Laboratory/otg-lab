@@ -1,0 +1,12 @@
+RaceHub v5.7.14 — Dashboard FINAL v5
+
+Built from v5.7.13 full working RaceHub build.
+Preserved: all six Dashboard actions already phone-tested successfully.
+Dashboard-only visual implementation:
+- locked 1x6 list retained
+- brighter wet racetrack/pit-building hero
+- approved RaceHub logo retained
+- no Settings cog, Hubs or Championship panel
+- no horizontal scrolling
+- hard cache break repeated with new v5714 CSS/JS/service-worker filenames
+No other page intentionally changed.

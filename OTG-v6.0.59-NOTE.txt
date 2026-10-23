@@ -1,0 +1,10 @@
+OTG! v6.0.59 — final visible rebrand cleanup
+Source: protected v6.0.58 PASS.
+NO IMAGE GENERATION / NO SCREEN REDESIGN.
+Fixes:
+- Delete League destructive modal stray circular-arrow icon fixed at source.
+- Hall of Fame baked rear-wall RaceHub/Hall of Fame wording removed.
+- Settings About tile title/version/chevron kept aligned without wrapping.
+- About App Version reads the single live racehub-version meta source.
+- Hubs live artwork rebranded from RaceHub/RH to clean OTG! marks.
+All existing functionality, data, Dashboard, Splash, Festival, Garage, Records and Stats preserved.

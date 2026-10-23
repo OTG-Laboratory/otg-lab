@@ -1,0 +1,16 @@
+RaceHub v5.7.52 — ADD CAR + DISCOVERY REPAIR
+
+Root cause fixed:
+- v5.7.51 Championship discovery called a non-existent rhEra() helper before saving a new car.
+- Discovery now derives the car's decade directly using the same year/era rule as Festival eligibility.
+
+Preserved:
+- Add/Edit Car behaviour from v5.7.50.
+- One-time NEW CHAMPIONSHIP AVAILABLE discovery from v5.7.51.
+- Records cleanup, setup cleanup, manufacturer rename, pull-to-refresh protection and all racing behaviour.
+- Existing RaceHub data format and stored user data.
+
+Phone test:
+1. Add a normal car — it must save.
+2. Add the second car for a manufacturer currently on one — NEW CHAMPIONSHIP AVAILABLE must appear.
+3. VIEW IN FESTIVAL must open Festival and the manufacturer must show as eligible.

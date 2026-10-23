@@ -1,0 +1,32 @@
+RACEHUB v5.6.0 — STUDIO FINAL BUILD
+===================================
+Baseline: v5.5.4 Events Legacy Header Removal (commit 64a2947)
+Build purpose: complete locked Studio redesign in one testable build.
+
+DATA SAFETY
+- Existing v5.5.4 Garage data migrates into the first RaceHub Space.
+- New production data is written to RaceHub_Studio_Final_v5_6, leaving the old v5.5.4 localStorage record untouched as a fallback.
+- Racing history from the legacy non-frozen model is not mixed into new frozen Championship runs.
+
+PRODUCTION ASSETS
+- Final supplied RaceHub logo.
+- Locked Hubs artwork.
+- ASSET-004 Festival Championship trophy.
+- ASSET-005 Manufacturer Championship trophy.
+- ASSET-006 Era Championship trophy.
+- ASSET-007 Favourite Manufacturer Championship trophy.
+- Supplied Dashboard, Festival, Events, Championship and Settings backgrounds.
+- Manufacturer logo asset directory removed; manufacturers are text-only.
+
+PHONE TEST ORDER
+1. Splash/version and Dashboard.
+2. Garage migration/search/add/edit.
+3. Festival Championship setup, frozen entries/Rounds, result entry and completion.
+4. Records and Hall of Fame.
+5. Events.
+6. Stats.
+7. Settings, Favourite Manufacturer, Spaces, Backup/Restore and Reset Racing Data.
+8. PWA close/reopen persistence and service-worker refresh.
+
+KNOWN ASSET-PACK LIMITATION
+The supplied artwork pack does not contain separate locked Garage or Stats background files, nor a separately identifiable helicopter Easter-egg asset. No substitute or invented artwork has been added. Those screens therefore use native RaceHub dark/glass presentation until an approved asset is supplied.

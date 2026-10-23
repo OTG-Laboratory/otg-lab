@@ -1,0 +1,21 @@
+/* OTG! v6.0.93 — Grand Tour GT-09..GT-14 polish. No artwork redraws. */
+/* GT-09: restore the existing approved Event scene asset. */
+.rhEventsScene{background-image:url('assets/final/events-approved-scene-v5721.png')!important;background-size:cover!important;background-position:center top!important}
+/* GT-10: Garage search icon is an active affordance on the right. */
+.rhGarageToolsV1 label{flex-direction:row!important}.rhGarageToolsV1 label input{order:1!important}.rhGarageToolsV1 label i{order:2!important;color:#27ddfa!important;opacity:1!important;margin-left:auto!important}
+/* GT-11: Records historical FINAL is view-only. Conceal baked artwork controls; real X remains authoritative. */
+.rhFS34RecordsModal:before{content:'';position:absolute;z-index:32;left:2.7%;top:1.2%;width:13.5%;aspect-ratio:1;border-radius:50%;background:#03090d;box-shadow:0 0 14px rgba(0,0,0,.5);pointer-events:none}
+.rhFS34RecordsModal:after{content:'';position:absolute;z-index:32;left:0;right:0;bottom:0;height:12.2%;background:linear-gradient(180deg,rgba(0,0,0,0),#02070c 24%,#02070c);pointer-events:none}
+/* GT-12: Settings action tiles use a clean two-column alignment. */
+#rhUpdatePanel .rhSettingRow,.rhSettingPanel .rhSettingRow{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important;column-gap:18px!important}
+#rhUpdatePanel .rhSettingRow b{max-width:230px!important;line-height:1.08!important}#rhUpdatePanel .rhSettingRow span{text-align:right!important;white-space:nowrap!important}
+.rhSettingRow[data-about],.rhAboutSettingRowV6093{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important;column-gap:18px!important}.rhAboutSettingRowV6093 b{line-height:1.08!important}.rhAboutSettingRowV6093 span{text-align:right!important;white-space:nowrap!important}
+/* GT-13: About information labels and values must not collide. */
+.rhAboutScene+.rhContent .rhInfoRow{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;column-gap:18px!important;align-items:center!important}.rhAboutScene+.rhContent .rhInfoRow b{max-width:none!important;margin-left:0!important;text-align:right!important}
+/* GT-14: only the colon is optically lowered; decimal point stays exactly where it was. */
+.rhLeagueDigitalTimeV6022>i:nth-of-type(1){top:4px!important}.rhLeagueDigitalTimeV6022>i:nth-of-type(2){top:2px!important}
+@media(max-width:420px){#rhUpdatePanel .rhSettingRow,.rhAboutSettingRowV6093{column-gap:10px!important}#rhUpdatePanel .rhSettingRow span,.rhAboutSettingRowV6093 span{font-size:10px!important}}
+/* v6.0.94 GT-12 remainder: make Update action row deliberate and compact. */
+#rhUpdatePanel #rhCheckUpdateButton{grid-template-columns:minmax(0,1fr) max-content!important;column-gap:12px!important;padding-left:18px!important;padding-right:18px!important}
+#rhUpdatePanel #rhCheckUpdateButton b{max-width:none!important;font-size:12px!important;line-height:1.15!important;letter-spacing:.01em!important}
+#rhUpdatePanel #rhCheckUpdateButton span{font-size:10px!important;line-height:1.15!important;text-align:right!important}

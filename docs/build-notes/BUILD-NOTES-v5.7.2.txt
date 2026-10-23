@@ -1,0 +1,25 @@
+RaceHub v5.7.2 — LOCKED SCREEN REBUILD CANDIDATE
+Built from phone-tested v5.7.0. Working data/business logic protected.
+
+REBUILT — NOT PATCHED:
+• Universal Championship/Event Enter Result presentation.
+• Single contextual Result Accepted state; no duplicate accepted banner on summary.
+• Car Complete → Next Car transition for Championships and Events.
+• Championship/Event Complete milestone before final leaderboard.
+• Hubs Championship Started / Event Started milestone.
+• Event Round reorder/remove controls.
+• Records presentation including Event record history.
+• RaceHub Spaces cards with real Space switching.
+• About RaceHub as its own dark/glass locked screen.
+• Records/Hall of Fame environmental artwork and phone visual hierarchy.
+• Logo, Hubs and ASSET-004–007 source renders rebuilt to genuine transparent PNGs.
+
+PROTECTED:
+Garage/migration data, saved-results logic, car-first sequencing, Space isolation,
+Stats logic/art, Backup/Restore, Hall of Fame ownership, two-option Danger Zone,
+and phone-tested empty-state behaviour.
+
+PRIVATE EASTER EGG:
+One tiny low-opacity TV-camera helicopter silhouette in the Festival outdoor sky.
+
+v5.7.1 repair ZIP is rejected/superseded and is not part of this build.

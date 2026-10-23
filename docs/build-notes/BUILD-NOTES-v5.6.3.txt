@@ -1,0 +1,19 @@
+RaceHub v5.6.3 — GARAGE PHONE AUDIT CHECKPOINT
+
+Scope intentionally limited to the Garage correction checkpoint.
+
+Implemented:
+- recovered Garage artwork
+- manufacturer-first strict alphabetical accordion browsing
+- manufacturer counts
+- collapsed-by-default browsing
+- global make/model/year search
+- RaceHub-native Add/Edit Car form
+- RaceHub-native Delete confirmation
+- no Garage browser prompt() usage
+- existing Garage records retained in the current Space
+
+Not included in this checkpoint:
+- remaining master phone-audit fixes for Events, Records, Stats, Settings, navigation and racing transitions.
+
+Phone test this page before continuing to the next correction checkpoint.

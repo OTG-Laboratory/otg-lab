@@ -1,0 +1,11 @@
+/* OTG! v8.0.12 — fixed three-slot backup layout */
+.rhBackupEmpty8012{min-height:108px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;opacity:.72!important}
+.rhBackupEmpty8012 h2{margin:5px 0 4px!important;font-size:16px!important;letter-spacing:.04em!important}
+.rhBackupEmpty8012 p{margin:0!important}
+.rhSafetyBackup8012{border-color:rgba(45,226,230,.5)!important}
+.rhSafetyBackup8012>div>small,.rhSafetyBackup8012>small{color:#2de2e6!important;font-weight:800!important;letter-spacing:.06em!important}
+.rhDataActionsFinal .btn:disabled{opacity:.55!important;cursor:not-allowed!important}
+/* OTG! v8.0.13 — developer-only Safety Backup gate test */
+.rhSafetyTest8013{border-style:dashed!important;border-color:rgba(255,255,255,.18)!important}
+.rhSafetyTest8013>small{color:#93a4ad!important;font-weight:800!important;letter-spacing:.06em!important}
+.rhSafetyTest8013 .rhBackupActions35{display:grid!important;grid-template-columns:1fr 1fr!important;gap:10px!important;margin-top:14px!important}

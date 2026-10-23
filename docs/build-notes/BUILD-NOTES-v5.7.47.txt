@@ -1,0 +1,18 @@
+RaceHub v5.7.47 — FESTIVAL QUEUE REPAIR
+
+Festival Championship only. Events untouched.
+
+FIXED
+- Restored working Shuffle Queue for active Festival/Manufacturer/Era/Favourite runs.
+- Added working Random Pick: selects one remaining eligible frozen-entry car and makes it next.
+- Completed cars are never reintroduced into the remaining queue.
+- Frozen Championship membership is unchanged.
+- Queue is contained in a fixed-height scroll window (~5–6 phone rows visible).
+- Random Pick and Shuffle Queue controls sit above the queue.
+- Frozen Entry List and Rounds are also contained in scrollable panels for very large Championships.
+
+PRESERVED
+- v5.7.46 Continue Championship repair.
+- Minimum 2-car Festival eligibility.
+- Result flow, calculations and existing saved Championship data.
+- Events.

@@ -1,0 +1,25 @@
+/* OTG! v6.0.112 — Race Off Stage 1 dashboard/navigation checkpoint */
+.rhDashV4Row.raceoff{--a:#ff3fb4}
+.rhDashV4Row.raceoff>span>small{color:#ff75c9!important}
+/* Seven dashboard rows: preserve approved artwork and move the existing OTG! mark up slightly. */
+.rhHomeLogoV4{bottom:34px!important}
+@media(max-width:390px){.rhHomeLogoV4{bottom:26px!important}.rhDashV4Row{height:56px!important}.rhDashV4List{gap:5px!important}}
+@media(max-height:780px){.rhHomeLogoV4{bottom:22px!important}.rhDashV4Row{height:53px!important}.rhDashV4List{gap:4px!important}}
+/* OTG! v6.0.113 — Race Off Stage 2 catalogue/menu */
+.rhRaceOffHeroV1{background-image:linear-gradient(180deg,rgba(0,8,12,.08),rgba(0,8,12,.54)),url('assets/final/raceoff-general-background-v6113.png')!important;background-size:cover!important;background-position:center 21%!important}
+.rhRaceOffV1 .rhFestivalHeadV1 h1,.rhRaceOffV1 .rhFestivalHeadV1 p,.rhRaceOffV1 .rhFestivalSectionV1>h2,.rhRaceOffV1 .rhFestivalDetailsV1>summary,.rhRaceOffV1 .rhFestivalDetailsV1>summary span{color:#59cbe8!important}
+.rhRaceOffV1 .rhFestivalFavouriteV1{border-color:rgba(89,203,232,.36)!important;background:rgba(0,19,27,.8)!important}
+.rhRaceOffV1 .rhChampCard{border-color:rgba(89,203,232,.27)!important}
+.rhRaceOffV1 .rhChampCard:hover,.rhRaceOffV1 .rhChampCard:focus-visible{border-color:rgba(89,203,232,.7)!important}
+
+/* OTG! v6.0.114 — Race Off Stage 3 entrant selection + frozen field */
+.rhRaceOffSetupIntro label{display:block;font-weight:900;letter-spacing:.06em;margin:0 0 10px;color:#74cce8}
+.rhRaceOffSelectionHead{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:22px 0 12px}.rhRaceOffSelectionHead h2{margin:0}.rhRaceOffSelectionHead p{margin:4px 0 0;color:#82909b}
+.rhRaceOffSelectionButtons{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.rhRaceOffSelectionButtons .chip{margin:0}
+.rhRaceOffEntrantGroups{padding:0!important;overflow:hidden}.rhRaceOffMakeSelect{border-bottom:1px solid rgba(83,193,227,.18)}.rhRaceOffMakeSelect:last-child{border-bottom:0}
+.rhRaceOffMakeSelect summary{list-style:none;display:flex;align-items:center;justify-content:space-between;padding:18px 20px;cursor:pointer}.rhRaceOffMakeSelect summary::-webkit-details-marker{display:none}.rhRaceOffMakeSelect summary em{font-size:24px;color:#82909b}
+.rhRaceOffMakeCheck{display:flex!important;align-items:center;gap:12px!important;margin:0!important;color:#fff!important;font-weight:900!important;letter-spacing:0!important;flex:1}.rhRaceOffMakeCheck input,.rhRaceOffCarPick input{width:25px;height:25px;accent-color:#56c8ed;flex:0 0 auto}.rhRaceOffMakeCheck b{margin-left:auto;color:#55c7eb}
+.rhRaceOffMakeSelect>div{border-top:1px solid rgba(83,193,227,.14)}.rhRaceOffCarPick{display:flex!important;align-items:center;gap:14px!important;padding:15px 20px;margin:0!important;border-bottom:1px solid rgba(255,255,255,.055);color:#fff!important;letter-spacing:0!important}.rhRaceOffCarPick:last-child{border-bottom:0}.rhRaceOffCarPick span{display:flex;flex-direction:column;min-width:0}.rhRaceOffCarPick b{font-size:16px}.rhRaceOffCarPick small{margin-top:4px;color:#82909b;font-size:13px}
+.rhRaceOffStickyLock{position:sticky;bottom:0;z-index:6;margin:18px 0 0;padding:14px;background:rgba(1,10,15,.96);border:1px solid rgba(75,190,225,.35);border-radius:18px;box-shadow:0 -14px 35px rgba(0,0,0,.45)}.rhRaceOffStickyLock>div{display:flex;align-items:baseline;gap:8px;justify-content:center;margin-bottom:10px}.rhRaceOffStickyLock b{font-size:30px;color:#56c8ed}.rhRaceOffStickyLock span{font-size:13px;font-weight:900;letter-spacing:.09em;color:#87939c}.rhRaceOffStickyLock .btn{width:100%;margin:0}
+.rhRaceOffLockedCard{text-align:left}.rhRaceOffLockedCard>small{font-weight:900;color:#56c8ed;letter-spacing:.08em}.rhRaceOffLockedCard h2{font-size:30px;margin:8px 0}.rhRaceOffLockedCard>strong{display:block;font-size:22px;margin:0 0 12px}.rhRaceOffLockedPreview{margin:18px 0;border:1px solid rgba(75,190,225,.2);border-radius:14px;overflow:hidden}.rhRaceOffLockedPreview div{padding:11px 14px;border-bottom:1px solid rgba(255,255,255,.06);color:#9ba7af}.rhRaceOffLockedPreview div:last-child{border:0}.rhRaceOffContinue{border-color:rgba(86,200,237,.38)!important}
+@media(max-width:520px){.rhRaceOffSelectionHead{align-items:flex-start;flex-direction:column}.rhRaceOffSelectionButtons{justify-content:flex-start}.rhRaceOffStickyLock{border-radius:14px}}

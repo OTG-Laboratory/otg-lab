@@ -1,0 +1,41 @@
+/* OTG v6.0.56 dashboard clean rebuild — final override only */
+.rhHomeHeroV4{background:linear-gradient(180deg,rgba(0,4,8,0) 0%,rgba(0,4,8,0) 58%,rgba(2,5,8,.16) 82%,#020508 100%),url('assets/final/dashboard-otg-neutral-v6056.png') center center/cover no-repeat!important;}
+.rhHomeLogoV4{position:absolute!important;z-index:5!important;left:50%!important;transform:translateX(-50%)!important;width:min(78vw,340px)!important;height:auto!important;max-height:none!important;object-fit:contain!important;bottom:8px!important;opacity:1!important;filter:brightness(1.38) contrast(1.08) drop-shadow(0 7px 18px rgba(0,0,0,.78)) drop-shadow(0 0 10px rgba(32,223,255,.12))!important;}
+.rhHomeWelcomeV4{z-index:6!important;}
+.splash .splashInner{width:min(660px,94vw)!important;}
+.splash .splashBrandNew{display:block!important;width:min(560px,88vw)!important;max-width:none!important;height:auto!important;margin:0 auto!important;filter:brightness(1.12) drop-shadow(0 0 24px rgba(32,223,255,.28))!important;}
+@media(max-width:390px){.rhHomeLogoV4{width:min(80vw,318px)!important;bottom:6px!important;}}
+@media(max-height:780px){.rhHomeLogoV4{width:min(73vw,300px)!important;bottom:5px!important;}}
+@media(max-width:520px){.splash .splashInner{width:96vw!important}.splash .splashBrandNew{width:min(430px,90vw)!important}}
+
+/* OTG! v6.0.57 — Festival building branding cleanup ONLY. */
+.rhFestivalHeroV1{
+  background:
+    linear-gradient(180deg,rgba(0,6,12,.02) 0%,rgba(0,6,12,.02) 60%,rgba(2,7,12,.18) 82%,#02070c 100%),
+    url('assets/final/festival-approved-scene-v6057-neutral.png') center center/cover no-repeat!important;
+}
+
+
+/* OTG! v6.0.59 final rebrand cleanup */
+.rhHofHeroV1{
+  background:#0c1012 url('assets/final/hall-of-fame-background-otg-v6059.png')
+  center center/100% 100% no-repeat!important;
+}
+.rhSettingRow{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto!important;
+  align-items:center!important;
+  column-gap:14px!important;
+}
+.rhSettingRow .rhAboutTileMeta{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:8px!important;
+  white-space:nowrap!important;
+  flex-wrap:nowrap!important;
+}
+.rhSettingRow .rhAboutTileMeta em{
+  margin:0!important;
+  display:inline!important;
+  font-style:normal!important;
+}

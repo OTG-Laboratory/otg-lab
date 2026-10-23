@@ -1,0 +1,21 @@
+OTG! v8.0.73 — Track Directory Live-Race Fix
+
+MAIN ONLY — rh-guide untouched.
+
+1) Track Directory
+- Adds an always-visible floating BACK control.
+
+2) LOCATION
+- Removed from Championship setup / Race Off setup and previews.
+- LOCATION now sits beside CONTINUE on the live current-race screen.
+- Festival / Manufacturer / Era / Favourite / Pick My Drive use the live Championship current-round track.
+- Race Off uses the live tournament round track.
+
+3) Track usage counters
+- Usage is result-backed, not setup/start-backed.
+- A Festival/Pick My Drive round counts once only after that round has at least one saved race result.
+- A Race Off round counts once only after that round has at least one saved race result; multiple prelim pairings on the same round do not multiply the usage count.
+- Future/generated routes, START, setup, previews, rerolls and shuffle bags do not increment usage.
+- Custom Racing standard results use the same result-backed rule.
+- Winter Wonderland remains excluded.
+- No racing-data reset required; counts are backfilled from existing saved results.

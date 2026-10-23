@@ -1,0 +1,28 @@
+/* OTG! v8.0.51 — setup/library consistency + Festival Swiss + final split-time polish */
+
+/* Saved Setups and Load chooser: stable one/two-line rows with fixed action/chevron columns. */
+.v7SetupChooserList>button{display:grid!important;grid-template-columns:minmax(0,1fr) 28px!important;align-items:center!important;gap:10px!important;min-height:76px!important;padding:12px 14px!important}
+.v7SetupChooserList>button>span{min-width:0!important;display:block!important}
+.v7SetupChooserList>button>span>b{display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important;line-height:1.15!important}
+.v7SetupChooserList>button>span>small{display:block!important;margin-top:5px!important}
+.v7SetupChooserList>button>i{grid-column:2!important;grid-row:1!important;align-self:center!important;justify-self:center!important;position:static!important;margin:0!important;line-height:1!important}
+
+/* Saved Race Names picker: make the modal itself fixed-height and the list the only scroll surface. */
+body.rh8051RoundPickerOpen{overflow:hidden!important}
+.rh8051RoundPicker{touch-action:none!important;overscroll-behavior:none!important}
+.rh8051RoundNamePickerModal{display:flex!important;flex-direction:column!important;max-height:min(82dvh,760px)!important;overflow:hidden!important;pointer-events:auto!important}
+.rh8051RoundNamePickerList{flex:1 1 auto!important;min-height:120px!important;max-height:none!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch!important;touch-action:pan-y!important;overscroll-behavior:contain!important;pointer-events:auto!important}
+.rh8051RoundNamePickerList>button{pointer-events:auto!important;touch-action:manipulation!important;flex:none!important}
+
+/* Three Festival format choices remain compact on wider phones. */
+@media(min-width:521px){.v8FormatChoices{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.v8051SwissPlanner{margin-top:14px!important}
+.v8051SwissWarn{margin:12px 0 0!important;padding:10px 12px!important;border-radius:10px!important;border:1px solid rgba(255,166,74,.35)!important;background:rgba(120,58,0,.18)!important;color:#ffc27d!important;font-weight:800!important}
+
+/* Standard Championship final reveal: each classification row now includes its round splits. */
+.rhFS28Rows .rh8051FinalRow{grid-template-columns:13% minmax(0,1fr) 24% 19%!important;min-height:auto!important;padding:10px 1.4%!important;row-gap:7px!important}
+.rh8051RoundBreakdown{grid-column:1/-1!important;display:grid!important;gap:4px!important;padding:7px 0 2px 13%!important;border-top:1px solid rgba(73,223,245,.17)!important}
+.rh8051RoundBreakdown>span{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;gap:8px!important;align-items:center!important;font-family:'Arial Narrow',Arial,sans-serif!important;text-shadow:none!important}
+.rh8051RoundBreakdown small{overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important;color:rgba(228,241,245,.72)!important;font-size:clamp(7px,2vw,12px)!important}
+.rh8051RoundBreakdown b{color:#67e9ff!important;font-size:clamp(8px,2.2vw,13px)!important;font-weight:800!important;white-space:nowrap!important}
+@media(max-width:390px){.rhFS28Rows .rh8051FinalRow{grid-template-columns:12% minmax(0,1fr) 25% 20%!important}.rh8051RoundBreakdown{padding-left:12%!important}}

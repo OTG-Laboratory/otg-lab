@@ -1,0 +1,8 @@
+RaceHub v5.7.48 — Queue Picker Experience
+
+- Preserves v5.7.47 queue logic and frozen Championship membership.
+- Random Pick now presents an animated full-screen draw before committing the selected next car.
+- Shuffle Queue now visibly cycles the remaining running order before committing it.
+- Completed cars remain excluded from both operations.
+- Replaces the temporary shuffle glyph with a clear bidirectional shuffle mark.
+- No Event, result-entry, Championship membership, Garage or data-model changes.

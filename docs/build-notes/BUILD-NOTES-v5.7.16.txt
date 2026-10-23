@@ -1,0 +1,10 @@
+RaceHub v5.7.16 — Dashboard FINAL v7
+
+Built from working v5.7.15.
+ONLY Dashboard visual correction:
+- replace the approved scene containing the baked duplicate RH/RaceHub logo
+  with dashboard-approved-scene-v7-clean.png
+- keep the separate approved live RaceHub logo exactly once
+
+No navigation, tile sizing, colours, spacing, data, or other screens changed.
+Fresh v5716 CSS/JS/service-worker filenames used for cache break.

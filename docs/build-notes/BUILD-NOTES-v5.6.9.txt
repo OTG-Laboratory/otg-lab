@@ -1,0 +1,12 @@
+RaceHub v5.6.9 — Header Control Optical Alignment
+
+Base: phone-verified v5.6.8 Dashboard Hero + Header Controls.
+
+Changes:
+- Moved back-arrow glyph slightly lower inside its existing circular control.
+- Moved page Help ? glyph slightly lower inside its existing circular control.
+- Moved Dashboard Help ? glyph slightly lower inside its existing circular control.
+- Moved Dashboard Settings cog slightly lower inside its existing circular control.
+- No circle sizes, positions, horizontal alignment or touch targets changed.
+- Dashboard hero composition unchanged from v5.6.8.
+- Events unchanged from phone-verified v5.6.7.

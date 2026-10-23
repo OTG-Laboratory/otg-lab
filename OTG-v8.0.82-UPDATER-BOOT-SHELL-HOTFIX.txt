@@ -1,0 +1,8 @@
+OTG! v8.0.82 — Updater boot-shell hotfix
+
+- Fixes v8.0.81 update loop where the new worker installed but navigation still served index-v8080.html.
+- Version-pinned worker now serves index-v8082.html after activation.
+- Canonical otg-service-worker.js is synchronised to v8.0.82 to prevent legacy registration paths from pinning the old shell.
+- Includes all v8.0.81 Results / Corrections car-name and compact-control polish unchanged.
+- No racing-data migration, no Evil Campaign reshuffle/progress reset, no Race Off logic changes.
+- rh-guide untouched.

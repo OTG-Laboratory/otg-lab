@@ -1,0 +1,20 @@
+RaceHub v5.6.4 — EVENTS NATIVE UI CHECKPOINT
+
+Based on phone-verified v5.6.3 Garage checkpoint.
+
+Changes:
+- Replaced browser prompt() for Create Event with RaceHub native glass modal.
+- Replaced browser prompt() for Event result entry with RaceHub native glass modal.
+- Result entry now chooses the Event Round explicitly.
+- Race time uses segmented numeric MIN : SEC . MS fields.
+- Existing Event data model and Garage data are preserved.
+- No unrelated screen redesign in this checkpoint.
+
+Phone test targets:
+1. Events > Create Event opens RaceHub modal (no github.io/browser prompt).
+2. Cancel closes modal without creating Event.
+3. Create Event creates and opens Event.
+4. Add/rename Rounds still works.
+5. Enter Result opens RaceHub modal.
+6. Select Round and enter time; saved result appears under correct Round.
+7. Back navigation returns to Events normally.

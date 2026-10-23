@@ -1,0 +1,8 @@
+/* OTG! v6.0.111 — Result Summary clean approved-brand composition. */
+.rhPodiumHeroV5804::after{
+ content:"";position:absolute;z-index:1;right:8.5%;top:8%;width:38%;height:34%;
+ background:url('assets/brand/otg-approved-painted-mark-v6052.png?v=6052') center/contain no-repeat;
+ pointer-events:none;
+}
+.rhPodiumHeaderV5804{position:relative;z-index:2}
+@media(max-width:430px){.rhPodiumHeroV5804::after{right:7%;top:9%;width:39%;height:32%}}

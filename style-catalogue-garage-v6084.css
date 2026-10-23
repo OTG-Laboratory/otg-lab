@@ -1,0 +1,13 @@
+
+/* v6.0.84 catalogue Garage parity */
+.rhCatalogueGarageV84 .rhGarageSummaryV1 strong small{white-space:nowrap}
+.rhCatalogueGarageCar{display:grid!important;grid-template-columns:28px 26px 1fr;align-items:center;gap:10px;cursor:pointer}
+.rhCatalogueGarageCar.unowned{opacity:.43}
+.rhCatalogueGarageCar.owned{opacity:1}
+.rhCatalogueGarageCar .rhCatalogueCheck{width:22px;height:22px;margin:0}
+.rhCatalogueGarageCar .rhCatalogueTick{font-weight:900}
+.rhCatalogueGarageCar.unowned .rhCatalogueTick{opacity:.25}
+.rhCatalogueGarageCar span:last-child{display:flex;flex-direction:column;min-width:0}
+.rhCatalogueGarageCar span:last-child b{overflow-wrap:anywhere}
+/* v6.0.92 Grand Tour: saved Race Notes are readable in Records history. */
+.rhGT92Notes{grid-column:1/-1;margin:.45rem 0 0 2.2rem;padding:.55rem .7rem;border-left:2px solid rgba(42,220,255,.55);background:rgba(0,0,0,.22);border-radius:0 .45rem .45rem 0}.rhGT92Notes small{display:block;color:#2adcff;font-size:.62rem;letter-spacing:.12em;font-weight:800}.rhGT92Notes p{margin:.22rem 0 0;color:#dce8ec;font-size:.78rem;line-height:1.35;white-space:pre-wrap}

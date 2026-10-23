@@ -1,0 +1,7 @@
+RaceHub v5.8.25 — Final Standings rebuilt from the approved blank artwork.
+- No legacy Final Standings renderer or CSS in the active build.
+- Approved UI-ready stadium artwork used unchanged.
+- Live title, final classification, dynamic trophy, champion and total time.
+- No current-result highlight.
+- Internal board scrolling.
+- Existing Hall of Fame and return navigation wired to transparent artwork hotspots.

@@ -1,0 +1,19 @@
+RaceHub v5.7.29 — STATS LOCKED CORRECTION
+Built from protected v5.7.28.
+
+ONLY CHANGE:
+- Remove standalone ? / Help control from Stats.
+
+UNCHANGED:
+- Stats approved visual/background.
+- Total Races centre.
+- Championships Created left.
+- Championships Completed right.
+- Time Driven hh:mm:ss lower odometer.
+- Existing bottom Stats information tile.
+- All functionality/data.
+- All previously locked pages.
+
+NO redraw. NO zoom. NO crop. NO layout redesign.
+
+Implementation detail: Stats uses its own header markup without rhHelp; global rhHeader remains unchanged for other screens.

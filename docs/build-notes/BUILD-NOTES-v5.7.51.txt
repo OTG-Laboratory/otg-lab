@@ -1,0 +1,9 @@
+RaceHub v5.7.51 — CHAMPIONSHIP DISCOVERY
+
+Adds one-time, non-blocking Championship discovery guidance:
+- Triggered only when a Garage change makes a Manufacturer, Era, or Favourite Manufacturer Championship newly eligible (minimum 2 cars).
+- Message: NEW CHAMPIONSHIP AVAILABLE, Championship name, eligibility explanation.
+- Actions: NOT NOW and VIEW IN FESTIVAL.
+- Discovery is remembered per RaceHub Space and will not be announced again after eligibility later drops and returns.
+- Existing Festival eligibility behaviour remains unchanged.
+- Existing v5.7.50 race-night repairs and user data format are preserved.

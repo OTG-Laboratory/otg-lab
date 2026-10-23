@@ -1,0 +1,17 @@
+/* OTG! v6.0.109 — Result Summary approved spray-mark placement only. */
+.rhPodiumHeroV5804::after{
+  content:"";
+  position:absolute;
+  z-index:1;
+  right:5%;
+  top:12%;
+  width:49%;
+  height:43%;
+  background:url('assets/final/otg-spray-mark-v6107.png') center/contain no-repeat;
+  filter:drop-shadow(0 0 7px rgba(22,210,240,.16));
+  pointer-events:none;
+}
+.rhPodiumHeaderV5804{position:relative;z-index:2}
+@media(max-width:430px){
+ .rhPodiumHeroV5804::after{right:3%;top:13%;width:50%;height:40%}
+}

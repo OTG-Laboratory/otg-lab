@@ -1,0 +1,5 @@
+RaceHub v5.7.95
+- Final Standings now hard-removes every legacy app surface from layout before mount.
+- Standalone root is fully opaque and fixed above the app.
+- Scroll position is reset across root, document and window on mount.
+- All completed championship leaderboard actions are captured and routed to the standalone renderer.

@@ -1,0 +1,24 @@
+/* OTG! v8.0.37 — compact Custom Knockout match rows */
+.rhKOMatch8037{display:grid;grid-template-columns:34px minmax(0,1fr) 76px;gap:10px;align-items:start;padding:12px 0;border-bottom:1px solid rgba(143,172,190,.3)}
+.rhKOMatchNo8037{font-size:24px;font-weight:800;line-height:1.15;padding-top:2px}
+.rhKOMatchBody8037{min-width:0;display:grid;gap:6px}
+.rhKORacer8037{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:start;min-width:0}
+.rhKORacer8037 span{font-size:19px;line-height:1.18;overflow-wrap:anywhere}
+.rhKORacer8037 b{font-size:18px;white-space:nowrap;line-height:1.18}
+.rhKORacer8037.winner span,.rhKORacer8037.winner b{font-weight:800}
+.rhKOWinner8037{margin-top:2px;padding-top:6px;border-top:1px solid rgba(82,195,220,.28);display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.rhKOWinner8037 small{color:#54c2d8;font-size:13px;font-weight:800;letter-spacing:.07em}
+.rhKOWinner8037 strong{font-size:16px;line-height:1.2}
+.rhKOStatus8037{text-align:right;font-weight:800;font-size:14px;letter-spacing:.03em;padding-top:3px;white-space:nowrap}
+.rhKOMatch8037.complete .rhKOStatus8037{color:#54c2d8}
+@media (max-width:560px){
+ .rhKOMatch8037{grid-template-columns:28px minmax(0,1fr);gap:8px;padding:10px 0}
+ .rhKOStatus8037{grid-column:2;text-align:left;padding-top:0;font-size:12px}
+ .rhKOMatchNo8037{font-size:20px}
+ .rhKORacer8037{gap:8px}
+ .rhKORacer8037 span{font-size:17px;line-height:1.16}
+ .rhKORacer8037 b{font-size:16px}
+ .rhKOWinner8037{padding-top:5px;gap:7px}
+ .rhKOWinner8037 small{font-size:11px}
+ .rhKOWinner8037 strong{font-size:14px}
+}

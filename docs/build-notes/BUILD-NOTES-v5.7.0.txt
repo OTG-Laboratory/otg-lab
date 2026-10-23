@@ -1,0 +1,33 @@
+RaceHub v5.7.0 — STUDIO CONFORMANCE CANDIDATE
+Base: protected v5.6.13 known-good functional checkpoint.
+
+Purpose:
+Restore missing FINAL/LOCKED Studio screen/state presentation without redesigning RaceHub or replacing working data logic.
+
+Restored in this candidate:
+- Unified Championship + Events segmented result entry presentation
+- Result Accepted success transition
+- Results Summary normal and record/celebration states
+- Championship Car Queue dedicated screen
+- Settings cyan/glass hierarchy
+- Two-option current-Space Danger Zone
+- Dedicated Data / Backups and Restore detail/confirmation states
+- Dedicated About RaceHub
+- RH-UI-024-style confirmation presentation
+- Favourite Manufacturer consequence confirmation
+- RaceHub Spaces management: create, rename, delete, final-Space protection
+- Final empty-state visual treatment without rejected Hubs empty-state artwork
+- Records/Hall of Fame glass conformance enhancement
+- Visible version/cache bump to 5.7.0
+
+Protected:
+- Existing v5.6.13 data model and migration
+- Garage functionality/data
+- Championship/Event working persistence and sequencing
+- Hall of Fame
+- Stats cockpit implementation
+- Dashboard final artwork/alignment
+- FINAL assets and trophy identities
+
+Next action:
+Deploy this candidate to phone/PWA and perform the complete Studio phone conformance review.

@@ -1,0 +1,8 @@
+RaceHub v5.7.83 — Final Leaderboard + In-App Update Check
+
+- Preserves all v5.7.82 functionality and the locked Enter Result / Result Summary artwork.
+- Completed Championship Result Summary now routes directly to the locked Final Leaderboard.
+- Removes the route ambiguity that could leave the older completion presentation in control.
+- Adds Settings > App Update > Check for Latest Update.
+- Update check forces a service-worker/network refresh and reloads when a newer deployed build is detected.
+- Visible version and PWA cache advanced to v5.7.83.

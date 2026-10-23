@@ -1,0 +1,27 @@
+OTG! v8.0.88 — MAIN ONLY
+
+BASELINE
+- Built directly from Main v8.0.87.
+- v8.0.87 Rally Adventure / Hot Wheels LOCATION clue work retained unchanged.
+- Evil Campaign bridge v8.0.86 retained unchanged.
+- Results / Corrections v8.0.82 retained unchanged.
+- rh-guide untouched.
+
+RACE OFF VARIANT LABELS
+- Frozen Race Off snapshots now resolve back to their FH5 catalogue identity for display.
+- Forza Edition cars are explicitly labelled (for example: Morris Minor 1000 1953 • FORZA EDITION).
+- Repair is presentation-first and applies to existing saved brackets as well as new Race Offs.
+- Applies across bracket draw/progress, ENTER RESULT, next-racer transition, tournament history and champion views.
+- Underlying immutable car IDs and race results are not changed.
+
+CAR HISTORY — CHAMPIONSHIP CAREER
+- Adds a Championship Career section above Honours and PBs.
+- Summary: Championships Entered, Complete, Wins, Podiums and Best Championship Finish.
+- Standard championships show exact finishing position / field size, rounds, cumulative time and best single-round placing.
+- Evil Campaign championships show their Slot number.
+- Active/abandoned championships remain visible with status.
+- Groups and Swiss runs show format-appropriate final/elimination context rather than inventing a false overall placing.
+- Career rows are derived live from saved results, so Results / Corrections automatically update the displayed championship finish.
+
+NO RACING-DATA DUPLICATION
+- No separate championship-history database is introduced. Car History is calculated from the existing run/results data.

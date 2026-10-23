@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 240" role="img" aria-labelledby="title desc">
+<title id="title">RaceHub logo</title><desc id="desc">RaceHub RH shield and wordmark</desc>
+<rect width="1040" height="240" fill="none"/>
+<g transform="translate(12 12) scale(.42)">
+<title id="title">RaceHub RH shield</title><desc id="desc">Angular cyan shield containing a white RH monogram</desc>
+<defs>
+ <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#39e6ff"/><stop offset="1" stop-color="#00a9d6"/></linearGradient>
+ <linearGradient id="face" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#111b25"/><stop offset="1" stop-color="#05090d"/></linearGradient>
+ <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<path d="M256 28 455 111v224L256 484 57 335V111Z" fill="#02070b" stroke="#00131c" stroke-width="26" stroke-linejoin="round"/>
+<path d="M256 36 446 115v215L256 472 66 330V115Z" fill="url(#face)" stroke="url(#cyan)" stroke-width="14" stroke-linejoin="round" filter="url(#glow)"/>
+<path d="M222 421h68l-34 23Z" fill="#19d8f5"/>
+<!-- stylised RH monogram -->
+<g fill="#fff" transform="skewX(-10)">
+ <path d="M128 165h132c48 0 71 22 65 61-4 27-21 45-50 54l38 67h-65l-33-58h-42l-11 58h-61l35-182Zm56 48-7 37h67c13 0 20-6 22-18 2-13-4-19-18-19Z"/>
+ <path d="M325 165h61l-13 68h55l13-68h61l-35 182h-61l13-67h-55l-13 67h-61Z"/>
+</g>
+</g>
+<g font-family="Arial, Helvetica, sans-serif" font-weight="900" font-style="italic" letter-spacing="9">
+ <text x="245" y="125" font-size="92" fill="#ffffff">RACE</text>
+ <text x="575" y="125" font-size="92" fill="#19d8f5">HUB</text>
+</g>
+<text x="251" y="177" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" letter-spacing="12" fill="#a9bac7">TRACK • RECORD • IMPROVE</text>
+</svg>

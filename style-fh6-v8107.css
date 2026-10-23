@@ -1,0 +1,41 @@
+/* FH6 8.0.107 — phone-native pre-launch track and scheduler workshop */
+.fh6PlannerLaunch{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:12px 0;padding:14px;background:#092935;border:1px solid #358ea3;border-radius:12px;color:#eafaff}
+.fh6PlannerLaunch b{font-size:12px;color:#96e9f2}.fh6PlannerLaunch p{font-size:11px;line-height:1.5;color:#a2c5d1;margin:7px 0 0}
+.fh6PlannerLaunch button,.fh6PlannerPage button{cursor:pointer;border-radius:8px;border:1px solid #4db9d1;background:#14576b;color:#e9fbff;padding:10px 12px;font-size:11px;font-weight:800;min-height:42px}
+.fh6PlannerLaunch button{flex:none}
+.fh6PlannerPage{font-family:inherit;color:#e5f5fa;min-width:0;max-width:100%;box-sizing:border-box;padding-bottom:80px;background:#061b24}
+.fh6PlannerPage *, .fh6PlannerPage *:before,.fh6PlannerPage *:after{box-sizing:border-box}
+.fh6PlannerHead{display:flex;align-items:center;gap:14px;padding:16px 13px;background:#0c2f3f;border-bottom:1px solid #346577}
+.fh6PlannerHead>button{font-size:24px;min-width:46px}.fh6PlannerHead small{font-size:9px;letter-spacing:.14em;color:#94d8e1}
+.fh6PlannerHead h1{font-size:20px;line-height:1.2;margin:4px 0;color:#a1ecf4}.fh6PlannerHead p{font-size:10px;color:#b2cdd7;margin:4px 0 0}
+.fh6PlannerBody{max-width:850px;padding:12px;margin:auto;display:grid;gap:13px}
+.fh6PlannerWarning,.fh6PlannerBottom{border:1px solid #98703a;background:#2b241b;border-radius:11px;padding:14px}
+.fh6PlannerWarning strong,.fh6PlannerBottom strong{color:#f7dc9c;font-size:12px}
+.fh6PlannerWarning p,.fh6PlannerBottom p{font-size:11px;line-height:1.6;color:#e5ccb2;margin:8px 0}
+.fh6PlannerMetrics{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.fh6PlannerMetrics>div{display:grid;text-align:center;gap:4px;padding:9px 4px;border:1px solid #2e6373;background:#0e3543;border-radius:8px}
+.fh6PlannerMetrics strong{font-size:19px;color:#91e9f6}.fh6PlannerMetrics small{font-size:9px;color:#a8c5d1}
+.fh6PlannerTabs{display:grid;grid-template-columns:1fr 1fr;gap:7px}.fh6PlannerTabs button{background:#10323e;border-color:#31687a}
+.fh6PlannerTabs button.on{background:#1a667b;border-color:#81def1}
+.fh6PlannerPanel{display:grid;gap:12px;background:#0b2733;border:1px solid #28596b;border-radius:10px;padding:13px}
+.fh6PlannerPanel h2{font-size:14px;margin:0;color:#86e0ed}.fh6PlannerPanel>p,.fh6PlannerHint{font-size:11px;color:#b1ced9;line-height:1.65;margin:0}
+.fh6PlannerControls{display:grid;grid-template-columns:1.2fr 1fr;gap:10px}
+.fh6PlannerPage label{display:grid;gap:6px;color:#a7d2df;font-size:11px;font-weight:700}
+.fh6PlannerPage input,.fh6PlannerPage select{width:100%;min-width:0;min-height:42px;border-radius:8px;color:#e6f8ff;padding:9px;background:#09202c;border:1px solid #36758a;font-size:12px}
+.fh6PlannerBig{width:100%}.fh6PlannerQueue,.fh6PlannerNights,.fh6PlannerSaved,.fh6PlannerPools{display:grid;gap:8px}
+.fh6PlannerVisit{display:grid;gap:5px;padding:10px;background:#0d3342;border:1px solid #295c6d;border-radius:8px}
+.fh6PlannerVisitTitle{display:flex;justify-content:space-between;gap:9px;align-items:baseline}
+.fh6PlannerVisitTitle b{font-size:11px;color:#e8fcff;overflow-wrap:anywhere}.fh6PlannerVisitTitle span{font-size:10px;white-space:nowrap;color:#94e1ed}
+.fh6PlannerVisit>small{font-size:10px;line-height:1.55;color:#aacbd8}.fh6PlannerVisit .fh6PlannerDependent{color:#f4d49d}
+.fh6PlannerVisit button{font-size:10px;justify-self:start;min-height:35px;margin-top:3px}.fh6PlannerPage button:disabled{opacity:.5;cursor:not-allowed}
+.fh6PlannerNights>div{display:grid;gap:4px;background:#103746;padding:10px;border-left:3px solid #62bed0}
+.fh6PlannerNights b{font-size:10px;color:#8ce0f1}.fh6PlannerNights strong{font-size:12px;color:#e5f7ff}.fh6PlannerNights small{font-size:10px;color:#b2cbd7;line-height:1.5}
+.fh6PlannerPools{grid-template-columns:1fr 1fr}.fh6PlannerPools>div{display:grid;gap:6px;padding:10px;background:#103744;border-radius:8px}
+.fh6PlannerPools b{font-size:11px;color:#9ae2ec}.fh6PlannerPools small{font-size:10px;color:#bfd3dd}
+#fh6PlannerAddForm{display:grid;gap:10px}
+.fh6PlannerSaved>div{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px;border-bottom:1px solid #326070}
+.fh6PlannerSaved span{display:grid;gap:5px;min-width:0}.fh6PlannerSaved strong{font-size:12px;overflow-wrap:anywhere}.fh6PlannerSaved small{font-size:10px;color:#a5cfdd}
+.fh6PlannerSaved button{background:#623a33;border-color:#aa6a62;font-size:10px;min-height:35px}
+.fh6PlannerSaved>p{font-size:11px;color:#9ebfcc}.fh6PlannerDrawResult{background:#0b3a43;padding:12px;border:1px solid #5ba8b8;border-radius:8px}
+.fh6PlannerDrawResult strong{font-size:12px;color:#9de9ee}.fh6PlannerDrawResult ol{font-size:12px;line-height:1.6}.fh6PlannerDrawResult small{font-size:10px;color:#bed4d9}
+@media(max-width:530px){.fh6PlannerLaunch{display:grid}.fh6PlannerLaunch button{width:100%}.fh6PlannerControls{grid-template-columns:1fr}.fh6PlannerPools{grid-template-columns:1fr}.fh6PlannerVisitTitle{flex-wrap:wrap}}

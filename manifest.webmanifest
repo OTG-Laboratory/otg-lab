@@ -1,0 +1,38 @@
+{
+  "name": "Out The Garage! — LAB",
+  "short_name": "OTG! LAB",
+  "description": "Isolated OTG! development and catalogue-test installation. Not the personal Main.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#02070c",
+  "theme_color": "#02070c",
+  "icons": [
+    {
+      "src": "icons/icon-v6069-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-v6069-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-v6069-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon-maskable-v6069-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "id": "./otg-lab-v1"
+}

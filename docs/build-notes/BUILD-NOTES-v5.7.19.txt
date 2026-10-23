@@ -1,0 +1,22 @@
+RaceHub v5.7.19 — Festival HERO HEIGHT
+
+Built from full v5.7.18 phone-test build.
+
+ONLY CHANGE:
+- Festival hero reduced to ~205 px (195 px on narrower phones; 185 px on shorter screens).
+
+UNCHANGED:
+- Festival background image
+- Festival background crop
+- all Festival live UI
+- Continue Racing
+- Favourite Manufacturer
+- Era/Manufacturer collapsibles
+- Manufacturer search
+- bottom help/info tile
+- trophies
+- Dashboard
+- all data/functionality
+
+No image generation used.
+Fresh v5719 CSS/JS/service-worker filenames force cache refresh.

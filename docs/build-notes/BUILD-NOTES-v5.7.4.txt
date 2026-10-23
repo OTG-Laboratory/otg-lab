@@ -1,0 +1,24 @@
+RaceHub v5.7.4 — LOCKED ARTWORK PRODUCTION CANDIDATE
+
+BASELINE
+- Built directly from RaceHub-v5.7.3-LOCKED-VISUAL-SYSTEM-REBUILD.zip.
+- No restart from scratch.
+- v5.7.3 working functionality and data behaviour preserved.
+
+VISUAL AUTHORITY
+- RaceHub_FINAL_ARTWORK_COMPLETE_2026-07-25.zip remains the locked visual authority.
+- Existing production assets in assets/final were verified against the locked artwork pack where the pack contains the direct source asset.
+- No redesign, generic replacement UI, patch-cover, or fake visual fix introduced.
+
+POST-ARTWORK STUDIO OVERRIDES RETAINED
+- Two-option Danger Zone: RESET RACING DATA + FULL RESET RACEHUB.
+- Hall of Fame retained.
+- Locked empty-state behaviour retained, with no Hubs in empty states.
+- Existing RaceHub Spaces can be explicitly switched from Manage RaceHub Spaces.
+- Backup / Restore and current-Space-only restore safeguards retained.
+- About RaceHub retained.
+- Confirmation standard retained.
+
+BUILD
+- Visible version incremented to v5.7.4.
+- Service-worker cache key incremented for phone/PWA cache confirmation.

@@ -1,0 +1,66 @@
+/* OTG! v6.0.78 — phone-fit correction for LOCKED Reset Racing Data / Full Reset OTG! artwork.
+   Artwork is displayed directly and stretched only by layout to the phone viewport; source pixels are untouched. */
+#rhConfirmOverlay.rhReset6078{
+  position:fixed;
+  inset:0;
+  z-index:2147483000;
+  overflow:hidden;
+  background:#020609;
+  overscroll-behavior:none;
+}
+.rhReset6078Stage{
+  position:relative;
+  width:min(100vw,480px);
+  height:100dvh;
+  min-height:100svh;
+  margin:0 auto;
+  line-height:0;
+  background:#020609;
+  overflow:hidden;
+}
+.rhReset6078Art{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  user-select:none;
+  -webkit-user-drag:none;
+  pointer-events:none;
+}
+.rhReset6078Hit{
+  position:absolute;
+  display:block;
+  border:0;
+  padding:0;
+  margin:0;
+  background:transparent;
+  appearance:none;
+  -webkit-appearance:none;
+  cursor:pointer;
+  opacity:.001;
+  touch-action:manipulation;
+}
+.rhReset6078Hit:focus-visible{
+  opacity:.18;
+  outline:3px solid #10d9ff;
+  outline-offset:-3px;
+  background:#10d9ff;
+}
+/* Hit zones use percentages so they stay aligned when the locked artwork is fitted to the viewport. */
+.rhReset6078 .rhResetBack6078{left:3.2%;top:1.8%;width:24.5%;height:5.2%}
+.rhReset6078 .rhResetCancel6078{left:10.8%;top:84.2%;width:33.0%;height:10.5%}
+.rhReset6078 .rhResetConfirm6078{left:47.0%;top:84.2%;width:43.0%;height:10.5%}
+.rhReset6078.full6078 .rhResetBack6078{left:3.2%;width:24.5%}
+.rhReset6078.full6078 .rhResetCancel6078{left:10.8%;width:33.0%}
+.rhReset6078.full6078 .rhResetConfirm6078{left:47.0%;width:43.0%}
+body.rhReset6078Open{overflow:hidden!important}
+@media (min-width:481px){
+  #rhConfirmOverlay.rhReset6078{background:#000}
+  .rhReset6078Stage{box-shadow:0 0 40px rgba(0,0,0,.8)}
+}
+
+/* v6.0.90: distinct approved Full Reset asset + real button hit zones */
+.rhReset6078.full6078 .rhResetCancel6078{left:6.5%;top:89.0%;width:39.5%;height:7.8%}
+.rhReset6078.full6078 .rhResetConfirm6078{left:50.0%;top:89.0%;width:43.0%;height:7.8%}

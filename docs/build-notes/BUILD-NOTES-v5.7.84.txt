@@ -1,0 +1,5 @@
+RaceHub v5.7.84
+- Replaced completed Championship route with locked Final Leaderboard presentation.
+- Added staged leaderboard, trophy and confetti animations.
+- Removed wheel/spinner/picker remnants from all Championship and Event result screens.
+- Preserved v5.7.83 update checker and existing functionality.

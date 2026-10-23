@@ -1,0 +1,11 @@
+OTG! v8.0.69 — FH5 Festival RANDOMISE ALL
+
+Finishes the Festival track-randomiser workflow.
+- Adds RANDOMISE ALL above the current race programme.
+- Rolls every editable race slot in one hit.
+- Category-safe pools only.
+- No duplicates inside the generated set; recent tracks remain deprioritised.
+- Individual RANDOM TRACK / REROLL TRACK controls remain available afterwards.
+- Groups later-stage setup is supported; protected finale rules are preserved.
+- Drag and fixed/special programmes remain untouched.
+- No rh-guide changes.

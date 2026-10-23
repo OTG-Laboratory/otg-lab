@@ -1,0 +1,17 @@
+RaceHub v5.7.54 — SAVED RACE NAME PICKER
+
+Targeted correction to v5.7.53 only:
+- Replaced browser-dependent HTML datalist autocomplete with an explicit RaceHub saved-race picker.
+- Championship, Manufacturer, Era, Favourite and Event round rows now have a small dropdown control beside the editable race-name field.
+- Picker is populated immediately from previously used Championship/Event round names already stored in the current RaceHub Space.
+- Selecting a saved name applies it to that Round.
+- User can still type any new race name normally.
+- Existing track-average and car/event completion-flow changes from v5.7.53 are preserved unchanged.
+- Existing user data format is unchanged.
+
+PHONE TEST:
+1. Create/open any Championship setup and Add Round.
+2. Tap the dropdown beside the Round name.
+3. Previously used race names from existing history should appear immediately.
+4. Pick one and confirm it fills the Round.
+5. Repeat once in Events.

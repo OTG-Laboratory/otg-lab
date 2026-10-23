@@ -1,0 +1,18 @@
+RaceHub v5.7.21 — EVENTS LOCKED v1
+
+Full app built from protected v5.7.20 fullscreen checkpoint.
+
+Events landing visual rebuilt to locked RH-UI-019:
+- approved unbranded race-control / wet pit-lane scene
+- no Hubs button
+- no '?' Help button
+- bottom Events information/help tile
+- Create Event primary card
+- In Progress only when a started Event exists
+- Your Events uses existing active/completed Event data
+- existing event open/remove/create functions preserved
+- no invented tabs
+- compact live UI; no horizontal scrolling
+
+Dashboard, Festival, fullscreen foundation and all non-Events functionality preserved.
+Fresh v5721 CSS/JS/service-worker filenames for cache break.

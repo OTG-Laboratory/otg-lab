@@ -1,0 +1,16 @@
+RaceHub v5.8.33 — Championship in Progress Rebuild
+
+Base: protected v5.8.32 Car Complete Podium Rebuild.
+
+Rebuilt Championship Overview as a new single-authority renderer loaded last.
+- Approved aerial night-race hero crop; no Hubs control and no top back arrow.
+- Progress, current car and Continue behaviour preserved.
+- Random Pick and Shuffle Queue retained and promoted.
+- Full queue removed from the live page.
+- NEXT UP now shows two cars plus remaining-car count as the third row.
+- Current Standings and Back to Festival are equal-width bottom tiles.
+- Layout compacted for a standard phone viewport without normal vertical scrolling.
+- Current Standings opens a dedicated internally scrollable table.
+- Completed Championships still route to the locked Final Standings page.
+
+No changes to Result Summary, Car Complete, Final Standings, Hubs, Records, Garage or race data logic.

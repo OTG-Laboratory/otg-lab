@@ -1,0 +1,16 @@
+/* OTG! 8.0.103 — R1 result average + mobile un-clipped Groups Run Order */
+.rhAverageTime8103{padding:11px 13px;margin:12px 0;border:1px solid rgba(53,225,246,.38);border-radius:11px;background:rgba(8,35,46,.94);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;color:#fff}
+.rhAverageTime8103 small{display:block;color:#60dff2;font-size:10px;font-weight:900;letter-spacing:.13em}
+.rhAverageTime8103 b{display:block;font-size:21px;margin:3px 0;font-variant-numeric:tabular-nums}
+.rhAverageTime8103 span{display:block;color:#a4b8c1;font-size:10px;font-weight:750}
+.rhAverageTime8103 strong{font-size:11px;font-weight:900;white-space:nowrap}
+.rhAverageTime8103 strong.faster{color:#7fe4a3}.rhAverageTime8103 strong.slower{color:#ffb18f}.rhAverageTime8103 strong.equal{color:#d4ebf2}
+@media(max-width:620px){
+  #festival .v8GroupPage{height:auto!important;min-height:100dvh!important;max-height:none!important;overflow:visible!important;padding-bottom:calc(52px + env(safe-area-inset-bottom))!important}
+  #festival .v8GroupPage .rhOverviewBodyV1{height:auto!important;max-height:none!important;min-height:0!important;overflow:visible!important;display:block!important;padding-bottom:calc(36px + env(safe-area-inset-bottom))!important}
+  #festival .v8GroupPage .rhLineupV1{height:auto!important;max-height:none!important;overflow:visible!important;contain:none!important}
+  #festival .v8GroupPage .rhLineupV1 .rhQueueWindowV1{height:auto!important;min-height:0!important;max-height:none!important;overflow-y:visible!important;overflow-x:hidden!important;overscroll-behavior:auto!important;touch-action:pan-y!important;display:block!important}
+  #festival .v8GroupPage .rhLineupV1 .rhLineupRowV1{height:auto!important;min-height:66px!important;overflow:visible!important}
+}
+
+#raceoff .rhRaceOffEntryLocation8103{width:auto;min-width:120px;margin-top:10px;align-self:flex-start;padding:9px 14px;border-radius:9px;border:1px solid rgba(53,225,246,.6);background:rgba(5,35,48,.94);color:#74e6f4;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:12px;font-weight:900}

@@ -1,0 +1,12 @@
+OTG! v8.0.102 — Evil R1 Reset Integration QA
+
+PASS — index version 8.0.102 and current script refs pinned.
+PASS — updater manifest pinned to otg-service-worker-v8102.js.
+PASS — service worker cache/navigation pinned to index-v8102.html.
+PASS — R1 reset hook attaches after the approved reset confirmation button is cloned/replaced.
+PASS — Reset Racing Data clears evilCampaignR18098.
+PASS — Reset Racing Data clears retired evilCampaign8076 state.
+PASS — Full Reset has the same Evil-state clearing fallback.
+PASS — Legacy 708 button and preservation notice removed from the live R1 UI.
+PASS — Garage/catalogue reset semantics unchanged: Reset Racing Data retains Garage ownership.
+PASS — JavaScript syntax checks clean for R1, updater, bootstrap and service worker.

@@ -1,0 +1,19 @@
+RaceHub v5.7.30 — SETTINGS LOCKED CORRECTION
+Built from protected v5.7.29.
+
+ONLY CHANGE:
+- Remove standalone ? / Help control from Settings.
+
+UNCHANGED:
+- Existing approved Settings visual/background/layout.
+- All Settings controls and functionality.
+- Celebrations.
+- Garage/Profile.
+- RaceHub Spaces.
+- Data / Backup / Restore.
+- Danger Zone.
+- About RaceHub.
+- Existing Settings information/guidance content.
+- All previously locked pages.
+
+NO redraw. NO zoom. NO crop. NO redesign.

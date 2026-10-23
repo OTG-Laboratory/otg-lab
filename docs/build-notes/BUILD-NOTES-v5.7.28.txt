@@ -1,0 +1,4 @@
+RaceHub v5.7.28
+Built from working v5.7.26.
+Adds the newly approved separate Records and Hall of Fame environmental backgrounds.
+No new drawing. No functional/layout changes. v5.7.27 rejected screenshot-background build is not used.

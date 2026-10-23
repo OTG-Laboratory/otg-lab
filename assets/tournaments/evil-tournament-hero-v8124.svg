@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-label="Night racing arena with a crimson and cyan illuminated racing car, chequered flags and a dramatic starting grid">
+<defs>
+<linearGradient id="night" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#040b14"/><stop offset=".5" stop-color="#142236"/><stop offset="1" stop-color="#290c20"/></linearGradient>
+<radialGradient id="glow" cx=".71" cy=".43" r=".58"><stop stop-color="#ed476a" stop-opacity=".53"/><stop offset=".55" stop-color="#5e2350" stop-opacity=".16"/><stop offset="1" stop-color="#050b17" stop-opacity="0"/></radialGradient>
+<linearGradient id="road" x1="0" y1="0" x2=".3" y2="1"><stop stop-color="#293549"/><stop offset="1" stop-color="#060a12"/></linearGradient>
+<linearGradient id="car" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6c7f9c"/><stop offset=".28" stop-color="#25354a"/><stop offset=".59" stop-color="#0d1425"/><stop offset="1" stop-color="#687c97"/></linearGradient>
+<linearGradient id="windshield" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#40b1c8" stop-opacity=".7"/><stop offset=".48" stop-color="#081522"/><stop offset="1" stop-color="#cb315c" stop-opacity=".58"/></linearGradient>
+<pattern id="checks" width="48" height="48" patternUnits="userSpaceOnUse"><rect width="48" height="48" fill="#c6dae5"/><path d="M0 0h24v24H0ZM24 24h24v24H24Z" fill="#0b1422"/></pattern>
+<filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+<filter id="shine"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<rect width="1200" height="600" fill="url(#night)"/><rect width="1200" height="600" fill="url(#glow)"/>
+<g opacity=".48"><path d="M0 120 445 140 650 380H0Z" fill="#071524"/><path d="M1200 85 890 118 645 375H1200Z" fill="#090e20"/><path d="M0 150h440M0 178h468M940 153h260M922 184h278" stroke="#a1dfff" stroke-opacity=".12" stroke-width="9"/></g>
+<g opacity=".7"><path d="M0 0 550 400M1200 0 690 420" stroke="#e64772" stroke-width="8" filter="url(#blur)"/><path d="M0 0 550 400" stroke="#48e9f8" stroke-opacity=".55" stroke-width="4"/><path d="M1200 0 690 420" stroke="#ed4776" stroke-opacity=".7" stroke-width="4"/></g>
+<g opacity=".82"><path d="M40 90l132 20-20 110-132-20z" fill="url(#checks)"/><path d="M1024 103l134-20 18 110-134 20z" fill="url(#checks)"/><path d="M29 80 80 375M1166 72l-32 313" stroke="#92adbe" stroke-width="12"/><path d="M29 80 80 375M1166 72l-32 313" stroke="#d5e5ee" stroke-width="3"/></g>
+<path d="M503 266 731 266 1200 600H0Z" fill="url(#road)"/>
+<path d="M605 278 595 600M660 278 890 600" stroke="#e6f2fa" stroke-opacity=".20" stroke-width="7" stroke-dasharray="44 48"/>
+<path d="M521 296 52 600M714 296l442 304" stroke="#33dce9" stroke-opacity=".42" stroke-width="8" filter="url(#blur)"/>
+<path d="M521 296 52 600" stroke="#4ceefa" stroke-opacity=".82" stroke-width="4"/><path d="M714 296l442 304" stroke="#ff4b7d" stroke-opacity=".85" stroke-width="4"/>
+<g opacity=".24" stroke="#cdeaff" stroke-width="8"><path d="M40 492H1150"/><path d="M25 542H1180"/></g>
+<g transform="translate(495 220)">
+<ellipse cx="250" cy="302" rx="257" ry="46" fill="#f63069" opacity=".44" filter="url(#blur)"/>
+<ellipse cx="250" cy="310" rx="284" ry="36" fill="#36eaff" opacity=".25" filter="url(#blur)"/>
+<path d="M68 165 117 90q22-46 85-53l100-3q58 0 91 55l57 80 31 27q17 16 12 55l-10 42-42 21H56l-38-27-8-57q-1-32 24-46z" fill="url(#car)" stroke="#b5cede" stroke-opacity=".75" stroke-width="5"/>
+<path d="M139 94q19-32 64-35l98-3q43 0 65 36l39 67H99z" fill="url(#windshield)" stroke="#72ddec" stroke-opacity=".85" stroke-width="5"/>
+<path d="M241 56v106" stroke="#bdcddd" stroke-opacity=".45" stroke-width="5"/><path d="M100 160h304" stroke="#d1e6f6" stroke-opacity=".25" stroke-width="5"/>
+<path d="M33 201 115 173 213 186 250 198 286 186 386 173 465 200l16 25H17Z" fill="#091421" stroke="#748b9e" stroke-width="3"/>
+<path d="M30 212 124 190 188 205 171 236 36 248Z" fill="#92f7ff" opacity=".78" filter="url(#shine)"/><path d="M30 212 124 190 188 205 171 236 36 248Z" fill="#b1faff" opacity=".93"/>
+<path d="M472 212 379 190 311 205 331 236 470 248Z" fill="#ff5387" opacity=".78" filter="url(#shine)"/><path d="M472 212 379 190 311 205 331 236 470 248Z" fill="#ff99ac" opacity=".96"/>
+<path d="M208 215h86v57h-86z" fill="#060a15" stroke="#94c4d9" stroke-opacity=".5" stroke-width="3"/><g fill="#37d6eb"><rect x="215" y="223" width="70" height="5" rx="2"/><rect x="215" y="235" width="70" height="5" rx="2"/><rect x="215" y="247" width="70" height="5" rx="2"/></g>
+<path d="M80 293H420" stroke="#1a2635" stroke-width="20"/><path d="M100 285H400" stroke="#e9f4ff" stroke-opacity=".38" stroke-width="3"/>
+<path d="M39 282h80v31H50zM381 282h81l-11 31h-70z" fill="#04070d" stroke="#1d2538" stroke-width="5"/>
+</g>
+<g fill="none" stroke-linecap="round"><path d="M0 550h400M865 550h335" stroke="#42d9ee" stroke-opacity=".35" stroke-width="7" filter="url(#blur)"/><path d="M0 576h332M930 576h270" stroke="#fa457a" stroke-opacity=".4" stroke-width="7" filter="url(#blur)"/></g>
+</svg>

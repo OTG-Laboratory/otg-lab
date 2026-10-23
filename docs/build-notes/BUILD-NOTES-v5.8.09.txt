@@ -1,0 +1,7 @@
+RaceHub v5.8.09 — Result Summary Runtime Repair
+
+- Fixed the actual Result Summary crash after RESULT SAVED.
+- The podium summary is now self-contained and no longer calls private helper functions from another script scope.
+- Added local championship and event classification builders and time formatter.
+- Kept Enter Result artwork/layout unchanged.
+- Synchronized visible version, update checker and service-worker cache to 5.8.09.

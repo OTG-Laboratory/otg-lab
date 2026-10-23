@@ -1,0 +1,6 @@
+RaceHub v5.8.03 — Enter Result locked correction
+
+- Removed the baked duplicate back-arrow area from the active Enter Result artwork by using a clean cropped production asset.
+- Retained one live, centred back control.
+- Increased optical spacing around the stopwatch colon and decimal point.
+- No other screen, flow, data behaviour, or artwork changed.

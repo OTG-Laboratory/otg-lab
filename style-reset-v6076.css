@@ -1,0 +1,62 @@
+/* OTG! v6.0.76 — locked rebuilt Reset Racing Data / Full Reset OTG! screens.
+   Approved artwork is displayed directly; no redraw/recomposition. */
+#rhConfirmOverlay.rhReset6076{
+  position:fixed;
+  inset:0;
+  z-index:2147483000;
+  overflow-y:auto;
+  overflow-x:hidden;
+  background:#020609;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior:contain;
+}
+.rhReset6076Stage{
+  position:relative;
+  width:min(100vw,480px);
+  margin:0 auto;
+  height:100dvh;
+  min-height:100svh;
+  line-height:0;
+  background:#020609;
+  overflow:hidden;
+}
+.rhReset6076Art{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:fill;
+  user-select:none;
+  -webkit-user-drag:none;
+  pointer-events:none;
+}
+.rhReset6076Hit{
+  position:absolute;
+  display:block;
+  border:0;
+  padding:0;
+  margin:0;
+  background:transparent;
+  appearance:none;
+  -webkit-appearance:none;
+  cursor:pointer;
+  opacity:.001;
+  touch-action:manipulation;
+}
+.rhReset6076Hit:focus-visible{
+  opacity:.18;
+  outline:3px solid #10d9ff;
+  outline-offset:-3px;
+  background:#10d9ff;
+}
+/* Hit zones follow the locked artwork geometry. */
+.rhReset6076 .rhResetBack6075{left:3.7%;top:4.55%;width:31.5%;height:3.45%}
+.rhReset6076 .rhResetCancel6075{left:4.4%;top:71.55%;width:41.5%;height:7.2%}
+.rhReset6076 .rhResetConfirm6075{left:49.0%;top:71.55%;width:45.5%;height:7.2%}
+.rhReset6076.full6076 .rhResetBack6075{left:2.0%;width:31.0%}
+.rhReset6076.full6076 .rhResetCancel6075{left:3.5%;width:40.5%}
+.rhReset6076.full6076 .rhResetConfirm6075{left:46.0%;width:49.0%}
+body.rhReset6076Open{overflow:hidden!important}
+@media (min-width:481px){
+  #rhConfirmOverlay.rhReset6076{background:#000}
+  .rhReset6076Stage{box-shadow:0 0 40px rgba(0,0,0,.8)}
+}

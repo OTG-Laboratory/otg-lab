@@ -1,0 +1,8 @@
+OTG! MAIN v8.0.77 — EVIL CAMPAIGN BACK HOTFIX
+
+- Evil Campaign list: BACK control forced visibly above the hero layer.
+- Evil Campaign slot detail: same BACK treatment.
+- Existing v8.0.76 campaign order and progress state are preserved.
+- No campaign reshuffle.
+- No Garage/racing-data changes.
+- rh-guide untouched.

@@ -1,0 +1,6 @@
+OTG! v8.0.72 — FH5 Track Usage Counters
+
+Adds per-track usage totals to the v8.0.71 Track Directory.
+Usage is backfilled from the current FH5 Space's started racing data.
+Preview/reroll does not count. Race Off counts a committed round once, not every pairing/car run.
+No reset required. Main only; rh-guide untouched.

@@ -1,0 +1,11 @@
+/* OTG! v6.0.24 — Stage 9D phone polish only. */
+/* Move the compact League digital timer slightly higher in its tile. */
+.rhLeagueRaceTimeLabelV6022 .rhLeagueDigitalTimeV6022{top:-8px}
+/* Reduce the oversized Position field while keeping a clear touch target. */
+.rhLeagueResultInputsV6021{grid-template-columns:74px minmax(0,1fr);align-items:start}
+.rhLeagueResultInputsV6021>label:first-child input{height:50px;min-height:50px;padding:8px 10px;font-size:1rem;text-align:center}
+.rhLeagueDangerV6024{margin:16px 0 0;padding:16px;border:1px solid rgba(224,77,77,.34);border-radius:16px;background:rgba(55,8,10,.22)}
+.rhLeagueDangerV6024 small{display:block;color:#ef7777;font-weight:900;letter-spacing:.11em;margin-bottom:10px}
+.rhLeagueDeleteV6024{width:100%;border:1px solid rgba(240,84,84,.62);border-radius:13px;background:rgba(91,12,16,.48);color:#ff9393;padding:13px 12px;font-weight:900;letter-spacing:.04em}
+.rhLeagueDangerV6024 p{margin:9px 0 0;color:#9b8588;font-size:.76rem;line-height:1.45}
+@media(max-width:420px){.rhLeagueRaceTimeLabelV6022 .rhLeagueDigitalTimeV6022{top:-7px}.rhLeagueResultInputsV6021{grid-template-columns:70px minmax(0,1fr)}}

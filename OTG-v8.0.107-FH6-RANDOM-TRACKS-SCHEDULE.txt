@@ -1,0 +1,32 @@
+OTG! v8.0.107 — FH6 RANDOM TRACKS & CAMPAIGN SCHEDULE (QA BUILD)
+BASELINE: accepted v8.0.106. FH5, GT7 and 658 FH6 entries are unchanged.
+
+NEW
+- FH6 Garage > OPEN TRACK & SCHEDULE PLANNER. Separate from the accepted EVIL BLUEPRINT.
+- Campaign visit-order preview derived from v8.0.106 event and workload rules.
+- Random interleaving of Manufacturer/Era/Class/Specialist visits; every event's linked visits stay in order, never collapsed into a huge session.
+- Change the numeric shuffle seed, or RANDOMISE the preview. Same seed => same core programme order. Preview does not write race progress or freeze entrants.
+- Maximum 24 Festival/10 Race Off result entries; Race Off <=5 pairings per visit. Late knockout visits are marked conditional on actual round winners; 25+ car Festival group stages do NOT invent advancement rounds.
+- Nine proposed Finals Nights in fixed order: Favourite Manufacturer Festival Night 02, Forza Edition Night 03, Drift Night 04, Favourite Manufacturer Race Off Night 05. Nights 01/others remain preview only; no final campaign slot count claimed.
+- FH6-only route library starts EMPTY. Road, Street, Dirt, Cross Country and Drift Zone are organisational TYPES, not assertions about any actual FH6 race name. No FH5 courses imported.
+- Optional manually entered FH6-verified routes are stored under the FH6 space only; duplicate names rejected; supports removal with confirmation.
+- Draw a verified route for a preview visit using a STRICT no-repeat bag scoped by championship+route pool. Exhausted pools block further draws instead of repeating tracks. The Specialist RACE pool remains blocked until FH6 race-route eligibility is verified.
+- No real route assignments, no LOCATION clues, no actual campaign start. Track draws are unsaved rehearsals only, while manually entered verified route names persist in FH6.
+
+IMPORTANT QA / KNOWN LIMITS
+- User phone/browser QA required; automated pure JavaScript/ZIP tests do not constitute mobile PASS.
+- Same-event, late-stage Race Off cards are forecast-only; actual later rounds cannot run without results.
+- FH5 v8.0.103 AVERAGE TIME and mobile RUN ORDER checks remain pending independently.
+- Take FH5 portable backup before updating. No racing data reset.
+
+HOW TO TEST
+1. Switch to FH6 > Garage > OPEN TRACK & SCHEDULE PLANNER.
+2. Check Campaign Order > RANDOMISE: programme changes; Finals Nights 02/05 stay spaced.
+3. TRACK LIBRARY should be EMPTY unless you have entered personally verified FH6 routes (not expected yet).
+4. Confirm the track category labels display. Do NOT add made-up routes just for live-data testing.
+5. Back to FH6 Garage, FH5 and GT7; verify existing data and progress.
+
+VS CODE / POWERSHELL — after extracting into existing C:\RaceHub
+ git add .
+ git commit -m "OTG! v8.0.107 - FH6 Random Tracks and Campaign Schedule"
+ git push origin main

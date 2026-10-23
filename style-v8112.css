@@ -1,0 +1,33 @@
+/* OTG! v8.0.112 — discreet paint-colour dice on open race screens. */
+.otgDiceLaunch8112 {
+ position:absolute!important;top:max(14px,env(safe-area-inset-top))!important;right:14px!important;
+ width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;
+ margin:0!important;padding:0!important;border:1px solid rgba(88,193,215,.7)!important;
+ border-radius:14px!important;background:rgba(10,30,41,.93)!important;color:#fff!important;
+ display:grid!important;place-items:center!important;line-height:1!important;font-size:25px!important;
+ text-shadow:none!important;box-shadow:0 6px 20px #0008!important;z-index:20!important;cursor:pointer!important;
+}
+.rhFestivalHeadV1:has(> .otgDiceLaunch8112) {padding-right:55px!important;}
+.rhFestivalHeadV1:has(> .otgDiceLaunch8112) > div:not(.otgDiceLaunch8112){min-width:0;}
+.rhOverviewHeroV1:has(> .otgDiceLaunch8112),.rhChamp34Hero:has(> .otgDiceLaunch8112){position:relative!important;}
+.rhOverviewHeroV1:has(> .otgDiceLaunch8112) .rhOverviewBrandV1{padding-right:54px!important;}
+.rhChamp34Hero:has(> .otgDiceLaunch8112) .rhChamp34Title{padding-right:54px!important;}
+.rhPageHead:has(> .otgDiceLaunch8112){position:relative!important;}
+.otgDiceLaunch8112:focus-visible,.otgDiceDialog8112 button:focus-visible,.otgDiceDialog8112 input:focus-visible{outline:3px solid #72e5ff!important;outline-offset:3px!important;}
+.otgDiceBackdrop8112{position:fixed;inset:0;z-index:2147482000;background:rgba(0,5,10,.84);display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box;}
+.otgDiceDialog8112{position:relative;box-sizing:border-box;width:min(100%,380px);max-height:92dvh;overflow:auto;background:linear-gradient(150deg,#071b25,#02090e);border:1px solid rgba(85,206,230,.55);border-radius:21px;box-shadow:0 18px 70px #000c;padding:28px 20px 22px;color:#f4fbff;text-align:center;}
+.otgDiceClose8112{position:absolute;right:9px;top:8px;border:none;background:transparent;color:#c8dde5;font-size:32px;width:44px;height:44px;cursor:pointer;}
+.otgDiceEyebrow8112{display:block;color:#66bfd5;font-size:12px;font-weight:800;letter-spacing:.14em;margin:1px 34px 8px;}
+.otgDiceDialog8112 h2{font-size:24px;line-height:1.15;letter-spacing:.025em;margin:0 0 23px;color:#f4fbff;}
+.otgDiceInputs8112{display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:left;}
+.otgDiceInputs8112>div,.otgDiceInputs8112>label{background:rgba(0,10,16,.8);border:1px solid #274c5c;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:9px;min-width:0;}
+.otgDiceInputs8112 span{font-size:12px;font-weight:800;color:#8cbbc9;letter-spacing:.08em;}
+.otgDiceInputs8112 strong{font-size:22px;padding:5px 0;color:#d9eef4;}
+.otgDiceInputs8112 input{box-sizing:border-box;width:100%;height:44px;border-radius:9px;background:#001018;border:1px solid #5294a9;padding:7px 9px;color:white;font-size:22px;font-weight:800;}
+.otgDiceResult8112{border-radius:14px;border:1px solid rgba(67,167,193,.4);background:rgba(0,12,20,.9);margin:16px 0 11px;padding:14px;display:flex;flex-direction:column;gap:5px;}
+.otgDiceResult8112 small{font-weight:800;letter-spacing:.12em;color:#7bbdd1;}
+.otgDiceResult8112 strong{font-size:52px;color:#fff;line-height:1.1;}
+.otgDiceError8112{color:#ffa9a9!important;margin:8px 0!important;font-size:13px!important;}
+.otgDiceRoll8112{display:block;width:100%;min-height:54px;border:1px solid #3aaecd;border-radius:14px;background:linear-gradient(180deg,#0b3b51,#05202c);color:white;font-size:19px;font-weight:850;cursor:pointer;}
+.otgDiceHint8112{font-size:12px!important;line-height:1.5!important;color:#a0b9c2!important;margin:12px 0 0!important;}
+@media(max-width:380px){.otgDiceLaunch8112{width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;right:9px!important}.rhFestivalHeadV1:has(> .otgDiceLaunch8112){padding-right:47px!important}.otgDiceDialog8112{padding:24px 15px 19px;}}

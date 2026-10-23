@@ -1,0 +1,9 @@
+/* OTG! v6.0.34 — Grand Tour Fix #4: Records historical Final Standings overlay only. */
+body.rhFS34RecordsOverlayActive{overflow:hidden!important}
+.rhFS34RecordsOverlay{position:fixed;inset:0;z-index:100000;display:grid;place-items:center;padding:max(10px,env(safe-area-inset-top)) max(10px,env(safe-area-inset-right)) max(10px,env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left))}
+.rhFS34RecordsBackdrop{position:absolute;inset:0;background:rgba(0,0,0,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.rhFS34RecordsModal{position:relative;z-index:1;width:min(96vw,calc(92dvh * .46258));height:min(92dvh,calc(96vw / .46258));overflow:hidden;border:1px solid rgba(98,216,239,.28);border-radius:18px;box-shadow:0 24px 80px rgba(0,0,0,.78),0 0 28px rgba(55,198,226,.12);background:#000}
+.rhFS34RecordsModal .rhFS28Page,.rhFS34RecordsModal .rhFS28Stage{width:100%;height:100%}
+.rhFS34RecordsModal .rhFS28Stage{max-width:none;max-height:none}
+.rhFS34RecordsClose{position:absolute;top:1.8%;right:3.8%;z-index:40;width:11.2%;aspect-ratio:1;border-radius:50%;border:1px solid rgba(124,230,247,.62);background:rgba(5,18,25,.9);color:#ecfdff;font:400 clamp(25px,7vw,38px)/1 Arial,sans-serif;display:grid;place-items:center;padding:0;box-shadow:0 0 18px rgba(48,205,232,.14);cursor:pointer}
+.rhFS34RecordsClose:focus-visible{outline:2px solid #71e7f8;outline-offset:2px}

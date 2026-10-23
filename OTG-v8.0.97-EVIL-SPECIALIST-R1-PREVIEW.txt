@@ -1,0 +1,24 @@
+OTG! v8.0.97 — FH5 EVIL SPECIALIST-FIRST R1 READ-ONLY PREVIEW
+
+PURPOSE
+- Embeds the new 1,165-slot FH5 Evil Campaign Specialist-First R1 for live phone QA.
+- Keeps the existing legacy 708-slot Evil Campaign and its completed Slots 1–8 intact.
+- Does NOT initialise, reset or write new R1 campaign progress.
+- R1 race launchers are intentionally locked in this build.
+
+INCLUDED IN PREVIEW
+- 697-car specialist classification: Normal / Forza Edition / Drift / Race / Off-Road-Buggy.
+- 228 exact event cards and frozen eligible-car fields.
+- Full 1,165-slot programme with workload/visit boundaries.
+- In-app Setup Guide, classification browser and mechanical audit.
+- Legacy 708 viewer remains accessible from the R1 preview.
+
+SAFETY
+- Existing Garage ownership is read only by the preview.
+- Existing racing/history/results are untouched.
+- Legacy evilCampaign8076 state is not reset or migrated.
+- New campaign state key is reserved as evilCampaignSpecialistR1 but is not written in v8.0.97.
+- rh-guide is untouched.
+
+NEXT
+After the R1 list passes live QA, build the activation/launch engine (including higher-is-better Drift Zone scoring) and only then perform a deliberate campaign restart.

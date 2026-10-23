@@ -1,0 +1,21 @@
+OTG! Main v8.0.66 — LIVE QA FIXES
+
+Base: Main v8.0.65 R2 PASS
+rh-guide: unchanged / frozen at v8.0.17 PASS
+
+FIXES
+1. CAR HISTORY BACK
+   - Adds a guaranteed fixed Back control on Car History.
+   - Keeps the legacy header Back where usable.
+
+2. RESET RACING DATA
+   - Root cause confirmed: v6.0.90 reset cleared runs/customEvents but did not clear space.raceOffs.
+   - Reset now clears Festival Championships, Custom Events, Race Offs, Favourite Manufacturer, championship discovery state and record-book exclusions for the current Space.
+   - Garage, Space identity, backups, catalogue and other Spaces are retained.
+
+3. DEAD CHAMPIONSHIP CARD GUARD
+   - Active Championship cards now route through a guarded opener.
+   - If a persisted run has missing basic arrays/fields, OTG! repairs only those structural fields and retries.
+   - If opening still fails, a safe recovery screen appears; no Championship data is deleted.
+
+No FH5 catalogue/taxonomy/Drag/Race Off format changes in this build.

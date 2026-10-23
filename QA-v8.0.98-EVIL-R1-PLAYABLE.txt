@@ -1,0 +1,29 @@
+OTG! v8.0.98 — EVIL R1 PLAYABLE STATIC QA
+
+PASS — JavaScript syntax: playable R1, updater, bootstrap, worker.
+PASS — R1 data: 1,165 contiguous slots.
+PASS — R1 data: 228 unique event IDs.
+PASS — R1 data: 697 unique car IDs.
+PASS — Every slot eventId resolves to an event.
+PASS — Every event eligibleId resolves to a classified car.
+PASS — Event↔car eligibility links: 5,069.
+PASS — Separate R1 state key: evilCampaignR18098.
+PASS — Legacy state evilCampaign8076 is not deleted or migrated by R1 code.
+PASS — R1 Reset listener only clears the R1 state after explicit reset confirmation.
+PASS — Accepted v8.0.97 R1 data remains unchanged and is reused as the immutable campaign definition.
+PASS — Accepted PMD, Results/Corrections, Evil bridge, Car History, LOCATION, Portable Backup scripts remain loaded.
+PASS — v8.0.98 index does not load the v8.0.97 read-only preview controller.
+PASS — version.json / update-manifest / bootstrap / service worker / meta tag are pinned to v8.0.98.
+PASS — service-worker critical assets all exist.
+PASS — rh-guide unchanged.
+
+KNOWN QA LIMITATION
+Drift scores are stored in R1 state and are not yet surfaced by the older timed-result Car History framework.
+
+NODE SMOKE TEST
+PASS — Future-slot launch gate blocks Slot 0006 while Slot 0001 is current.
+PASS — Slot 0001 Groups constructor: 54 exact entrants, 7 groups, 2 opening tracks.
+PASS — Slot 0006 Standard constructor: 11 exact entrants, 2 rounds.
+PASS — Slot 0003 Race Off constructor: 188 exact entrants.
+PASS — First Drift Festival slot creates persistent Drift Zone round state.
+PASS — First Drift Race Off slot creates persistent knockout round state.

@@ -1,0 +1,6 @@
+RaceHub v5.7.26 — RECORDS + HALL OF FAME LOCKED v1
+Built from protected v5.7.25.
+Records: Hall of Fame banner, collapsible frozen-run records, empty state, bottom information tile.
+Hall of Fame: completed runs only; correct saved-type trophy, Championship name, winning car TEXT ONLY, final cumulative time. No car pictures, dates, card buttons/arrows, badges or Hubs.
+Global production rule retained: NO ZOOMING, NO CROPPING, NO unsolicited redraws.
+Garage v5.7.25 and earlier locked screens/functionality preserved.

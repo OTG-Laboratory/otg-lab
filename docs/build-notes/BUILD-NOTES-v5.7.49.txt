@@ -1,0 +1,17 @@
+RaceHub v5.7.49 — RACE NIGHT REPAIRS
+Baseline: v5.7.48 QUEUE PICKER EXPERIENCE phone-tested build.
+
+Repairs:
+- User-facing Championship progress uses cars complete, not result-slot totals.
+- Result Summary uses current-car round progress.
+- Historical average comparison restored for same car + round across previous Championship runs; faster green, slower red.
+- Car completion returns to Championship control; final car still goes to Final Leaderboard.
+- Records run header shows ACTIVE/COMPLETED only.
+- Active Festival Championship can deliberately add newly acquired Garage cars; Era/Manufacturer/Favourite remain frozen.
+- Manufacturer rename added in Settings and propagates through current Space cars, Favourite and make/favourite Championship identity.
+- Pull-to-refresh overscroll suppressed for installed/PWA use where supported.
+- PWA icons rebuilt from locked metallic RaceHub mark.
+- Service-worker asset list corrected and cache bumped.
+- Tiny TV camera helicopter silhouette restored to Records outdoor sky.
+
+Data migration: none. Existing local RaceHub data preserved.

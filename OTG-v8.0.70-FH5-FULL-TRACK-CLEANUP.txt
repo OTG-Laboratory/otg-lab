@@ -1,0 +1,38 @@
+OTG! v8.0.70 — FH5 FULL TRACK CLEANUP
+
+MAIN ONLY. rh-guide is unchanged.
+
+TRACK CATALOGUE
+- Road / Street random pool: 53 tracks.
+- Off-road random pool: 38 tracks.
+- Rally Adventure random pool: 24 tracks.
+- Hot Wheels random pool: 17 tracks.
+- Drag: 3 fixed strips.
+- Protected finales: 7.
+- Rally Adventure Ambassador races catalogued as SPECIAL: The Apex Run, Raptor Race!, Desafio.
+- Winter Wonderland Circuit is deliberately excluded.
+- The five old bogus Cross Country labels remain permanently corrected to their real FH5 routes.
+
+FESTIVAL
+- RANDOM TRACK and RANDOMISE ALL now use persistent per-category shuffle bags.
+- Previewing/rerolling does not consume a track.
+- START consumes the final selected randomised tracks.
+- No repeat until that category bag is exhausted; then it refills for a new cycle.
+- Fresh Festival defaults are diversified across the expanded track catalogue.
+- Protected finales remain outside the normal bag. Drag and fixed specials remain fixed.
+
+RACE OFF
+- No RANDOM button.
+- OTG! auto-plans a different discipline-appropriate track for every non-final bracket stage.
+- Race Off uses independent persistent shuffle bags, separate from Festival.
+- The Final remains on its protected showcase route.
+- The full programme preview shows the new route before the first draw.
+
+DATA / RESET
+- Existing Garage/catalogue data is untouched.
+- Reset Racing Data and Full Reset clear the v8.0.70 shuffle-bag state for the current Space.
+
+DEPLOYMENT
+  git add .
+  git commit -m "OTG v8.0.70 FH5 full track cleanup"
+  git push origin main

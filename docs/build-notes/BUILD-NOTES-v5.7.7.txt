@@ -1,0 +1,13 @@
+RaceHub v5.7.7 — RH-UI-017 Dashboard phone-test correction
+
+Built directly from v5.7.6.
+Visual-only Dashboard corrections from Andy phone test:
+- Settings cog optically centred.
+- Events identity changed to purple with purpose-built event-board icon.
+- Garage identity changed to green with purpose-built garage/car icon.
+- Festival remains cyan/checkered.
+- Records remains gold/trophy.
+- Stats remains cyan but is now a compact full-width strip rather than an oversized tile.
+- No Championship in Progress panel and no Hubs button on Dashboard.
+- Existing button actions, navigation, data behaviour and all other screens preserved.
+- Version/cache incremented to 5.7.7.
