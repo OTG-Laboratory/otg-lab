@@ -1,5 +1,9 @@
 {
+  "channel": "OTG-LAB",
+  "branch": "LAB",
   "version": "8.0.143",
+  "labVersion": "0.3",
+  "labWorker": "./otg-lab-worker-v1.js",
   "worker": "./otg-lab-worker-v1.js",
-  "message": "OTG! LAB v0.2 - FH5 permanent identity lock; Main unchanged."
+  "message": "LAB v0.3 \u2014 Settings now checks LAB releases independently. MAIN remains frozen at 8.0.143."
 }

@@ -1,0 +1,30 @@
+# OTG! LAB v0.3 — LAB Settings Update Checker (QA build)
+
+**Only upload to** `github.com/OTG-Laboratory/otg-lab`; never upload to MAIN/RaceHub.
+
+This release preserves the Main app engine version 8.0.143 and uses an independent LAB version 0.3. The LAB Update button in Settings checks only the same-origin `update-manifest.json` with `channel=OTG-LAB`, `branch=LAB` and an allowlisted LAB service worker. It cannot offer Main as a LAB update. If a later LAB release appears, the button offers to install it, requiring verified LAB Safety Backups for all Spaces before reload. It does not wipe or restore data, and it cannot publish releases itself: future changes must still be pushed to this LAB GitHub repository.
+
+## Files to copy into repo root
+- `index.html`
+- `update-manifest.json`
+- `otg-lab-worker-v1.js`
+- `js/otg-lab-updates-v03.js`
+
+No other app/catalogue/state files are modified. MAIN remains untouched.
+
+## QA after publishing
+1. Verify amber ribbon says **LAB v0.3**.
+2. Verify **Settings → CHECK FOR LATEST UPDATE** says **OTG! LAB v0.3 is up to date**. The button and section must say LAB, not Main.
+3. Verify existing FH5 LAB TEST Space still has the 3 owned cars (Carlton, R390, BMW X5 M FE).
+4. Verify original MAIN is unaffected.
+5. If offline, Settings must report unable to verify updates rather than falsely claiming current.
+
+## Git commands (from checked otg-lab repository only)
+```
+git remote -v
+git add -A
+git commit -m "OTG! LAB v0.3 - Isolated LAB update checker"
+git push
+```
+
+Safety note: v0.3 does not itself prove that a *future* v0.4 update can be installed: that requires a real future LAB release and separate phone QA.
