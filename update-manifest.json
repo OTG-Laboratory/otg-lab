@@ -2,8 +2,8 @@
   "channel": "OTG-LAB",
   "branch": "LAB",
   "version": "8.0.143",
-  "labVersion": "0.4",
+  "labVersion": "0.4.1",
   "labWorker": "./otg-lab-worker-v1.js",
   "worker": "./otg-lab-worker-v1.js",
-  "message": "LAB v0.4 — freezes identities of 145 existing FH5 routes. No saved races or ownership data are altered; MAIN untouched."
+  "message": "LAB v0.4.1 \u2014 isolated LAB checker hotfix and 145 frozen FH5 route identities. MAIN remains protected."
 }

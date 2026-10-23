@@ -79,15 +79,27 @@ for(const forbidden of ['rhSave(', 'localStorage.', 'sessionStorage.', '.results
 const index=fs.readFileSync(path.join(ROOT,'index.html'),'utf8');
 assert(index.indexOf('fh5-track-cleanup-v8070.js')<index.indexOf('fh5-track-ids-lab-v04.js'));
 assert(index.indexOf('fh5-track-ids-lab-v04.js')<index.indexOf('fh5-track-directory-v8103.js'));
-assert(index.includes('name="otg-lab-version" content="0.4"'));
+assert(index.includes('name="otg-lab-version" content="0.4.1"'));
 const manifest=JSON.parse(fs.readFileSync(path.join(ROOT,'update-manifest.json')));
-assert.equal(manifest.labVersion,'0.4');assert.equal(manifest.channel,'OTG-LAB');assert.equal(manifest.version,'8.0.143');
+assert.equal(manifest.labVersion,'0.4.1');assert.equal(manifest.channel,'OTG-LAB');assert.equal(manifest.version,'8.0.143');
 const sw=fs.readFileSync(path.join(ROOT,'otg-lab-worker-v1.js'),'utf8');
-assert(sw.includes('otg-lab-v0.4-fh5-tracks-8143'));
+assert(sw.includes('otg-lab-v0.4.1-updater-fix-8143'));
 assert(sw.split('fh5-track-ids-lab-v04.js?v=lab04').length>=3);
 assert.equal(index.includes('fh5-catalogue-v6069-main.js?v=lab02-idlock'),true);
 console.log('PASS: 145 unique frozen FH5 route IDs; all legacy aliases, finals and exclusions unchanged.');
 console.log('PASS: 145 route directory entries and original random pools preserved.');
 console.log('PASS: reordered taxonomy retains identities; duplicate, missing or unregistered route rejected.');
 console.log('PASS: historic Festival, Race Off and Custom results counted without modifying stored names.');
-console.log('PASS: LAB v0.4 worker, installer manifest, three owned-car compatibility paths and cache wiring.');
+console.log('PASS: LAB v0.4.1 worker, installer manifest, three owned-car compatibility paths and cache wiring.');
+
+// Regression: LAB update checker must be loaded AFTER all historical app scripts
+// which assign window.rhCheckForUpdate. It must also use a LAB-only manifest.
+assert(index.lastIndexOf('otg-lab-updates-v041.js') > index.lastIndexOf('grand-tour-final-fixes-v6094.js'));
+assert(index.lastIndexOf('otg-lab-updates-v041.js') > index.lastIndexOf('update-wire-v8143.js'));
+assert(sw.includes('otg-lab-updates-v041.js?v=lab041'));
+const updater=source('otg-lab-updates-v041.js');
+assert(updater.includes('e.stopImmediatePropagation()'));
+assert(updater.includes("const LAB_CHANNEL='OTG-LAB'"));
+assert(updater.includes('window.rhCheckForUpdate=()=>manualCheck()'));
+assert(!updater.includes('window.rhCheckForUpdate=manual'));
+console.log('PASS: LAB updater loads after all legacy overrides, with a capture-phase LAB-only click handler.');

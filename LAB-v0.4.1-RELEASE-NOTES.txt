@@ -1,0 +1,20 @@
+OTG! LAB v0.4.1 — CHECKER HOTFIX + 145 TRACK IDS
+
+ROOT CAUSE FOUND: Earlier LAB v0.3 loaded its independent update-check script BEFORE an old legacy app script, js/grand-tour-final-fixes-v6094.js. That old script reassigned window.rhCheckForUpdate, so the LAB button was displaying a LAB label while actually checking MAIN-style version 8.0.143. The screenshot exposing this regression was valuable.
+
+FIX: The v0.4.1 checker loads as the absolute LAST script; a capture-phase click handler additionally prevents the old inline button handler from ever running. The status is explicitly LAB-tagged. LAB v0.4.1 retains the 145 frozen track identity registry delivered in v0.4 and all v0.2 car ID protection; engine 8.0.143 unchanged.
+
+Files include index.html, update-manifest.json, otg-lab-worker-v1.js, js/otg-lab-updates-v041.js, fh5-track-ids registry/script, docs/tests. No MAIN files or saved data changed. Copy contents of zip into *OTG-LAB* repository (not original MAIN); leave existing unrelated files intact.
+
+Check git remote -v: must point to OTG-Laboratory/otg-lab.
+git add -A
+git commit -m "OTG! LAB v0.4.1 - Fix LAB update checker and lock tracks"
+git push
+
+Phone QA:
+  1. Banner must show LAB v0.4.1 after deployment/reopen.
+  2. Settings status should no longer refer to Installed 8.0.143; tap check and require OTG! LAB v0.4.1 is up to date.
+  3. FH5 LAB TEST retains 3 owned cars. Tracks still work.
+  4. Check MAIN still intact. No reset/restores required.
+
+Do not claim updater future-release INSTALL fully proven until tested with a newer release.
