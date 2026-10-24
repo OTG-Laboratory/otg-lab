@@ -183,10 +183,11 @@ window.rhDeleteCarFinal=function(id){const s=rhSpace();if(s?.catalogueKey===KEY)
  }
  }return deleteBase?.apply(this,arguments);};
 
-// Idempotent: adopt one existing FH6-named Space or create exactly one new Space.
-// Do not activate it or interrupt the user's current FH5 race.
+// LAB v0.8.1: only reconcile an EXISTING FH6 Space on startup.
+// Never resurrect a user-deleted FH6 Space; intentional creation must be explicit.
+// Never change the active Space during background reconciliation.
 try{
-  fh6EnsureSpace(false,true);
+  fh6EnsureSpace(false,false);
   // On a later app visit, the active FH6 Space may have been restored before
   // this late-loaded catalogue module existed; refresh the current home once.
   if(rhSpace()?.catalogueKey===KEY&&document.getElementById('home')&&!document.getElementById('home').classList.contains('hidden'))window.rhRenderHome?.();

@@ -237,8 +237,9 @@ if(otgMainManageSpaces6066)window.rhManageSpaces=function(){
 
 window.addEventListener('load',()=>{
   setTimeout(()=>{
-    // Background catalogue setup may reconcile/create GT7, but must never choose the user's active Space.
-    // Explicit OPEN/CREATE actions still activate GT7 via gt7EnsureSpace(true).
-    gt7EnsureSpace(false);
+    // LAB v0.8.1: reconcile ONLY an existing GT7 Space. A deliberately
+    // deleted GT7 Space must not be silently recreated on each app launch.
+    // The explicit OPEN/CREATE action still calls gt7EnsureSpace(true).
+    if(gt7FindExistingSpace())gt7EnsureSpace(false);
   },0)
 });

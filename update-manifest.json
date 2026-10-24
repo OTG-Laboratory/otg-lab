@@ -2,8 +2,8 @@
   "channel": "OTG-LAB",
   "branch": "LAB",
   "version": "8.0.143",
-  "labVersion": "0.8",
+  "labVersion": "0.8.1",
   "labWorker": "./otg-lab-worker-v1.js",
   "worker": "./otg-lab-worker-v1.js",
-  "message": "LAB v0.8 \u2014 SHA-verified FH5 catalogue can create ONE new protected real LAB Space, without changing existing 3-car Space. Multi-FH5 switching QA; optional catalogues in clean public Guide remain future work."
+  "message": "LAB v0.8.1 — prevent deleted GT7/FH6 Spaces from being recreated automatically on startup. Existing Spaces and their data are preserved; guarded optional FH5 new-Space bridge remains available. MAIN untouched."
 }

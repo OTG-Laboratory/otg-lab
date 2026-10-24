@@ -1,0 +1,28 @@
+OTG! LAB v0.8.1 — STOP RECREATING DELETED SPACES (QA HOTFIX)
+For existing OTG! LAB v0.8 ONLY. Never copy these files into MAIN or RH Guide.
+
+Cause confirmed in existing code: GT7 startup called gt7EnsureSpace(false), which
+CREATES a Space when absent; FH6 startup called fh6EnsureSpace(false,true),
+explicitly requesting recreation. Previously deleted empty Spaces reappeared at app launch.
+
+Fix: GT7 reconciles only if a matching Space already exists; FH6 reconciles
+only if present. The code no longer creates them in the background.
+This does NOT delete any existing Space. GT7 can still be created via its
+explicit user action; FH6 can still be added deliberately later.
+
+INSTALL
+1. Before replacing files, make LAB Safety Backup (and portable export if available).
+2. Open cloned VS Code OTG-Laboratory/otg-lab; run git remote -v to confirm.
+3. Unzip and copy the contents into the repo root, preserving js/.
+4. git add -A
+   git commit -m "OTG! LAB v0.8.1 - Stop deleted GT7 and FH6 Spaces returning"
+   git push
+
+PHONE QA — ONE SCREENSHOT/STEP AT A TIME
+1. LAB banner should show v0.8.1. Show screenshot; do not delete yet.
+2. Once instructed, delete only the 0-car unwanted Space(s) using Manage Spaces;
+   close and reopen LAB; they should remain deleted.
+3. Preserve My OTG! and FH5 LAB TEST with 3/902 owned; do not use RESET.
+4. Then resume v0.8 Step 1 online catalogue real-Space bridge test.
+
+No existing Space deleted programmatically. All saved data unchanged by patch.
