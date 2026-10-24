@@ -2,8 +2,8 @@
   "channel": "OTG-LAB",
   "branch": "LAB",
   "version": "8.0.143",
-  "labVersion": "0.7",
+  "labVersion": "0.8",
   "labWorker": "./otg-lab-worker-v1.js",
   "worker": "./otg-lab-worker-v1.js",
-  "message": "LAB v0.7 \u2014 phone-native download button layout and isolated optional catalogue clean-start proof; Main and existing FH5 Spaces untouched."
+  "message": "LAB v0.8 \u2014 SHA-verified FH5 catalogue can create ONE new protected real LAB Space, without changing existing 3-car Space. Multi-FH5 switching QA; optional catalogues in clean public Guide remain future work."
 }

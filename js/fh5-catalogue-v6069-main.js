@@ -11,6 +11,10 @@ function fh5CarId(c){return 'fh5-'+fh5Slug(c.full+'-'+c.year)}
 function fh5SpaceNameMatch(name){const n=fh5Norm(name);return n==='forza 5'||n==='forza horizon 5'||n==='fh5'||n==='forza horizon5'||n==='forza'}
 function fh5FindExistingSpace(){
   if(!state||!Array.isArray(state.spaces))return null;
+  // LAB v0.8: multiple FH5 catalogue Spaces are valid. Respect the ACTIVE one;
+  // otherwise Garage operations in an optional FH5 Space silently switch to the first FH5 Space.
+  const active=state.spaces.find(s=>s&&s.id===state.activeSpaceId);
+  if(active&&active.catalogueKey===FH5_SPACE_KEY)return active;
   return state.spaces.find(s=>s&&s.catalogueKey===FH5_SPACE_KEY)||state.spaces.find(s=>s&&fh5SpaceNameMatch(s.name))||null
 }
 function fh5Space(){return fh5FindExistingSpace()}

@@ -1,0 +1,17 @@
+OTG! LAB v0.8 — REAL SPACE CATALOGUE CONNECTION (QA ONLY)
+INCREMENTAL ZIP: apply ONLY on phone-accepted LAB v0.7.
+1. Do not touch MAIN or RH Guide. Keep portable LAB backup.
+2. Extract and copy contents into OTG-Laboratory/otg-lab VS Code repo, preserving js/ docs/ tests/.
+3. Run git remote -v and confirm OTG-Laboratory/otg-lab.
+4. git add -A
+   git commit -m "OTG! LAB v0.8 - Guarded optional FH5 real Space integration"
+   git push
+5. Phone screenshot sequence, ONE at a time: (a) amber LAB v0.8, 3 original FH5 cars;
+   (b) Settings > REAL SPACE CATALOGUE - LAB v0.8 panel, Step 1;
+   (c) Step 2 DOWNLOAD & VERIFY, require verified;
+   (d) Step 3 CREATE after safety backup confirmation;
+   (e) switch between original FH5 LAB TEST (3/902) and NEW FH5 OPTIONAL LAB TEST (0/902);
+   (f) tick ONE different car in new Space; switch back; original must still be 3/902.
+STRICT SAFETY: New Space only; no conversion/reset of existing Spaces. Requires all-Space backup gate.
+KNOWN LIMITATION: FH5 master still bundled in LAB. This does NOT yet implement actual optional catalogue loading in the public Guide; that is future work.
+STOP if anything unexpected, no resets/restores or manual edits.

@@ -1,0 +1,7 @@
+/* LAB v0.8 only: stack long phone button labels, never overlap. */
+#otgLabOptionalSpace08 .rhSettingRow{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:7px!important;text-align:left!important;white-space:normal!important;height:auto!important;min-height:86px;padding:18px 19px!important;}
+#otgLabOptionalSpace08 .rhSettingRow b,#otgLabOptionalSpace08 .rhSettingRow span{display:block!important;position:static!important;max-width:100%;white-space:normal!important;overflow-wrap:anywhere!important;text-align:left!important;margin:0!important;}
+#otgLabOptionalSpace08 .rhSettingRow span{font-size:clamp(12px,3.4vw,15px)!important;line-height:1.45!important;}
+#otgLabOptionalSpace08 .lab08Status{color:#a1e7e5;overflow-wrap:anywhere;}
+#otgLabOptionalSpace08 .lab08Status.failure{color:#ffacac;}
+#otgLabOptionalSpace08 button:disabled{opacity:.55;}
