@@ -1,0 +1,19 @@
+{
+  "schema": "otg-lab-cars-only-library-v11",
+  "channel": "OTG-LAB",
+  "libraryVersion": "1.0.0",
+  "description": "FH5 902-car library, independent of 145-track pack; TEST DATA, NO MAIN CHANGES",
+  "packs": [
+    {
+      "id": "fh5-cars",
+      "title": "Forza Horizon 5 — 902 cars only",
+      "game": "Forza Horizon 5",
+      "catalogueKey": "fh5-catalogue-v1",
+      "packVersion": "1.0.0",
+      "cars": 902,
+      "tracks": 0,
+      "path": "./catalogue-packs/fh5-cars-1.0.0.json",
+      "sha256": "fbaa8ecd9c35d0e62142fd4642a569b7d3a3787b5fb43ebf7ff0e100fd0cb1b1"
+    }
+  ]
+}

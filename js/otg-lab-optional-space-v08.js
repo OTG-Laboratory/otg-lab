@@ -35,6 +35,7 @@ function refresh(){const el=panel();if(!el)return;
  el.querySelector('.lab08Create').disabled=busy||!has||!!installed;
  const msg=el.querySelector('.lab08Existing');
  msg.textContent=installed?`EXISTING TEST SPACE: ${installed.name} · ${installed.cars.length} Garage cars. Switch to it through Manage OTG! Spaces. No duplicate will be created.`:'No optional FH5 test Space created yet. Your existing FH5 LAB TEST is not a target.';
+ if(installed)step(3,`CREATED • ${installed.name} • ${Object.values(installed.catalogueOwned||{}).filter(Boolean).length} owned right now • existing Space detected; duplicate creation blocked.`);
 }
 async function check(){if(busy||existing())return;busy=true;verified=null;entry=null;refresh();report('Checking separate online catalogue directory…');try{
  if(!currentAvailable())throw Error('LAB runtime identity or download safeguards unavailable');
@@ -97,7 +98,7 @@ function ensure(){
  if(panel()){refresh();return}
  const s=document.createElement('section');s.id='otgLabOptionalSpace08';s.className='rhSection rhSettingPanel';
  s.innerHTML=`<h2>🧪 REAL SPACE CATALOGUE — LAB v0.8</h2>
- <p class="small">Controlled next step: download the complete FH5 pack and create <b>one NEW actual OTG! Space</b>. This is NOT an import into, or a reset of, your existing three-car FH5 LAB TEST. LAB v0.9 loads the protected 902-car master from an independently verified download at startup. Track taxonomy and existing legacy compatibility logic remain bundled at this stage.</p>
+ <p class="small">Controlled next step: download the complete FH5 pack and create <b>one NEW actual OTG! Space</b>. This is NOT an import into, or a reset of, your existing three-car FH5 LAB TEST. LAB v0.11 starts from independent cars-only and tracks-only signed packs. This original v0.8 Space-creation wizard deliberately still checks its legacy complete fixture for rollback compatibility; it is not used by the normal startup loader.</p>
  <p class="small lab08Existing"></p>
  <button type="button" class="rhSettingRow lab08Check"><b>STEP 1 — CHECK ONLINE FH5 LIBRARY</b><span>No download · no changes ›</span></button><p class="lab08Step1 small">Library not checked.</p>
  <button type="button" class="rhSettingRow lab08Download" disabled><b>STEP 2 — DOWNLOAD &amp; VERIFY PACK</b><span>SHA-256 + 902 car IDs + 145 routes ›</span></button><p class="lab08Step2 small">No verified downloaded pack yet.</p>

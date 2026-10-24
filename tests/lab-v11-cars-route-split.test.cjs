@@ -1,0 +1,24 @@
+'use strict';
+const a=require('node:assert/strict'),fs=require('node:fs'),crypto=require('node:crypto'),path=require('node:path'),vm=require('node:vm');
+const root=path.join(__dirname,'..'),get=n=>fs.readFileSync(path.join(root,n)),json=n=>JSON.parse(get(n).toString());
+const cars=json('catalogue-packs/fh5-cars-1.0.0.json'),lib=json('catalogue-packs/cars-library-v11.json'),
+ old=json('catalogue-packs/fh5-complete-1.0.0.json'),routes=json('catalogue-packs/fh5-tracks-1.0.0.json'),routeLib=json('catalogue-packs/tracks-library-v1.json');
+a.equal(cars.schema,'otg-lab-fh5-cars-only-v1');a.equal(cars.cars.length,902);a.equal(cars.tracks,undefined);
+a.deepEqual(cars.cars,old.cars,'all 902 row IDs and fields unchanged from accepted baseline');
+a.equal(new Set(cars.cars.map(c=>c.catalogueId)).size,902);
+a.equal(cars.cars[0].catalogueId,'fh5-v1-0001');a.equal(cars.cars[901].catalogueId,'fh5-v1-0902');
+a.equal(routes.tracks.length,145);
+a.equal(lib.packs[0].tracks,0);a.equal(lib.packs[0].cars,902);
+a.equal(crypto.createHash('sha256').update(get('catalogue-packs/fh5-cars-1.0.0.json')).digest('hex'),lib.packs[0].sha256);
+a.equal(crypto.createHash('sha256').update(get('catalogue-packs/fh5-tracks-1.0.0.json')).digest('hex'),routeLib.packs[0].sha256);
+const boot=get('js/otg-lab-download-boot-v11.js').toString();a(boot.includes(lib.packs[0].sha256));a(boot.includes(routeLib.packs[0].sha256));
+a(!boot.includes('fh5-complete-1.0.0.json'),'no legacy combined pack in startup path');a(!boot.includes('verified-fh5-boot-v09'));
+a(!boot.substring(boot.indexOf('function dataChecks'),boot.indexOf('function trackChecks')).includes('pack.tracks'),'car checks must not depend on embedded tracks');
+const oldManifest=json('js/otg-lab-boot-manifest-v10.json'),newManifest=json('js/otg-lab-boot-manifest-v11.json');
+a.deepEqual(newManifest.scripts.map(x=>x.split('?')[0]),oldManifest.scripts.map(x=>x.split('?')[0]),'all 137 runtime module filenames and order unchanged (only optional-space UI query bumped)');
+a.equal(newManifest.scripts.length,137);for(const p of newManifest.scripts)a(fs.existsSync(path.join(root,p.split('?')[0])),`script missing: ${p}`);
+a.equal(json('update-manifest.json').labVersion,'0.11');a(get('index.html').toString().includes('DEVELOPMENT COPY · v0.11'));
+a(get('otg-lab-worker-v1.js').toString().includes('cars-library-v11.json'));
+let sandbox={window:{OTG_LAB_VERIFIED_FH5_CARS_V09:cars.cars},console};
+const x=vm.runInNewContext('const FH5_CATALOGUE=window.OTG_LAB_VERIFIED_FH5_CARS_V09;FH5_CATALOGUE.length',sandbox);a.equal(x,902);
+console.log('PASS v0.11 static: isolated 902 car rows unchanged; legacy car pack not used at boot; 145 track ID pack unchanged; both digests; 137 JS module order preserved; correct version and service-worker assets');

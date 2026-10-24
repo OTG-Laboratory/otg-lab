@@ -2,8 +2,8 @@
   "channel": "OTG-LAB",
   "branch": "LAB",
   "version": "8.0.143",
-  "labVersion": "0.10",
+  "labVersion": "0.11",
   "labWorker": "./otg-lab-worker-v1.js",
   "worker": "./otg-lab-worker-v1.js",
-  "message": "LAB v0.10 — independent pinned SHA-256 downloaded FH5 car and 145-track catalogues at boot; previous Spaces/records/ownership preserved. Track hints moved into external route pack; location clues await geographic audit. MAIN separate."
+  "message": "LAB v0.11 \u2014 separate SHA-256 pinned FH5 902-car-only and 145-track-only catalogue downloads; preserves all Space identities and histories. Legacy full pack retained only for earlier LAB test wizard/rollback, not runtime boot. MAIN remains separate."
 }
