@@ -1,0 +1,20 @@
+OTG! LAB v0.9 — CONTROLLED CATALOGUE-LESS FH5 CAR MASTER BOOT (FIRST STAGE)
+
+SAFETY: LAB repo only: OTG-Laboratory/otg-lab. NEVER apply to MAIN. Portable LAB backup has been made and renamed on phone.
+
+Extract/copy all included files preserving folders, commit+push only inside the LAB repo. Do NOT delete any files from the repo.
+
+WHAT THIS TEST DOES
+* Removes the fixed list of 902 FH5 car records from the running application JavaScript.
+* A small independent boot screen requires a verified SHA-256 match from the separate catalogue-packs/ download BEFORE the normal app can load.
+* Uses a previously verified cached copy for offline return visits; first launch may need the DOWNLOAD & VERIFY button.
+* If verification fails, the app does NOT start and existing Spaces/records are not modified. Rollback requires the original v0.8 FH5 catalogue JS plus the v0.8.1 index/worker and settings files; do not reset or import anything. If the phone will not boot, STOP and send us a screenshot for a safe rollback patch.
+* Preserves all three existing LAB Spaces, default, ownership, custom event, race record and stats; their actual phone re-validation is still PENDING.
+* IMPORTANT STAGE BOUNDARY: the 145-ROUTE track taxonomy, identity audits and legacy compatibility remain bundled at v0.9. This is NOT YET the final completely unbundled public build, and My OTG! cannot start without an FH5 catalogue at this stage. The purpose is to verify network-loaded car masters within the full existing app.
+* Dynamic loading of 137 app modules after verification replaces the original parser script tags. This may take longer on the first load, and must be tested on the phone.
+
+QA performed: pinned pack SHA-256, pack counts, car IDs, script-manifest order and Node syntax. Browser QA could not be run in this environment (browser was blocked by administrator); launch, offline boot, and failure-to-download behaviour require YOUR phone screenshots. No phone PASS claimed.
+
+PHONE CHECK #1: Open LAB and send us a screenshot of its boot screen; DO NOT press anything or change Spaces yet.
+
+MAIN v8.0.143 is not touched.

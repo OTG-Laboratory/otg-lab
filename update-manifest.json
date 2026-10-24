@@ -2,8 +2,8 @@
   "channel": "OTG-LAB",
   "branch": "LAB",
   "version": "8.0.143",
-  "labVersion": "0.8.1",
+  "labVersion": "0.9",
   "labWorker": "./otg-lab-worker-v1.js",
   "worker": "./otg-lab-worker-v1.js",
-  "message": "LAB v0.8.1 — prevent deleted GT7/FH6 Spaces from being recreated automatically on startup. Existing Spaces and their data are preserved; guarded optional FH5 new-Space bridge remains available. MAIN untouched."
+  "message": "LAB v0.9 \u2014 controlled downloaded FH5 car master at startup; fail closed without verified SHA-256 pack, preserve every existing Space. Track taxonomy remains in runtime until later stage. MAIN separate."
 }

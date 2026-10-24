@@ -97,7 +97,7 @@ function ensure(){
  if(panel()){refresh();return}
  const s=document.createElement('section');s.id='otgLabOptionalSpace08';s.className='rhSection rhSettingPanel';
  s.innerHTML=`<h2>🧪 REAL SPACE CATALOGUE — LAB v0.8</h2>
- <p class="small">Controlled next step: download the complete FH5 pack and create <b>one NEW actual OTG! Space</b>. This is NOT an import into, or a reset of, your existing three-car FH5 LAB TEST. The official FH5 master is <b>still bundled in LAB</b>; this test validates the real Space connection before removing bundled catalogues in a future public build.</p>
+ <p class="small">Controlled next step: download the complete FH5 pack and create <b>one NEW actual OTG! Space</b>. This is NOT an import into, or a reset of, your existing three-car FH5 LAB TEST. LAB v0.9 loads the protected 902-car master from an independently verified download at startup. Track taxonomy and existing legacy compatibility logic remain bundled at this stage.</p>
  <p class="small lab08Existing"></p>
  <button type="button" class="rhSettingRow lab08Check"><b>STEP 1 — CHECK ONLINE FH5 LIBRARY</b><span>No download · no changes ›</span></button><p class="lab08Step1 small">Library not checked.</p>
  <button type="button" class="rhSettingRow lab08Download" disabled><b>STEP 2 — DOWNLOAD &amp; VERIFY PACK</b><span>SHA-256 + 902 car IDs + 145 routes ›</span></button><p class="lab08Step2 small">No verified downloaded pack yet.</p>
