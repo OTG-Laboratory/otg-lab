@@ -1,0 +1,14 @@
+{
+  "schema": "otg-lab-track-library-v1",
+  "channel": "OTG-LAB",
+  "packs": [
+    {
+      "id": "fh5-tracks",
+      "path": "./catalogue-packs/fh5-tracks-1.0.0.json",
+      "sha256": "38391e98d921ad8db1a8c3ddf9cfa8bca05ba8e9ce64c51ac5c77f5ee25ef1ee",
+      "game": "Forza Horizon 5",
+      "packVersion": "1.0.0",
+      "tracks": 145
+    }
+  ]
+}

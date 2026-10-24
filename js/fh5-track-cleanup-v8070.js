@@ -26,18 +26,12 @@ function randIndex(n){if(n<=1)return 0;try{const a=new Uint32Array(1);crypto.get
 function shuffle(a){a=[...(a||[])];for(let i=a.length-1;i>0;i--){const j=randIndex(i+1);[a[i],a[j]]=[a[j],a[i]]}return a}
 function hash(s){let h=2166136261;for(const c of String(s||'')){h^=c.charCodeAt(0);h=Math.imul(h,16777619)}return h>>>0}
 
-/* ---------- Complete FH5 taxonomy used by OTG! ---------- */
-const ADD_ROAD=[
- 'Horizon Oval Circuit','Vista Del Mar Sprint','Marigold Sprint','Aeródromo Sprint','Línea Costera Sprint',
- 'Cloverleaf Sprint','San Juan Sprint','Valle Del Rio Sprint','Rocosa Sprint','Horizon Stadium Circuit'
-];
-const RALLY_SPECIAL=['The Apex Run','Raptor Race!','Desafio'];
-const DROP=new Set(['Winter Wonderland Circuit']);
-const tracks=(OLD_TAX?.tracks||[]).filter(t=>!DROP.has(clean(t?.name))).map(t=>({...t}));
-/* Correct the one old Cross Country canonical label while retaining an alias below. */
-for(const t of tracks)if(norm(t.name)===norm('Estadio Cross Country'))t.name='Estadio Cross Country Circuit';
-for(const name of ADD_ROAD)if(!tracks.some(t=>norm(t.name)===norm(name)))tracks.push({name,world:'Mexico',category:'ROAD',discipline:'Road Racing',standard:true,finale:false,added8070:true});
-for(const name of RALLY_SPECIAL)if(!tracks.some(t=>norm(t.name)===norm(name)))tracks.push({name,world:'Sierra Nueva',category:'RALLY',discipline:'Rally Adventure',standard:false,finale:false,special:true,protected:true,added8070:true});
+/* LAB v0.10: canonical 145 routes are supplied by the verified external track pack.
+   Preserve original route ordering, metadata, special/finale flags and all saved shuffle bags. */
+const verifiedTracks=window.OTG_LAB_VERIFIED_FH5_TRACKS_V10;
+if(!Array.isArray(verifiedTracks)||verifiedTracks.length!==145)throw Error('OTG! LAB v0.10: no verified downloaded FH5 routes');
+const tracks=(OLD_TAX?.tracks||[]).map(t=>({...t}));
+if(tracks.length!==145 || tracks.some((t,i)=>t.trackId!==verifiedTracks[i].trackId||t.name!==verifiedTracks[i].name))throw Error('OTG! LAB v0.10: route taxonomy mismatches verified pack');
 const alias=new Map();
 for(const t of tracks)alias.set(norm(t.name),t.name);
 const aliases={
@@ -262,7 +256,7 @@ const baseFullResetConfirm8070=window.rhFullResetConfirm;if(typeof baseFullReset
 
 /* Read-only QA hooks. */
 window.rhFH5TrackCleanup8070={
- version:VERSION,summary,canonical,standardPool,finalePool,specialTracks:[...RALLY_SPECIAL],excludedSeasonal:['Winter Wonderland Circuit'],
+ version:VERSION,summary,canonical,standardPool,finalePool,specialTracks:tracks.filter(t=>t.special).map(t=>t.name),excludedSeasonal:['Winter Wonderland Circuit'],
  bagSnapshot:(mode='festival',cat='ROAD')=>{const pool=setupPool(cat),v=bagView(mode,cat,pool);return {mode,category:cat,total:pool.length,remaining:v.remaining.length,cycle:v.cycle,tracks:[...v.remaining]}},
  stagesForCount,deterministicProgramme,
  raceOffPlan:(type,value,count)=>{const fake={type,value,entryIds:Array.from({length:Math.max(2,Number(count)||2)})};const cat=raceOffCategory(fake),pool=setupPool(cat),stages=stagesForCount(count),pre=drawSequence('raceoff',cat,pool,Math.max(0,stages.length-1)),fin=window.rhFH5Finale8058?.(type,value,'raceoff')||finalePool(cat)[0]||'';return {category:cat,stages,tracks:[...pre,fin]}}

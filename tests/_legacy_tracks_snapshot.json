@@ -1,0 +1,1203 @@
+[
+  {
+    "name": "Arch of Mulegé Circuit",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Bahía De Plano Circuit",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Bola Ocho Circuit",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Cathedral Circuit",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Chihuahua Circuit",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Copper Canyon Sprint",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Descansar Dorado Sprint",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Dunas Blancas Sprint",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Emerald Circuit",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Estadio Circuit",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Gran Pantano Sprint",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Horizon Mexico Circuit",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Llanuras Sprint",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Lookout Circuit",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Los Jardines Circuit",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Panorámica Sprint",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Playa Azul Circuit",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Plaza Circuit",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Reservorio Sprint",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Riviera Sprint",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Sierra Verde Sprint",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Tierra Próspera Circuit",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Volcán Sprint",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Bosque Del Sur",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Cañón Run",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Carretera Chase",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Castillo Del Mar",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Coast Run",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Costa Rocosa",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Cruce Del Valle",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "El Lago Blanco",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Festival Gatecrash",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Granjas De Tapalpa",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Guanajuato Sur",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Highland Climb",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Hilltop Descent",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Horizon Callejera",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Jungle Descent",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Las Afueras",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Las Laderas",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Ruta Norte",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Tunnel Run",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Wetland Charge",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "The Goliath",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": false,
+    "finale": true,
+    "finaleFor": [
+      "ROAD"
+    ]
+  },
+  {
+    "name": "The Colossus",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": false,
+    "finale": true,
+    "finaleFor": [
+      "ROAD"
+    ]
+  },
+  {
+    "name": "The Marathon",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Street Racing",
+    "standard": false,
+    "finale": true,
+    "finaleFor": [
+      "ROAD"
+    ]
+  },
+  {
+    "name": "Baja California Trail",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Dirt Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Bajío Trail",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Dirt Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Barranca Trail",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Dirt Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Caldera Scramble",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Dirt Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Cascada Trail",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Dirt Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Cordillera Trail",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Dirt Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Desierto Trail",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Dirt Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "El Pípila Scramble",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Dirt Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Fuera Del Camino Trail",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Dirt Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Horizon Baja Scramble",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Dirt Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "La Selva Scramble",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Dirt Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Mangrove Scramble",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Dirt Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Montaña Trail",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Dirt Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Mulegé Town Scramble",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Dirt Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "River Scramble",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Dirt Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "San Juan Scramble",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Dirt Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Tapalpa Trail",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Dirt Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Teotihuacán Scramble",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Dirt Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Tulum Trail",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Dirt Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Airfield Cross Country Circuit",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Cross Country",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Baja Cross Country Circuit",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Cross Country",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Copper Canyon Cross Country",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Cross Country",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Costa Este Cross Country",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Cross Country",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Costera Cross Country Circuit",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Cross Country",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Ek' Balam Cross Country Circuit",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Cross Country",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "El Descenso Cross Country",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Cross Country",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Estadio Cross Country Circuit",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Cross Country",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Festival Cross Country",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Cross Country",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Foto Final Cross Country",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Cross Country",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Herencia Cross Country Circuit",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Cross Country",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Las Dunas Cross Country",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Cross Country",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Las Granjas Cross Country",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Cross Country",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Las Ranas Cross Country",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Cross Country",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Oasis Cross Country",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Cross Country",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Restos Cross Country",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Cross Country",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Ribera Rocosa Cross Country",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Cross Country",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Tropico Cross Country",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Cross Country",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Urban Cross Country Circuit",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Cross Country",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "The Titan",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Cross Country",
+    "standard": false,
+    "finale": true,
+    "finaleFor": [
+      "OFFROAD"
+    ]
+  },
+  {
+    "name": "The Gauntlet",
+    "world": "Mexico",
+    "category": "OFFROAD",
+    "discipline": "Dirt Racing",
+    "standard": false,
+    "finale": true,
+    "finaleFor": [
+      "OFFROAD"
+    ],
+    "roadWildcard": true
+  },
+  {
+    "name": "Devil's Pass",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "El Bosque",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Quarry Trail",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Arzate Sprint",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "The Narrows",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "La Cantera",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Canyon Trail",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Senda De Montana",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Cascada Fuerte",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Three Hills",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Lago Azulado",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Desert Scramble",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Meridian",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Forest Trail",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Rugged Dunes",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Tres Colinas",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Reserva Del Carrizo",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Orogrande",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Tierras Verdes",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Joya Marron",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Crateres Secos",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Valle De Pozas",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Palm Forest",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Switchback Run",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Horizon Badlands Goliath",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": false,
+    "finale": true,
+    "finaleFor": [
+      "RALLY"
+    ]
+  },
+  {
+    "name": "Canyon Loop Speed Sprint",
+    "world": "Hot Wheels Park",
+    "category": "HOT_WHEELS",
+    "discipline": "Speed Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Canyon Racer Speed Sprint",
+    "world": "Hot Wheels Park",
+    "category": "HOT_WHEELS",
+    "discipline": "Speed Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Canyon's Edge Speed Sprint",
+    "world": "Hot Wheels Park",
+    "category": "HOT_WHEELS",
+    "discipline": "Speed Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Dragon's Fall Speed Circuit",
+    "world": "Hot Wheels Park",
+    "category": "HOT_WHEELS",
+    "discipline": "Speed Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Nexus Speed Circuit",
+    "world": "Hot Wheels Park",
+    "category": "HOT_WHEELS",
+    "discipline": "Speed Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Nexus Speed Sprint",
+    "world": "Hot Wheels Park",
+    "category": "HOT_WHEELS",
+    "discipline": "Speed Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Ram's Head Speed Sprint",
+    "world": "Hot Wheels Park",
+    "category": "HOT_WHEELS",
+    "discipline": "Speed Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Twin Loop Speed Circuit",
+    "world": "Hot Wheels Park",
+    "category": "HOT_WHEELS",
+    "discipline": "Speed Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Waterslide Speed Circuit",
+    "world": "Hot Wheels Park",
+    "category": "HOT_WHEELS",
+    "discipline": "Speed Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Canyon's Drop Hazard Sprint",
+    "world": "Hot Wheels Park",
+    "category": "HOT_WHEELS",
+    "discipline": "Hazard Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Forest Falls Hazard Sprint",
+    "world": "Hot Wheels Park",
+    "category": "HOT_WHEELS",
+    "discipline": "Hazard Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Forest Gorge Hazard Sprint",
+    "world": "Hot Wheels Park",
+    "category": "HOT_WHEELS",
+    "discipline": "Hazard Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Ice Canyon Hazard Sprint",
+    "world": "Hot Wheels Park",
+    "category": "HOT_WHEELS",
+    "discipline": "Hazard Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Ice Loop Hazard Sprint",
+    "world": "Hot Wheels Park",
+    "category": "HOT_WHEELS",
+    "discipline": "Hazard Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Lava Loop Hazard Sprint",
+    "world": "Hot Wheels Park",
+    "category": "HOT_WHEELS",
+    "discipline": "Hazard Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Snow Fields Hazard Circuit",
+    "world": "Hot Wheels Park",
+    "category": "HOT_WHEELS",
+    "discipline": "Hazard Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Volcano Pass Hazard Sprint",
+    "world": "Hot Wheels Park",
+    "category": "HOT_WHEELS",
+    "discipline": "Hazard Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Hot Wheels Goliath",
+    "world": "Hot Wheels Park",
+    "category": "HOT_WHEELS",
+    "discipline": "Speed Racing",
+    "standard": false,
+    "finale": true,
+    "finaleFor": [
+      "HOT_WHEELS"
+    ]
+  },
+  {
+    "name": "Teotihuacan Drag Strip",
+    "world": "Mexico",
+    "category": "DRAG",
+    "discipline": "Drag Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Festival Drag Strip",
+    "world": "Mexico",
+    "category": "DRAG",
+    "discipline": "Drag Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Aerodromo Drag Strip",
+    "world": "Mexico",
+    "category": "DRAG",
+    "discipline": "Drag Racing",
+    "standard": true,
+    "finale": false
+  },
+  {
+    "name": "Horizon Oval Circuit",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false,
+    "added8070": true
+  },
+  {
+    "name": "Vista Del Mar Sprint",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false,
+    "added8070": true
+  },
+  {
+    "name": "Marigold Sprint",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false,
+    "added8070": true
+  },
+  {
+    "name": "Aeródromo Sprint",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false,
+    "added8070": true
+  },
+  {
+    "name": "Línea Costera Sprint",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false,
+    "added8070": true
+  },
+  {
+    "name": "Cloverleaf Sprint",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false,
+    "added8070": true
+  },
+  {
+    "name": "San Juan Sprint",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false,
+    "added8070": true
+  },
+  {
+    "name": "Valle Del Rio Sprint",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false,
+    "added8070": true
+  },
+  {
+    "name": "Rocosa Sprint",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false,
+    "added8070": true
+  },
+  {
+    "name": "Horizon Stadium Circuit",
+    "world": "Mexico",
+    "category": "ROAD",
+    "discipline": "Road Racing",
+    "standard": true,
+    "finale": false,
+    "added8070": true
+  },
+  {
+    "name": "The Apex Run",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": false,
+    "finale": false,
+    "special": true,
+    "protected": true,
+    "added8070": true
+  },
+  {
+    "name": "Raptor Race!",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": false,
+    "finale": false,
+    "special": true,
+    "protected": true,
+    "added8070": true
+  },
+  {
+    "name": "Desafio",
+    "world": "Sierra Nueva",
+    "category": "RALLY",
+    "discipline": "Rally Adventure",
+    "standard": false,
+    "finale": false,
+    "special": true,
+    "protected": true,
+    "added8070": true
+  }
+]

@@ -1,0 +1,15 @@
+OTG! LAB v0.10 — INDEPENDENT DOWNLOADED FH5 TRACKS (145) + CARS (902)
+
+LAB ONLY. Install into OTG-Laboratory/otg-lab, NEVER MAIN. Keep your v0.9 all-Spaces portable backup on your phone. Do not reset or restore any Space as part of installation.
+
+INSTALL: Extract all patch files preserving js/, catalogue-packs/, tests/ paths; copy/replace corresponding LAB repo files; git add -A; git commit -m "OTG! LAB v0.10 - External FH5 routes"; git push.
+
+This LAB change moves the 145 official FH5 track identities, metadata and existing location hints out of the running taxonomy, identity-lock and Track Directory JavaScript, and gates app startup on separately verified SHA-256 car and track downloads. The car pack remains the known-good v0.9 902-car pack; the second 145-route pack has its own pinned digest and cache. The legacy FH5 race preset/round names still exist in other old scripts and the permanent FH5 car list stays external. This is a phase-two LAB experiment, not a production Guide release.
+
+FAIL CLOSED: if a track download is absent or tampered, LAB displays SAFE STOP and does not start app modules; it does not reset or write Space data. First v0.10 startup online is needed to obtain the new route pack; after verification, full offline reboot should use the cached verified car+track files.
+
+IMPORTANT: Existing 145 location clues are copied word-for-word from current LAB for parity. Their geography is NOT independently verified; at least one is suspected incorrect and must be audited before Public Guide release. We do NOT change MAIN clues.
+
+PHONE TEST 1: With Wi-Fi ON, open LAB. Verify amber banner reads v0.10 and all three Spaces still present. If a download/verification error appears STOP and report it; do not reset/restore. Then verify the original three-car Space, optional Space with two cars, saved Carlton 02:34.567 and Aeródromo Sprint USED ONCE. Test offline *after* this online run.
+
+Static/Node QA tests included; real phone browser QA is PENDING. MAIN v8.0.143 is unaffected.

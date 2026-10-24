@@ -9,69 +9,12 @@ const FH5_KEY='fh5-catalogue-v1';
 const E=v=>typeof esc==='function'?esc(String(v??'')):String(v??'').replace(/[&<>\"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[m]));
 const norm=v=>String(v??'').normalize('NFKD').toLowerCase().replace(/[^a-z0-9]+/g,'');
 const uniq=a=>[...new Set((a||[]).filter(Boolean))];
-const TRACKS=[];
+/* LAB v0.10: no 145-route list embedded in application scripts.
+   Routes and metadata are sourced only from the independently SHA-256 verified track pack. */
+const packTracks=window.OTG_LAB_VERIFIED_FH5_TRACKS_V10;
+if(!Array.isArray(packTracks)||packTracks.length!==145)throw Error('OTG! LAB v0.10: verified external track catalogue unavailable');
+const TRACKS=packTracks.map(t=>({...t}));
 const ALIAS=new Map();
-function add(names,meta){for(const name of names)TRACKS.push({name,...meta});}
-
-/* Mexico — Road / Street. Long finales are tagged separately and excluded from standard pool. */
-const ROAD=[
- 'Arch of Mulegé Circuit','Bahía De Plano Circuit','Bola Ocho Circuit','Cathedral Circuit','Chihuahua Circuit','Copper Canyon Sprint',
- 'Descansar Dorado Sprint','Dunas Blancas Sprint','Emerald Circuit','Estadio Circuit','Gran Pantano Sprint','Horizon Mexico Circuit',
- 'Llanuras Sprint','Lookout Circuit','Los Jardines Circuit','Panorámica Sprint','Playa Azul Circuit','Plaza Circuit','Reservorio Sprint',
- 'Riviera Sprint','Sierra Verde Sprint','Tierra Próspera Circuit','Volcán Sprint'
-];
-const STREET=[
- 'Bosque Del Sur','Cañón Run','Carretera Chase','Castillo Del Mar','Coast Run','Costa Rocosa','Cruce Del Valle','El Lago Blanco',
- 'Festival Gatecrash','Granjas De Tapalpa','Guanajuato Sur','Highland Climb','Hilltop Descent','Horizon Callejera','Jungle Descent',
- 'Las Afueras','Las Laderas','Ruta Norte','Tunnel Run','Wetland Charge'
-];
-add(ROAD,{world:'Mexico',category:'ROAD',discipline:'Road Racing',standard:true,finale:false});
-add(STREET,{world:'Mexico',category:'ROAD',discipline:'Street Racing',standard:true,finale:false});
-add(['The Goliath','The Colossus'],{world:'Mexico',category:'ROAD',discipline:'Road Racing',standard:false,finale:true,finaleFor:['ROAD']});
-add(['The Marathon'],{world:'Mexico',category:'ROAD',discipline:'Street Racing',standard:false,finale:true,finaleFor:['ROAD']});
-
-/* Mexico — Dirt / Cross Country combine into OTG! OFFROAD. */
-const DIRT=[
- 'Baja California Trail','Bajío Trail','Barranca Trail','Caldera Scramble','Cascada Trail','Cordillera Trail','Desierto Trail',
- 'El Pípila Scramble','Fuera Del Camino Trail','Horizon Baja Scramble','La Selva Scramble','Mangrove Scramble','Montaña Trail',
- 'Mulegé Town Scramble','River Scramble','San Juan Scramble','Tapalpa Trail','Teotihuacán Scramble','Tulum Trail'
-];
-const CROSS=[
- 'Airfield Cross Country Circuit','Baja Cross Country Circuit','Copper Canyon Cross Country','Costa Este Cross Country',
- 'Costera Cross Country Circuit',"Ek' Balam Cross Country Circuit",'El Descenso Cross Country','Estadio Cross Country',
- 'Festival Cross Country','Foto Final Cross Country','Herencia Cross Country Circuit','Las Dunas Cross Country','Las Granjas Cross Country',
- 'Las Ranas Cross Country','Oasis Cross Country','Restos Cross Country','Ribera Rocosa Cross Country','Tropico Cross Country',
- 'Urban Cross Country Circuit'
-];
-add(DIRT,{world:'Mexico',category:'OFFROAD',discipline:'Dirt Racing',standard:true,finale:false});
-add(CROSS,{world:'Mexico',category:'OFFROAD',discipline:'Cross Country',standard:true,finale:false});
-add(['The Titan'],{world:'Mexico',category:'OFFROAD',discipline:'Cross Country',standard:false,finale:true,finaleFor:['OFFROAD']});
-add(['The Gauntlet'],{world:'Mexico',category:'OFFROAD',discipline:'Dirt Racing',standard:false,finale:true,finaleFor:['OFFROAD'],roadWildcard:true});
-
-/* Rally Adventure — normal pool stays entirely inside Sierra Nueva. */
-const RALLY=[
- "Devil's Pass",'El Bosque','Quarry Trail','Arzate Sprint','The Narrows','La Cantera','Canyon Trail','Senda De Montana',
- 'Cascada Fuerte','Three Hills','Lago Azulado','Desert Scramble','Meridian','Forest Trail','Rugged Dunes','Tres Colinas',
- 'Reserva Del Carrizo','Orogrande','Tierras Verdes','Joya Marron','Crateres Secos','Valle De Pozas','Palm Forest','Switchback Run'
-];
-add(RALLY,{world:'Sierra Nueva',category:'RALLY',discipline:'Rally Adventure',standard:true,finale:false});
-add(['Horizon Badlands Goliath'],{world:'Sierra Nueva',category:'RALLY',discipline:'Rally Adventure',standard:false,finale:true,finaleFor:['RALLY']});
-
-/* Hot Wheels — Speed + Hazard normal pool; Goliath reserved for finale. */
-const HW_SPEED=[
- 'Canyon Loop Speed Sprint','Canyon Racer Speed Sprint',"Canyon's Edge Speed Sprint","Dragon's Fall Speed Circuit",
- 'Nexus Speed Circuit','Nexus Speed Sprint',"Ram's Head Speed Sprint",'Twin Loop Speed Circuit','Waterslide Speed Circuit'
-];
-const HW_HAZARD=[
- "Canyon's Drop Hazard Sprint",'Forest Falls Hazard Sprint','Forest Gorge Hazard Sprint','Ice Canyon Hazard Sprint',
- 'Ice Loop Hazard Sprint','Lava Loop Hazard Sprint','Snow Fields Hazard Circuit','Volcano Pass Hazard Sprint'
-];
-add(HW_SPEED,{world:'Hot Wheels Park',category:'HOT_WHEELS',discipline:'Speed Racing',standard:true,finale:false});
-add(HW_HAZARD,{world:'Hot Wheels Park',category:'HOT_WHEELS',discipline:'Hazard Racing',standard:true,finale:false});
-add(['Hot Wheels Goliath'],{world:'Hot Wheels Park',category:'HOT_WHEELS',discipline:'Speed Racing',standard:false,finale:true,finaleFor:['HOT_WHEELS']});
-
-/* Drag remains its own locked specialist family. */
-add(['Teotihuacan Drag Strip','Festival Drag Strip','Aerodromo Drag Strip'],{world:'Mexico',category:'DRAG',discipline:'Drag Racing',standard:true,finale:false});
 
 /* Known legacy/source-name aliases. These only resolve names; they do not rewrite saved races. */
 const aliases={

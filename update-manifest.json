@@ -2,8 +2,8 @@
   "channel": "OTG-LAB",
   "branch": "LAB",
   "version": "8.0.143",
-  "labVersion": "0.9",
+  "labVersion": "0.10",
   "labWorker": "./otg-lab-worker-v1.js",
   "worker": "./otg-lab-worker-v1.js",
-  "message": "LAB v0.9 \u2014 controlled downloaded FH5 car master at startup; fail closed without verified SHA-256 pack, preserve every existing Space. Track taxonomy remains in runtime until later stage. MAIN separate."
+  "message": "LAB v0.10 — independent pinned SHA-256 downloaded FH5 car and 145-track catalogues at boot; previous Spaces/records/ownership preserved. Track hints moved into external route pack; location clues await geographic audit. MAIN separate."
 }
